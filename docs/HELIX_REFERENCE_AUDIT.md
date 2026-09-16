@@ -51,3 +51,7 @@ The adapter's `first_violation` ordering approximates token finish order by cumu
 ## Wording correction for new work
 
 Use “under the pinned HELIX reference simulator and tested configurations.” The older manuscript's “execution reference”, “runtime residual”, and “488×” can be misunderstood as real-GPU evidence. Their numerical results are simulator-relative. Do not modify the old manuscript; use explicit terminology and definitions in the journal.
+
+## Threshold-only cache optimization
+
+The outer journal wrapper can reclassify a complete cached simulator run when only TTFT/TPOT thresholds change. All physical inputs, model/adapter versions, finite workload, and postprocessed fixed/queue overhead must match. Independent old runs confirmed exactly equal per-token metrics in 79 such pairs before enabling this optimization; the test suite checks reclassified result fields against independently simulated results. Derived records include `derived_from`. This reuses a simulator trace, not a predicted verdict, and does not change model dynamics. Record logical paired probes separately from newly executed physical simulations.

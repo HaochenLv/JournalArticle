@@ -5,6 +5,7 @@ not represented as the unavailable final paper-1 source snapshot.
 """
 from pathlib import Path
 import sys, os, json, hashlib, gzip, time
+import copy
 from dataclasses import asdict, replace
 ROOT=Path(__file__).resolve().parents[1]
 os.environ.setdefault('MPLBACKEND','Agg')
@@ -27,6 +28,29 @@ ref._helix_machine_type=lambda name: {'L4x2':'L4x2','T4x4':'T4x4'}.get(name) or 
 
 def fingerprint(value):
  return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
+
+def physical_fingerprint(inputs):
+ value=copy.deepcopy(inputs)
+ # These two thresholds are inspected only AFTER HELIX has fully drained.
+ # Fixed/queue overhead is retained because cached metrics already include it.
+ value['sla'].pop('ttft_s');value['sla'].pop('tpot_s')
+ return fingerprint(value)
+
+def reclassify_record(source,inputs):
+ """Reapply the pinned adapter's exact threshold logic to immutable metrics."""
+ raw=copy.deepcopy(source['raw']);limits=inputs['sla'];violations=[]
+ for request in inputs['workload']:
+  m=raw['query_metrics'][request['id']]
+  if m['aligned_ttft_s']>limits['ttft_s']:violations.append((request['arrival_time_s']+m['aligned_ttft_s'],'ttft',request['id'],m['aligned_ttft_s'],limits['ttft_s']))
+  for i,t in enumerate(m['decode_tpot_s']):
+   if t>limits['tpot_s']:violations.append((request['arrival_time_s']+m['aligned_ttft_s']+sum(m['decode_tpot_s'][:i+1]),'tpot',request['id'],t,limits['tpot_s']))
+ violations.sort(key=lambda x:(x[0],x[1],x[2]));first=violations[0] if violations else None
+ raw.update(feasible=first is None,first_violation_kind=first[1] if first else None,first_violation_request_id=first[2] if first else None,first_violation_observed_s=first[3] if first else None,first_violation_limit_s=first[4] if first else None)
+ summary=dict(source['summary']);summary.update(safe=raw['feasible'],first_violation=raw['first_violation_kind'],cache_key=fingerprint(inputs))
+ return {'inputs':inputs,'summary':summary,'raw':raw,'derived_from':source['summary']['cache_key'],'reuse_reason':'SLA thresholds do not affect the pinned simulation; complete per-token metrics reused'}
+
+_physical_records={}
+_seen_reference_files=set()
 
 def workload(seed=7,duration=30):
  return build_helix_azure_conversation_workload(HELIX,commit=HELIX_COMMIT,duration_s=duration,target_request_rate=1.5,seed=seed).requests
@@ -94,6 +118,19 @@ def reference(p,w,sla):
  key=fingerprint(inputs);folder=ROOT/'results/raw_reference';folder.mkdir(parents=True,exist_ok=True);path=folder/(key+'.json.gz')
  if path.exists():
   with gzip.open(path,'rt') as f:return json.load(f)['summary']
+ for old_path in folder.glob('*.json.gz'):
+  if old_path.name in _seen_reference_files:continue
+  with gzip.open(old_path,'rt') as f:old=json.load(f)
+  _physical_records.setdefault(physical_fingerprint(old['inputs']),old_path)
+  _seen_reference_files.add(old_path.name)
+ physical=physical_fingerprint(inputs)
+ if physical in _physical_records:
+  with gzip.open(_physical_records[physical],'rt') as f:source=json.load(f)
+  record=reclassify_record(source,inputs)
+  temporary=path.with_suffix('.tmp-'+str(os.getpid()))
+  with gzip.open(temporary,'wt') as f:json.dump(record,f,separators=(',',':'))
+  temporary.replace(path)
+  return record['summary']
  start=time.perf_counter();run=ref.evaluate_helix_fixed_reference(pipeline=p,workload=w,sla=sla,helix_root=HELIX);elapsed=time.perf_counter()-start
  metrics=list(run.query_metrics.values())
  summary={'safe':run.feasible,'first_violation':run.first_violation_kind,'max_ttft_s':max(m.aligned_ttft_s for m in metrics),'max_native_ttft_s':max(m.true_first_token_ttft_s for m in metrics),'max_tpot_s':max(m.max_tpot_s for m in metrics),'finished_requests':run.finished_requests,'runtime_s':elapsed,'cache_key':key}

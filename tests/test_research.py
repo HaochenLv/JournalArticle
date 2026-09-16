@@ -47,4 +47,24 @@ class ResearchTests(unittest.TestCase):
   with new.open() as f:actual=list(csv.DictReader(f))
   self.assertEqual(actual,expected)
 
+ def test_threshold_reuse_matches_independent_complete_simulations(self):
+  groups={};comparisons=0
+  for path in (ROOT/'results/raw_reference').glob('*.json.gz'):
+   with gzip.open(path,'rt') as f:d=json.load(f)
+   key=physical_fingerprint(d['inputs'])
+   if key in groups:
+    old=groups[key];self.assertEqual(old['raw']['query_metrics'],d['raw']['query_metrics'])
+    rebuilt=reclassify_record(old,d['inputs']);self.assertEqual(rebuilt['raw'],d['raw']);comparisons+=1
+   else:groups[key]=d
+  self.assertGreater(comparisons,10)
+
+ def test_planners_return_only_queried_safe_points_within_budget(self):
+  from planning import plan
+  for policy in ['fixed_grid','round_robin','best_first']:
+   calls=[]
+   def query(s,j):calls.append((s,j));return j in [0,2,4] if s==0 else j==1
+   result=plan([1,2,3,4,5],[-1,0],{-1:[True]*5,0:[True]*5},query,7,policy)
+   self.assertEqual(len(calls),len(set(calls)));self.assertLessEqual(len(calls),7)
+   self.assertIn(result['chosen'],result['trace']);self.assertTrue(result['chosen']['safe'])
+
 if __name__=='__main__':unittest.main()

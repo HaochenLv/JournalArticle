@@ -37,3 +37,23 @@ Additional nominal cases are predeclared to separate limiting phases: seed19 ori
 ## D2 — Matched-profile partition diagnostic (running)
 
 Question: does capacity ranking transfer to the reference when workload, partition, network, and **absolute** device profiles agree? Five shifts [-2,-1,0,1,2], alternating L4x2/T4x4, fast links, 30 s windows. Nominal isolated seed-7 maximum Prefill plus intrinsic charge is 3.68–3.79 s and singleton Decode .2112–.2368 s, so the conference's analytical-model .28 s TTFT cannot be reused meaningfully. New diagnostic SLAs are (4.2 s,.30 s) and (4.2 s,10 s), selected before ranking results. These are controlled simulator tests, not a reproduction of the conference's absolute capacities. The first group-profile reference smoke runs successfully. Cost about 16 s per 17-request simulation under concurrent diagnostic load.
+
+## R3 — Additional provenance checks
+
+All 12 published evaluator transition endpoint pairs (six seeds × two placements) match the recovered implementation. The paper-2 revision's 20-seed, nine-shift top1 coarse-to-fine outcomes also reproduce: Decode 20/20 exact and near; Prefill 16/20 exact and 19/20 near. This checks the final reported search suite rather than relying only on the older phase13 snapshot.
+
+## D3 — Preliminary guard result and branch stop
+
+On the first completed six nominal cases (98 paired probes), four-scenario checking has the same accepted/reference-safe counts and optimistic counts as fixed 25% compute inflation: at nominal inputs 0 optimistic and 17 accepted/reference-safe points; with both profiles underestimated by 10%, 8 optimistic and 24 accepted/reference-safe points. Therefore **stop developing a more complicated scenario method** on the basis of these data. Both are conservative at nominal input and neither resolves structural mismatch under all stresses. Final aggregate is regenerated after the full declared matrix, so do not combine this interim denominator with the final one.
+
+## D4 — Nonmonotone and conservative reference behavior
+
+Seed19, slow links, original 2 s/.15 s SLA: reference unsafe at .01625, safe at .0175, unsafe at .01875. No single reference transition is valid. Fast links remain reference-safe at .04, while the published evaluator transition is .0152–.0153. Safe-point recovery is meaningful; an inferred safe **prefix** is not certified.
+
+## Engineering — Threshold-only reference reuse
+
+The simulator never reads TTFT/TPOT thresholds until all requests finish. Seventy-nine independently simulated pairs with identical physical inputs and different thresholds had **exactly identical per-token metrics**. A new cache layer therefore reuses complete physical outcomes across threshold-only changes and reapplies the pinned adapter's classification/first-violation logic. Fixed/queue overhead remains part of the physical key because cached metrics include it. Eight bridge tests pass, including recomputation against independent prior runs. Records mark `derived_from`; planning comparisons count unique physical queries within each fixed-SLA trial, and inherited runtime is explicitly a replay cost estimate. In-progress drivers were restarted from saved caches to avoid redundant simulations; no conference repository or HELIX simulator source was changed.
+
+## D5 — Reference-call pilot
+
+An offline query-counted pilot compares evaluator only, reference exhaustive on a fixed coarse grid, a fixed reference grid, evaluator-seeded equal allocation, and evaluator-seeded best-first allocation. It returns only directly queried reference-safe operating points, with abstention if none is found. Returning validated points is a construction rule, not a probabilistic guarantee. On initial completed cases, best-first does not beat simpler equal allocation, so no advanced allocation claim is justified. Finer-grid and held-out validation remain necessary before publishing method superiority.

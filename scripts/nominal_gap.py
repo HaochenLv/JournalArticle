@@ -36,7 +36,7 @@ def run_case(case,grid=GRID,refine=2,folder='nominal_gap'):
  # Seek the reference's own failure rather than stopping at the evaluator edge.
  # A finite cap prevents an unbounded sweep; retain explicit right censoring.
  high=max(rows)
- while rows[high]['reference']['safe'] and high<10:
+ while rows[high]['reference']['safe'] and high<128:
   high=round(high*2,10);probe(high)
  for _ in range(refine):
   ordered=sorted(rows.values(),key=lambda x:x['lambda'])

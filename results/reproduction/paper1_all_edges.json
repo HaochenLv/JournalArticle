@@ -1,0 +1,134 @@
+[
+  {
+    "seed": 0,
+    "placement": "slow",
+    "safe_lambda": 0.015,
+    "unsafe_lambda": 0.0151,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  },
+  {
+    "seed": 0,
+    "placement": "fast",
+    "safe_lambda": 0.015,
+    "unsafe_lambda": 0.0151,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  },
+  {
+    "seed": 1,
+    "placement": "slow",
+    "safe_lambda": 0.0159,
+    "unsafe_lambda": 0.016,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  },
+  {
+    "seed": 1,
+    "placement": "fast",
+    "safe_lambda": 0.0159,
+    "unsafe_lambda": 0.016,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  },
+  {
+    "seed": 2,
+    "placement": "slow",
+    "safe_lambda": 0.0102,
+    "unsafe_lambda": 0.0103,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  },
+  {
+    "seed": 2,
+    "placement": "fast",
+    "safe_lambda": 0.0102,
+    "unsafe_lambda": 0.0103,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  },
+  {
+    "seed": 3,
+    "placement": "slow",
+    "safe_lambda": 0.0152,
+    "unsafe_lambda": 0.0153,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  },
+  {
+    "seed": 3,
+    "placement": "fast",
+    "safe_lambda": 0.0152,
+    "unsafe_lambda": 0.0153,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  },
+  {
+    "seed": 7,
+    "placement": "slow",
+    "safe_lambda": 0.0131,
+    "unsafe_lambda": 0.0132,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  },
+  {
+    "seed": 7,
+    "placement": "fast",
+    "safe_lambda": 0.0131,
+    "unsafe_lambda": 0.0132,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  },
+  {
+    "seed": 19,
+    "placement": "slow",
+    "safe_lambda": 0.0152,
+    "unsafe_lambda": 0.0153,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  },
+  {
+    "seed": 19,
+    "placement": "fast",
+    "safe_lambda": 0.0152,
+    "unsafe_lambda": 0.0153,
+    "observed_verdicts": [
+      true,
+      false
+    ],
+    "matches_paper": true
+  }
+]

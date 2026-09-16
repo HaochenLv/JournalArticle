@@ -31,5 +31,29 @@ def paper2():
  csv_path.write_text(csv_path.read_text())
  print(json.dumps(summary['trial_summaries']),flush=True)
 
+def paper1_edges():
+ expected={0:.0150,1:.0159,2:.0102,3:.0152,7:.0131,19:.0152}
+ rows=[]
+ for seed,low in expected.items():
+  for place in ['slow','fast']:
+   p=pipeline(place);base=workload(seed);sla=SLA(2.,.15,fixed_overhead_s=.005)
+   verdicts=[evaluator(p,scale_workload(base,v),sla)['safe'] for v in [low,round(low+.0001,4)]]
+   rows.append({'seed':seed,'placement':place,'safe_lambda':low,'unsafe_lambda':round(low+.0001,4),'observed_verdicts':verdicts,'matches_paper':verdicts==[True,False]})
+ write_json(ROOT/'results/reproduction/paper1_all_edges.json',rows)
+ assert all(r['matches_paper'] for r in rows)
+ print('12/12 published evaluator transition endpoint pairs recovered.')
+
+def paper2_revision():
+ sys.path.insert(0,str(ROOT/'.deps/partition/src'))
+ from sla_partition_sensitivity.phase16_coarse_to_fine_search import _run_condition
+ cfg=json.loads((ROOT/'.deps/partition/config/phase14.json').read_text())
+ cfg['phase6']['profile_root']=str(ROOT/'.deps/partition/data/helix_profiles/llama2_70b')
+ cfg['phase11']['runtime_trace_root']=str(ROOT/'.deps/partition/data/runtime_helix_trace')
+ rows,profiles,logs=_run_condition(cfg,condition='expanded_20_seed',seeds=list(range(20)),bandwidth_multiplier=1.,radius=4)
+ write_json(ROOT/'results/reproduction/paper2_revision_20seeds.json',{'rows':rows,'profiles':profiles})
+ for regime in ['decode_constrained','prefill_constrained']:
+  selected=[r for r in rows if r['regime']==regime and r['method']=='coarse_top1']
+  print(regime,len(selected),sum(r['matches_oracle_shift'] for r in selected),sum(r['near_oracle'] for r in selected),flush=True)
+
 if __name__=='__main__':
- {'paper1':paper1,'paper2':paper2}[sys.argv[1]]()
+ {'paper1':paper1,'paper2':paper2,'paper1_edges':paper1_edges,'paper2_revision':paper2_revision}[sys.argv[1]]()

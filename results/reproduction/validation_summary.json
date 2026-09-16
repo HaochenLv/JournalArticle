@@ -8,8 +8,16 @@
     "failed": 0
   },
   "journal_bridge_tests": {
-    "passed": 6,
+    "passed": 8,
     "failed": 0
   },
-  "paper2_seed7_cached_rows_exact_match": true
+  "paper2_seed7_cached_rows_exact_match": true,
+  "paper1_transition_pairs_matching": 12,
+  "paper2_revision": {
+    "decode_exact": 20,
+    "decode_near": 20,
+    "prefill_exact": 16,
+    "prefill_near": 19,
+    "trials_per_regime": 20
+  }
 }
