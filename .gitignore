@@ -1,0 +1,14 @@
+.deps/
+.venv/
+.private/
+__pycache__/
+*.pyc
+.DS_Store
+CA/
+*.pdf
+*.docx
+*.pkl
+.env*
+*.pem
+*.key
+.mplconfig/
