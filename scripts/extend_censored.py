@@ -15,6 +15,6 @@ if __name__=='__main__':
  for folder in ['nominal_gap','partition_ranking']:
   for p in (ROOT/'results/diagnostic'/folder).glob('*.json'):
    d=json.loads(p.read_text())
-   if d.get('reference_summary',{}).get('right_censored'):jobs.append((d['case'],folder))
+   if isinstance(d,dict) and d.get('reference_summary',{}).get('right_censored'):jobs.append((d['case'],folder))
  print('Extending',len(jobs),'reference-censored cases',flush=True)
  with ProcessPoolExecutor(max_workers=3) as pool:list(pool.map(run,jobs))

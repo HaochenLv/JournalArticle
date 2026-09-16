@@ -1,0 +1,11 @@
+case,ttft_s,tpot_s,pairs,evaluator_safe_max,evaluator_next_unsafe,reference_safe_max,reference_next_unsafe,reference_monotonic,reference_right_censored,relative_observed_gap_pct,first_disagreement,optimistic,conservative,native_definition_changes_safe_verdict
+a100-s0-fast-decode,2.0,0.15,15,0.015,0.01625,0.015,0.01625,True,False,0.0,,0,0,0
+a100-s0-slow-decode,2.0,0.15,15,0.015,0.01625,0.015,0.01625,True,False,0.0,,0,0,0
+a100-s0-slow-prefill,2.0,1.0,17,0.8,0.96,0.0325,0.03625,True,False,-95.9375,"{'lambda': 0.03625, 'type': 'optimistic'}",7,0,0
+a100-s0-slow-ttft,1.8,10.0,23,3.2,3.84,40.96,51.2,True,False,1180.0,"{'lambda': 3.84, 'type': 'conservative'}",0,5,8
+a100-s19-fast-decode,2.0,0.15,17,0.015,0.01625,0.04,0.05,True,False,166.66666666666669,"{'lambda': 0.01625, 'type': 'conservative'}",0,5,0
+a100-s19-slow-decode,2.0,0.15,16,0.015,0.01625,0.0175,,False,False,16.666666666666675,"{'lambda': 0.0175, 'type': 'conservative'}",0,1,6
+a100-s7-fast-decode,2.0,0.15,17,0.01315,0.013175,0.01365,0.0141,True,False,3.802281368821303,"{'lambda': 0.013175, 'type': 'conservative'}",0,3,0
+a100-s7-slow-decode,2.0,0.15,17,0.01315,0.013175,0.0132,0.01365,True,False,0.3802281368821214,"{'lambda': 0.013175, 'type': 'conservative'}",0,2,0
+a100-s7-slow-prefill,2.0,1.0,17,0.04,0.05,0.0132,0.01365,True,False,-67.0,"{'lambda': 0.01365, 'type': 'optimistic'}",6,0,0
+a100-s7-slow-ttft,1.8,10.0,21,1.28,1.6,12.8,15.36,True,False,900.0,"{'lambda': 1.6, 'type': 'conservative'}",0,6,8

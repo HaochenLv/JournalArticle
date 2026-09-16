@@ -1,0 +1,204 @@
+{
+  "rows": [
+    {
+      "case": "a100-s0-fast-decode",
+      "ttft_s": 2.0,
+      "tpot_s": 0.15,
+      "pairs": 15,
+      "evaluator_safe_max": 0.015,
+      "evaluator_next_unsafe": 0.01625,
+      "reference_safe_max": 0.015,
+      "reference_next_unsafe": 0.01625,
+      "reference_monotonic": true,
+      "reference_right_censored": false,
+      "relative_observed_gap_pct": 0.0,
+      "first_disagreement": null,
+      "optimistic": 0,
+      "conservative": 0,
+      "native_definition_changes_safe_verdict": 0
+    },
+    {
+      "case": "a100-s0-slow-decode",
+      "ttft_s": 2.0,
+      "tpot_s": 0.15,
+      "pairs": 15,
+      "evaluator_safe_max": 0.015,
+      "evaluator_next_unsafe": 0.01625,
+      "reference_safe_max": 0.015,
+      "reference_next_unsafe": 0.01625,
+      "reference_monotonic": true,
+      "reference_right_censored": false,
+      "relative_observed_gap_pct": 0.0,
+      "first_disagreement": null,
+      "optimistic": 0,
+      "conservative": 0,
+      "native_definition_changes_safe_verdict": 0
+    },
+    {
+      "case": "a100-s0-slow-prefill",
+      "ttft_s": 2.0,
+      "tpot_s": 1.0,
+      "pairs": 17,
+      "evaluator_safe_max": 0.8,
+      "evaluator_next_unsafe": 0.96,
+      "reference_safe_max": 0.0325,
+      "reference_next_unsafe": 0.03625,
+      "reference_monotonic": true,
+      "reference_right_censored": false,
+      "relative_observed_gap_pct": -95.9375,
+      "first_disagreement": {
+        "lambda": 0.03625,
+        "type": "optimistic"
+      },
+      "optimistic": 7,
+      "conservative": 0,
+      "native_definition_changes_safe_verdict": 0
+    },
+    {
+      "case": "a100-s0-slow-ttft",
+      "ttft_s": 1.8,
+      "tpot_s": 10.0,
+      "pairs": 23,
+      "evaluator_safe_max": 3.2,
+      "evaluator_next_unsafe": 3.84,
+      "reference_safe_max": 40.96,
+      "reference_next_unsafe": 51.2,
+      "reference_monotonic": true,
+      "reference_right_censored": false,
+      "relative_observed_gap_pct": 1180.0,
+      "first_disagreement": {
+        "lambda": 3.84,
+        "type": "conservative"
+      },
+      "optimistic": 0,
+      "conservative": 5,
+      "native_definition_changes_safe_verdict": 8
+    },
+    {
+      "case": "a100-s19-fast-decode",
+      "ttft_s": 2.0,
+      "tpot_s": 0.15,
+      "pairs": 17,
+      "evaluator_safe_max": 0.015,
+      "evaluator_next_unsafe": 0.01625,
+      "reference_safe_max": 0.04,
+      "reference_next_unsafe": 0.05,
+      "reference_monotonic": true,
+      "reference_right_censored": false,
+      "relative_observed_gap_pct": 166.66666666666669,
+      "first_disagreement": {
+        "lambda": 0.01625,
+        "type": "conservative"
+      },
+      "optimistic": 0,
+      "conservative": 5,
+      "native_definition_changes_safe_verdict": 0
+    },
+    {
+      "case": "a100-s19-slow-decode",
+      "ttft_s": 2.0,
+      "tpot_s": 0.15,
+      "pairs": 16,
+      "evaluator_safe_max": 0.015,
+      "evaluator_next_unsafe": 0.01625,
+      "reference_safe_max": 0.0175,
+      "reference_next_unsafe": null,
+      "reference_monotonic": false,
+      "reference_right_censored": false,
+      "relative_observed_gap_pct": 16.666666666666675,
+      "first_disagreement": {
+        "lambda": 0.0175,
+        "type": "conservative"
+      },
+      "optimistic": 0,
+      "conservative": 1,
+      "native_definition_changes_safe_verdict": 6
+    },
+    {
+      "case": "a100-s7-fast-decode",
+      "ttft_s": 2.0,
+      "tpot_s": 0.15,
+      "pairs": 17,
+      "evaluator_safe_max": 0.01315,
+      "evaluator_next_unsafe": 0.013175,
+      "reference_safe_max": 0.01365,
+      "reference_next_unsafe": 0.0141,
+      "reference_monotonic": true,
+      "reference_right_censored": false,
+      "relative_observed_gap_pct": 3.802281368821303,
+      "first_disagreement": {
+        "lambda": 0.013175,
+        "type": "conservative"
+      },
+      "optimistic": 0,
+      "conservative": 3,
+      "native_definition_changes_safe_verdict": 0
+    },
+    {
+      "case": "a100-s7-slow-decode",
+      "ttft_s": 2.0,
+      "tpot_s": 0.15,
+      "pairs": 17,
+      "evaluator_safe_max": 0.01315,
+      "evaluator_next_unsafe": 0.013175,
+      "reference_safe_max": 0.0132,
+      "reference_next_unsafe": 0.01365,
+      "reference_monotonic": true,
+      "reference_right_censored": false,
+      "relative_observed_gap_pct": 0.3802281368821214,
+      "first_disagreement": {
+        "lambda": 0.013175,
+        "type": "conservative"
+      },
+      "optimistic": 0,
+      "conservative": 2,
+      "native_definition_changes_safe_verdict": 0
+    },
+    {
+      "case": "a100-s7-slow-prefill",
+      "ttft_s": 2.0,
+      "tpot_s": 1.0,
+      "pairs": 17,
+      "evaluator_safe_max": 0.04,
+      "evaluator_next_unsafe": 0.05,
+      "reference_safe_max": 0.0132,
+      "reference_next_unsafe": 0.01365,
+      "reference_monotonic": true,
+      "reference_right_censored": false,
+      "relative_observed_gap_pct": -67.0,
+      "first_disagreement": {
+        "lambda": 0.01365,
+        "type": "optimistic"
+      },
+      "optimistic": 6,
+      "conservative": 0,
+      "native_definition_changes_safe_verdict": 0
+    },
+    {
+      "case": "a100-s7-slow-ttft",
+      "ttft_s": 1.8,
+      "tpot_s": 10.0,
+      "pairs": 21,
+      "evaluator_safe_max": 1.28,
+      "evaluator_next_unsafe": 1.6,
+      "reference_safe_max": 12.8,
+      "reference_next_unsafe": 15.36,
+      "reference_monotonic": true,
+      "reference_right_censored": false,
+      "relative_observed_gap_pct": 900.0,
+      "first_disagreement": {
+        "lambda": 1.6,
+        "type": "conservative"
+      },
+      "optimistic": 0,
+      "conservative": 6,
+      "native_definition_changes_safe_verdict": 8
+    }
+  ],
+  "totals": {
+    "cases": 10,
+    "pairs": 175,
+    "optimistic": 13,
+    "conservative": 22
+  }
+}

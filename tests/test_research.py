@@ -60,7 +60,7 @@ class ResearchTests(unittest.TestCase):
 
  def test_planners_return_only_queried_safe_points_within_budget(self):
   from planning import plan
-  for policy in ['fixed_grid','round_robin','best_first']:
+  for policy in ['fixed_grid','reference_only_adaptive','round_robin','best_first']:
    calls=[]
    def query(s,j):calls.append((s,j));return j in [0,2,4] if s==0 else j==1
    result=plan([1,2,3,4,5],[-1,0],{-1:[True]*5,0:[True]*5},query,7,policy)

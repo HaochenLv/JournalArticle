@@ -27,7 +27,7 @@ def main():
   rows.append({'case':'isolated-2051','source':'reproduction','variant':label,'lambda':1.,'evaluator_safe':e['safe'],'reference_safe':r['safe'],'disagreement':('optimistic' if e['safe'] else 'conservative') if e['safe']!=r['safe'] else 'agreement','evaluator_violation':(e['first_violation'] or {}).get('kind'),'reference_violation':r['first_violation'],'reference_ttft_s':r['max_ttft_s'],'reference_tpot_s':r['max_tpot_s'],'reference_cache_key':r['cache_key'],'evaluator_runtime_s':e['runtime_s']})
  out=ROOT/'results/diagnostic/profile_mismatch';out.mkdir(parents=True,exist_ok=True)
  with (out/'trials.csv').open('w') as f:
-  writer=csv.DictWriter(f,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
+  writer=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n');writer.writeheader();writer.writerows(rows)
  groups=[]
  for source in sorted({r['source'] for r in rows}):
   for variant in sorted({r['variant'] for r in rows if r['source']==source}):

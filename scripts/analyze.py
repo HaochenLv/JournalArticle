@@ -41,6 +41,7 @@ def main():
   changes=[]
   for trial in rankrows:
    for variant in sorted({r['variant'] for r in mr if r['source']=='partition_ranking'}):
+    if not all(any(r['case']==trial['case']+'-shift'+str(s) and r['variant']==variant for r in mr) for s in [-2,-1,0,1,2]):continue
     scores={s:max((float(r['lambda']) for r in mr if r['case']==trial['case']+'-shift'+str(s) and r['variant']==variant and r['evaluator_safe']=='True'),default=0) for s in [-2,-1,0,1,2]}
     selected=max(scores,key=lambda s:(scores[s],-abs(s),-s));refs=trial['reference_scores'];rb=max(refs.values());rv=refs[selected]
     changes.append({'case':trial['case'],'variant':variant,'evaluator_scores':scores,'selected':selected,'changed_from_nominal':selected!=trial['evaluator_selected'],'reference_rank':1+sum(v>rv for v in refs.values()),'reference_quality_ratio':rv/rb if rb else None})

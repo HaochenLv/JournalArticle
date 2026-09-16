@@ -57,3 +57,9 @@ The simulator never reads TTFT/TPOT thresholds until all requests finish. Sevent
 ## D5 — Reference-call pilot
 
 An offline query-counted pilot compares evaluator only, reference exhaustive on a fixed coarse grid, a fixed reference grid, evaluator-seeded equal allocation, and evaluator-seeded best-first allocation. It returns only directly queried reference-safe operating points, with abstention if none is found. Returning validated points is a construction rule, not a probabilistic guarantee. On initial completed cases, best-first does not beat simpler equal allocation, so no advanced allocation claim is justified. Finer-grid and held-out validation remain necessary before publishing method superiority.
+
+## D1 completed — Nominal sign and reference boundaries
+
+All ten nominal A100 cases now include reference-unsafe probes. Original Decode SLAs show both matching and conservative classifications; relaxed-Decode TPOT=1 s shows nominal optimism (seed0 evaluator safe maximum .8 versus observed reference-safe .0325; seed7 .04 versus .0132). TTFT-sensitive (1.8 s,10 s) cases show substantial conservatism: seed0 evaluator safe maximum 3.2 versus reference 40.96, next unsafe 51.2; seed7 1.28 versus 12.8, next unsafe 15.36. These are intensities of **17-request finite traces**, not sustained production rates. Larger intensity compresses a finite arrival window. Seed19 slow's nonmonotone sequence prevents reporting a single reference edge.
+
+The initial range was explicitly extended after reference right censoring, first to 10.24 and then until unsafe (maximum tested 81.92). No profile was changed in D1. All rows, first disagreements, next unsafe probes where valid, TTFT/TPOT metrics, and native-definition sensitivity counts are in nominal_summary.json/csv. This supports a mixed nominal reliability conclusion for the recovered implementation; it is not an accusation that an unavailable final implementation has identical behavior.
