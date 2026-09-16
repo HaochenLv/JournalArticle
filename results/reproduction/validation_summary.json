@@ -1,0 +1,15 @@
+{
+  "public_evaluator_branch_tests": {
+    "passed": 31,
+    "failed": 0
+  },
+  "public_partition_revision_tests": {
+    "passed": 42,
+    "failed": 0
+  },
+  "journal_bridge_tests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "paper2_seed7_cached_rows_exact_match": true
+}

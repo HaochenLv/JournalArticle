@@ -1,0 +1,115 @@
+{
+  "counterexample": {
+    "baseline": {
+      "safe": true,
+      "first_violation": null,
+      "max_accounted_ttft_s": 1.8940402816,
+      "max_accounted_tpot_s": 0.1173670016,
+      "events": 3,
+      "trajectory_hash": "4837411aeb484614d0a29e3be6830210bcd2337359be60421a683f53cd90414d",
+      "runtime_s": 0.0002400000230409205
+    },
+    "accounting_only": {
+      "safe": false,
+      "first_violation": {
+        "kind": "network",
+        "time_s": 0.0,
+        "utilization": 1.0214723758277418,
+        "num_prefill": 1,
+        "num_decode": 0
+      },
+      "max_accounted_ttft_s": 2.0158229367353977,
+      "max_accounted_tpot_s": 0.0,
+      "events": 3,
+      "trajectory_hash": "4837411aeb484614d0a29e3be6830210bcd2337359be60421a683f53cd90414d",
+      "runtime_s": 0.00011358398478478193
+    },
+    "reference": {
+      "safe": false,
+      "first_violation": "ttft",
+      "max_ttft_s": 2.0151050770040033,
+      "max_native_ttft_s": 2.127531105807995,
+      "max_tpot_s": 0.11742602880399178,
+      "finished_requests": 1,
+      "runtime_s": 2.912226041953545,
+      "cache_key": "e1b5acbc79f4037729fc348d694a49c2b12182fae491714f747445f68ceca95f"
+    }
+  },
+  "sampled_transition": [
+    {
+      "lambda": 0.01,
+      "evaluator": {
+        "safe": true,
+        "first_violation": null,
+        "max_accounted_ttft_s": 1.6805613841447071,
+        "max_accounted_tpot_s": 0.1173670016,
+        "events": 279,
+        "trajectory_hash": "ebe2b0331016ede6c69b516939e41692431532f789f4de94e83c722e3118826d",
+        "runtime_s": 0.01046304201008752
+      },
+      "reference": {
+        "safe": true,
+        "first_violation": null,
+        "max_ttft_s": 1.679963226028467,
+        "max_native_ttft_s": 1.7923892548395814,
+        "max_tpot_s": 0.11742602881111452,
+        "finished_requests": 17,
+        "runtime_s": 6.854187874996569,
+        "cache_key": "5644d77660db5c277cbfd51f4d02eca415f928cbf70d06b53eeb7a6d3f8c23c5"
+      }
+    },
+    {
+      "lambda": 0.0131,
+      "evaluator": {
+        "safe": true,
+        "first_violation": null,
+        "max_accounted_ttft_s": 1.6805613841447071,
+        "max_accounted_tpot_s": 0.1173670016,
+        "events": 279,
+        "trajectory_hash": "a6fe20a15e0e0a6f94363591405cb283b7eb71129ecba81a58ad3fb8f147cbee",
+        "runtime_s": 0.009130042046308517
+      },
+      "reference": {
+        "safe": true,
+        "first_violation": null,
+        "max_ttft_s": 1.679963226028467,
+        "max_native_ttft_s": 1.7923892548395814,
+        "max_tpot_s": 0.11742602881111452,
+        "finished_requests": 17,
+        "runtime_s": 7.764927082986105,
+        "cache_key": "c8bc33de17094e3150d8c803bcb59fea1844ba077c4358e26afa4fd55f0d15d4"
+      }
+    },
+    {
+      "lambda": 0.0132,
+      "evaluator": {
+        "safe": false,
+        "first_violation": {
+          "kind": "decode_sla_budget",
+          "time_s": 1822.6818181818182,
+          "request_id": "azure-00014",
+          "required_s": 0.8660756230902658,
+          "limit_s": 0.15,
+          "num_prefill": 1,
+          "num_decode": 1,
+          "prefill_debt_s": 0.7490756230902658
+        },
+        "max_accounted_ttft_s": 1.6805613841447071,
+        "max_accounted_tpot_s": 0.8664426246902658,
+        "events": 279,
+        "trajectory_hash": "12a206eee4485dbb627e719c23aab64038af31102d04e87ab35d19a8b803d2ea",
+        "runtime_s": 0.008544290962163359
+      },
+      "reference": {
+        "safe": true,
+        "first_violation": null,
+        "max_ttft_s": 1.679963226028467,
+        "max_native_ttft_s": 1.7923892548395814,
+        "max_tpot_s": 0.11742602881111452,
+        "finished_requests": 17,
+        "runtime_s": 7.851941667031497,
+        "cache_key": "038eee7259f0589974e504fa66496f553efba2fd4c1db17edc4de78efe1ef290"
+      }
+    }
+  ]
+}

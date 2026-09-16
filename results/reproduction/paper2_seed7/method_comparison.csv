@@ -1,0 +1,11 @@
+seed,regime,method,shift,partition,safe_intensity,unsafe_intensity,first_violation,sampled_monotonic,capacity_evaluations,oracle_safe_intensity,oracle_shifts
+7,decode_constrained,uniform,0,10-10-10-10-10-10-10-10,0.03125,0.035156,network,True,8,0.03125,"-2,-1,0"
+7,decode_constrained,prefill_balanced,2,12-8-12-8-12-8-12-8,0.015625,0.019531,network,True,8,0.03125,"-2,-1,0"
+7,decode_constrained,decode_balanced,-2,8-12-8-12-8-12-8-12,0.03125,0.035156,network,True,8,0.03125,"-2,-1,0"
+7,decode_constrained,phase_agnostic_joint_compute,-1,9-11-9-11-9-11-9-11,0.03125,0.035156,network,True,8,0.03125,"-2,-1,0"
+7,decode_constrained,sla_evaluator_guided_local_search,0,10-10-10-10-10-10-10-10,0.03125,0.035156,network,True,8,0.03125,"-2,-1,0"
+7,prefill_constrained,uniform,0,10-10-10-10-10-10-10-10,0.523438,0.527344,network,True,9,0.535156,-1
+7,prefill_constrained,prefill_balanced,2,12-8-12-8-12-8-12-8,0.507812,0.511719,network,True,9,0.535156,-1
+7,prefill_constrained,decode_balanced,-2,8-12-8-12-8-12-8-12,0.519531,0.523438,network,True,9,0.535156,-1
+7,prefill_constrained,phase_agnostic_joint_compute,-1,9-11-9-11-9-11-9-11,0.535156,0.539062,network,True,9,0.535156,-1
+7,prefill_constrained,sla_evaluator_guided_local_search,-1,9-11-9-11-9-11-9-11,0.535156,0.539062,network,True,9,0.535156,-1

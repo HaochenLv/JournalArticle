@@ -27,3 +27,13 @@ An initial script-write command used an extra repository directory prefix and wa
 ## D1 — Nominal paired grids (running)
 
 Six cases: seeds 0/7; slow and fast Decode-constrained pipelines (2 s/.15 s); slow Prefill-sensitive pipelines (2 s/1 s). The same 30 s generated window and nominal A100 tables are supplied to both models. Fixed grid .006–1.28, followed by two local midpoint rounds wherever **either** model changes verdict. Retain every probe and report safe islands; do not force binary-search monotonicity. Raw reference metrics are saved incrementally.
+
+## V1 — Validation suites
+
+Public evaluator-branch suite: 31/31 tests pass. Public partition revision suite: 42/42 tests pass. The first partition invocation used the journal working directory and failed relative config paths; rerunning from the **exported** snapshot's directory resolves this without modifying the old repository. New bridge suite: 6/6 tests pass (profile equality, accounting trajectory invariant, reported seed-7 edge, nonmonotonicity guard, cache fingerprints/completion/verdict recomputation, exact paper-2 stored rows).
+
+Additional nominal cases are predeclared to separate limiting phases: seed19 original Decode regimes on both placements, plus seeds0/7 with TTFT 1.8 s and TPOT 10 s. The earlier TPOT 1 s cases retain their historical `prefill` filename but are actually **relaxed-Decode** diagnostics when the reference violation is TPOT; do not relabel their failures as TTFT failures.
+
+## D2 — Matched-profile partition diagnostic (running)
+
+Question: does capacity ranking transfer to the reference when workload, partition, network, and **absolute** device profiles agree? Five shifts [-2,-1,0,1,2], alternating L4x2/T4x4, fast links, 30 s windows. Nominal isolated seed-7 maximum Prefill plus intrinsic charge is 3.68–3.79 s and singleton Decode .2112–.2368 s, so the conference's analytical-model .28 s TTFT cannot be reused meaningfully. New diagnostic SLAs are (4.2 s,.30 s) and (4.2 s,10 s), selected before ranking results. These are controlled simulator tests, not a reproduction of the conference's absolute capacities. The first group-profile reference smoke runs successfully. Cost about 16 s per 17-request simulation under concurrent diagnostic load.
