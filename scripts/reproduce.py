@@ -27,6 +27,8 @@ def paper2():
  cfg['phase11']['workload_seeds']=[7]
  rows,summary,log=run(cfg)
  write_outputs(rows,summary,log,ROOT/'results/reproduction/paper2_seed7')
+ csv_path=ROOT/'results/reproduction/paper2_seed7/method_comparison.csv'
+ csv_path.write_text(csv_path.read_text())
  print(json.dumps(summary['trial_summaries']),flush=True)
 
 if __name__=='__main__':
