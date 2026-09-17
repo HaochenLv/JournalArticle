@@ -1,6 +1,5 @@
 {
   "stage": 3,
-  "supersedes": "Stage 2 review retained in Git history",
   "checked_utc": "2026-09-17T09:37:16.791802+00:00",
   "passed": true,
   "tests_passed": 31,

@@ -1,6 +1,6 @@
 # Journal research on SLA-aware LLM pipeline planning
 
-**Stage2 completed (2026-09-17):** [Chinese formal evidence report](FORMAL_EVIDENCE_REPORT.md), with the complete frozen matrix, controlled profile stresses, six engineering controls, mechanism traces and fresh sequential desktop timings. Formal verification and28 tests pass. Conclusions are simulator-relative and explicitly distinguish the recovered JB1 from the unavailable final conference implementation.
+**Stage3 evidence frozen (2026-09-17):** [Writing handoff](STAGE3_EVIDENCE_REPORT.md) and [formal evidence report](FORMAL_EVIDENCE_REPORT.md). Legacy sensitivity reuses1634 reference records for3268 judgments; no new reference run. Main line: Yes, but modified. Raw4 strict/2 tie-break mismatches become legacy3/1; decision and operating-point losses are separated. Mitigation is conditional replay on a reference-informed frozen grid.31 tests pass; no further experiments needed for the stated scope.
 
 Reproducible diagnosis of an inexpensive evaluator against a pinned HELIX reference simulator, followed by evidence-based journal direction selection. No GPU cluster is required.
 
@@ -45,3 +45,7 @@ The supplied papers, private reviewer material, credentials, caches, and machine
 - `results/figures/`: PNG/SVG scientific figures.
 
 `PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/verify_results.py` additionally checks this completed matrix and verifies the two sibling repositories against their recorded start states; it requires those sibling clones at the original commits. The ordinary bridge tests do not require sibling clones. Exploratory results do not substitute for the held-out journal evaluation described in the report.
+
+## Stage 3 reproduction and writing inputs
+
+With the pinned dependencies available, run `python scripts/stage3_evidence.py all`, `python scripts/stage3_report.py`, `python scripts/formal_verify.py`, and `python scripts/stage3_verify.py`. On Windows use `.venv/Scripts/python.exe`; on POSIX use `.venv/bin/python`. Existing legacy group outputs are verified and reused; no command above launches the reference simulator. See `docs/LEGACY_PROGRESS_SENSITIVITY.md`, `docs/DECISION_LOSS_DECOMPOSITION.md`, and `docs/MITIGATION_INTERPRETATION_AUDIT.md`. Stage 2 raw files and protocol remain immutable; figure/report presentation labels are updated separately.

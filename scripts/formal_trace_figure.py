@@ -29,7 +29,8 @@ def main(name):
    if dec is not None:ax.broken_barh([(dec,end-dec)],(j-.3,.6),facecolors=colors['Decode'])
   ax.axvline(focus,color='#a32929',ls='--',lw=1);ax.set_yticks(range(len(ids)),[r.replace('azure-','q') for r in ids]);ax.set_title(title);ax.spines[['top','right']].set_visible(False)
  axes[1].set_xlabel('Time from common simulation origin (s)');axes[1].set_xlim(max(0,focus-3),focus+2);axes[0].legend(handles=[Patch(facecolor=v,label=k) for k,v in colors.items()],loc='upper left',ncol=2)
- fig.suptitle(d['group']['workload']+' · '+d['regime'].replace('_',' ')+' · intensity '+str(d['intensity'])+'\nDashed line: '+('first evaluator failure' if first else 'first reference violation'));fig.tight_layout()
+ display_sla='tight-TPOT' if d['regime']=='decode' else 'relaxed-TPOT (fixed TTFT)'
+ fig.suptitle(d['group']['workload']+' · '+display_sla+' · intensity '+str(d['intensity'])+'\nDashed line: '+('first evaluator failure' if first else 'first reference violation'));fig.tight_layout()
  folder=FORMAL/'figures';folder.mkdir(exist_ok=True);fig.savefig(folder/(name+'_timeline.png'),dpi=180);fig.savefig(folder/(name+'_timeline.svg'));plt.close(fig)
  svg=folder/(name+'_timeline.svg');svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
 if __name__=='__main__':

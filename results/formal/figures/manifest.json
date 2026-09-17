@@ -10,6 +10,9 @@
     "Counts describe the frozen adaptive sample, not population risk.",
     "Capacity scatter omits all-unsafe configurations; full tables retain them.",
     "Decision quality uses the largest observed safe load even for nonmonotone sequences; see flags in tables.",
-    "Mitigation shows main five-candidate trials only; line is mean over defined qualities, dots are individual trials."
+    "Nominal relaxed-TPOT: four strict best-set mismatches (S), two tie-break mismatches (T).",
+    "Mitigation shows 12 main five-candidate trials only; line is mean over defined qualities, dots are individual trials.",
+    "Conditional replay uses a preconstructed reference-informed grid; at most five replay queries do not include grid construction or solve planning from scratch.",
+    "Derating is a 20% target with grid snapping, not a fixed realized 20% reduction."
   ]
 }

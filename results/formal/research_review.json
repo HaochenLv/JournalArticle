@@ -94,7 +94,9 @@
         "0": 0.0095136569,
         "1": 0.0093097989,
         "2": 0.008915094
-      }
+      },
+      "sla_display_label": "tight-TPOT",
+      "mismatch_type": "agreement"
     },
     {
       "group": "h101-o60-d30-heterogeneous-fast",
@@ -133,7 +135,9 @@
         "0": 13.1931367994,
         "1": 11.8389211708,
         "2": 10.3960654413
-      }
+      },
+      "sla_display_label": "relaxed-TPOT (fixed TTFT)",
+      "mismatch_type": "strict best-set mismatch"
     },
     {
       "group": "h102-o300-d120-heterogeneous-slow",
@@ -172,7 +176,9 @@
         "0": 0.008,
         "1": 0.0076608262,
         "2": 0.0074966705
-      }
+      },
+      "sla_display_label": "tight-TPOT",
+      "mismatch_type": "agreement"
     },
     {
       "group": "h102-o300-d120-heterogeneous-slow",
@@ -212,7 +218,9 @@
         "0": 9.7419846861,
         "1": 8.933439346,
         "2": 8.3713814418
-      }
+      },
+      "sla_display_label": "relaxed-TPOT (fixed TTFT)",
+      "mismatch_type": "strict best-set mismatch"
     },
     {
       "group": "h103-o500-d30-heterogeneous-slow",
@@ -251,7 +259,9 @@
         "0": 0.0078285765,
         "1": 0.0076608262,
         "2": 0.0074966705
-      }
+      },
+      "sla_display_label": "tight-TPOT",
+      "mismatch_type": "agreement"
     },
     {
       "group": "h103-o500-d30-heterogeneous-slow",
@@ -290,7 +300,9 @@
         "0": 9.7419846861,
         "1": 9.5332340431,
         "2": 8.5546908256
-      }
+      },
+      "sla_display_label": "relaxed-TPOT (fixed TTFT)",
+      "mismatch_type": "strict best-set mismatch"
     },
     {
       "group": "h104-o700-d120-heterogeneous-fast",
@@ -329,7 +341,9 @@
         "0": 0.0032915109,
         "1": 0.0032209806,
         "2": 0.0031519616
-      }
+      },
+      "sla_display_label": "tight-TPOT",
+      "mismatch_type": "agreement"
     },
     {
       "group": "h104-o700-d120-heterogeneous-fast",
@@ -369,7 +383,9 @@
         "0": 6.7410144386,
         "1": 6.7410144386,
         "2": 6.0490798938
-      }
+      },
+      "sla_display_label": "relaxed-TPOT (fixed TTFT)",
+      "mismatch_type": "strict best-set mismatch"
     },
     {
       "group": "h105-o900-d30-heterogeneous-fast",
@@ -408,7 +424,9 @@
         "0": 0.0085371232,
         "1": 0.0083541903,
         "2": 0.008
-      }
+      },
+      "sla_display_label": "tight-TPOT",
+      "mismatch_type": "agreement"
     },
     {
       "group": "h105-o900-d30-heterogeneous-fast",
@@ -449,7 +467,9 @@
         "0": 37.3158259837,
         "1": 41.5842617652,
         "2": 32.0658493305
-      }
+      },
+      "sla_display_label": "relaxed-TPOT (fixed TTFT)",
+      "mismatch_type": "tie-break mismatch"
     },
     {
       "group": "h106-o1100-d120-heterogeneous-slow",
@@ -488,7 +508,9 @@
         "0": 0.0,
         "1": 0.0083541903,
         "2": 0.0081751772
-      }
+      },
+      "sla_display_label": "tight-TPOT",
+      "mismatch_type": "agreement"
     },
     {
       "group": "h106-o1100-d120-heterogeneous-slow",
@@ -528,7 +550,9 @@
         "0": 0.0,
         "1": 4.096,
         "2": 5.5470307203
-      }
+      },
+      "sla_display_label": "relaxed-TPOT (fixed TTFT)",
+      "mismatch_type": "tie-break mismatch"
     }
   ],
   "rq4": [
@@ -930,5 +954,18 @@
       "d_scale": 1.0,
       "reason": "Same common load for evaluator-selected shift2 and reference-best shift0; full common-grid scores establish nominal reversal."
     }
-  ]
+  ],
+  "stage3": {
+    "assessment": "Yes, but modified",
+    "new_reference_runs": 0,
+    "raw_strict_mismatches": 4,
+    "raw_tie_break_mismatches": 2,
+    "legacy_strict_mismatches": 3,
+    "legacy_tie_break_mismatches": 1,
+    "legacy_summary": "legacy_progress_sensitivity/summary.json",
+    "decision_loss": "decision_loss_decomposition.json",
+    "derating_audit": "mitigation_derating_audit/summary.json",
+    "mitigation_scope": "conditional reference-validation replay; reference-informed grid construction cost excluded",
+    "derating_label": "20%-target derating with grid snapping"
+  }
 }

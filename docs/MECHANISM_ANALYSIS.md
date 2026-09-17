@@ -4,7 +4,7 @@ The full1634-point matrix and postprocessing are complete. Five saved instrument
 
 For each selected point, retain the actual request arrivals and HELIX Prefill/Decode iteration timestamps. Instrumentation may retain per-node execution-batch and request-location timestamps without changing scheduling. Compare those with JB1 pre/post-event ledgers, active Prefill/Decode counts, fractional progress, blocking charge, residual SLA budgets, and link commitments. Align virtual time origins explicitly; do not use the compact adapter's approximate first-violation ordering for causal chronology.
 
-The current baseline gate has already isolated one reproducible implementation mechanism: adding5ms fixed overhead to progress changes overlap trajectories and restores all12 published endpoint pairs, whereas keeping overhead only in the ledger shifts those edges. This is a baseline-semantic sensitivity result, not a held-out mechanism finding.
+The current baseline gate has already isolated one reproducible implementation mechanism: adding5ms fixed overhead to progress changes overlap trajectories and restores all12 published endpoint pairs, whereas keeping overhead only in the ledger shifts those edges. This was the baseline-semantic audit. Stage 3 now adds the full held-out evaluator-only sensitivity in LEGACY_PROGRESS_SENSITIVITY.md, without any new reference run.
 
 Possible explanations such as overcharging full active Prefill service or aggregate-vs-stage-local batching will be called mechanisms only to the extent supported by traces and limited ablations. Otherwise the report will state that causation remains uncertain. No unsupported hardware/runtime explanation will be introduced.
 
@@ -28,16 +28,20 @@ An evaluator-only diagnostic ablation adds the fixed5ms overhead to progress, le
 
 ## Large capacity error with the correct winner under stress
 
-No nominal main trial combines a large selected-capacity gap with a correct winner: the six correct nominal Decode-tight winners have matching selected sampled capacities. We explicitly use an explanatory stress case instead of inventing that nominal pattern.
+No Raw nominal main trial combines a large selected-capacity gap with a correct winner: the six correct Raw nominal tight-TPOT winners have matching selected sampled capacities. The original mechanism trace therefore uses an explanatory Raw stress case. Stage 3 separately finds correct nominal legacy winners with large operating-point losses (h104/h105); those are control-result observations, not these original Raw traces.
 
-For h103/heterogeneous/Prefill-oriented with Both−10%, shift0 has Emax2.8963093757 versus Rmax9.7419846861 (−70.2698%), yet is reference-best. Both−5% also selects shift0, so the selected winner is stable across those two perturbations. Nominal profiles select shift2 and are wrong; stability is not claimed across nominal and stress.
+For h103/heterogeneous/relaxed-TPOT (fixed TTFT) with Both−10%, shift0 has Emax2.8963093757 versus Rmax9.7419846861 (−70.2698%), yet is reference-best. Both−5% also selects shift0, so the selected winner is stable across those two perturbations. Nominal profiles select shift2 and are wrong; stability is not claimed across nominal and stress.
 
 At common load4.096, the stress trace rejects at3.575195s: the Decode ledger charges10.625292s of active-Prefill debt plus0.201600s compute and0.005s overhead, exceeding10s. The reference maxima are TTFT4.533201s and TPOT4.478798s, both safe. At that epoch JB1 counts5 Prefill/1 Decode while reference query occupancy is6 Prefill/0 Decode. Both excessive blocking accounting and phase timing differ here; this case does not isolate either as the sole cause. A large absolute error can coexist with a correct ordering among the tested candidates.
 
 ## Genuine nominal decision reversal
 
-In h101/Prefill-oriented, E selects shift2 (Emax4.096) over shift0 (Emax3.8382953147). The reference selects shift0 (Rmax13.1931367994); shift2 reaches10.3960654413 and ranks fourth, a21.201% sampled-capacity loss. This is a common-grid reversal, not an artifact of candidate-specific probe sets.
+In h101/relaxed-TPOT (fixed TTFT), E selects shift2 (Emax4.096) over shift0 (Emax3.8382953147). The reference selects shift0 (Rmax13.1931367994); shift2 reaches10.3960654413 and ranks fourth, a21.201% sampled-capacity loss. This is a common-grid reversal, not an artifact of candidate-specific probe sets.
 
 Paired traces at the same load4.096 reproduce the local preference: shift0 is E-unsafe/R-safe while shift2 is E-safe/R-safe. At4.662109s, shift0 has6 Prefill and4 Decode in both models. Its first failing ledger is9.822287s blocking plus0.232s compute plus0.005s overhead =10.059287s, marginally exceeding10s. Shift2's maximum accounted TPOT is9.953235s. Reference maxima at this load are only4.513336s and4.452622s. Thus a small shift-dependent accounting difference straddles E's threshold while both candidates remain reference-safe.
 
 The shared grids establish the later capacity ranking; these two local traces explain the evaluator's premature distinction. They do not fully explain why shift0 has the larger reference frontier. No single queuing/batching cause for the entire reversal is claimed without a further causal intervention. The documented local mechanism and its boundary are sufficient for this empirical diagnosis.
+
+## Stage 3 implementation sensitivity boundary
+
+Full frozen-grid control: Raw O/C=23/413, legacy=17/460. Tight winner agreement remains6/6; relaxed improves0/6→2/6. Raw has4 strict best-set and2 tie-break mismatches; legacy retains3 strict (h101–h103) and1 tie-break (h106). h104/h105 improve, but h102 selected rank worsens2→4. The outcome is partially semantic-sensitive, not a universal repair. h101's strict mismatch survives the control; the local explanatory trace remains Raw evidence. Existing stress traces do not establish legacy stress behavior. All five traces are reused unchanged.

@@ -1,3 +1,5 @@
+> Historical Stage 1 direction report, superseded for final claims by [STAGE3_EVIDENCE_REPORT.md](STAGE3_EVIDENCE_REPORT.md). Stage 3 assessment: Yes, but modified. The plans and provisional findings below are preserved as history, not outstanding work or the current experiment specification.
+
 # 1. 一句话结论
 
 首选写一篇“快评估器的安全判断、容量估计和分区选择到底有多可靠”的实证论文；目前不要把复杂鲁棒优化或新的 reference 调用分配算法作为核心创新。

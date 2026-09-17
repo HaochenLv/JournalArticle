@@ -1,10 +1,14 @@
-# Current status — stage 2
+# Current status — Stage 3 evidence frozen
 
-**Stage2 research complete (2026-09-17).** Read the Chinese14-section [FORMAL_EVIDENCE_REPORT.md](FORMAL_EVIDENCE_REPORT.md). All14 groups/1634 physical points/3268 SLA pairs,35,688 stress rows and336 mitigation rows are complete. Formal integrity checks and28 tests pass; saved reference attempts contain0 failures/timeouts/retries. Original195 inherited rows remain exactly unchanged. Five metric-identical explanatory traces (one reused, four new), a diagnostic evaluator-only progress ablation, reviewed figures and fresh Windows sequential timing are complete. No main-matrix rerun or frozen baseline/protocol change was made.
+**Stage 3 complete (2026-09-17). Main line: Yes, but modified.** Writing inputs are ready in [STAGE3_EVIDENCE_REPORT.md](STAGE3_EVIDENCE_REPORT.md); no complete manuscript was written. No further experiments needed for the stated scope.
 
-Nominal confusion:953 both-safe,1879 both-unsafe,23 optimistic,413 conservative. Main decision trials:6/6 Decode-tight winners agree;0/6 Prefill-oriented winners agree, with8.30–26.16% sampled reference-capacity regret. Preserve3 reference nonmonotone configurations,8 no-safe configurations, ties and all denominators. Boundary validation with at most5 queries has0 unsafe outputs in the tested replay and retains more useful load than blanket margin, without a new-optimizer superiority or deployment-safety claim. Report assessment: **Yes for a narrowly scoped simulator-relative empirical study**, with explicit novelty/generalization limits.
+Legacy-progress sensitivity evaluated3268 frozen nominal judgments using existing1634 physical reference records. No new reference runs, no grid extension, no baseline/protocol/raw overwrite. O23→17; C413→460;53 safe→unsafe changes. Tight agreement6/6 persists; relaxed0/6→2/6. Raw4 strict+2 tie-break mismatches; legacy3 strict+1 tie-break. h104/h105 improve; h102 worsens. Preserve8 no-safe configurations and3 nonmonotone reference sequences.
 
-No experiments remain under the frozen protocol. The next phase is manuscript planning, only if requested. Final evidence was pushed in commit b4f7cdc; automation journalarticle is confirmed PAUSED after delivery. Evidence is in `results/formal/`, `docs/MECHANISM_ANALYSIS.md` and `docs/CLAIM_BOUNDARY.md`.
+Decision-loss decomposition separates partition loss from recommended-load loss and exact reference safety. Raw relaxed losses are8.30%–26.16% versus68.95%–95.86%; h106 output is unsafe and its safe usable loss is100%. Mitigation is conditional reference-validation replay on a preconstructed reference-informed grid, not five-call planning from scratch.20%-target grid-snapped derating has nominal realized median46.53%, max79.87%, and8/28 partition changes after snapping.
+
+31 tests pass; formal and Stage3 integrity records are in results/formal. Frozen source/raw manifests cover2387 files. Figures and claim labels updated. Stage2 stress remains35,688 rows and mitigation336 rows; no legacy-profile stress experiment is implied. Research monitoring remains paused; all required Stage3 work is completed in the current task.
+
+The following checkpoints are historical execution records with historical terminology; they are not current claims.
 
 ## Historical checkpoints (superseded by completion above)
 

@@ -59,3 +59,7 @@ The original final40-test suite and the exact140-row regression manifest (136 pr
 ## Gate outcome
 
 Proceed with formal experiments on JB1 under its stated assumptions, after protocol freeze. Keep legacy fixed-progress behavior as an implementation-sensitivity control. Claims concern JB1 versus the pinned HELIX reference simulator, never “the exact final CA implementation.” If a final artifact becomes available later, compare it separately and version the protocol; do not overwrite JB1 results.
+
+## Stage 3 held-out control completed
+
+The frozen baseline is unchanged. A separate legacy-progress control evaluates all3268 nominal paired points against the existing1634 physical reference records, with no reference rerun. Only5ms fixed overhead enters progress (queue=0 asserted). Tight winner agreement remains6/6; relaxed0/6→2/6. Raw4 strict+2 tie-break mismatches become legacy3 strict+1 tie-break;53 safe labels become unsafe. This demonstrates partial implementation-semantic sensitivity and does not identify either variant as the missing CA final code. See LEGACY_PROGRESS_SENSITIVITY.md and the Stage 3 report. Historical source searches remain closed.
