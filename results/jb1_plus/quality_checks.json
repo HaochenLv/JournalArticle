@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "protocol_hash": "66375a5dab2941a70ee3111cd1f16f09d7e05fd32b440cf3759591b78e57afe2",
+  "protocol_freeze_commit": "e3887ca",
+  "protected_files": 5867,
+  "phase_a_physical_points": 2050,
+  "a100_controls": 130,
+  "phase_b_physical_points": 500,
+  "full_stage4_results_exact": true,
+  "stage4_decisions_reproduced": 96,
+  "stage4_capacity_records_reproduced": 480,
+  "baseline_off_mode_equivalence": {
+    "passed": true,
+    "returncode": 0,
+    "output": "test_cached_profile_equals_nominal_and_biased (test_formal.FormalTests.test_cached_profile_equals_nominal_and_biased) ... ok\ntest_frozen_inputs_and_heldout_separation (test_formal.FormalTests.test_frozen_inputs_and_heldout_separation) ... ok\ntest_nonmonotone_and_no_safe_are_not_boundaries (test_formal.FormalTests.test_nonmonotone_and_no_safe_are_not_boundaries) ... ok\ntest_tie_ranks_regret_and_correlation (test_formal.FormalTests.test_tie_ranks_regret_and_correlation) ... ok\ntest_process_probe_does_not_kill_live_process (test_host_execution.HostExecutionTests.test_process_probe_does_not_kill_live_process) ... ok\ntest_result_and_failure_are_propagated (test_host_execution.HostExecutionTests.test_result_and_failure_are_propagated) ... ok\ntest_timeout_kills_and_reaps_child (test_host_execution.HostExecutionTests.test_timeout_kills_and_reaps_child) ... ok\ntest_clipping_and_zero_duration (test_jb1_plus.PlusTests.test_clipping_and_zero_duration) ... ok\ntest_off_mode_exact_all_fields (test_jb1_plus.PlusTests.test_off_mode_exact_all_fields) ... ok\ntest_remaining_lifetime_intrinsic_and_trajectory (test_jb1_plus.PlusTests.test_remaining_lifetime_intrinsic_and_trajectory) ... ok\ntest_representative_real_profiles_all_fields (test_jb1_plus.PlusTests.test_representative_real_profiles_all_fields) ... ok\ntest_shared_transition_union_and_missingness (test_jb1_plus.PlusTests.test_shared_transition_union_and_missingness) ... ok\ntest_activation_buffer_and_prompt_kv_reserved_at_arrival (test_journal_baseline.BaselineTests.test_activation_buffer_and_prompt_kv_reserved_at_arrival) ... ok\ntest_block_context_left_right_and_full_drain (test_journal_baseline.BaselineTests.test_block_context_left_right_and_full_drain) ... ok\ntest_event_limit_is_error (test_journal_baseline.BaselineTests.test_event_limit_is_error) ... ok\ntest_fixed_overhead_does_not_change_progress (test_journal_baseline.BaselineTests.test_fixed_overhead_does_not_change_progress) ... ok\ntest_fractional_decode_survives_unrelated_arrival (test_journal_baseline.BaselineTests.test_fractional_decode_survives_unrelated_arrival) ... ok\ntest_isolated_paper_numbers_and_trajectory (test_journal_baseline.BaselineTests.test_isolated_paper_numbers_and_trajectory) ... ok\ntest_network_equal_relative_commitment (test_journal_baseline.BaselineTests.test_network_equal_relative_commitment) ... ok\ntest_simultaneous_constraints_are_retained (test_journal_baseline.BaselineTests.test_simultaneous_constraints_are_retained) ... ok\ntest_sla_changes_only_ledger_under_full_drain (test_journal_baseline.BaselineTests.test_sla_changes_only_ledger_under_full_drain) ... ok\ntest_tied_arrivals_commute (test_journal_baseline.BaselineTests.test_tied_arrivals_commute) ... ok\ntest_exception_releases_budget_and_does_not_change_next_result (test_memory_scheduler.MemorySchedulerTests.test_exception_releases_budget_and_does_not_change_next_result) ... ok\ntest_headroom_recovers_and_allows_queued_job (test_memory_scheduler.MemorySchedulerTests.test_headroom_recovers_and_allows_queued_job) ... ok\ntest_small_jobs_pass_waiting_large_jobs_without_exceeding_budget (test_memory_scheduler.MemorySchedulerTests.test_small_jobs_pass_waiting_large_jobs_without_exceeding_budget) ... ok\ntest_accounting_correction_and_bias_hold_trajectory_contract (test_research.ResearchTests.test_accounting_correction_and_bias_hold_trajectory_contract) ... ok\ntest_nominal_a100_profile_matches_pinned_profiler (test_research.ResearchTests.test_nominal_a100_profile_matches_pinned_profiler) ... ok\ntest_nominal_seed7_paper_transition (test_research.ResearchTests.test_nominal_seed7_paper_transition) ... ok\ntest_nonmonotone_grid_does_not_claim_a_single_boundary (test_research.ResearchTests.test_nonmonotone_grid_does_not_claim_a_single_boundary) ... ok\ntest_paper2_reproduction_matches_frozen_rows (test_research.ResearchTests.test_paper2_reproduction_matches_frozen_rows) ... ok\ntest_planners_return_only_queried_safe_points_within_budget (test_research.ResearchTests.test_planners_return_only_queried_safe_points_within_budget) ... ok\ntest_reference_cache_input_hash_and_complete_requests (test_research.ResearchTests.test_reference_cache_input_hash_and_complete_requests) ... ok\ntest_threshold_reuse_matches_independent_complete_simulations (test_research.ResearchTests.test_threshold_reuse_matches_independent_complete_simulations) ... ok\ntest_both_transition_directions_and_union (test_sla_sensitivity.Stage4Tests.test_both_transition_directions_and_union) ... ok\ntest_failed_is_not_unsafe (test_sla_sensitivity.Stage4Tests.test_failed_is_not_unsafe) ... ok\ntest_nonmonotone_and_no_safe_retained (test_sla_sensitivity.Stage4Tests.test_nonmonotone_and_no_safe_retained) ... ok\ntest_relaxation_bug_detected (test_sla_sensitivity.Stage4Tests.test_relaxation_bug_detected) ... ok\ntest_tie_break_remains_absolute_then_negative (test_sla_sensitivity.Stage4Tests.test_tie_break_remains_absolute_then_negative) ... ok\ntest_fixed_overhead_only_changes_progress (test_stage3.Stage3Tests.test_fixed_overhead_only_changes_progress) ... ok\ntest_mismatch_distinguishes_overlap_from_selected_winner (test_stage3.Stage3Tests.test_mismatch_distinguishes_overlap_from_selected_winner) ... ok\ntest_saved_decomposition_and_derating (test_stage3.Stage3Tests.test_saved_decomposition_and_derating) ... ok\n\n----------------------------------------------------------------------\nRan 41 tests in 21.740s\n\nOK\n",
+    "utc": "2026-09-17T11:51:33.903604+00:00",
+    "no_reference_simulations": true
+  },
+  "reference_threshold_checks": 18660,
+  "formula_component_checks": 1210,
+  "checks": [
+    "protected hashes unchanged",
+    "protocol/workloads committed before outcomes",
+    "exact disjoint source windows regenerated",
+    "pinned HELIX/adapter/profiles unchanged",
+    "all old cache records read only",
+    "full per-request drain and token metrics",
+    "four variants share every grid",
+    "SLA relaxation monotonicity",
+    "Full-safe implies Remaining-safe",
+    "both transition directions and refinement priority replayed",
+    "500-point budget and at most two attempts",
+    "missing labels never unsafe",
+    "CSV/JSON tables recomputed",
+    "loss identity and exact recommendation safety",
+    "remaining compute and unscaled H audited",
+    "full-drain trajectories unchanged",
+    "runtime outputs equal saved scientific outputs"
+  ],
+  "source_hashes": {
+    "src/journal_baseline_plus.py": "b589ab63fe841a68ab77ad14164049cd9ee3127cdc8bff1693cea69524de5977",
+    "tests/test_jb1_plus.py": "4d0f060395b2e63002920da29c86715adc5682e9eb7c2a8c0a409bc538d1418d",
+    "scripts/analyze_jb1_plus.py": "71cfe9118bc424c242e3c1c03be61eac73f548252c32c4827620a53e08b52f4a",
+    "scripts/audit_jb1_plus.py": "b22ad0d508ed5176052dd381cf0f95daa42a91a849f16cb6b40486280224a68b",
+    "scripts/figure_jb1_plus.py": "3c5b4b66234a9022099263ede6a0c0feaa6f10e38d396ed5fa0b5963fe8106dc",
+    "scripts/freeze_jb1_plus.py": "2b1719df57ee7f224f25b0690754cc511052dce9772832a027562d2d7f2d285a",
+    "scripts/jb1_plus_common.py": "84e7e71ab3d2f371622db298655760ed2dc9fe5eb93f8a6f0795e8c4de245c1f",
+    "scripts/report_jb1_plus.py": "e0d45c59ed775e925535fffd2a56f299e95318e9cad28c1330cfa8b3ff40ee13",
+    "scripts/run_jb1_plus.py": "11f4042d8d35523481739509e7c358c869cffe0c44df76d89578a2b997c08cde",
+    "scripts/verify_jb1_plus.py": "a4a877313f3bb045980fa906edc26e31dd3daa5286f98f38f7398baa283a7741"
+  }
+}

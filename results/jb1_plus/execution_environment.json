@@ -1,0 +1,11 @@
+{
+  "host": {
+    "system": "Windows",
+    "machine": "AMD64",
+    "python": "3.12.14",
+    "cpu_logical": 20,
+    "memory_bytes": 34164097024
+  },
+  "runtime_note": "Bundled Python 3.12.14 with pre-existing project site-packages, as validated in Stage 4; no dependency updates or changes to frozen Stage 2/3/4 scientific sources.",
+  "protocol_hash": "66375a5dab2941a70ee3111cd1f16f09d7e05fd32b440cf3759591b78e57afe2"
+}

@@ -1,0 +1,64 @@
+{
+  "protocol_hash": "66375a5dab2941a70ee3111cd1f16f09d7e05fd32b440cf3759591b78e57afe2",
+  "measured_utc": "2026-09-17T12:23:04.720493+00:00",
+  "method": "Sequential same-process evaluator calls after physical campaign; one pass all 180 initial points x 4 SLAs x 4 variants, shared CachedProfiles per workload, deterministic rotating variant order; Full calls frozen journal_baseline.py and Remaining calls journal_baseline_plus.py. perf_counter wall seconds on CPU, no reference query.",
+  "variants": {
+    "Raw-Full": {
+      "runtime_s": {
+        "n": 720,
+        "median": 0.0019116500043310225,
+        "p95": 0.03492770000593737,
+        "max": 0.3028542000101879
+      },
+      "events": {
+        "n": 720,
+        "median": 66.0,
+        "p95": 857,
+        "max": 857
+      }
+    },
+    "Raw-Remaining": {
+      "runtime_s": {
+        "n": 720,
+        "median": 0.0019544500100892037,
+        "p95": 0.039638300018850714,
+        "max": 0.30738669994752854
+      },
+      "events": {
+        "n": 720,
+        "median": 66.0,
+        "p95": 857,
+        "max": 857
+      }
+    },
+    "Legacy-Full": {
+      "runtime_s": {
+        "n": 720,
+        "median": 0.0019061000202782452,
+        "p95": 0.035059899964835495,
+        "max": 0.30873069999506697
+      },
+      "events": {
+        "n": 720,
+        "median": 66.0,
+        "p95": 857,
+        "max": 857
+      }
+    },
+    "Legacy-Remaining": {
+      "runtime_s": {
+        "n": 720,
+        "median": 0.0019456999725662172,
+        "p95": 0.0401113000116311,
+        "max": 0.30835880001541227
+      },
+      "events": {
+        "n": 720,
+        "median": 66.0,
+        "p95": 857,
+        "max": 857
+      }
+    }
+  },
+  "complexity": "Two stored scalars (start, progress duration) per active Prefill; existing frozen compute reused; fraction computed transiently. O(active Prefill) per check, same asymptotic debt-scan order. Early rejection can change measured event count; full-drain trajectories unchanged."
+}

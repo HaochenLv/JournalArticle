@@ -1,0 +1,49 @@
+{
+  "protocol_hash": "66375a5dab2941a70ee3111cd1f16f09d7e05fd32b440cf3759591b78e57afe2",
+  "phase_a_reused_physical_points": 2050,
+  "a100_reused_physical_points": 130,
+  "phase_a_new_reference_runs": 0,
+  "phase_b_unique_physical_points": 500,
+  "phase_b_successful_points": 500,
+  "physical_attempts": 500,
+  "retries": 0,
+  "failed_points": 0,
+  "timeouts": 0,
+  "phase_a_new_evaluator_calls": 33320,
+  "phase_b_evaluator_calls": 8000,
+  "evaluator_count_scope": "Saved matrix calls only; mechanism replay and unit-test calls are separate, as are the 2880 sequential evaluator timing calls recorded in runtime_samples.csv.",
+  "groups": [
+    {
+      "group": "w201-heterogeneous-fast",
+      "grid_size": 25,
+      "added_intensities": 16,
+      "unresolved_intervals": 10,
+      "max_unresolved_relative_width": 0.4142135623926746,
+      "stop_reason": "16-intensity budget"
+    },
+    {
+      "group": "w202-heterogeneous-slow",
+      "grid_size": 25,
+      "added_intensities": 16,
+      "unresolved_intervals": 12,
+      "max_unresolved_relative_width": 0.4142135625000001,
+      "stop_reason": "16-intensity budget"
+    },
+    {
+      "group": "w203-heterogeneous-slow",
+      "grid_size": 25,
+      "added_intensities": 16,
+      "unresolved_intervals": 6,
+      "max_unresolved_relative_width": 0.18920711562500014,
+      "stop_reason": "16-intensity budget"
+    },
+    {
+      "group": "w204-heterogeneous-fast",
+      "grid_size": 25,
+      "added_intensities": 16,
+      "unresolved_intervals": 9,
+      "max_unresolved_relative_width": 0.4142135623926746,
+      "stop_reason": "16-intensity budget"
+    }
+  ]
+}
