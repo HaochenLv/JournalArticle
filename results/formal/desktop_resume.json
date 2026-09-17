@@ -13,7 +13,7 @@
   "automatic_followup": {
     "id": "journalarticle",
     "status": "ACTIVE",
-    "interval_minutes": 30,
+    "interval_minutes": 5,
     "scope": "Current desktop task only; finish existing campaign and evidence review, then pause."
   },
   "scheduling": {

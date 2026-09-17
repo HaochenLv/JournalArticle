@@ -2,6 +2,8 @@
 
 ## 主机已验证 Windows 原生执行（2026-09-17 更新）
 
+检查频率更新：按用户要求评估后，主机自动续接检查已从每30分钟缩短为每5分钟。正常时轻量核对、保持安静；5分钟没有日志不代表卡死，仍须结合进程活动和原600秒超时/一次重试判断。矩阵结束到数值后处理的独立轮询间隔本来就是30秒。
+
 最新加速设置：用户要求提高并行度后，改为 `scripts/formal_run.py --workers 8 --memory-budget-gib 22 --memory-reserve-gib 6`。最多8个任务按冻结 workload 大小预留预计内存，并检查实时物理/提交余量；大型任务占用更大预算，短任务填充余量，实际并发可变。此执行层调度不改变实验输入、模型或共同 grid。当前 PID、日志和调度快照路径以 `results/formal/desktop_resume.json` 为准；已启用并更新本主机每30分钟自动续接检查。不得额外启动第二个 runner。
 
 用户要求优先检查原生 Python 后，执行层已补齐 Windows 支持：没有 SIGALRM 时用可终止的 spawn 子进程执行每次 reference，仍保留600秒超时和一次相同重试；后处理使用只读 Windows 进程状态查询，不调用 Windows 的 `os.kill(pid,0)`。冻结 JB1、协议、共同 grid、依赖 commit 和历史缓存均未修改。25项测试通过；新鲜短 trace 的14个请求在所有逐请求指标、最终模拟时间、E/R两种 SLA 判定上与原缓存精确一致，记录见 `results/formal/desktop_host_check.json`。因此下文“必须使用 WSL2”是原交接时的限制，已被本次验证过的执行层适配取代，无需安装 WSL。

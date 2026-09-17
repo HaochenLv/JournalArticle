@@ -6,6 +6,8 @@ Windows-native execution is validated as of2026-09-17. In PowerShell set `$env:P
 
 Execution-resource adjustment: on the current32GB Windows host use `scripts/formal_run.py --workers 4`. Eight concurrent long traces approached physical/commit memory exhaustion;4 was chosen after this measured resource check. Eight new completed points were retained across the adjustment. This changes scheduling only; retain the frozen protocol file,600s per attempt, retries and every shared-grid stage plan. See `results/formal/desktop_memory_restart.json`. Evaluator-only mismatch/mitigation may still use8 workers, followed by sequential reference timing.
 
+Monitoring update: the desktop heartbeat now runs every5 minutes (superseding earlier30-minute references). Healthy checks should only inspect stage, process activity, queue, errors and saved progress; remain quiet and avoid repeated tests/analysis/commits. A5-minute gap in output is not a failure: attempts still allow600s and one retry. The chained postprocessor polls matrix exit every30 seconds independently.
+
 The baseline and protocol are frozen. Do not resume historical-source archaeology. All commands run from JournalArticle with Python3.12 and pinned dependencies installed by `scripts/bootstrap.py`. Keep the original conference repositories read-only.
 
 ## Existing campaign
