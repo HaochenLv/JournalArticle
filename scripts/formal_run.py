@@ -3,7 +3,7 @@ from pathlib import Path
 import sys,json,math,time,signal,gzip,argparse
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from formal_core import *
-from host_execution import spawned_call,host_metadata
+from host_execution import spawned_call,host_metadata,available_memory_bytes
 
 def execute_point(group,shift,value):
  wd,base=load_workload(group['workload']);limits=slas(group)
@@ -80,15 +80,22 @@ def run_group(group,executor):
  return {'group':group['id'],'status':'complete','points':len(rows),'loads':len(state['grid']),'failures':state['failed_points'],'elapsed_s':state['elapsed_s']}
 
 if __name__=='__main__':
- ap=argparse.ArgumentParser();ap.add_argument('--group');ap.add_argument('--workers',type=int,default=CONFIG['workers']);args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--group');ap.add_argument('--workers',type=int,default=CONFIG['workers']);ap.add_argument('--memory-budget-gib',type=float);ap.add_argument('--memory-reserve-gib',type=float,default=6.);args=ap.parse_args()
  selected=[g for g in groups() if args.group is None or g['id']==args.group]
  if args.group and not selected:raise SystemExit('unknown group')
  selected.sort(key=lambda g:load_workload(g['workload'])[0]['features']['request_count']*len(g['shifts']),reverse=True)
  from concurrent.futures import ProcessPoolExecutor,ThreadPoolExecutor,as_completed
  from multiprocessing import get_context
  # Explicit spawn also avoids forking a multithreaded coordinator on Linux.
- with ProcessPoolExecutor(max_workers=args.workers,initializer=check_pins,mp_context=get_context('spawn')) as pool, ThreadPoolExecutor(max_workers=len(selected)) as coordinators:
-  futures={coordinators.submit(run_group,g,pool):g['id'] for g in selected}
-  for f in as_completed(futures):
-   try:print('GROUP_COMPLETE',json.dumps(f.result()),flush=True)
-   except Exception as e:print('GROUP_ERROR',futures[f],repr(e),flush=True);raise
+ from contextlib import nullcontext
+ from memory_scheduler import MemoryAwareExecutor
+ with ProcessPoolExecutor(max_workers=args.workers,initializer=check_pins,mp_context=get_context('spawn')) as pool:
+  # Reserve 512 MiB base + 0.30 MiB/output token, rounded up to 256 MiB.
+  # Host-only estimates cover HELIX event archives; no workload is regenerated.
+  costs={g['id']:math.ceil((512+.30*sum(r.output_tokens for r in load_workload(g['workload'])[1]))/256)*256*1024**2 for g in selected}
+  managed=MemoryAwareExecutor(pool,args.workers,int(args.memory_budget_gib*1024**3),costs,available_memory_bytes,int(args.memory_reserve_gib*1024**3),lambda state:write_json(ROOT/'.private/memory_scheduler.json',state)) if args.memory_budget_gib else nullcontext(pool)
+  with managed as executor, ThreadPoolExecutor(max_workers=len(selected)) as coordinators:
+   futures={coordinators.submit(run_group,g,executor):g['id'] for g in selected}
+   for f in as_completed(futures):
+    try:print('GROUP_COMPLETE',json.dumps(f.result()),flush=True)
+    except Exception as e:print('GROUP_ERROR',futures[f],repr(e),flush=True);raise

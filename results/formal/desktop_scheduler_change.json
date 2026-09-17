@@ -1,0 +1,18 @@
+{
+  "changed_utc": "2026-09-17T06:12:20.639636+00:00",
+  "reason": "User requested higher concurrency and acceleration; preserve completed work while limiting HELIX event-archive memory.",
+  "from_workers": 4,
+  "to_max_workers": 8,
+  "memory_budget_gib": 22,
+  "memory_reserve_gib": 6,
+  "cost_rule": "512 MiB base + 0.30 MiB per output token, rounded up to 256 MiB; estimates, not hard OS limits.",
+  "dispatch": "Round-robin physical groups; skip tasks that do not fit reservations or live physical/commit headroom. Running attempts retain original 600s deadline and one retry.",
+  "saved_points_before_switch": 530,
+  "interrupted_unrecorded_points": "At most four in-flight attempts may be interrupted; preserve complete caches and stage plans; no verdict assigned to interruption.",
+  "scientific_inputs_changed": false,
+  "source_hashes": {
+    "src\\memory_scheduler.py": "dc041ea5b1985eba931b295edb5129dc41ef26097cc7c40a359fe0cb189023a4",
+    "src\\host_execution.py": "2de5a1410cd0b315ade2be37df475e0abc14cb07e07efb7237a8f70b2b2f712d",
+    "scripts\\formal_run.py": "db2ab925e4d475c9ca1c5c250ec36b230129984892b02dffb08ff4d6f8280f02"
+  }
+}

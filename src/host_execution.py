@@ -84,21 +84,33 @@ def process_alive(pid):
         kernel.CloseHandle(handle)
 
 
+def _windows_memory_status():
+    class MemoryStatus(ctypes.Structure):
+        _fields_ = [('length', wintypes.DWORD), ('load', wintypes.DWORD)] + [
+            (name, ctypes.c_ulonglong) for name in
+            ('physical', 'available', 'pagefile', 'available_pagefile',
+             'virtual', 'available_virtual', 'extended')]
+    status = MemoryStatus()
+    status.length = ctypes.sizeof(status)
+    kernel = ctypes.WinDLL('kernel32', use_last_error=True)
+    kernel.GlobalMemoryStatusEx.argtypes = [ctypes.POINTER(MemoryStatus)]
+    kernel.GlobalMemoryStatusEx.restype = wintypes.BOOL
+    if not kernel.GlobalMemoryStatusEx(ctypes.byref(status)):
+        raise ctypes.WinError(ctypes.get_last_error())
+    return status
+
+
+def available_memory_bytes():
+    """Use the smaller physical/commit headroom for Windows admission checks."""
+    if os.name == 'nt':
+        status = _windows_memory_status()
+        return min(status.available, status.available_pagefile)
+    return os.sysconf('SC_AVPHYS_PAGES') * os.sysconf('SC_PAGE_SIZE')
+
+
 def host_memory_bytes():
     if os.name == 'nt':
-        class MemoryStatus(ctypes.Structure):
-            _fields_ = [('length', wintypes.DWORD), ('load', wintypes.DWORD)] + [
-                (name, ctypes.c_ulonglong) for name in
-                ('physical', 'available', 'pagefile', 'available_pagefile',
-                 'virtual', 'available_virtual', 'extended')]
-        status = MemoryStatus()
-        status.length = ctypes.sizeof(status)
-        kernel = ctypes.WinDLL('kernel32', use_last_error=True)
-        kernel.GlobalMemoryStatusEx.argtypes = [ctypes.POINTER(MemoryStatus)]
-        kernel.GlobalMemoryStatusEx.restype = wintypes.BOOL
-        if not kernel.GlobalMemoryStatusEx(ctypes.byref(status)):
-            raise ctypes.WinError(ctypes.get_last_error())
-        return status.physical
+        return _windows_memory_status().physical
     if platform.system() == 'Darwin':
         return int(subprocess.check_output(['sysctl', '-n', 'hw.memsize']))
     if hasattr(os, 'sysconf'):

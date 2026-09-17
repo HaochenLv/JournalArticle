@@ -25,9 +25,283 @@
     ],
     "lower-0": [
       0.00025
+    ],
+    "lower-1": [
+      6.25e-05
     ]
   },
   "rows": [
+    {
+      "shift": 0,
+      "intensity": 0.00025,
+      "partition_fingerprint": "e1f6e03cc0875412abe56d84fc24359e3eec6667dbc3c2c1e428338cf8e26b84",
+      "scaled_workload_fingerprint": "296b4676b62f970879f8219e69f3d79e9f61aa9366e03e6328e94e0f7d4dd98f",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 315710208.19678676,
+            "limit": 312500000.0,
+            "time_s": 192001.0,
+            "side": "post",
+            "num_prefill": 1,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            }
+          ],
+          "events": 392,
+          "drained": false,
+          "final_time_s": 192001.0,
+          "peak_prefill": 1,
+          "peak_decode": 1,
+          "peak_network_utilization": 1.0102726662297177,
+          "peak_memory_bytes": {
+            "n0": 17616981760.0,
+            "n1": 17616981760.0,
+            "n2": 17616981760.0,
+            "n3": 17616981760.0,
+            "n4": 17616981760.0,
+            "n5": 17616981760.0,
+            "n6": 17616981760.0,
+            "n7": 17616981760.0
+          },
+          "max_accounted_ttft_s": 2.0076127698392057,
+          "max_accounted_tpot_s": 0.1173670016,
+          "trajectory_hash": null,
+          "runtime_s": 0.011528600007295609
+        },
+        "relaxed_decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 315710208.19678676,
+            "limit": 312500000.0,
+            "time_s": 192001.0,
+            "side": "post",
+            "num_prefill": 1,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 315710208.19678676,
+              "limit": 312500000.0,
+              "time_s": 192001.0,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 0
+            }
+          ],
+          "events": 392,
+          "drained": false,
+          "final_time_s": 192001.0,
+          "peak_prefill": 1,
+          "peak_decode": 1,
+          "peak_network_utilization": 1.0102726662297177,
+          "peak_memory_bytes": {
+            "n0": 17616981760.0,
+            "n1": 17616981760.0,
+            "n2": 17616981760.0,
+            "n3": 17616981760.0,
+            "n4": 17616981760.0,
+            "n5": 17616981760.0,
+            "n6": 17616981760.0,
+            "n7": 17616981760.0
+          },
+          "max_accounted_ttft_s": 2.0076127698392057,
+          "max_accounted_tpot_s": 0.1173670016,
+          "trajectory_hash": null,
+          "runtime_s": 0.011089499981608242
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 2.006898759714095,
+          "max_native_ttft_s": 2.119324789115926,
+          "max_tpot_s": 0.11742602963466198,
+          "violating_requests": 1,
+          "request_count": 49,
+          "violating_request_fraction": 0.02040816326530612,
+          "max_ttft_excess_s": 0.006898759714094815,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.0034493798570474077,
+          "drained": true,
+          "runtime_s": 37.45577699999558
+        },
+        "relaxed_decode": {
+          "safe": false,
+          "max_ttft_s": 2.006898759714095,
+          "max_native_ttft_s": 2.119324789115926,
+          "max_tpot_s": 0.11742602963466198,
+          "violating_requests": 1,
+          "request_count": 49,
+          "violating_request_fraction": 0.02040816326530612,
+          "max_ttft_excess_s": 0.006898759714094815,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.0034493798570474077,
+          "drained": true,
+          "runtime_s": 37.45577699999558
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 42.38228660001187
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "bfd7897933af2f23b4e842fe554e5eee3980324371d82ce5a3deb4688bbc706e",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 37.45577699999558,
+      "reference_access_wall_s": 42.38228660001187
+    },
     {
       "shift": 0,
       "intensity": 0.001,
@@ -2146,7 +2420,7 @@
       "reference_access_wall_s": 26.63974989997223
     }
   ],
-  "elapsed_s": 660.2794821170392,
+  "elapsed_s": 1720.4244080170174,
   "workload_fingerprint": "a9392ae2dcb654273e12717aafeb6e32f31621289c9beaa659312490e267c033",
   "profile_fingerprint": "cfa10f4b4b56dfb3fadb07e503e6a14a3a19942c30391a5403f20d21129608c9",
   "baseline_sha256": "4f186748f3fb5940179e833ffe68cf463bb8b9d1dbbd16926490062065669b15"
