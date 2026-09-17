@@ -2,14 +2,14 @@
   "status": "running_on_desktop_native_windows",
   "started_utc": "2026-09-17T05:32:32.6684866Z",
   "source_commit": "db7dc3576c2602cc9a31be901e9941916ec35615",
-  "matrix_pid": 18884,
-  "followthrough_pid": 9204,
-  "workers": 8,
+  "matrix_pid": 17292,
+  "followthrough_pid": 11380,
+  "workers": 12,
   "inherited_physical_points": 195,
   "inherited_sla_pairs": 390,
   "cross_machine_check": "results/formal/desktop_host_check.json",
   "runtime_note": "Inherited rows/caches are laptop-origin. New rows carry execution_host/reference_runtime_origin. Sequential timings run entirely on desktop after parallel jobs exit.",
-  "restarted_utc": "2026-09-17T06:12:21.8086530Z",
+  "restarted_utc": "2026-09-17T06:34:46.9786484Z",
   "automatic_followup": {
     "id": "journalarticle",
     "status": "ACTIVE",
@@ -18,10 +18,10 @@
   },
   "scheduling": {
     "mode": "memory_budgeted",
-    "max_workers": 8,
-    "memory_budget_gib": 22,
+    "max_workers": 12,
+    "memory_budget_gib": 24,
     "memory_reserve_gib": 6,
-    "matrix_log": ".private/desktop_matrix_memory8.log",
+    "matrix_log": ".private/desktop_matrix_memory12.log",
     "scheduler_status": ".private/memory_scheduler.json"
   }
 }

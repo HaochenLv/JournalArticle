@@ -1,0 +1,64 @@
+{
+  "changed_utc": "2026-09-17T06:34:46.936263+00:00",
+  "reason": "User requested increased parallelism after observing available host resources.",
+  "from_max_workers": 8,
+  "to_max_workers": 12,
+  "memory_budget_gib": 24,
+  "memory_reserve_gib": 6,
+  "unchanged_cost_rule": "512 MiB + 0.30 MiB per output token, rounded up to 256 MiB",
+  "saved_points_before_switch": 1007,
+  "saved_points_after_switch": 1007,
+  "prior_rows_and_stage_plans_exactly_preserved": true,
+  "scientific_inputs_changed": false,
+  "execution_amendment": "Host scheduling only: 12 is the admission ceiling, not a protocol/model/grid change. Parallel runtimes are not controlled speedup evidence. Original 600-second attempt deadline and one retry retained.",
+  "interrupted_work": "Only unsaved in-flight work can be retried; completed rows and reference caches reused.",
+  "measurement_before": {
+    "free_physical_gib": 20.9482,
+    "free_commit_gib": 13.2827,
+    "cpu_load_percent_later_snapshot": 74
+  },
+  "postprocessing_workers": 8,
+  "post_switch_samples": [
+    {
+      "Utc": "2026-09-17T06:35:16.8498647Z",
+      "CpuLoadPercent": 40,
+      "Active": 5,
+      "Pending": 153,
+      "PeakActive": 5,
+      "FreePhysicalGiB": 18.0,
+      "FreeCommitGiB": 10.31,
+      "ReservedGiB": 23.75
+    },
+    {
+      "Utc": "2026-09-17T06:35:27.9803666Z",
+      "CpuLoadPercent": 57,
+      "Active": 5,
+      "Pending": 153,
+      "PeakActive": 5,
+      "FreePhysicalGiB": 15.23,
+      "FreeCommitGiB": 7.54,
+      "ReservedGiB": 23.75
+    },
+    {
+      "Utc": "2026-09-17T06:35:39.1962321Z",
+      "CpuLoadPercent": 63,
+      "Active": 6,
+      "Pending": 151,
+      "PeakActive": 6,
+      "FreePhysicalGiB": 15.1,
+      "FreeCommitGiB": 7.99,
+      "ReservedGiB": 22.5
+    },
+    {
+      "Utc": "2026-09-17T06:35:50.3445346Z",
+      "CpuLoadPercent": 62,
+      "Active": 7,
+      "Pending": 146,
+      "PeakActive": 7,
+      "FreePhysicalGiB": 23.65,
+      "FreeCommitGiB": 14.76,
+      "ReservedGiB": 23.75
+    }
+  ],
+  "observed_limitation": "Actual concurrency 5-7 in initial samples because long jobs use most estimated reservation budget. No measured speedup claim. Windows commit headroom reached 7.54 GiB despite more free physical RAM."
+}
