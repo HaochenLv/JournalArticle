@@ -1,0 +1,352 @@
+{
+  "id": "w202",
+  "seed": 202,
+  "interval_offset": 1150,
+  "source_interval_indices": [
+    1150,
+    1151,
+    1152,
+    1153,
+    1154,
+    1155,
+    1156,
+    1157,
+    1158,
+    1159,
+    1160,
+    1161,
+    1162,
+    1163,
+    1164,
+    1165,
+    1166,
+    1167,
+    1168,
+    1169,
+    1170,
+    1171,
+    1172,
+    1173,
+    1174,
+    1175,
+    1176,
+    1177,
+    1178,
+    1179,
+    1180,
+    1181,
+    1182,
+    1183,
+    1184,
+    1185,
+    1186,
+    1187,
+    1188,
+    1189
+  ],
+  "duration_s": 120,
+  "global_target_rate": 0.5,
+  "primary_link": "slow",
+  "requests": [
+    {
+      "id": "azure-00000",
+      "arrival_time_s": 1.5,
+      "input_tokens": 328,
+      "output_tokens": 18
+    },
+    {
+      "id": "azure-00001",
+      "arrival_time_s": 4.0,
+      "input_tokens": 1316,
+      "output_tokens": 130
+    },
+    {
+      "id": "azure-00002",
+      "arrival_time_s": 5.0,
+      "input_tokens": 1118,
+      "output_tokens": 388
+    },
+    {
+      "id": "azure-00003",
+      "arrival_time_s": 7.5,
+      "input_tokens": 1048,
+      "output_tokens": 414
+    },
+    {
+      "id": "azure-00004",
+      "arrival_time_s": 10.5,
+      "input_tokens": 1087,
+      "output_tokens": 372
+    },
+    {
+      "id": "azure-00005",
+      "arrival_time_s": 13.5,
+      "input_tokens": 1174,
+      "output_tokens": 145
+    },
+    {
+      "id": "azure-00006",
+      "arrival_time_s": 16.0,
+      "input_tokens": 1051,
+      "output_tokens": 440
+    },
+    {
+      "id": "azure-00007",
+      "arrival_time_s": 17.0,
+      "input_tokens": 1065,
+      "output_tokens": 398
+    },
+    {
+      "id": "azure-00008",
+      "arrival_time_s": 21.75,
+      "input_tokens": 1105,
+      "output_tokens": 397
+    },
+    {
+      "id": "azure-00009",
+      "arrival_time_s": 22.5,
+      "input_tokens": 1911,
+      "output_tokens": 93
+    },
+    {
+      "id": "azure-00010",
+      "arrival_time_s": 23.25,
+      "input_tokens": 1144,
+      "output_tokens": 395
+    },
+    {
+      "id": "azure-00011",
+      "arrival_time_s": 25.5,
+      "input_tokens": 390,
+      "output_tokens": 96
+    },
+    {
+      "id": "azure-00012",
+      "arrival_time_s": 28.0,
+      "input_tokens": 417,
+      "output_tokens": 200
+    },
+    {
+      "id": "azure-00013",
+      "arrival_time_s": 29.0,
+      "input_tokens": 425,
+      "output_tokens": 84
+    },
+    {
+      "id": "azure-00014",
+      "arrival_time_s": 34.0,
+      "input_tokens": 1061,
+      "output_tokens": 363
+    },
+    {
+      "id": "azure-00015",
+      "arrival_time_s": 35.0,
+      "input_tokens": 307,
+      "output_tokens": 18
+    },
+    {
+      "id": "azure-00016",
+      "arrival_time_s": 37.5,
+      "input_tokens": 787,
+      "output_tokens": 121
+    },
+    {
+      "id": "azure-00017",
+      "arrival_time_s": 40.5,
+      "input_tokens": 181,
+      "output_tokens": 81
+    },
+    {
+      "id": "azure-00018",
+      "arrival_time_s": 43.5,
+      "input_tokens": 984,
+      "output_tokens": 423
+    },
+    {
+      "id": "azure-00019",
+      "arrival_time_s": 46.5,
+      "input_tokens": 1010,
+      "output_tokens": 410
+    },
+    {
+      "id": "azure-00020",
+      "arrival_time_s": 49.5,
+      "input_tokens": 1024,
+      "output_tokens": 429
+    },
+    {
+      "id": "azure-00021",
+      "arrival_time_s": 52.5,
+      "input_tokens": 393,
+      "output_tokens": 87
+    },
+    {
+      "id": "azure-00022",
+      "arrival_time_s": 55.5,
+      "input_tokens": 1143,
+      "output_tokens": 393
+    },
+    {
+      "id": "azure-00023",
+      "arrival_time_s": 58.5,
+      "input_tokens": 897,
+      "output_tokens": 395
+    },
+    {
+      "id": "azure-00024",
+      "arrival_time_s": 61.0,
+      "input_tokens": 1110,
+      "output_tokens": 28
+    },
+    {
+      "id": "azure-00025",
+      "arrival_time_s": 62.0,
+      "input_tokens": 1317,
+      "output_tokens": 249
+    },
+    {
+      "id": "azure-00026",
+      "arrival_time_s": 64.5,
+      "input_tokens": 1095,
+      "output_tokens": 373
+    },
+    {
+      "id": "azure-00027",
+      "arrival_time_s": 67.5,
+      "input_tokens": 1096,
+      "output_tokens": 411
+    },
+    {
+      "id": "azure-00028",
+      "arrival_time_s": 70.5,
+      "input_tokens": 387,
+      "output_tokens": 93
+    },
+    {
+      "id": "azure-00029",
+      "arrival_time_s": 73.5,
+      "input_tokens": 429,
+      "output_tokens": 115
+    },
+    {
+      "id": "azure-00030",
+      "arrival_time_s": 76.0,
+      "input_tokens": 429,
+      "output_tokens": 84
+    },
+    {
+      "id": "azure-00031",
+      "arrival_time_s": 77.0,
+      "input_tokens": 390,
+      "output_tokens": 96
+    },
+    {
+      "id": "azure-00032",
+      "arrival_time_s": 79.5,
+      "input_tokens": 1140,
+      "output_tokens": 401
+    },
+    {
+      "id": "azure-00033",
+      "arrival_time_s": 85.5,
+      "input_tokens": 407,
+      "output_tokens": 88
+    },
+    {
+      "id": "azure-00034",
+      "arrival_time_s": 88.0,
+      "input_tokens": 1992,
+      "output_tokens": 56
+    },
+    {
+      "id": "azure-00035",
+      "arrival_time_s": 89.0,
+      "input_tokens": 212,
+      "output_tokens": 217
+    },
+    {
+      "id": "azure-00036",
+      "arrival_time_s": 91.5,
+      "input_tokens": 1065,
+      "output_tokens": 413
+    },
+    {
+      "id": "azure-00037",
+      "arrival_time_s": 94.5,
+      "input_tokens": 380,
+      "output_tokens": 115
+    },
+    {
+      "id": "azure-00038",
+      "arrival_time_s": 97.5,
+      "input_tokens": 1872,
+      "output_tokens": 62
+    },
+    {
+      "id": "azure-00039",
+      "arrival_time_s": 100.0,
+      "input_tokens": 1011,
+      "output_tokens": 411
+    },
+    {
+      "id": "azure-00040",
+      "arrival_time_s": 101.0,
+      "input_tokens": 426,
+      "output_tokens": 93
+    },
+    {
+      "id": "azure-00041",
+      "arrival_time_s": 103.0,
+      "input_tokens": 1018,
+      "output_tokens": 426
+    },
+    {
+      "id": "azure-00042",
+      "arrival_time_s": 104.0,
+      "input_tokens": 407,
+      "output_tokens": 107
+    },
+    {
+      "id": "azure-00043",
+      "arrival_time_s": 106.5,
+      "input_tokens": 376,
+      "output_tokens": 66
+    },
+    {
+      "id": "azure-00044",
+      "arrival_time_s": 109.5,
+      "input_tokens": 1040,
+      "output_tokens": 605
+    },
+    {
+      "id": "azure-00045",
+      "arrival_time_s": 112.5,
+      "input_tokens": 897,
+      "output_tokens": 397
+    },
+    {
+      "id": "azure-00046",
+      "arrival_time_s": 115.5,
+      "input_tokens": 956,
+      "output_tokens": 513
+    },
+    {
+      "id": "azure-00047",
+      "arrival_time_s": 118.5,
+      "input_tokens": 895,
+      "output_tokens": 98
+    }
+  ],
+  "workload_fingerprint": "c11fe42566f08cda83ed6b96fc19486610b397a269faa0ffa31330fd3d9d0a1f",
+  "features": {
+    "request_count": 48,
+    "input_mean": 869.0208333333334,
+    "input_min": 181,
+    "input_max": 1992,
+    "output_mean": 245.97916666666666,
+    "output_min": 18,
+    "output_max": 605,
+    "output_tokens": 11807,
+    "interarrival_cv": 0.43354484967427
+  }
+}

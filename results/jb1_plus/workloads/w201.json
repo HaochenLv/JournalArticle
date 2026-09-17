@@ -1,0 +1,112 @@
+{
+  "id": "w201",
+  "seed": 201,
+  "interval_offset": 1140,
+  "source_interval_indices": [
+    1140,
+    1141,
+    1142,
+    1143,
+    1144,
+    1145,
+    1146,
+    1147,
+    1148,
+    1149
+  ],
+  "duration_s": 30,
+  "global_target_rate": 0.5,
+  "primary_link": "fast",
+  "requests": [
+    {
+      "id": "azure-00000",
+      "arrival_time_s": 1.5,
+      "input_tokens": 1670,
+      "output_tokens": 65
+    },
+    {
+      "id": "azure-00001",
+      "arrival_time_s": 4.5,
+      "input_tokens": 1048,
+      "output_tokens": 400
+    },
+    {
+      "id": "azure-00002",
+      "arrival_time_s": 9.75,
+      "input_tokens": 425,
+      "output_tokens": 85
+    },
+    {
+      "id": "azure-00003",
+      "arrival_time_s": 10.5,
+      "input_tokens": 218,
+      "output_tokens": 217
+    },
+    {
+      "id": "azure-00004",
+      "arrival_time_s": 11.25,
+      "input_tokens": 410,
+      "output_tokens": 83
+    },
+    {
+      "id": "azure-00005",
+      "arrival_time_s": 13.5,
+      "input_tokens": 395,
+      "output_tokens": 92
+    },
+    {
+      "id": "azure-00006",
+      "arrival_time_s": 16.0,
+      "input_tokens": 324,
+      "output_tokens": 18
+    },
+    {
+      "id": "azure-00007",
+      "arrival_time_s": 17.0,
+      "input_tokens": 1049,
+      "output_tokens": 388
+    },
+    {
+      "id": "azure-00008",
+      "arrival_time_s": 19.5,
+      "input_tokens": 1128,
+      "output_tokens": 405
+    },
+    {
+      "id": "azure-00009",
+      "arrival_time_s": 22.5,
+      "input_tokens": 1156,
+      "output_tokens": 396
+    },
+    {
+      "id": "azure-00010",
+      "arrival_time_s": 25.5,
+      "input_tokens": 1139,
+      "output_tokens": 386
+    },
+    {
+      "id": "azure-00011",
+      "arrival_time_s": 28.0,
+      "input_tokens": 1108,
+      "output_tokens": 396
+    },
+    {
+      "id": "azure-00012",
+      "arrival_time_s": 29.0,
+      "input_tokens": 392,
+      "output_tokens": 87
+    }
+  ],
+  "workload_fingerprint": "fe02eb387b40c7ecafe9fc871c1b79f96f10c66c9bb89366bc8dde85431e38b3",
+  "features": {
+    "request_count": 13,
+    "input_mean": 804.7692307692307,
+    "input_min": 218,
+    "input_max": 1670,
+    "output_mean": 232.15384615384616,
+    "output_min": 18,
+    "output_max": 405,
+    "output_tokens": 3018,
+    "interarrival_cv": 0.5415008222485611
+  }
+}
