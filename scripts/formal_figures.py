@@ -17,8 +17,8 @@ def main():
  stress=json.loads((FORMAL/'rq4_profile_mismatch/summary.json').read_text())
  mitigation=json.loads((FORMAL/'mitigation/results.json').read_text())
  def save(fig,name):
-  fig.tight_layout();fig.savefig(folder/(name+'.png'));fig.savefig(folder/(name+'.svg'));plt.close(fig)
-  svg=folder/(name+'.svg');svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
+  fig.tight_layout();fig.savefig(folder/(name+'.png'),bbox_inches='tight');fig.savefig(folder/(name+'.svg'),bbox_inches='tight');plt.close(fig)
+  svg=folder/(name+'.svg');svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
  categories=[('heterogeneous','decode'),('heterogeneous','prefill'),('a100','decode'),('a100','relaxed_decode')]
  fig,axes=plt.subplots(1,4,figsize=(12,3.2))
  for ax,(kind,regime) in zip(axes,categories):
@@ -28,7 +28,7 @@ def main():
   for i in range(2):
    for j in range(2):ax.text(j,i,str(vals[i,j]),ha='center',va='center',color='white' if vals[i,j]>.6*vals.max() else 'black',fontsize=13)
   ax.set_xticks([0,1],['R safe','R unsafe']);ax.set_yticks([0,1],['E safe','E unsafe']);ax.set_title(kind+'\n'+regime.replace('_',' '))
- fig.suptitle('Paired point counts on adaptively refined grids',y=1.05);save(fig,'01_reliability')
+ fig.suptitle('Paired point counts on adaptively refined grids');save(fig,'01_reliability')
  fig,ax=plt.subplots(figsize=(6.5,5))
  for kind,regime in categories:
   rs=[r for r in caps if r['kind']==kind and r['regime']==regime and r['status']=='ok' and r['evaluator']['largest_safe'] and r['reference']['largest_safe']]
@@ -58,7 +58,7 @@ def main():
   for j,name in enumerate(names):
    a=[r for r in rs if r['policy']==name];values=[r['normalized_usable_quality'] for r in a if r['normalized_usable_quality'] is not None]
    ax.scatter([j]*len(values),values,s=20,alpha=.65);ax.plot([j-.2,j+.2],[statistics.mean(values)]*2,color='black',lw=2) if values else None
-  ax.set_xticks(range(len(names)),labels,rotation=40,ha='right');ax.set_ylim(-.04,1.05);ax.set_title('Nominal profiles' if bias==1 else 'Both profiles −10%');ax.set_ylabel('Usable selected load / best tested reference load')
+  ax.set_xticks(range(len(names)),labels,rotation=40,ha='right');ax.set_ylim(-.04,1.05);ax.set_title('Nominal profiles' if bias==1 else 'Both profiles −10%');ax.set_ylabel('Usable load / best tested reference load')
  save(fig,'04_mitigation')
  write_json(folder/'manifest.json',{'protocol_hash':PROTOCOL_HASH,'figures':['01_reliability','02_capacity','03_decision_stress','04_mitigation'],'notes':['Counts describe the frozen adaptive sample, not population risk.','Capacity scatter omits all-unsafe configurations; full tables retain them.','Decision quality uses the largest observed safe load even for nonmonotone sequences; see flags in tables.','Mitigation shows main five-candidate trials only; line is mean over defined qualities, dots are individual trials.']})
 if __name__=='__main__':main()

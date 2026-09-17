@@ -11,7 +11,10 @@ from matplotlib.patches import Patch
 def main(name):
  d=json.load(gzip.open(FORMAL/'mechanisms'/(name+'.json.gz'),'rt'));e=d['evaluator'];first=e['first_violation'];rv=d['reference_violations_in_physical_finish_order']
  focus=first['time_s'] if first else rv[0]['physical_end_s'] if rv else 5.
- ids=[r['id'] for r in d['workload'] if r['arrival_time_s']<=focus+1][:8]
+ # Show queries overlapping the displayed window, including late-arriving
+ # violations; the first eight arrivals may have finished long before it.
+ ids=[r['id'] for r in d['workload'] if d['reference_queries'][r['id']]['iterations'][0]['start_s']<=focus+2 and d['reference_queries'][r['id']]['iterations'][-1]['end_s']>=focus-3][:8]
+ if first and first.get('request_id') and first['request_id'] not in ids:ids=[first['request_id'],*ids][:8]
  fig,axes=plt.subplots(2,1,figsize=(9,6),sharex=True)
  colors={'Prefill':'#32658f','Decode':'#d78831'}
  for ax,title in zip(axes,['JB1 query-phase occupancy','HELIX reference query-phase occupancy']):
@@ -28,6 +31,6 @@ def main(name):
  axes[1].set_xlabel('Time from common simulation origin (s)');axes[1].set_xlim(max(0,focus-3),focus+2);axes[0].legend(handles=[Patch(facecolor=v,label=k) for k,v in colors.items()],loc='upper left',ncol=2)
  fig.suptitle(d['group']['workload']+' · '+d['regime'].replace('_',' ')+' · intensity '+str(d['intensity'])+'\nDashed line: '+('first evaluator failure' if first else 'first reference violation'));fig.tight_layout()
  folder=FORMAL/'figures';folder.mkdir(exist_ok=True);fig.savefig(folder/(name+'_timeline.png'),dpi=180);fig.savefig(folder/(name+'_timeline.svg'));plt.close(fig)
- svg=folder/(name+'_timeline.svg');svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
+ svg=folder/(name+'_timeline.svg');svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('name');a=p.parse_args();main(a.name)

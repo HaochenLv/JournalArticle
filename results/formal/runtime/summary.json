@@ -1,0 +1,83 @@
+{
+  "protocol_hash": "75120a5593b7c9574fe5bb3b21c3172179b95700955464d6aada0d12f04024bf",
+  "rows": [
+    {
+      "protocol_hash": "75120a5593b7c9574fe5bb3b21c3172179b95700955464d6aada0d12f04024bf",
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "shift": 0,
+      "regime": "decode",
+      "intensity": 0.0095136569,
+      "selection_rule": "highest observed both-safe shift0 point, otherwise lowest point",
+      "request_count": 16,
+      "evaluator_safe": true,
+      "reference_safe": true,
+      "warmups_per_model": 1,
+      "evaluator_wall_s": [
+        0.007232899952214211,
+        0.007816600031219423,
+        0.007236499979626387,
+        0.00849689997266978,
+        0.007522700005210936,
+        0.007428499986417592,
+        0.007291799993254244,
+        0.007558699988294393,
+        0.007168600044678897,
+        0.007770300027914345
+      ],
+      "reference_wall_s": [
+        9.836470999987796,
+        9.932150600012392,
+        10.021273299993481
+      ],
+      "evaluator_median_s": 0.007475599995814264,
+      "reference_median_s": 9.932150600012392,
+      "reference_to_evaluator_median_ratio": 1328.609155863556,
+      "metric_equality": true,
+      "execution": "fresh sequential reference calls; no cache; evaluator CSV profile objects initialized before timing; planning CPU wall time, not inference speedup",
+      "python": "3.12.10",
+      "system": "Windows",
+      "machine": "AMD64",
+      "cpu_logical": 20,
+      "memory_bytes": 34164097024
+    },
+    {
+      "protocol_hash": "75120a5593b7c9574fe5bb3b21c3172179b95700955464d6aada0d12f04024bf",
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "shift": 0,
+      "regime": "decode",
+      "intensity": 0.008,
+      "selection_rule": "highest observed both-safe shift0 point, otherwise lowest point",
+      "request_count": 54,
+      "evaluator_safe": true,
+      "reference_safe": true,
+      "warmups_per_model": 1,
+      "evaluator_wall_s": [
+        0.028302400023676455,
+        0.030118399998173118,
+        0.02784080000128597,
+        0.02806480001891032,
+        0.028543399996124208,
+        0.02850329998182133,
+        0.028561200015246868,
+        0.03186579997418448,
+        0.027940700005274266,
+        0.02843629999551922
+      ],
+      "reference_wall_s": [
+        40.00832210003864,
+        38.7748089999659,
+        39.547478699998464
+      ],
+      "evaluator_median_s": 0.028469799988670275,
+      "reference_median_s": 39.547478699998464,
+      "reference_to_evaluator_median_ratio": 1389.1027936879295,
+      "metric_equality": true,
+      "execution": "fresh sequential reference calls; no cache; evaluator CSV profile objects initialized before timing; planning CPU wall time, not inference speedup",
+      "python": "3.12.10",
+      "system": "Windows",
+      "machine": "AMD64",
+      "cpu_logical": 20,
+      "memory_bytes": 34164097024
+    }
+  ]
+}

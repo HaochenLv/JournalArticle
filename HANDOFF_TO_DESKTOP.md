@@ -1,5 +1,7 @@
 # 主机续跑交接
 
+**最终完成（2026-09-17）：第二阶段实验、分析、核验、机制审阅、图表和本机顺序计时已完成；中文14节报告见 [FORMAL_EVIDENCE_REPORT.md](FORMAL_EVIDENCE_REPORT.md)。不再启动矩阵或后处理。下文保留迁移和续跑历史，所有“待完成/正在运行”状态由此条取代。自动检查在最终交付后暂停。**
+
 最新执行资源调整（2026-09-17，优先于下文旧参数）：用户再次要求加速后，矩阵从8并行提高为 `scripts/formal_run.py --workers 12 --memory-budget-gib 24 --memory-reserve-gib 6`。1007个已保存点及所有已保存stage plan经核验完全保留；仅未完成且未保存的在途任务可能重算。12是上限，保留现有内存成本估算与6GiB实时余量保护；后处理仍8并行，正式计时仍串行。只调整执行资源，不更改冻结协议或研究输入。PID/日志以 `results/formal/desktop_resume.json` 为准，实际检查见 `MONITORING_LOG.md`；自动检查仍每5分钟。
 
 ## 主机已验证 Windows 原生执行（2026-09-17 更新）

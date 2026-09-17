@@ -1,6 +1,56 @@
 {
   "protocol_hash": "75120a5593b7c9574fe5bb3b21c3172179b95700955464d6aada0d12f04024bf",
-  "workflow_started_utc": "2026-09-17T06:12:21.982611+00:00",
-  "status": "waiting_for_matrix",
-  "steps": []
+  "workflow_started_utc": "2026-09-17T06:34:47.155345+00:00",
+  "status": "research_complete",
+  "steps": [
+    {
+      "script": "formal_analyze.py",
+      "started_utc": "2026-09-17T08:00:17.299822+00:00",
+      "returncode": 0,
+      "elapsed_s": 0.36188549996586516,
+      "finished_utc": "2026-09-17T08:00:17.663358+00:00"
+    },
+    {
+      "script": "formal_mismatch.py",
+      "started_utc": "2026-09-17T08:00:17.666373+00:00",
+      "returncode": 0,
+      "elapsed_s": 427.37275490001775,
+      "finished_utc": "2026-09-17T08:07:25.039853+00:00"
+    },
+    {
+      "script": "formal_mitigation.py",
+      "started_utc": "2026-09-17T08:07:25.042213+00:00",
+      "returncode": 0,
+      "elapsed_s": 174.35599220002769,
+      "finished_utc": "2026-09-17T08:10:19.399048+00:00"
+    },
+    {
+      "script": "formal_verify.py",
+      "started_utc": "2026-09-17T08:10:19.402047+00:00",
+      "returncode": 0,
+      "elapsed_s": 5.364549699996132,
+      "finished_utc": "2026-09-17T08:10:24.767228+00:00"
+    },
+    {
+      "script": "formal_figures.py",
+      "started_utc": "2026-09-17T08:10:24.768228+00:00",
+      "returncode": 0,
+      "elapsed_s": 2.865590500005055,
+      "finished_utc": "2026-09-17T08:10:27.635439+00:00"
+    },
+    {
+      "script": "formal_timing.py",
+      "started_utc": "2026-09-17T08:10:27.636854+00:00",
+      "returncode": 0,
+      "elapsed_s": 199.45429010002408,
+      "finished_utc": "2026-09-17T08:13:47.091666+00:00"
+    }
+  ],
+  "matrix_exit_observed_utc": "2026-09-17T08:00:17.299822+00:00",
+  "finished_utc": "2026-09-17T08:13:47.102345+00:00",
+  "research_review_finished_utc": "2026-09-17T08:30:39.783923+00:00",
+  "report": "FORMAL_EVIDENCE_REPORT.md",
+  "tests_passed": 28,
+  "mechanism_traces_verified": 5,
+  "diagnostic_evaluator_ablations": 1
 }

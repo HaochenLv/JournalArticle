@@ -1,0 +1,15 @@
+{
+  "protocol_hash": "75120a5593b7c9574fe5bb3b21c3172179b95700955464d6aada0d12f04024bf",
+  "figures": [
+    "01_reliability",
+    "02_capacity",
+    "03_decision_stress",
+    "04_mitigation"
+  ],
+  "notes": [
+    "Counts describe the frozen adaptive sample, not population risk.",
+    "Capacity scatter omits all-unsafe configurations; full tables retain them.",
+    "Decision quality uses the largest observed safe load even for nonmonotone sequences; see flags in tables.",
+    "Mitigation shows main five-candidate trials only; line is mean over defined qualities, dots are individual trials."
+  ]
+}

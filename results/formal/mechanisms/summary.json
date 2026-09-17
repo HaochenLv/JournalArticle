@@ -1,0 +1,356 @@
+{
+  "traces": [
+    {
+      "shift": 0,
+      "intensity": 4.096,
+      "regime": "relaxed_decode",
+      "p_scale": 1.0,
+      "d_scale": 1.0,
+      "metrics_exactly_equal": true,
+      "reference_cache_key": "3089180e2bf990e9003effda111fabc1d7ef0606f383ba63ca987d4214b533a2",
+      "name": "conservative_h105_a100.json.gz",
+      "group": "h105-o900-d30-a100-fast",
+      "evaluator_safe": false,
+      "evaluator_first_violation": {
+        "kind": "sla_time",
+        "object": "decode",
+        "request_id": "azure-00000",
+        "required": 1.6645232912538739,
+        "limit": 1.0,
+        "time_s": 2.46484375,
+        "side": "post",
+        "num_prefill": 2,
+        "num_decode": 2
+      },
+      "evaluator_max_accounted_tpot_s": 1.6646150416538739,
+      "reference_max_tpot_s": 0.9459497199904342,
+      "reference_max_aligned_ttft_s": 0.963246876201611,
+      "first_reference_violation": [],
+      "first_evaluator_ledger": {
+        "phase": "decode",
+        "compute_s": 0.112,
+        "blocking_charge_s": 1.547523291253874,
+        "intrinsic_s": 0.0,
+        "residual_s": -0.6645232912538739,
+        "serialization_s": 9.175040000000001e-05,
+        "context": 1027,
+        "progress": 7.333247767857142,
+        "block": 0
+      },
+      "phase_counts_at_first_evaluator_failure": {
+        "time_s": 2.46484375,
+        "side": "post",
+        "evaluator_prefill": 2,
+        "evaluator_decode": 2,
+        "reference_prefill": 2,
+        "reference_decode": 2
+      },
+      "target_worst_decode_iterations": [
+        {
+          "request_id": "azure-00000",
+          "reference_iteration_start_s": 1.9080729312383993,
+          "reference_iteration_end_s": 2.82675380720241,
+          "reference_iteration_duration_s": 0.9186808759640104,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.11211796479999081,
+          "batches_with_prefill": 0,
+          "evaluator_query_finish_s": 46.07679939612571,
+          "reference_query_finish_s": 59.402616307529364
+        },
+        {
+          "request_id": "azure-00002",
+          "reference_iteration_start_s": 5.607341687573572,
+          "reference_iteration_end_s": 6.515301377413579,
+          "reference_iteration_duration_s": 0.9079596898400064,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.13891742720001332,
+          "batches_with_prefill": 10,
+          "evaluator_query_finish_s": 22.744091583625636,
+          "reference_query_finish_s": 34.733490137416446
+        },
+        {
+          "request_id": "azure-00004",
+          "reference_iteration_start_s": 7.822193745424901,
+          "reference_iteration_end_s": 8.763143465415336,
+          "reference_iteration_duration_s": 0.9409497199904342,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.8287989760000176,
+          "batches_with_prefill": 80,
+          "evaluator_query_finish_s": 18.474103771125634,
+          "reference_query_finish_s": 29.214585254221262
+        }
+      ]
+    },
+    {
+      "shift": 0,
+      "intensity": 4.096,
+      "regime": "prefill",
+      "p_scale": 0.9,
+      "d_scale": 0.9,
+      "metrics_exactly_equal": true,
+      "reference_cache_key": "f93fb1741b94c5dac31334913d671ec5fc8d2ed4efea7b60b0aba67b1fa53542",
+      "name": "large_gap_correct_winner_h103_stress.json.gz",
+      "group": "h103-o500-d30-heterogeneous-slow",
+      "evaluator_safe": false,
+      "evaluator_first_violation": {
+        "kind": "sla_time",
+        "object": "decode",
+        "request_id": "azure-00004",
+        "required": 10.831891874211557,
+        "limit": 10.0,
+        "time_s": 3.5751953125,
+        "side": "post",
+        "num_prefill": 5,
+        "num_decode": 1
+      },
+      "evaluator_max_accounted_tpot_s": 11.182038702705775,
+      "reference_max_tpot_s": 4.478798122736007,
+      "reference_max_aligned_ttft_s": 4.533201127100002,
+      "first_reference_violation": [],
+      "first_evaluator_ledger": {
+        "phase": "decode",
+        "compute_s": 0.20160000000000003,
+        "blocking_charge_s": 10.625291874211555,
+        "intrinsic_s": 0.0,
+        "residual_s": -0.8318918742115571,
+        "serialization_s": 0.00036700160000000003,
+        "context": 221,
+        "progress": 0.07917286706349279,
+        "block": 0
+      },
+      "phase_counts_at_first_evaluator_failure": {
+        "time_s": 3.5751953125,
+        "side": "post",
+        "evaluator_prefill": 5,
+        "evaluator_decode": 1,
+        "reference_prefill": 6,
+        "reference_decode": 0
+      },
+      "target_worst_decode_iterations": [
+        {
+          "request_id": "azure-00002",
+          "reference_iteration_start_s": 5.359472087815993,
+          "reference_iteration_end_s": 9.833270210552001,
+          "reference_iteration_duration_s": 4.4737981227360075,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.825020678399996,
+          "batches_with_prefill": 50,
+          "evaluator_query_finish_s": 90.92450597528911,
+          "reference_query_finish_s": 128.20302332832816
+        },
+        {
+          "request_id": "azure-00004",
+          "reference_iteration_start_s": 6.9794420938839785,
+          "reference_iteration_end_s": 9.833270211376002,
+          "reference_iteration_duration_s": 2.8538281174920224,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.825020678399996,
+          "batches_with_prefill": 50,
+          "evaluator_query_finish_s": 21.67184411700011,
+          "reference_query_finish_s": 36.48275082903668
+        },
+        {
+          "request_id": "azure-00010",
+          "reference_iteration_start_s": 9.690310502100003,
+          "reference_iteration_end_s": 10.983493777271983,
+          "reference_iteration_duration_s": 1.2931832751719803,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.2317506752000238,
+          "batches_with_prefill": 0,
+          "evaluator_query_finish_s": 21.279086507113895,
+          "reference_query_finish_s": 28.44350212503914
+        }
+      ]
+    },
+    {
+      "shift": 0,
+      "intensity": 0.016,
+      "regime": "decode",
+      "p_scale": 1.0,
+      "d_scale": 1.0,
+      "metrics_exactly_equal": true,
+      "reference_cache_key": "fb113cd1abafe9fac1c8cc699e497be45bd437f32f99e825ef26816958b62cfa",
+      "name": "optimistic_h103_a100.json.gz",
+      "group": "h103-o500-d30-a100-slow",
+      "evaluator_safe": true,
+      "evaluator_first_violation": null,
+      "evaluator_max_accounted_tpot_s": 0.1173670016,
+      "reference_max_tpot_s": 1.1039344049369264,
+      "reference_max_aligned_ttft_s": 1.7372011271012342,
+      "first_reference_violation": [
+        {
+          "request_id": "azure-00013",
+          "iteration": 548,
+          "phase": "Increment",
+          "observed_s": 1.1039344049369264,
+          "limit_s": 0.15,
+          "physical_end_s": 1721.3912105365594,
+          "uid": 10003599
+        }
+      ],
+      "target_worst_decode_iterations": [
+        {
+          "request_id": "azure-00010",
+          "reference_iteration_start_s": 940.7322011271012,
+          "reference_iteration_end_s": 940.844627155905,
+          "reference_iteration_duration_s": 0.11242602880372488,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.11205898239950329,
+          "batches_with_prefill": 0,
+          "evaluator_query_finish_s": 946.248,
+          "reference_query_finish_s": 947.0280587401098
+        },
+        {
+          "request_id": "azure-00013",
+          "reference_iteration_start_s": 1720.2922761316224,
+          "reference_iteration_end_s": 1721.3912105365594,
+          "reference_iteration_duration_s": 1.0989344049369265,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.11205898240768875,
+          "batches_with_prefill": 0,
+          "evaluator_query_finish_s": 1720.1995999999972,
+          "reference_query_finish_s": 1721.8409146539657
+        }
+      ],
+      "phase_counts_near_reference_violation": {
+        "time_s": 1720.25,
+        "side": "pre",
+        "evaluator_prefill": 0,
+        "evaluator_decode": 0,
+        "reference_prefill": 1,
+        "reference_decode": 1
+      },
+      "arrivals_near_reference_violation": [
+        {
+          "id": "azure-00014",
+          "arrival_time_s": 1720.25,
+          "input_tokens": 1082,
+          "output_tokens": 581
+        }
+      ]
+    },
+    {
+      "shift": 0,
+      "intensity": 4.096,
+      "regime": "prefill",
+      "p_scale": 1.0,
+      "d_scale": 1.0,
+      "metrics_exactly_equal": true,
+      "reference_cache_key": "4fca6713640f3bd4af496d375c34bc56caf922dc2245eb90bb5c160dcb58dda7",
+      "name": "reversal_h101_shift0.json.gz",
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "evaluator_safe": false,
+      "evaluator_first_violation": {
+        "kind": "sla_time",
+        "object": "decode",
+        "request_id": "azure-00000",
+        "required": 10.059287262651614,
+        "limit": 10.0,
+        "time_s": 4.662109375,
+        "side": "post",
+        "num_prefill": 6,
+        "num_decode": 4
+      },
+      "evaluator_max_accounted_tpot_s": 10.18642109346487,
+      "reference_max_tpot_s": 4.513336026661562,
+      "reference_max_aligned_ttft_s": 4.528642054374371,
+      "first_reference_violation": [],
+      "first_evaluator_ledger": {
+        "phase": "decode",
+        "compute_s": 0.23200000000000004,
+        "blocking_charge_s": 9.822287262651614,
+        "intrinsic_s": 0.0,
+        "residual_s": -0.05928726265161366,
+        "serialization_s": 9.175040000000001e-05,
+        "context": 889,
+        "progress": 7.861907162167271,
+        "block": 0
+      },
+      "phase_counts_at_first_evaluator_failure": {
+        "time_s": 4.662109375,
+        "side": "post",
+        "evaluator_prefill": 6,
+        "evaluator_decode": 4,
+        "reference_prefill": 6,
+        "reference_decode": 4
+      },
+      "target_worst_decode_iterations": [
+        {
+          "request_id": "azure-00000",
+          "reference_iteration_start_s": 2.988079514793597,
+          "reference_iteration_end_s": 6.044197313105601,
+          "reference_iteration_duration_s": 3.056117798312004,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 1.9094422016000023,
+          "batches_with_prefill": 60,
+          "evaluator_query_finish_s": 24.669561802015767,
+          "reference_query_finish_s": 37.805994887400324
+        },
+        {
+          "request_id": "azure-00006",
+          "reference_iteration_start_s": 6.356777820427204,
+          "reference_iteration_end_s": 10.865113847088766,
+          "reference_iteration_duration_s": 4.508336026661562,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.7034605055999794,
+          "batches_with_prefill": 70,
+          "evaluator_query_finish_s": 120.58257976393492,
+          "reference_query_finish_s": 134.06684325800518
+        },
+        {
+          "request_id": "azure-00012",
+          "reference_iteration_start_s": 10.772665491874372,
+          "reference_iteration_end_s": 11.241343338599155,
+          "reference_iteration_duration_s": 0.4686778467247823,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.287161100800029,
+          "batches_with_prefill": 10,
+          "evaluator_query_finish_s": 27.27959832290787,
+          "reference_query_finish_s": 31.898541095403562
+        }
+      ]
+    },
+    {
+      "shift": 2,
+      "intensity": 4.096,
+      "regime": "prefill",
+      "p_scale": 1.0,
+      "d_scale": 1.0,
+      "metrics_exactly_equal": true,
+      "reference_cache_key": "d34517d609abd0bac683ca2df4b2f5a9c4fc44bb29a69cbf2df7937242ca536d",
+      "name": "reversal_h101_shift2.json.gz",
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "evaluator_safe": true,
+      "evaluator_first_violation": null,
+      "evaluator_max_accounted_tpot_s": 9.953235013051614,
+      "reference_max_tpot_s": 4.4526222058615605,
+      "reference_max_aligned_ttft_s": 4.464898054374372,
+      "first_reference_violation": [],
+      "target_worst_decode_iterations": [
+        {
+          "request_id": "azure-00006",
+          "reference_iteration_start_s": 6.335933318027208,
+          "reference_iteration_end_s": 10.783555523888769,
+          "reference_iteration_duration_s": 4.447622205861561,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.6925481471999833,
+          "batches_with_prefill": 68,
+          "evaluator_query_finish_s": 126.4318001321719,
+          "reference_query_finish_s": 147.24854611720323
+        },
+        {
+          "request_id": "azure-00012",
+          "reference_iteration_start_s": 16.759036572201076,
+          "reference_iteration_end_s": 17.150769282600965,
+          "reference_iteration_duration_s": 0.39173271039988933,
+          "reference_batch_intervals": 80,
+          "shared_batch_service_sum_s": 0.24340643839995835,
+          "batches_with_prefill": 0,
+          "evaluator_query_finish_s": 27.97768927544258,
+          "reference_query_finish_s": 35.41726845699575
+        }
+      ]
+    }
+  ],
+  "scope": "Explanatory outcome-selected cases. Batch service is shared, not marginal request cost; residual time is not uniquely decomposed into waiting and transfer."
+}

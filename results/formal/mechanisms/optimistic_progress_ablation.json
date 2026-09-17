@@ -1,0 +1,80 @@
+{
+  "group": "h103-o500-d30-a100-slow",
+  "shift": 0,
+  "intensity": 0.016,
+  "regime": "decode",
+  "diagnostic_only": true,
+  "frozen_baseline_changed": false,
+  "interpretation_limit": "Sensitivity to adding fixed overhead to evaluator progress; not a validated general correction or isolation of reference queue/network delays.",
+  "cases": [
+    {
+      "fixed_overhead_in_progress": false,
+      "safe": true,
+      "first_violation": null,
+      "query13_finish_s": 1720.1995999999972,
+      "arrival_epoch": {
+        "time_s": 1720.25,
+        "num_prefill": 1,
+        "num_decode": 0,
+        "ledger": {
+          "azure-00014": {
+            "phase": "prefill",
+            "compute_s": 0.66624,
+            "blocking_charge_s": 0.0,
+            "intrinsic_s": 0.06424613986177491,
+            "residual_s": 1.264513860138225,
+            "serialization_s": 0.3970957312,
+            "context": 1082,
+            "progress": 0.0,
+            "block": 0
+          }
+        }
+      }
+    },
+    {
+      "fixed_overhead_in_progress": true,
+      "safe": false,
+      "first_violation": {
+        "kind": "sla_time",
+        "object": "decode",
+        "request_id": "azure-00007",
+        "required": 0.2086184143455569,
+        "limit": 0.15,
+        "time_s": 751.5,
+        "side": "post",
+        "num_prefill": 1,
+        "num_decode": 1
+      },
+      "query13_finish_s": 1722.9646000000025,
+      "arrival_epoch": {
+        "time_s": 1720.25,
+        "num_prefill": 1,
+        "num_decode": 1,
+        "ledger": {
+          "azure-00013": {
+            "phase": "decode",
+            "compute_s": 0.112,
+            "blocking_charge_s": 0.730486139861775,
+            "intrinsic_s": 0.0,
+            "residual_s": -0.697486139861775,
+            "serialization_s": 0.00036700160000000003,
+            "context": 1529,
+            "progress": 528.798290598269,
+            "block": 33
+          },
+          "azure-00014": {
+            "phase": "prefill",
+            "compute_s": 0.66624,
+            "blocking_charge_s": 0.0,
+            "intrinsic_s": 0.06424613986177491,
+            "residual_s": 1.264513860138225,
+            "serialization_s": 0.3970957312,
+            "context": 1082,
+            "progress": 0.0,
+            "block": 0
+          }
+        }
+      }
+    }
+  ]
+}

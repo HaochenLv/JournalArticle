@@ -1,6 +1,6 @@
-# Mechanism analysis — stage2 evidence in progress
+# Mechanism analysis — completed stage2 review
 
-Formal paired runs are in progress. Representative selection will be made from the completed shared-grid results: one optimistic point, one conservative point, a large-gap/stable-winner trial, and a nominal or stress-induced decision reversal if one exists. Selection is explanatory and does not provide a prevalence estimate.
+The full1634-point matrix and postprocessing are complete. Five saved instrumented traces cover an optimistic point, the inherited conservative point, a large-gap/correct-winner stress case, and both candidates in a nominal reversal. Every trace matches the cached per-query metrics exactly; newly executed traces also assert equal final simulation time. Selection rules are recorded in `results/formal/research_review.json`; compact measurements are in `results/formal/mechanisms/summary.json`. Selection is explanatory and does not provide a prevalence estimate.
 
 For each selected point, retain the actual request arrivals and HELIX Prefill/Decode iteration timestamps. Instrumentation may retain per-node execution-batch and request-location timestamps without changing scheduling. Compare those with JB1 pre/post-event ledgers, active Prefill/Decode counts, fractional progress, blocking charge, residual SLA budgets, and link commitments. Align virtual time origins explicitly; do not use the compact adapter's approximate first-violation ordering for causal chronology.
 
@@ -16,4 +16,28 @@ At physical time2.46484375s, request azure-00003 arrives. Both models then have 
 
 The reference fully drains14 queries: maximum aligned TTFT=.9632468762s, maximum TPOT=.9459497200s. For the first rejected query azure-00000, its worst Decode iteration physically spans1.9080729312–2.8267538072s, including the evaluator's failing epoch. Its actual iteration duration is.9186808760s; adding the5ms ledger overhead yields.9236808760s. Its80 per-layer execution intervals sum to.1121179648s and none shares an execution batch with a Prefill request. The remaining.8065629112s includes queuing and transmission, which this aggregate does not separate. Actual stage-local overlap therefore does not incur the full1.5475s charge imposed on this Decode ledger.
 
-The two models agree on query-phase concurrency at the failing post-event epoch, so this example does not need a concurrency-count error to explain rejection. The full-service blocking rule, rather than a measured residual waiting time, is the identifiable conservative component here. We do not infer that removing this charge is generally safe or recommend changing the frozen baseline. Replication in another case and optimistic/decision-transfer mechanisms remain pending.
+The two models agree on query-phase concurrency at the failing post-event epoch, so this example does not need a concurrency-count error to explain rejection. The full-service blocking rule, rather than a measured residual waiting time, is the identifiable conservative component here. We do not infer that removing this charge is generally safe or recommend changing the frozen baseline. This inherited trace was reused without another simulation.
+
+## Optimistic error: completion-time drift removes real overlap
+
+At h103/A100/slow, intensity0.016 and TPOT0.15s, JB1 accepts with maximum accounted TPOT0.117367s. Reference TPOT reaches1.103934s for azure-00013, iteration548, ending1721.391211s. Its physical duration is1.098934s plus the0.005s ledger overhead. All15 requests drain; TTFT remains within2s.
+
+JB1 finishes request13 at1720.199600s, just before request14 arrives at1720.250000s. The reference finishes request13 at1721.840915s: request13 is still decoding when request14 enters Prefill. At the post-arrival check JB1 sees one Prefill and zero Decode; reference query occupancy is one of each. The reference violating iteration spans1720.292276–1721.391211s. Its80 layer execution intervals total0.112059s and none shares a batch with Prefill; the remaining0.986875s is time outside those execution intervals, not slower isolated Decode compute. Location history and phase occupancy support a missed-overlap explanation; the residual is not uniquely assigned to queueing versus transport.
+
+An evaluator-only diagnostic ablation adds the fixed5ms overhead to progress, leaving the saved nominal labels untouched. It moves request13 completion to1722.964600s and restores Decode occupancy at request14 arrival; the evaluator becomes unsafe. However its first failure is an earlier request at751.5s. This demonstrates sensitivity to progress semantics, not an exact reconstruction of reference chronology or a validated correction. Evidence: `optimistic_h103_a100.json.gz`, `optimistic_progress_ablation.json`, and the optimistic timeline figure. The frozen baseline hash is unchanged.
+
+## Large capacity error with the correct winner under stress
+
+No nominal main trial combines a large selected-capacity gap with a correct winner: the six correct nominal Decode-tight winners have matching selected sampled capacities. We explicitly use an explanatory stress case instead of inventing that nominal pattern.
+
+For h103/heterogeneous/Prefill-oriented with Both−10%, shift0 has Emax2.8963093757 versus Rmax9.7419846861 (−70.2698%), yet is reference-best. Both−5% also selects shift0, so the selected winner is stable across those two perturbations. Nominal profiles select shift2 and are wrong; stability is not claimed across nominal and stress.
+
+At common load4.096, the stress trace rejects at3.575195s: the Decode ledger charges10.625292s of active-Prefill debt plus0.201600s compute and0.005s overhead, exceeding10s. The reference maxima are TTFT4.533201s and TPOT4.478798s, both safe. At that epoch JB1 counts5 Prefill/1 Decode while reference query occupancy is6 Prefill/0 Decode. Both excessive blocking accounting and phase timing differ here; this case does not isolate either as the sole cause. A large absolute error can coexist with a correct ordering among the tested candidates.
+
+## Genuine nominal decision reversal
+
+In h101/Prefill-oriented, E selects shift2 (Emax4.096) over shift0 (Emax3.8382953147). The reference selects shift0 (Rmax13.1931367994); shift2 reaches10.3960654413 and ranks fourth, a21.201% sampled-capacity loss. This is a common-grid reversal, not an artifact of candidate-specific probe sets.
+
+Paired traces at the same load4.096 reproduce the local preference: shift0 is E-unsafe/R-safe while shift2 is E-safe/R-safe. At4.662109s, shift0 has6 Prefill and4 Decode in both models. Its first failing ledger is9.822287s blocking plus0.232s compute plus0.005s overhead =10.059287s, marginally exceeding10s. Shift2's maximum accounted TPOT is9.953235s. Reference maxima at this load are only4.513336s and4.452622s. Thus a small shift-dependent accounting difference straddles E's threshold while both candidates remain reference-safe.
+
+The shared grids establish the later capacity ranking; these two local traces explain the evaluator's premature distinction. They do not fully explain why shift0 has the larger reference frontier. No single queuing/batching cause for the entire reversal is claimed without a further causal intervention. The documented local mechanism and its boundary are sufficient for this empirical diagnosis.

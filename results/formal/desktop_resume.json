@@ -1,5 +1,5 @@
 {
-  "status": "running_on_desktop_native_windows",
+  "status": "research_complete",
   "started_utc": "2026-09-17T05:32:32.6684866Z",
   "source_commit": "db7dc3576c2602cc9a31be901e9941916ec35615",
   "matrix_pid": 17292,
@@ -23,5 +23,6 @@
     "memory_reserve_gib": 6,
     "matrix_log": ".private/desktop_matrix_memory12.log",
     "scheduler_status": ".private/memory_scheduler.json"
-  }
+  },
+  "completed_utc": "2026-09-17T08:30:39.783923+00:00"
 }

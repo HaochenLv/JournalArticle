@@ -1,0 +1,24 @@
+{
+  "checked_utc": "2026-09-17T08:30:39.783923+00:00",
+  "report_sections": 14,
+  "local_report_links_valid": true,
+  "tests_passed": 28,
+  "formal_verification_passed": true,
+  "mechanism_metric_equal_traces": 5,
+  "inherited_rows_preserved": 195,
+  "figures_visually_reviewed": true,
+  "figure_corrections": [
+    "prevent cropped titles/labels",
+    "show queries active around late reference violations"
+  ],
+  "frozen_experiments_remaining": 0,
+  "sha256": {
+    "FORMAL_EVIDENCE_REPORT.md": "6490f4a91959bfa3a388d68927451d274044327631e800fe3a5b3ea19d802275",
+    "docs/MECHANISM_ANALYSIS.md": "9f0122ca89893763d4c0cf29707aa2cff780658c17be27820ffb7cb7761135ee",
+    "docs/CLAIM_BOUNDARY.md": "82aa9d99ecd7337f6fd613d00276fcf90f92fabc5c5376ac336154c3dfc50bb0",
+    "results/formal/quality_checks.json": "f79c5fc2558641bedc50067fd78ef53a2bb7a7977a76c827816df6ff38dd35b8",
+    "results/formal/research_review.json": "abe1332d08db6c1afc5e526712348bb8dd9eb04d2f5c58c3ef23576a18e16c78",
+    "results/formal/mechanisms/summary.json": "fbf81b35eac916a724a5997dce1ab12a792a052d27d9e1de2c1b1dfec05ea5dd",
+    "results/formal/runtime/summary.json": "c8d84cb2403c7342f9bf654e95de8f69239cbd0cf3b9c3f2885a3f9316d48bf3"
+  }
+}

@@ -1,5 +1,7 @@
 # Journal research on SLA-aware LLM pipeline planning
 
+**Stage2 completed (2026-09-17):** [Chinese formal evidence report](FORMAL_EVIDENCE_REPORT.md), with the complete frozen matrix, controlled profile stresses, six engineering controls, mechanism traces and fresh sequential desktop timings. Formal verification and28 tests pass. Conclusions are simulator-relative and explicitly distinguish the recovered JB1 from the unavailable final conference implementation.
+
 Reproducible diagnosis of an inexpensive evaluator against a pinned HELIX reference simulator, followed by evidence-based journal direction selection. No GPU cluster is required.
 
 Selected direction: **Reference-Grounded Reliability Assessment for SLA-Aware Capacity and Partition Planning**. Read [JOURNAL_DIRECTION_REPORT.md](JOURNAL_DIRECTION_REPORT.md) for the Chinese decision report, [CURRENT_STATUS.md](CURRENT_STATUS.md) for execution state, and [EXPERIMENT_LOG.md](EXPERIMENT_LOG.md) for evidence. Source/version and metric audits are in `docs/`.
