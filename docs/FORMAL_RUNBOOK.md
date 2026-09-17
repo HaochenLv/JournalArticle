@@ -2,6 +2,8 @@
 
 Windows-native execution is validated as of2026-09-17. In PowerShell set `$env:PYTHONUTF8='1'` and `$env:PYTHONDONTWRITEBYTECODE='1'`, and substitute `.venv\Scripts\python.exe` for `.venv/bin/python`. Reference attempts use killable spawn children when SIGALRM is unavailable, retaining600s/one retry. The postprocessor uses Windows process handles for read-only liveness checks. Preserve LF bytes (`git config core.autocrlf false`) for frozen hashes. See `results/formal/desktop_host_check.json` for the exact14-request migration comparison. This host uses Python3.12.10; no simulation/evaluator semantics or frozen inputs were changed.
 
+Execution-resource adjustment: on the current32GB Windows host use `scripts/formal_run.py --workers 4`. Eight concurrent long traces approached physical/commit memory exhaustion;4 was chosen after this measured resource check. Eight new completed points were retained across the adjustment. This changes scheduling only; retain the frozen protocol file,600s per attempt, retries and every shared-grid stage plan. See `results/formal/desktop_memory_restart.json`. Evaluator-only mismatch/mitigation may still use8 workers, followed by sequential reference timing.
+
 The baseline and protocol are frozen. Do not resume historical-source archaeology. All commands run from JournalArticle with Python3.12 and pinned dependencies installed by `scripts/bootstrap.py`. Keep the original conference repositories read-only.
 
 ## Existing campaign

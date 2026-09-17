@@ -1,0 +1,9 @@
+{
+  "checked_utc": "2026-09-17T05:34:30.6797834Z",
+  "reason": "Eight simultaneous long reference traces exhausted physical memory and approached commit limit on 32GB Windows host.",
+  "observed_free_physical_kib": 414580,
+  "observed_free_virtual_kib": 1066892,
+  "action": "Terminate interrupted matrix process tree; retain every saved point/cache; resume with four workers.",
+  "interrupted_points": "Unrecorded pending probes retain no verdict and will resume from saved stage plans.",
+  "protocol_changed": false
+}
