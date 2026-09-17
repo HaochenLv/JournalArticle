@@ -1,0 +1,109 @@
+{
+  "checked_utc": "2026-09-17T04:13:53.678832+00:00",
+  "source_commit": "97c38c6ad0ba83af0a8ad6302b4fec6d2cc38bf4",
+  "status": "checkpoint_verified_execution_blocked_missing_wsl2",
+  "protocol_hash": "75120a5593b7c9574fe5bb3b21c3172179b95700955464d6aada0d12f04024bf",
+  "baseline_sha256": "4f186748f3fb5940179e833ffe68cf463bb8b9d1dbbd16926490062065669b15",
+  "verified_workloads": 6,
+  "verified_pretransfer_cache_records": 874,
+  "saved_physical_points": 195,
+  "saved_logical_sla_pairs": 390,
+  "recorded_failed_points": 0,
+  "groups": [
+    {
+      "group": "h101-o60-d30-a100-fast",
+      "saved_physical_points": 0,
+      "unfinished_planned_points": 9,
+      "status": "running"
+    },
+    {
+      "group": "h101-o60-d30-anchor-slow",
+      "saved_physical_points": 0,
+      "unfinished_planned_points": 9,
+      "status": "running"
+    },
+    {
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "saved_physical_points": 23,
+      "unfinished_planned_points": 22,
+      "status": "running"
+    },
+    {
+      "group": "h102-o300-d120-a100-slow",
+      "saved_physical_points": 9,
+      "unfinished_planned_points": 1,
+      "status": "running"
+    },
+    {
+      "group": "h102-o300-d120-anchor-fast",
+      "saved_physical_points": 2,
+      "unfinished_planned_points": 7,
+      "status": "running"
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "saved_physical_points": 45,
+      "unfinished_planned_points": 15,
+      "status": "running"
+    },
+    {
+      "group": "h103-o500-d30-a100-slow",
+      "saved_physical_points": 1,
+      "unfinished_planned_points": 8,
+      "status": "running"
+    },
+    {
+      "group": "h103-o500-d30-heterogeneous-slow",
+      "saved_physical_points": 45,
+      "unfinished_planned_points": 15,
+      "status": "running"
+    },
+    {
+      "group": "h104-o700-d120-a100-fast",
+      "saved_physical_points": 5,
+      "unfinished_planned_points": 4,
+      "status": "running"
+    },
+    {
+      "group": "h104-o700-d120-heterogeneous-fast",
+      "saved_physical_points": 4,
+      "unfinished_planned_points": 41,
+      "status": "running"
+    },
+    {
+      "group": "h105-o900-d30-a100-fast",
+      "saved_physical_points": 9,
+      "unfinished_planned_points": 3,
+      "status": "running"
+    },
+    {
+      "group": "h105-o900-d30-heterogeneous-fast",
+      "saved_physical_points": 21,
+      "unfinished_planned_points": 24,
+      "status": "running"
+    },
+    {
+      "group": "h106-o1100-d120-a100-slow",
+      "saved_physical_points": 0,
+      "unfinished_planned_points": 9,
+      "status": "running"
+    },
+    {
+      "group": "h106-o1100-d120-heterogeneous-slow",
+      "saved_physical_points": 31,
+      "unfinished_planned_points": 14,
+      "status": "running"
+    }
+  ],
+  "checks": [
+    "baseline bytes equal frozen SHA256",
+    "six frozen workload fingerprints",
+    "all pretransfer cache input keys and full drain",
+    "group protocol/profile/workload fingerprints",
+    "unique point identities and exact saved unfinished plans",
+    "paired reference verdicts and TTFT/TPOT maxima recomputed from saved metrics"
+  ],
+  "line_endings": "Repository-local core.autocrlf=false; pristine text restored to exact committed bytes after Windows clone conversion.",
+  "execution": "No reference or evaluator experiments run. Native Python used only for standard-library archive/JSON/hash inspection. Linux dependency setup, tests and fresh cross-machine reference equality remain pending.",
+  "runtime_provenance": "All inherited reference caches remain laptop-origin; no desktop timings collected."
+}

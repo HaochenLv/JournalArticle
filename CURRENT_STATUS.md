@@ -1,5 +1,7 @@
 # Current status — stage 2
 
+**Desktop intake verified; execution blocked on missing WSL2 (2026-09-17).** The Windows destination cloned the handoff commit and verified all6 frozen workloads,874 pre-transfer cache records,195 saved physical points and390 SLA pairs, with0 recorded failed points. Saved plans and incomplete probes match the handoff exactly. Windows checkout line endings were restored to the committed bytes; frozen JB1 SHA256 matches. See `results/formal/desktop_intake.json`. No experiments were rerun. Installation of WSL2/Linux requires confirmation because it changes host system components beyond this repository and may require a restart. Linux dependency setup/tests and the fresh cross-machine metric/verdict comparison remain pending; the matrix and postprocessor have not started on the desktop. The laptop must remain paused.
+
 **PAUSED at user request for transfer from laptop to desktop.** All laptop campaign processes and its automatic follow-up are stopped.195 physical reference runs /390 SLA pairs are saved, with0 recorded failed points. Do not automatically resume on the laptop. Read `HANDOFF_TO_DESKTOP.md` and `results/formal/machine_handoff.json` before resuming on the destination machine. The older running-state description below records the pre-pause phase.
 
 The journal research question is locked: judgement reliability → sampled capacity error → deployment decision transfer → controlled profile mismatch.
