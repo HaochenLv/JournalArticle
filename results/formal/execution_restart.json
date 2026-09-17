@@ -1,0 +1,53 @@
+{
+  "reason": "Change CPU work distribution from one worker per group to a shared eight-worker point queue; exact saved grids/inputs/baseline retained. Running uncompleted probes are restarted, never assigned verdicts.",
+  "interrupted_probe_candidates": [
+    {
+      "group": "h104-o700-d120-heterogeneous-fast",
+      "stage": "initial",
+      "shift": 1,
+      "intensity": 0.001
+    },
+    {
+      "group": "h104-o700-d120-a100-fast",
+      "stage": "initial",
+      "shift": 0,
+      "intensity": 0.064
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "stage": "initial",
+      "shift": -2,
+      "intensity": 0.004
+    },
+    {
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "stage": "initial",
+      "shift": -1,
+      "intensity": 0.256
+    },
+    {
+      "group": "h106-o1100-d120-heterogeneous-slow",
+      "stage": "initial",
+      "shift": -2,
+      "intensity": 0.004
+    },
+    {
+      "group": "h102-o300-d120-a100-slow",
+      "stage": "initial",
+      "shift": 0,
+      "intensity": 0.256
+    },
+    {
+      "group": "h105-o900-d30-heterogeneous-fast",
+      "stage": "initial",
+      "shift": -2,
+      "intensity": 0.256
+    },
+    {
+      "group": "h103-o500-d30-heterogeneous-slow",
+      "stage": "initial",
+      "shift": 1,
+      "intensity": 0.064
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "all raw fields including every per-token metric bit-identical on one short and one long trace; full simulator event/request dynamics unchanged",
+  "runs": [
+    {
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "requests": 16,
+      "reference_key": "fd44fe016ba0a88b64c3b2c4c5907b4e5b16bc26be5d557a65ad34efaf755635",
+      "raw_result_exactly_equal": true,
+      "original_runtime_s": 13.405487958982121,
+      "compact_runtime_s": 27.503586791979615
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "requests": 54,
+      "reference_key": "84e8b381ac86a2a8abf0a4dbc15f0576ef685b10fd802dc1d0f4ae4614033c5e",
+      "raw_result_exactly_equal": true,
+      "original_runtime_s": 69.12891570897773,
+      "compact_runtime_s": 106.83369599998696
+    }
+  ]
+}

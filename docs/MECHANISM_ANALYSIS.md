@@ -1,0 +1,19 @@
+# Mechanism analysis — stage2 evidence in progress
+
+Formal paired runs are in progress. Representative selection will be made from the completed shared-grid results: one optimistic point, one conservative point, a large-gap/stable-winner trial, and a nominal or stress-induced decision reversal if one exists. Selection is explanatory and does not provide a prevalence estimate.
+
+For each selected point, retain the actual request arrivals and HELIX Prefill/Decode iteration timestamps. Instrumentation may retain per-node execution-batch and request-location timestamps without changing scheduling. Compare those with JB1 pre/post-event ledgers, active Prefill/Decode counts, fractional progress, blocking charge, residual SLA budgets, and link commitments. Align virtual time origins explicitly; do not use the compact adapter's approximate first-violation ordering for causal chronology.
+
+The current baseline gate has already isolated one reproducible implementation mechanism: adding5ms fixed overhead to progress changes overlap trajectories and restores all12 published endpoint pairs, whereas keeping overhead only in the ledger shifts those edges. This is a baseline-semantic sensitivity result, not a held-out mechanism finding.
+
+Possible explanations such as overcharging full active Prefill service or aggregate-vs-stage-local batching will be called mechanisms only to the extent supported by traces and limited ablations. Otherwise the report will state that causation remains uncertain. No unsupported hardware/runtime explanation will be introduced.
+
+## Observed conservative mechanism: full active-Prefill charge
+
+Explanatory case selected while the matrix was running: held-out h105, A100, fast links, intensity4.096, TTFT2s/TPOT1s. This was an early observed short-trace conservative disagreement, not a random sample. The instrumented rerun exactly matches **all** original per-query TTFT/TPOT metrics and final simulation time. Evidence: `results/formal/mechanisms/conservative_h105_a100.json.gz`; instrumentation: `scripts/formal_trace.py`.
+
+At physical time2.46484375s, request azure-00003 arrives. Both models then have two Prefill and two Decode queries. JB1 charges each Decode query the two full Prefill compute times, .76032+.64832s, plus .1388832913s intrinsic charge. The resulting1.5475232913s blocking charge plus .112s Decode compute and .005s fixed overhead gives1.6645232913s against a1s TPOT limit; residual budget is−.6645232913s. This is sufficient to explain JB1's rejection at that epoch. Without the blocking component, this particular ledger would be below1s; that local arithmetic is not a claim that every later ledger would pass.
+
+The reference fully drains14 queries: maximum aligned TTFT=.9632468762s, maximum TPOT=.9459497200s. For the first rejected query azure-00000, its worst Decode iteration physically spans1.9080729312–2.8267538072s, including the evaluator's failing epoch. Its actual iteration duration is.9186808760s; adding the5ms ledger overhead yields.9236808760s. Its80 per-layer execution intervals sum to.1121179648s and none shares an execution batch with a Prefill request. The remaining.8065629112s includes queuing and transmission, which this aggregate does not separate. Actual stage-local overlap therefore does not incur the full1.5475s charge imposed on this Decode ledger.
+
+The two models agree on query-phase concurrency at the failing post-event epoch, so this example does not need a concurrency-count error to explain rejection. The full-service blocking rule, rather than a measured residual waiting time, is the identifiable conservative component here. We do not infer that removing this charge is generally safe or recommend changing the frozen baseline. Replication in another case and optimistic/decision-transfer mechanisms remain pending.

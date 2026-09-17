@@ -95,3 +95,11 @@ Created independent fresh mirrors under ignored dependencies and inspected reach
 ## Stage2 protocol frozen
 
 FI-JB1-v1 is frozen before held-out reference outcomes. Six new seed/window pairs,30/120s traces, global source-count scaling target.5, five-shift heterogeneous comparisons, A100 controls and two opposite-link uniform anchors give76 configuration/regime combinations. Common grid refinement uses union transitions across all candidates and both SLAs, targeting2.5% relative brackets with finite caps.22 pre-run tests pass. Per user steering, historical archaeology is closed; missing historical artifacts are documented limitations and do not block new evidence.
+
+## Stage2 execution and first mechanism check — running
+
+Changed CPU scheduling from one process per physical group to eight shared point workers. Existing points and per-stage frozen plans are resumed unchanged. Eight potentially interrupted probes are recorded in `results/formal/execution_restart.json` and must appear in the final completeness audit. This is an execution-only change, not a changed grid, workload, SLA or reference model. Long reference traces remain fully drained.
+
+Prepared RQ1–RQ4 analysis, six simple mitigation replays, event tracing, quality checks and post-matrix sequential timing. All22 tests still pass. A storage-only reference experiment matched two complete metric sets, but showed no established speed benefit under uncontrolled contention; it is not used by the formal runner.
+
+First explanatory trace: h105/A100/fast/intensity4.096/relaxed-Decode. JB1 rejects from full active-Prefill blocking debt1.547523s; the reference's maximum TPOT is.945950s against1s. Full instrumented metrics exactly equal the original reference record. The comparison and local arithmetic, with attribution limits, are in MECHANISM_ANALYSIS. No aggregate reliability or decision-transfer conclusion is drawn from incomplete groups.
