@@ -1,0 +1,32 @@
+{
+  "evaluator": {
+    "reachable_commits": 329,
+    "refs": 197,
+    "tags": 0,
+    "pull_refs": 50,
+    "artifact_metadata_records": 1365,
+    "artifact_distinct_commits": 128,
+    "artifact_commits_not_in_history": [
+      "717447021a1a698874538a3942cea9904fe7588d",
+      "7943bc8b323aef8ebda791f48ffcc903f7ff1270",
+      "87f3f64f430a7be30c45f7d76ba996e695d88b6e",
+      "92cc64420e74085859049628d03eecd2da93c597",
+      "e6e7b8dbc1247f04527b727779dc87ff96519bb2",
+      "fdff5af00c5da1056593c92f839e147e5e3c66d9"
+    ],
+    "download_status": "Archive metadata inspected; binary downloads failed (403 from connector file URL; 401 from authenticated API redirect). No final accounting-only artifact identified.",
+    "final_reachable_commits": 335,
+    "final_ref_count": 203,
+    "final_pull_ref_count": 50,
+    "all_six_artifact_only_commits_fetched_and_inspected": true
+  },
+  "partition": {
+    "reachable_commits": 105,
+    "refs": 2,
+    "tags": 0,
+    "pull_refs": 0,
+    "final_reachable_commits": 105,
+    "final_ref_count": 2,
+    "final_pull_ref_count": 0
+  }
+}
