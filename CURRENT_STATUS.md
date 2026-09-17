@@ -1,4 +1,15 @@
-# Current status — Stage 4 SLA sensitivity complete
+# Current status — Stage 5 JB1+ correction complete
+
+**Stage 5 complete (2026-09-17): a clear trade-off; journal position B.** Read [JB1_PLUS_EVIDENCE_REPORT.md](JB1_PLUS_EVIDENCE_REPORT.md) and [technical evidence](docs/JB1_PLUS_TECHNICAL_REPORT.md). Keep JB1 as the main research object and JB1+ as a mechanism-guided correction experiment; do not present it as a safer replacement.
+
+One frozen formula scales only active-Prefill compute by its remaining lifetime fraction; intrinsic H remains full, Raw/Legacy trajectories unchanged. Protocol/workloads committed in e3887ca before outcomes. Reused2,050 Stage4 primary physical points plus130 A100 points, with zero old-reference reruns. Four new held-out workloads used500 new HELIX points/500 attempts, all successful, no retries/timeouts/failures. Each workload reached16 added intensities;37 unresolved intervals remain, maximum41.42%. No budget expansion.
+
+Phase A Raw C1911→1604/O38→39, Legacy C2046→1724/O31→32. Phase B Raw C225→153 and Legacy C227→155, but both O7→17. Held-out winner agreement stays14/16 Raw and13/16 Legacy. Mean absolute capacity gap only improves41.11%→38.94% Raw and41.31%→39.14% Legacy; TPOT5 mean absolute error worsens and maximum overestimate rises+100%→+300%. Unsafe recommendations stay1/16, but w202/TPOT5 violations worsen1/48→9/48 as recommended intensity doubles. Average operating loss44.78%→38.87% does not erase that safety cost. The original completion-time drift remains.
+
+All41 tests and integrity checks pass;5,867 protected historical files unchanged, old96 decisions/480 capacity entries reproduce, reference/pins/profiles unchanged. Two main-text candidate figures visually reviewed. Sequential evaluator timings stay in the same millisecond order; these are CPU planning timings, not GPU speedup. Reports retain all adverse cases, censoring and nonmonotonicity. **No JB1++, no further experiments, no manuscript drafted.**
+
+## Historical Stage 4 completion
+
 
 **Stage 4 complete (2026-09-17): strengthens current story within the tested scope.** Read [SLA_SENSITIVITY_EVIDENCE_REPORT.md](SLA_SENSITIVITY_EVIDENCE_REPORT.md) and [technical evidence](docs/SLA_REGIME_SENSITIVITY.md). This is a post-Stage-3 parameter supplement on the same six workloads, not independent held-out generalization. No manuscript prose or new algorithm was written.
 

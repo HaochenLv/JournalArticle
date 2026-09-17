@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "evidence_sections": 14,
+  "technical_sections": 18,
+  "protocol_hash": "66375a5dab2941a70ee3111cd1f16f09d7e05fd32b440cf3759591b78e57afe2",
+  "headline_numeric_assertions": "A/B O/C, winner and unsafe counts; 500/500 attempts, no failures,37 unresolved; paired72 C removed and10 new O;30 capacity improvements/2 worsening; w202 doubled unsafe load and1/48 to9/48 violations;300% max gap;nonmonotone and censor flags",
+  "report_sha256": {
+    "JB1_PLUS_EVIDENCE_REPORT.md": "15f45893f0abb516083a86487c58e52a0f78137ab14896fa77bf350291800170",
+    "docs/JB1_PLUS_TECHNICAL_REPORT.md": "12a4291c4838851d145d9a7b70af97aee3db7d241809bae34fc55f4882e9673f"
+  },
+  "source_summary_sha256": "40de82125758f3cefb324020382135aa3124bd59a0adf26a8bc0f920de62720b"
+}

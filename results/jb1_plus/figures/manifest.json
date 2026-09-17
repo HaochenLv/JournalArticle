@@ -1,0 +1,12 @@
+{
+  "figures": 2,
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "source": "results/jb1_plus/summary.json",
+  "source_sha256": "40de82125758f3cefb324020382135aa3124bd59a0adf26a8bc0f920de62720b",
+  "caption_a": "Counts are adaptive-grid descriptions, not production risk probabilities. Mean absolute sampled capacity gap excludes undefined capacities; signed medians, ranges and no-safe flags remain in tables. Phase A is post-hoc; Phase B uses four new workloads. Last two Phase A x labels show TTFT / TPOT.",
+  "caption_b": "Four workload decisions per SLA. Counts do not establish population reliability. Loss means include only defined quantities, with denominators in tables; arithmetic operating loss does not establish point safety. All cases, ties and unresolved intervals retained.",
+  "display": "Small horizontal offsets separate coincident variants within each fixed SLA category; they are not different SLA thresholds. Lines connect tested categories only."
+}

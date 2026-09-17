@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "figures": 2,
+  "visually_reviewed": [
+    "figure_a.png",
+    "figure_b.png"
+  ],
+  "checks": [
+    "title and legend separated",
+    "axis labels and panel titles legible",
+    "coincident variants exposed with declared categorical offsets",
+    "capacity absolute-error panel retains adverse TPOT5 change",
+    "unchanged unsafe count paired with1/48 to9/48 severity annotation",
+    "only two main-text candidates, PNG/SVG companions"
+  ],
+  "sha256": {
+    "figure_a.png": "4224ecf3412944dfa75d8504ca86262dd4a606c31b50072c8d49d17f3a797450",
+    "figure_a.svg": "d709d8b60323e9110b0f7b09a5e7e5f309d051c3ee2a162aa2b09570c95bd9fd",
+    "figure_b.png": "9462f0c366539c20ba5c91689405a90a6fc565a4156069479d846c9a6fe34ddb",
+    "figure_b.svg": "c1249ac72c66e980b5962669f1b8965ddecded980ec9d78a916168b4ec5c4b3c"
+  }
+}
