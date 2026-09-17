@@ -46,6 +46,17 @@ def main():
     selected=max(scores,key=lambda s:(scores[s],-abs(s),-s));refs=trial['reference_scores'];rb=max(refs.values());rv=refs[selected]
     changes.append({'case':trial['case'],'variant':variant,'evaluator_scores':scores,'selected':selected,'changed_from_nominal':selected!=trial['evaluator_selected'],'reference_rank':1+sum(v>rv for v in refs.values()),'reference_quality_ratio':rv/rb if rb else None})
   write_json(ROOT/'results/diagnostic/partition_ranking/mismatch_rankings.json',changes)
+  # Resolution control: use exactly the same loads for every candidate.
+  from partition_ranking import GRID
+  common=[];loads=set(GRID)
+  for trial in rankrows:
+   key=trial['case'];ds=ranking[key]
+   refs={d['case']['shift']:max((r['lambda'] for r in d['rows'] if r['lambda'] in loads and r['reference']['safe']),default=0) for d in ds}
+   for variant in sorted({r['variant'] for r in mr if r['source']=='partition_ranking'}):
+    scores={s:max((float(r['lambda']) for r in mr if r['case']==key+'-shift'+str(s) and r['variant']==variant and float(r['lambda']) in loads and r['evaluator_safe']=='True'),default=0) for s in [-2,-1,0,1,2]}
+    selected=max(scores,key=lambda s:(scores[s],-abs(s),-s));best=max(refs.values())
+    common.append({'case':key,'variant':variant,'evaluator_scores':scores,'reference_scores':refs,'selected':selected,'reference_rank':1+sum(v>refs[selected] for v in refs.values()),'reference_quality_ratio':refs[selected]/best if best else None})
+  write_json(ROOT/'results/diagnostic/partition_ranking/common_grid_rankings.json',{'scope':'identical 19-load grid for all candidates; under-resolves some partition differences','trials':common})
  print(json.dumps({'nominal':nominal,'ranking':rankrows},indent=2))
 
 if __name__=='__main__':main()

@@ -1,0 +1,248 @@
+{
+  "scope": "largest safe observed probes per candidate; use reported intervals/censoring before asserting a strict rank",
+  "trials": [
+    {
+      "case": "hetero-s0-decode",
+      "evaluator_scores": {
+        "-2": 0.008,
+        "2": 0.007,
+        "1": 0.00725,
+        "0": 0.0075,
+        "-1": 0.00775
+      },
+      "reference_scores": {
+        "-2": 0.008,
+        "2": 0.00725,
+        "1": 0.0075,
+        "0": 0.0075,
+        "-1": 0.00775
+      },
+      "evaluator_best_set": [
+        -2
+      ],
+      "reference_best_set": [
+        -2
+      ],
+      "evaluator_selected": -2,
+      "reference_rank_of_evaluator_selected": 1,
+      "reference_quality_ratio": 1.0,
+      "reference_censored": false,
+      "reference_nonmonotone_candidates": [],
+      "candidate_intervals": {
+        "-2": {
+          "evaluator_lower": 0.008,
+          "evaluator_upper": 0.00825,
+          "reference_lower": 0.008,
+          "reference_upper": 0.00825
+        },
+        "2": {
+          "evaluator_lower": 0.007,
+          "evaluator_upper": 0.00725,
+          "reference_lower": 0.00725,
+          "reference_upper": 0.0075
+        },
+        "1": {
+          "evaluator_lower": 0.00725,
+          "evaluator_upper": 0.0075,
+          "reference_lower": 0.0075,
+          "reference_upper": 0.00775
+        },
+        "0": {
+          "evaluator_lower": 0.0075,
+          "evaluator_upper": 0.00775,
+          "reference_lower": 0.0075,
+          "reference_upper": 0.00775
+        },
+        "-1": {
+          "evaluator_lower": 0.00775,
+          "evaluator_upper": 0.008,
+          "reference_lower": 0.00775,
+          "reference_upper": 0.008
+        }
+      }
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "evaluator_scores": {
+        "1": 2.755,
+        "-1": 2.61,
+        "0": 2.61,
+        "-2": 2.61,
+        "2": 2.755
+      },
+      "reference_scores": {
+        "1": 12.76,
+        "-1": 11.02,
+        "0": 12.76,
+        "-2": 8.7,
+        "2": 11.6
+      },
+      "evaluator_best_set": [
+        1,
+        2
+      ],
+      "reference_best_set": [
+        0,
+        1
+      ],
+      "evaluator_selected": 1,
+      "reference_rank_of_evaluator_selected": 1,
+      "reference_quality_ratio": 1.0,
+      "reference_censored": false,
+      "reference_nonmonotone_candidates": [],
+      "candidate_intervals": {
+        "1": {
+          "evaluator_lower": 2.755,
+          "evaluator_upper": 2.9,
+          "reference_lower": 12.76,
+          "reference_upper": 13.34
+        },
+        "-1": {
+          "evaluator_lower": 2.61,
+          "evaluator_upper": 2.755,
+          "reference_lower": 11.02,
+          "reference_upper": 11.6
+        },
+        "0": {
+          "evaluator_lower": 2.61,
+          "evaluator_upper": 2.755,
+          "reference_lower": 12.76,
+          "reference_upper": 13.34
+        },
+        "-2": {
+          "evaluator_lower": 2.61,
+          "evaluator_upper": 2.755,
+          "reference_lower": 8.7,
+          "reference_upper": 8.99
+        },
+        "2": {
+          "evaluator_lower": 2.755,
+          "evaluator_upper": 2.9,
+          "reference_lower": 11.6,
+          "reference_upper": 12.18
+        }
+      }
+    },
+    {
+      "case": "hetero-s7-decode",
+      "evaluator_scores": {
+        "1": 0.00625,
+        "-2": 0.007,
+        "0": 0.0065,
+        "-1": 0.00675,
+        "2": 0.00625
+      },
+      "reference_scores": {
+        "1": 0.0065,
+        "-2": 0.007,
+        "0": 0.00675,
+        "-1": 0.00675,
+        "2": 0.00625
+      },
+      "evaluator_best_set": [
+        -2
+      ],
+      "reference_best_set": [
+        -2
+      ],
+      "evaluator_selected": -2,
+      "reference_rank_of_evaluator_selected": 1,
+      "reference_quality_ratio": 1.0,
+      "reference_censored": false,
+      "reference_nonmonotone_candidates": [],
+      "candidate_intervals": {
+        "1": {
+          "evaluator_lower": 0.00625,
+          "evaluator_upper": 0.0065,
+          "reference_lower": 0.0065,
+          "reference_upper": 0.00675
+        },
+        "-2": {
+          "evaluator_lower": 0.007,
+          "evaluator_upper": 0.00725,
+          "reference_lower": 0.007,
+          "reference_upper": 0.00725
+        },
+        "0": {
+          "evaluator_lower": 0.0065,
+          "evaluator_upper": 0.00675,
+          "reference_lower": 0.00675,
+          "reference_upper": 0.007
+        },
+        "-1": {
+          "evaluator_lower": 0.00675,
+          "evaluator_upper": 0.007,
+          "reference_lower": 0.00675,
+          "reference_upper": 0.007
+        },
+        "2": {
+          "evaluator_lower": 0.00625,
+          "evaluator_upper": 0.0065,
+          "reference_lower": 0.00625,
+          "reference_upper": 0.0065
+        }
+      }
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "evaluator_scores": {
+        "-2": 1.01375,
+        "0": 1.01375,
+        "1": 1.2325,
+        "2": 1.2325,
+        "-1": 1.01375
+      },
+      "reference_scores": {
+        "-2": 3.045,
+        "0": 3.77,
+        "1": 4.205,
+        "2": 3.77,
+        "-1": 3.335
+      },
+      "evaluator_best_set": [
+        1,
+        2
+      ],
+      "reference_best_set": [
+        1
+      ],
+      "evaluator_selected": 1,
+      "reference_rank_of_evaluator_selected": 1,
+      "reference_quality_ratio": 1.0,
+      "reference_censored": false,
+      "reference_nonmonotone_candidates": [],
+      "candidate_intervals": {
+        "-2": {
+          "evaluator_lower": 1.01375,
+          "evaluator_upper": 1.038125,
+          "reference_lower": 3.045,
+          "reference_upper": 3.19
+        },
+        "0": {
+          "evaluator_lower": 1.01375,
+          "evaluator_upper": 1.038125,
+          "reference_lower": 3.77,
+          "reference_upper": 3.915
+        },
+        "1": {
+          "evaluator_lower": 1.2325,
+          "evaluator_upper": 1.305,
+          "reference_lower": 4.205,
+          "reference_upper": 4.35
+        },
+        "2": {
+          "evaluator_lower": 1.2325,
+          "evaluator_upper": 1.305,
+          "reference_lower": 3.77,
+          "reference_upper": 3.915
+        },
+        "-1": {
+          "evaluator_lower": 1.01375,
+          "evaluator_upper": 1.038125,
+          "reference_lower": 3.335,
+          "reference_upper": 3.48
+        }
+      }
+    }
+  ]
+}

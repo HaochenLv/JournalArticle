@@ -28,7 +28,7 @@ def main():
   oracle=max((v for s,t in lookups.items() for v in loads if t[round(v,10)]['reference']['safe']),default=0.)
   def query(s,j):return lookups[s][round(loads[j],10)]['reference']['safe']
   for budget in budgets:
-   for policy in ['fixed_grid','reference_only_adaptive','round_robin','best_first']:
+   for policy in ['fixed_grid','reference_only_adaptive','reference_only_bisection','reference_uniform_bisection','round_robin','best_first']:
     r=plan(loads,list(cases),e,query,budget,policy);chosen=r['chosen'];value=chosen['load'] if chosen else 0.
     replay_cost=sum(lookups[x['candidate']][round(x['load'],10)]['reference']['runtime_s'] for x in r['trace'])
     e_cost=evaluator_cost if policy in ['round_robin','best_first'] else 0.

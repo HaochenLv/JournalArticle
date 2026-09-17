@@ -1,0 +1,315 @@
+{
+  "interpretation": "deterministic controlled stress grid, not a probability estimate",
+  "groups": [
+    {
+      "source": "nominal_gap",
+      "variant": "both_minus10",
+      "pairs": 175,
+      "run_errors": 0,
+      "both_safe": 76,
+      "both_unsafe": 64,
+      "optimistic": 21,
+      "conservative": 14
+    },
+    {
+      "source": "nominal_gap",
+      "variant": "both_minus20",
+      "pairs": 175,
+      "run_errors": 0,
+      "both_safe": 79,
+      "both_unsafe": 54,
+      "optimistic": 31,
+      "conservative": 11
+    },
+    {
+      "source": "nominal_gap",
+      "variant": "both_minus5",
+      "pairs": 175,
+      "run_errors": 0,
+      "both_safe": 75,
+      "both_unsafe": 69,
+      "optimistic": 16,
+      "conservative": 15
+    },
+    {
+      "source": "nominal_gap",
+      "variant": "decode_minus10",
+      "pairs": 175,
+      "run_errors": 0,
+      "both_safe": 74,
+      "both_unsafe": 65,
+      "optimistic": 20,
+      "conservative": 16
+    },
+    {
+      "source": "nominal_gap",
+      "variant": "decode_minus20",
+      "pairs": 175,
+      "run_errors": 0,
+      "both_safe": 76,
+      "both_unsafe": 59,
+      "optimistic": 26,
+      "conservative": 14
+    },
+    {
+      "source": "nominal_gap",
+      "variant": "decode_minus5",
+      "pairs": 175,
+      "run_errors": 0,
+      "both_safe": 73,
+      "both_unsafe": 70,
+      "optimistic": 15,
+      "conservative": 17
+    },
+    {
+      "source": "nominal_gap",
+      "variant": "nominal",
+      "pairs": 175,
+      "run_errors": 0,
+      "both_safe": 68,
+      "both_unsafe": 72,
+      "optimistic": 13,
+      "conservative": 22
+    },
+    {
+      "source": "nominal_gap",
+      "variant": "prefill_minus10",
+      "pairs": 175,
+      "run_errors": 0,
+      "both_safe": 72,
+      "both_unsafe": 71,
+      "optimistic": 14,
+      "conservative": 18
+    },
+    {
+      "source": "nominal_gap",
+      "variant": "prefill_minus20",
+      "pairs": 175,
+      "run_errors": 0,
+      "both_safe": 75,
+      "both_unsafe": 65,
+      "optimistic": 20,
+      "conservative": 15
+    },
+    {
+      "source": "nominal_gap",
+      "variant": "prefill_minus5",
+      "pairs": 175,
+      "run_errors": 0,
+      "both_safe": 72,
+      "both_unsafe": 71,
+      "optimistic": 14,
+      "conservative": 18
+    },
+    {
+      "source": "partition_ranking",
+      "variant": "both_minus10",
+      "pairs": 502,
+      "run_errors": 0,
+      "both_safe": 226,
+      "both_unsafe": 217,
+      "optimistic": 15,
+      "conservative": 44
+    },
+    {
+      "source": "partition_ranking",
+      "variant": "both_minus20",
+      "pairs": 502,
+      "run_errors": 0,
+      "both_safe": 237,
+      "both_unsafe": 210,
+      "optimistic": 22,
+      "conservative": 33
+    },
+    {
+      "source": "partition_ranking",
+      "variant": "both_minus5",
+      "pairs": 502,
+      "run_errors": 0,
+      "both_safe": 222,
+      "both_unsafe": 223,
+      "optimistic": 9,
+      "conservative": 48
+    },
+    {
+      "source": "partition_ranking",
+      "variant": "decode_minus10",
+      "pairs": 502,
+      "run_errors": 0,
+      "both_safe": 206,
+      "both_unsafe": 217,
+      "optimistic": 15,
+      "conservative": 64
+    },
+    {
+      "source": "partition_ranking",
+      "variant": "decode_minus20",
+      "pairs": 502,
+      "run_errors": 0,
+      "both_safe": 209,
+      "both_unsafe": 211,
+      "optimistic": 21,
+      "conservative": 61
+    },
+    {
+      "source": "partition_ranking",
+      "variant": "decode_minus5",
+      "pairs": 502,
+      "run_errors": 0,
+      "both_safe": 206,
+      "both_unsafe": 223,
+      "optimistic": 9,
+      "conservative": 64
+    },
+    {
+      "source": "partition_ranking",
+      "variant": "l4x2_minus10",
+      "pairs": 502,
+      "run_errors": 0,
+      "both_safe": 222,
+      "both_unsafe": 221,
+      "optimistic": 11,
+      "conservative": 48
+    },
+    {
+      "source": "partition_ranking",
+      "variant": "nominal",
+      "pairs": 502,
+      "run_errors": 0,
+      "both_safe": 202,
+      "both_unsafe": 232,
+      "optimistic": 0,
+      "conservative": 68
+    },
+    {
+      "source": "partition_ranking",
+      "variant": "prefill_minus10",
+      "pairs": 502,
+      "run_errors": 0,
+      "both_safe": 222,
+      "both_unsafe": 232,
+      "optimistic": 0,
+      "conservative": 48
+    },
+    {
+      "source": "partition_ranking",
+      "variant": "prefill_minus20",
+      "pairs": 502,
+      "run_errors": 0,
+      "both_safe": 234,
+      "both_unsafe": 232,
+      "optimistic": 0,
+      "conservative": 36
+    },
+    {
+      "source": "partition_ranking",
+      "variant": "prefill_minus5",
+      "pairs": 502,
+      "run_errors": 0,
+      "both_safe": 218,
+      "both_unsafe": 232,
+      "optimistic": 0,
+      "conservative": 52
+    },
+    {
+      "source": "reproduction",
+      "variant": "both_minus10",
+      "pairs": 1,
+      "run_errors": 0,
+      "both_safe": 0,
+      "both_unsafe": 0,
+      "optimistic": 1,
+      "conservative": 0
+    },
+    {
+      "source": "reproduction",
+      "variant": "both_minus20",
+      "pairs": 1,
+      "run_errors": 0,
+      "both_safe": 0,
+      "both_unsafe": 0,
+      "optimistic": 1,
+      "conservative": 0
+    },
+    {
+      "source": "reproduction",
+      "variant": "both_minus5",
+      "pairs": 1,
+      "run_errors": 0,
+      "both_safe": 0,
+      "both_unsafe": 0,
+      "optimistic": 1,
+      "conservative": 0
+    },
+    {
+      "source": "reproduction",
+      "variant": "decode_minus10",
+      "pairs": 1,
+      "run_errors": 0,
+      "both_safe": 0,
+      "both_unsafe": 1,
+      "optimistic": 0,
+      "conservative": 0
+    },
+    {
+      "source": "reproduction",
+      "variant": "decode_minus20",
+      "pairs": 1,
+      "run_errors": 0,
+      "both_safe": 0,
+      "both_unsafe": 1,
+      "optimistic": 0,
+      "conservative": 0
+    },
+    {
+      "source": "reproduction",
+      "variant": "decode_minus5",
+      "pairs": 1,
+      "run_errors": 0,
+      "both_safe": 0,
+      "both_unsafe": 1,
+      "optimistic": 0,
+      "conservative": 0
+    },
+    {
+      "source": "reproduction",
+      "variant": "nominal",
+      "pairs": 1,
+      "run_errors": 0,
+      "both_safe": 0,
+      "both_unsafe": 1,
+      "optimistic": 0,
+      "conservative": 0
+    },
+    {
+      "source": "reproduction",
+      "variant": "prefill_minus10",
+      "pairs": 1,
+      "run_errors": 0,
+      "both_safe": 0,
+      "both_unsafe": 0,
+      "optimistic": 1,
+      "conservative": 0
+    },
+    {
+      "source": "reproduction",
+      "variant": "prefill_minus20",
+      "pairs": 1,
+      "run_errors": 0,
+      "both_safe": 0,
+      "both_unsafe": 0,
+      "optimistic": 1,
+      "conservative": 0
+    },
+    {
+      "source": "reproduction",
+      "variant": "prefill_minus5",
+      "pairs": 1,
+      "run_errors": 0,
+      "both_safe": 0,
+      "both_unsafe": 0,
+      "optimistic": 1,
+      "conservative": 0
+    }
+  ]
+}

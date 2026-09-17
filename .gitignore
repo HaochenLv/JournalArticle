@@ -12,3 +12,4 @@ CA/
 *.pem
 *.key
 .mplconfig/
+*.tmp-*

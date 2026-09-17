@@ -82,7 +82,7 @@ class Profiles:
 def evaluator(p,w,sla,prof=None,intrinsic=True,debt=True):
  prof=prof or Profiles()
  start=time.perf_counter()
- run=evaluate(pipeline=p,workload=w,sla=sla,config=EvaluatorConfig(record_trace=True),profiler=prof)
+ run=evaluate(pipeline=p,workload=w,sla=sla,config=EvaluatorConfig(record_trace=True,max_events=20_000),profiler=prof)
  byid={r.id:r for r in w}; first=None;max_p=0.;max_d=0.
  for snap in run.trace:
   np,nd=snap.num_prefill,snap.num_decode

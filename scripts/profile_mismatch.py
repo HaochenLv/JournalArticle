@@ -15,9 +15,15 @@ def main():
    case=d['case'];p=pipeline(case['placement'],case['shift'],case['hetero']);base=tuple(RequestSpec(**r) for r in d['requests']);sla=SLA(**d['sla'])
    variants=VARIANTS+([('l4x2_minus10',1.,1.,('l4x2',.9))] if case['hetero'] else [])
    for label,ps,ds,device in variants:
+    print('Evaluating',case['id'],label,flush=True)
     prof=Profiles(ps,ds,device)
     for r in d['rows']:
-     e=evaluator(p,scale_workload(base,r['lambda']),sla,prof);ref=r['reference']
+     ref=r['reference']
+     try:e=evaluator(p,scale_workload(base,r['lambda']),sla,prof)
+     except RuntimeError as exc:
+      print('ERROR',case['id'],label,r['lambda'],str(exc),flush=True)
+      rows.append({'case':case['id'],'source':folder,'variant':label,'lambda':r['lambda'],'evaluator_safe':None,'reference_safe':ref['safe'],'disagreement':'error','evaluator_violation':str(exc),'reference_violation':ref['first_violation'],'reference_ttft_s':ref['max_ttft_s'],'reference_tpot_s':ref['max_tpot_s'],'reference_cache_key':ref['cache_key'],'evaluator_runtime_s':None})
+      continue
      assert label!='nominal' or e['safe']==r['evaluator']['safe']
      rows.append({'case':case['id'],'source':folder,'variant':label,'lambda':r['lambda'],'evaluator_safe':e['safe'],'reference_safe':ref['safe'],'disagreement':('optimistic' if e['safe'] else 'conservative') if e['safe']!=ref['safe'] else 'agreement','evaluator_violation':(e['first_violation'] or {}).get('kind'),'reference_violation':ref['first_violation'],'reference_ttft_s':ref['max_ttft_s'],'reference_tpot_s':ref['max_tpot_s'],'reference_cache_key':ref['cache_key'],'evaluator_runtime_s':e['runtime_s']})
  # Isolated held-out counterexample checks profile sensitivity without confounding arrival shifts.
@@ -31,8 +37,8 @@ def main():
  groups=[]
  for source in sorted({r['source'] for r in rows}):
   for variant in sorted({r['variant'] for r in rows if r['source']==source}):
-   group=[r for r in rows if r['source']==source and r['variant']==variant]
-   groups.append({'source':source,'variant':variant,'pairs':len(group),'both_safe':sum(r['evaluator_safe'] and r['reference_safe'] for r in group),'both_unsafe':sum(not r['evaluator_safe'] and not r['reference_safe'] for r in group),'optimistic':sum(r['disagreement']=='optimistic' for r in group),'conservative':sum(r['disagreement']=='conservative' for r in group)})
+   attempted=[r for r in rows if r['source']==source and r['variant']==variant];group=[r for r in attempted if r['disagreement']!='error']
+   groups.append({'source':source,'variant':variant,'pairs':len(group),'run_errors':len(attempted)-len(group),'both_safe':sum(r['evaluator_safe'] and r['reference_safe'] for r in group),'both_unsafe':sum(not r['evaluator_safe'] and not r['reference_safe'] for r in group),'optimistic':sum(r['disagreement']=='optimistic' for r in group),'conservative':sum(r['disagreement']=='conservative' for r in group)})
  write_json(out/'summary.json',{'interpretation':'deterministic controlled stress grid, not a probability estimate','groups':groups})
  print(json.dumps(groups,indent=2))
 if __name__=='__main__':main()

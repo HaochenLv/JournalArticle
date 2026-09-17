@@ -1,0 +1,929 @@
+{
+  "scope": "identical 19-load grid for all candidates; under-resolves some partition differences",
+  "trials": [
+    {
+      "case": "hetero-s0-decode",
+      "variant": "both_minus10",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "-2": 0.006,
+        "2": 0.006,
+        "1": 0.006,
+        "0": 0.006,
+        "-1": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-decode",
+      "variant": "both_minus20",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "-2": 0.006,
+        "2": 0.006,
+        "1": 0.006,
+        "0": 0.006,
+        "-1": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-decode",
+      "variant": "both_minus5",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "-2": 0.006,
+        "2": 0.006,
+        "1": 0.006,
+        "0": 0.006,
+        "-1": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-decode",
+      "variant": "decode_minus10",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "-2": 0.006,
+        "2": 0.006,
+        "1": 0.006,
+        "0": 0.006,
+        "-1": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-decode",
+      "variant": "decode_minus20",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "-2": 0.006,
+        "2": 0.006,
+        "1": 0.006,
+        "0": 0.006,
+        "-1": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-decode",
+      "variant": "decode_minus5",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "-2": 0.006,
+        "2": 0.006,
+        "1": 0.006,
+        "0": 0.006,
+        "-1": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-decode",
+      "variant": "l4x2_minus10",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "-2": 0.006,
+        "2": 0.006,
+        "1": 0.006,
+        "0": 0.006,
+        "-1": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-decode",
+      "variant": "nominal",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "-2": 0.006,
+        "2": 0.006,
+        "1": 0.006,
+        "0": 0.006,
+        "-1": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-decode",
+      "variant": "prefill_minus10",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "-2": 0.006,
+        "2": 0.006,
+        "1": 0.006,
+        "0": 0.006,
+        "-1": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-decode",
+      "variant": "prefill_minus20",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "-2": 0.006,
+        "2": 0.006,
+        "1": 0.006,
+        "0": 0.006,
+        "-1": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-decode",
+      "variant": "prefill_minus5",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "-2": 0.006,
+        "2": 0.006,
+        "1": 0.006,
+        "0": 0.006,
+        "-1": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "variant": "both_minus10",
+      "evaluator_scores": {
+        "-2": 2.32,
+        "-1": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32
+      },
+      "reference_scores": {
+        "1": 9.28,
+        "-1": 9.28,
+        "0": 9.28,
+        "-2": 4.64,
+        "2": 9.28
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "variant": "both_minus20",
+      "evaluator_scores": {
+        "-2": 2.32,
+        "-1": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 4.64
+      },
+      "reference_scores": {
+        "1": 9.28,
+        "-1": 9.28,
+        "0": 9.28,
+        "-2": 4.64,
+        "2": 9.28
+      },
+      "selected": 2,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "variant": "both_minus5",
+      "evaluator_scores": {
+        "-2": 2.32,
+        "-1": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32
+      },
+      "reference_scores": {
+        "1": 9.28,
+        "-1": 9.28,
+        "0": 9.28,
+        "-2": 4.64,
+        "2": 9.28
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "variant": "decode_minus10",
+      "evaluator_scores": {
+        "-2": 2.32,
+        "-1": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32
+      },
+      "reference_scores": {
+        "1": 9.28,
+        "-1": 9.28,
+        "0": 9.28,
+        "-2": 4.64,
+        "2": 9.28
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "variant": "decode_minus20",
+      "evaluator_scores": {
+        "-2": 2.32,
+        "-1": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32
+      },
+      "reference_scores": {
+        "1": 9.28,
+        "-1": 9.28,
+        "0": 9.28,
+        "-2": 4.64,
+        "2": 9.28
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "variant": "decode_minus5",
+      "evaluator_scores": {
+        "-2": 2.32,
+        "-1": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32
+      },
+      "reference_scores": {
+        "1": 9.28,
+        "-1": 9.28,
+        "0": 9.28,
+        "-2": 4.64,
+        "2": 9.28
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "variant": "l4x2_minus10",
+      "evaluator_scores": {
+        "-2": 2.32,
+        "-1": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32
+      },
+      "reference_scores": {
+        "1": 9.28,
+        "-1": 9.28,
+        "0": 9.28,
+        "-2": 4.64,
+        "2": 9.28
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "variant": "nominal",
+      "evaluator_scores": {
+        "-2": 2.32,
+        "-1": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32
+      },
+      "reference_scores": {
+        "1": 9.28,
+        "-1": 9.28,
+        "0": 9.28,
+        "-2": 4.64,
+        "2": 9.28
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "variant": "prefill_minus10",
+      "evaluator_scores": {
+        "-2": 2.32,
+        "-1": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32
+      },
+      "reference_scores": {
+        "1": 9.28,
+        "-1": 9.28,
+        "0": 9.28,
+        "-2": 4.64,
+        "2": 9.28
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "variant": "prefill_minus20",
+      "evaluator_scores": {
+        "-2": 2.32,
+        "-1": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 4.64
+      },
+      "reference_scores": {
+        "1": 9.28,
+        "-1": 9.28,
+        "0": 9.28,
+        "-2": 4.64,
+        "2": 9.28
+      },
+      "selected": 2,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s0-prefill",
+      "variant": "prefill_minus5",
+      "evaluator_scores": {
+        "-2": 2.32,
+        "-1": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32
+      },
+      "reference_scores": {
+        "1": 9.28,
+        "-1": 9.28,
+        "0": 9.28,
+        "-2": 4.64,
+        "2": 9.28
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-decode",
+      "variant": "both_minus10",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "1": 0.006,
+        "-2": 0.006,
+        "0": 0.006,
+        "-1": 0.006,
+        "2": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-decode",
+      "variant": "both_minus20",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "1": 0.006,
+        "-2": 0.006,
+        "0": 0.006,
+        "-1": 0.006,
+        "2": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-decode",
+      "variant": "both_minus5",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "1": 0.006,
+        "-2": 0.006,
+        "0": 0.006,
+        "-1": 0.006,
+        "2": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-decode",
+      "variant": "decode_minus10",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "1": 0.006,
+        "-2": 0.006,
+        "0": 0.006,
+        "-1": 0.006,
+        "2": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-decode",
+      "variant": "decode_minus20",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "1": 0.006,
+        "-2": 0.006,
+        "0": 0.006,
+        "-1": 0.006,
+        "2": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-decode",
+      "variant": "decode_minus5",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "1": 0.006,
+        "-2": 0.006,
+        "0": 0.006,
+        "-1": 0.006,
+        "2": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-decode",
+      "variant": "l4x2_minus10",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "1": 0.006,
+        "-2": 0.006,
+        "0": 0.006,
+        "-1": 0.006,
+        "2": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-decode",
+      "variant": "nominal",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "1": 0.006,
+        "-2": 0.006,
+        "0": 0.006,
+        "-1": 0.006,
+        "2": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-decode",
+      "variant": "prefill_minus10",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "1": 0.006,
+        "-2": 0.006,
+        "0": 0.006,
+        "-1": 0.006,
+        "2": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-decode",
+      "variant": "prefill_minus20",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "1": 0.006,
+        "-2": 0.006,
+        "0": 0.006,
+        "-1": 0.006,
+        "2": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-decode",
+      "variant": "prefill_minus5",
+      "evaluator_scores": {
+        "-2": 0.006,
+        "-1": 0.006,
+        "0": 0.006,
+        "1": 0.006,
+        "2": 0.006
+      },
+      "reference_scores": {
+        "1": 0.006,
+        "-2": 0.006,
+        "0": 0.006,
+        "-1": 0.006,
+        "2": 0.006
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "variant": "both_minus10",
+      "evaluator_scores": {
+        "-2": 1.16,
+        "-1": 1.16,
+        "0": 1.16,
+        "1": 1.16,
+        "2": 1.16
+      },
+      "reference_scores": {
+        "-2": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32,
+        "-1": 2.32
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "variant": "both_minus20",
+      "evaluator_scores": {
+        "-2": 1.16,
+        "-1": 1.16,
+        "0": 1.16,
+        "1": 2.32,
+        "2": 2.32
+      },
+      "reference_scores": {
+        "-2": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32,
+        "-1": 2.32
+      },
+      "selected": 1,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "variant": "both_minus5",
+      "evaluator_scores": {
+        "-2": 1.16,
+        "-1": 1.16,
+        "0": 1.16,
+        "1": 1.16,
+        "2": 1.16
+      },
+      "reference_scores": {
+        "-2": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32,
+        "-1": 2.32
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "variant": "decode_minus10",
+      "evaluator_scores": {
+        "-2": 0.77,
+        "-1": 0.77,
+        "0": 0.77,
+        "1": 1.16,
+        "2": 1.16
+      },
+      "reference_scores": {
+        "-2": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32,
+        "-1": 2.32
+      },
+      "selected": 1,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "variant": "decode_minus20",
+      "evaluator_scores": {
+        "-2": 0.77,
+        "-1": 0.77,
+        "0": 1.16,
+        "1": 1.16,
+        "2": 1.16
+      },
+      "reference_scores": {
+        "-2": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32,
+        "-1": 2.32
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "variant": "decode_minus5",
+      "evaluator_scores": {
+        "-2": 0.77,
+        "-1": 0.77,
+        "0": 0.77,
+        "1": 1.16,
+        "2": 1.16
+      },
+      "reference_scores": {
+        "-2": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32,
+        "-1": 2.32
+      },
+      "selected": 1,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "variant": "l4x2_minus10",
+      "evaluator_scores": {
+        "-2": 1.16,
+        "-1": 1.16,
+        "0": 1.16,
+        "1": 1.16,
+        "2": 1.16
+      },
+      "reference_scores": {
+        "-2": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32,
+        "-1": 2.32
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "variant": "nominal",
+      "evaluator_scores": {
+        "-2": 0.77,
+        "-1": 0.77,
+        "0": 0.77,
+        "1": 1.16,
+        "2": 1.16
+      },
+      "reference_scores": {
+        "-2": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32,
+        "-1": 2.32
+      },
+      "selected": 1,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "variant": "prefill_minus10",
+      "evaluator_scores": {
+        "-2": 1.16,
+        "-1": 1.16,
+        "0": 1.16,
+        "1": 1.16,
+        "2": 1.16
+      },
+      "reference_scores": {
+        "-2": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32,
+        "-1": 2.32
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "variant": "prefill_minus20",
+      "evaluator_scores": {
+        "-2": 1.16,
+        "-1": 1.16,
+        "0": 1.16,
+        "1": 2.32,
+        "2": 2.32
+      },
+      "reference_scores": {
+        "-2": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32,
+        "-1": 2.32
+      },
+      "selected": 1,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    },
+    {
+      "case": "hetero-s7-prefill",
+      "variant": "prefill_minus5",
+      "evaluator_scores": {
+        "-2": 1.16,
+        "-1": 1.16,
+        "0": 1.16,
+        "1": 1.16,
+        "2": 1.16
+      },
+      "reference_scores": {
+        "-2": 2.32,
+        "0": 2.32,
+        "1": 2.32,
+        "2": 2.32,
+        "-1": 2.32
+      },
+      "selected": 0,
+      "reference_rank": 1,
+      "reference_quality_ratio": 1.0
+    }
+  ]
+}

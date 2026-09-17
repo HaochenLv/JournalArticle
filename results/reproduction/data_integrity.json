@@ -1,0 +1,16 @@
+{
+  "case_counts": {
+    "nominal_gap": 10,
+    "partition_ranking": 20
+  },
+  "paired_probes": {
+    "nominal_gap": 175,
+    "partition_ranking": 502
+  },
+  "mismatch_rows": 7282,
+  "mismatch_run_errors": 0,
+  "planning_rows": 304,
+  "raw_reference_records": 678,
+  "original_repositories_unchanged": true,
+  "checks": "case completeness; observed reference failures; common ranking grid; event budget; raw fingerprints/verdicts; mismatch coverage and immutable reference keys; query budgets and validated outputs; old repository HEAD/status"
+}

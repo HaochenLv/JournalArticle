@@ -40,9 +40,13 @@ def main():
  path=ROOT/'results/diagnostic/profile_mismatch/summary.json'
  if path.exists():
   groups=[r for r in json.loads(path.read_text())['groups'] if r['source']=='nominal_gap']
+  order=['nominal']+[f'{phase}_minus{n}' for phase in ['prefill','decode','both'] for n in [5,10,20]]
+  groups.sort(key=lambda r:order.index(r['variant']))
   fig,ax=plt.subplots(figsize=(11,4.8),constrained_layout=True);x=np.arange(len(groups))
   ax.bar(x-.18,[r['optimistic'] for r in groups],.36,label='Optimistic',color='#c63838');ax.bar(x+.18,[r['conservative'] for r in groups],.36,label='Conservative',color='#245ab3')
   ax.set_xticks(x,[r['variant'].replace('_',' ') for r in groups],rotation=30,ha='right');ax.set(ylabel='Observed disagreement count',title='Evaluator-only profile stress on nominal diagnostic probes');ax.legend()
   fig.savefig(out/'profile_mismatch.png',dpi=180);fig.savefig(out/'profile_mismatch.svg');plt.close(fig)
+ for path in out.glob('*.svg'):
+  path.write_text('\n'.join(line.rstrip() for line in path.read_text().splitlines())+'\n')
  print(out.relative_to(ROOT))
 if __name__=='__main__':main()
