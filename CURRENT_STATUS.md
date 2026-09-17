@@ -1,4 +1,14 @@
-# Current status — Stage 3 evidence frozen
+# Current status — Stage 4 SLA sensitivity complete
+
+**Stage 4 complete (2026-09-17): strengthens current story within the tested scope.** Read [SLA_SENSITIVITY_EVIDENCE_REPORT.md](SLA_SENSITIVITY_EVIDENCE_REPORT.md) and [technical evidence](docs/SLA_REGIME_SENSITIVITY.md). This is a post-Stage-3 parameter supplement on the same six workloads, not independent held-out generalization. No manuscript prose or new algorithm was written.
+
+Frozen eight SLA tuples, five shifts and Raw/Legacy semantics. Reused1,450 original physical points; added600 HELIX points/600 attempts, all successful, zero retries/timeouts/failures. Completed32,800 evaluator judgments and16,400 reference threshold classifications on2,050 physical points. Final grid sizes h101–h106:75/77/70/52/73/63. Four workloads reached24 added intensities; h104/h106 used11/13. Total600/720 budget. All observed transitions resolved for h103/h104/h106;27 unresolved intervals remain in h101/h102/h105, maximum18.92%, explicitly retained.
+
+TPOT effects are nonmonotone. At TPOT5 the capacity-gap median is−95.08%, versus−75.00% at10; mean partition loss2.43% coexists with mean operating-point loss94.90%. h102 Raw at1.2/2.4 has arithmetic operating loss0% but an unsafe recommendation (3/54 violating requests), so safe loss100%; Legacy selects a safe alternative. At10 Legacy repairs h104/h105 winners but worsens h102 partition loss. Tightening TTFT to4.68 makes h102/h106 no-safe across the tested grid; relative quality is undefined. All24 Stage3 endpoint semantic decisions retain their winner, best sets and mismatch type.
+
+All quality checks and36 unit tests pass.2,459 protected files remain byte-identical. One new main-text candidate figure (PNG/SVG) was visually reviewed. Old Stage2/3 evidence is not rewritten. **No further experiments** for these bounded findings; resolution limits do not authorize budget expansion.
+
+## Historical Stage 3 status
 
 **Stage 3 complete (2026-09-17). Main line: Yes, but modified.** Writing inputs are ready in [STAGE3_EVIDENCE_REPORT.md](STAGE3_EVIDENCE_REPORT.md); no complete manuscript was written. No further experiments needed for the stated scope.
 

@@ -40,6 +40,8 @@ def main():
     fig.tight_layout(rect=(0,.10,1,.94))
     dest=OUT/'figures';dest.mkdir(exist_ok=True)
     for suffix in ['png','svg']:fig.savefig(dest/('sla_sensitivity.'+suffix),dpi=180,facecolor='white')
+    svg=dest/'sla_sensitivity.svg'
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
     plt.close(fig)
     write_json(dest/'manifest.json',{'figure_count':1,'data_source':'results/sla_sensitivity/summary.json','data_sha256':hashlib.sha256((OUT/'summary.json').read_bytes()).hexdigest(),
       'scope':'Six original workloads, TTFT5.2, six prescribed TPOT thresholds; final shared grids. Lines connect tested conditions only, not a continuous threshold estimate.',

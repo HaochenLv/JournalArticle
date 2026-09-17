@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "figure_count": 1,
+  "png_sha256": "f12340ec848719f3a490a8d383cc020a748342abf01c6ad47091228342331932",
+  "review": "Visually inspected final PNG: six workload panels, distinct semantic offsets, decision markers, unsafe rings and separate loss lines are legible; no label overlap or clipping. SVG shares the same source figure.",
+  "axis_offsets_disclosed": true
+}

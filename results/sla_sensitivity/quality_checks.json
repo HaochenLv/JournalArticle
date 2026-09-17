@@ -92,7 +92,7 @@
   "reference_flag_count_note": "reference flags repeat once per evaluator semantic in the 480 capacity rows",
   "source_sha256": {
     "scripts/analyze_sla_sensitivity.py": "822ad6367322047ace30ace63c285cafb103f9f2b12ea6370f4ea0f239029704",
-    "scripts/figure_sla_sensitivity.py": "3f9c086ac7a138599722152723711a58eab75234e710c00d021882116b9d6bb5",
+    "scripts/figure_sla_sensitivity.py": "7f39f8fd17fab3ed8a8b66a8885e7b752781d8a278ef4303c04c1df31a3143b4",
     "scripts/freeze_sla_sensitivity.py": "530a50bb18a9769ad570bd8dc2a3a21a0dc4b5f62774fedef295bde27972f3ad",
     "scripts/report_sla_sensitivity.py": "cee561610df40c31f4c1bda9e834a284a737059acd087dd726bc257f5835c677",
     "scripts/run_sla_sensitivity.py": "bd9b6a3de6a2b439bbd7d11b136aff8eb275cfef9a6916b6b9d455e2ccc53581",

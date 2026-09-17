@@ -1,0 +1,66 @@
+[
+  {
+    "sla": "TTFT5.2_TPOT0.3",
+    "changed_labels": 27,
+    "changed_selections": 0,
+    "changed_types": 0,
+    "max_operating_loss_difference": 0.02142794137691595,
+    "max_partition_loss_difference": 0.0
+  },
+  {
+    "sla": "TTFT5.2_TPOT0.6",
+    "changed_labels": 27,
+    "changed_selections": 0,
+    "changed_types": 0,
+    "max_operating_loss_difference": 0.02142794137691595,
+    "max_partition_loss_difference": 0.0
+  },
+  {
+    "sla": "TTFT5.2_TPOT1.2",
+    "changed_labels": 26,
+    "changed_selections": 1,
+    "changed_types": 1,
+    "max_operating_loss_difference": 0.02142794137691595,
+    "max_partition_loss_difference": 0.021427944304898583
+  },
+  {
+    "sla": "TTFT5.2_TPOT2.4",
+    "changed_labels": 26,
+    "changed_selections": 1,
+    "changed_types": 1,
+    "max_operating_loss_difference": 0.02142794137691595,
+    "max_partition_loss_difference": 0.021427944304898583
+  },
+  {
+    "sla": "TTFT5.2_TPOT5",
+    "changed_labels": 1,
+    "changed_selections": 0,
+    "changed_types": 0,
+    "max_operating_loss_difference": 0.0,
+    "max_partition_loss_difference": 0.0
+  },
+  {
+    "sla": "TTFT5.2_TPOT10",
+    "changed_labels": 8,
+    "changed_selections": 3,
+    "changed_types": 2,
+    "max_operating_loss_difference": 0.003870905579223094,
+    "max_partition_loss_difference": 0.10264546250455786
+  },
+  {
+    "sla": "TTFT4.68_TPOT1.2",
+    "changed_labels": 20,
+    "changed_selections": 0,
+    "changed_types": 0,
+    "max_operating_loss_difference": 0.02142794137691595,
+    "max_partition_loss_difference": 0.0
+  },
+  {
+    "sla": "TTFT4.68_TPOT10",
+    "changed_labels": 7,
+    "changed_selections": 2,
+    "changed_types": 2,
+    "max_operating_loss_difference": 0.004042285210659524,
+    "max_partition_loss_difference": 0.060248743205577826
+  }
+]

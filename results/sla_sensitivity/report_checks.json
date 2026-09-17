@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "core_numerical_claims_checked": true,
+  "all_report_links_resolve": true,
+  "required_evidence_sections": 16,
+  "original_stage3_decisions_unchanged": 24,
+  "figure_visual_review_passed": true,
+  "artifact_sha256": {
+    "SLA_SENSITIVITY_EVIDENCE_REPORT.md": "fa8b305bb741c2f8f540f3016f5d450280d578f6a42fa3b0d4dc12f5b56a3357",
+    "docs/SLA_REGIME_SENSITIVITY.md": "8ab72cd9a9261340142d0daa499cfca0044028e0e24bb28ffe6642aacf7b5f4c",
+    "results/sla_sensitivity/interpretation.json": "36b4ad08bfc726535015e8a76ae0a7163cacd20484abb6e9d5a7a993c7b2c2b3",
+    "results/sla_sensitivity/summary.json": "a4bf50c077e451afed06342b54f938a4278e1cdf19e89f17d3cd97a04092fea5",
+    "results/sla_sensitivity/figures/sla_sensitivity.png": "f12340ec848719f3a490a8d383cc020a748342abf01c6ad47091228342331932"
+  }
+}

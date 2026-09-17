@@ -1,0 +1,8 @@
+{
+  "figure_count": 1,
+  "data_source": "results/sla_sensitivity/summary.json",
+  "data_sha256": "a4bf50c077e451afed06342b54f938a4278e1cdf19e89f17d3cd97a04092fea5",
+  "scope": "Six original workloads, TTFT5.2, six prescribed TPOT thresholds; final shared grids. Lines connect tested conditions only, not a continuous threshold estimate.",
+  "axis": "Six tested TPOT categories, with small horizontal Raw/Legacy offsets solely to expose coincident markers; offsets are not new SLA values.",
+  "unsafe_note": "Circled operating losses are arithmetic 1-L/B only; safety-adjusted loss is 100% for these unsafe recommendations. Full values and TTFT4.68 conditions are in tables."
+}
