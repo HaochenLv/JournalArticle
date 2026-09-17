@@ -18,6 +18,7 @@ def main():
  mitigation=json.loads((FORMAL/'mitigation/results.json').read_text())
  def save(fig,name):
   fig.tight_layout();fig.savefig(folder/(name+'.png'));fig.savefig(folder/(name+'.svg'));plt.close(fig)
+  svg=folder/(name+'.svg');svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
  categories=[('heterogeneous','decode'),('heterogeneous','prefill'),('a100','decode'),('a100','relaxed_decode')]
  fig,axes=plt.subplots(1,4,figsize=(12,3.2))
  for ax,(kind,regime) in zip(axes,categories):

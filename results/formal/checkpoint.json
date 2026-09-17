@@ -1,0 +1,94 @@
+{
+  "checkpoint_utc": "2026-09-17T03:53:32.520415+00:00",
+  "status": "partial_matrix_running",
+  "physical_points": 179,
+  "logical_sla_pairs": 358,
+  "completed_groups": 0,
+  "failed_recorded_points": 0,
+  "unique_reference_records": 179,
+  "checks": "staged snapshots have unique candidate/load keys, complete referenced raw records, fully drained reference histories; old repositories unchanged",
+  "groups": [
+    {
+      "group": "h101-o60-d30-a100-fast",
+      "status": "running",
+      "physical_points": 0
+    },
+    {
+      "group": "h101-o60-d30-anchor-slow",
+      "status": "running",
+      "physical_points": 0
+    },
+    {
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "status": "running",
+      "physical_points": 23
+    },
+    {
+      "group": "h102-o300-d120-a100-slow",
+      "status": "running",
+      "physical_points": 9
+    },
+    {
+      "group": "h102-o300-d120-anchor-fast",
+      "status": "running",
+      "physical_points": 2
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "status": "running",
+      "physical_points": 45
+    },
+    {
+      "group": "h103-o500-d30-a100-slow",
+      "status": "running",
+      "physical_points": 1
+    },
+    {
+      "group": "h103-o500-d30-heterogeneous-slow",
+      "status": "running",
+      "physical_points": 45
+    },
+    {
+      "group": "h104-o700-d120-a100-fast",
+      "status": "running",
+      "physical_points": 5
+    },
+    {
+      "group": "h104-o700-d120-heterogeneous-fast",
+      "status": "running",
+      "physical_points": 4
+    },
+    {
+      "group": "h105-o900-d30-a100-fast",
+      "status": "running",
+      "physical_points": 9
+    },
+    {
+      "group": "h105-o900-d30-heterogeneous-fast",
+      "status": "running",
+      "physical_points": 21
+    },
+    {
+      "group": "h106-o1100-d120-a100-slow",
+      "status": "running",
+      "physical_points": 0
+    },
+    {
+      "group": "h106-o1100-d120-heterogeneous-slow",
+      "status": "running",
+      "physical_points": 15
+    }
+  ],
+  "original_repositories": [
+    {
+      "repository": "sla-aware-evaluator",
+      "head": "297280c000e45ba6a8fa79135e4bfc4a9e17cb99",
+      "status_short": ""
+    },
+    {
+      "repository": "SLA-Aware-Layer-Partitioning",
+      "head": "e92644c943369054b54361cdcdc54646d2bdc48f",
+      "status_short": ""
+    }
+  ]
+}

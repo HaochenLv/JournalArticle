@@ -1,0 +1,136 @@
+{
+  "protocol_hash": "75120a5593b7c9574fe5bb3b21c3172179b95700955464d6aada0d12f04024bf",
+  "group": {
+    "id": "h103-o500-d30-a100-slow",
+    "workload": "h103-o500-d30",
+    "kind": "a100",
+    "link": "slow",
+    "shifts": [
+      0
+    ],
+    "role": "primary"
+  },
+  "status": "running",
+  "stages": {
+    "initial": [
+      0.001,
+      0.004,
+      0.016,
+      0.064,
+      0.256,
+      1.024,
+      4.096,
+      16.384,
+      65.536
+    ]
+  },
+  "rows": [
+    {
+      "shift": 0,
+      "intensity": 0.001,
+      "partition_fingerprint": "e1f6e03cc0875412abe56d84fc24359e3eec6667dbc3c2c1e428338cf8e26b84",
+      "scaled_workload_fingerprint": "69ae79904ba3a664b38c99e10a85e34414d4df0333d512d9d333b9ea58d221c4",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": true,
+          "first_violation": null,
+          "first_violations": [],
+          "events": 298,
+          "drained": true,
+          "final_time_s": 27567.238240000046,
+          "peak_prefill": 1,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.713029718470869,
+          "peak_memory_bytes": {
+            "n0": 17601785600.0,
+            "n1": 17601785600.0,
+            "n2": 17601785600.0,
+            "n3": 17601785600.0,
+            "n4": 17601785600.0,
+            "n5": 17601785600.0,
+            "n6": 17601785600.0,
+            "n7": 17601785600.0
+          },
+          "max_accounted_ttft_s": 1.737822385521858,
+          "max_accounted_tpot_s": 0.1173670016,
+          "trajectory_hash": null,
+          "runtime_s": 0.04341095802374184
+        },
+        "relaxed_decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": true,
+          "first_violation": null,
+          "first_violations": [],
+          "events": 298,
+          "drained": true,
+          "final_time_s": 27567.238240000046,
+          "peak_prefill": 1,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.713029718470869,
+          "peak_memory_bytes": {
+            "n0": 17601785600.0,
+            "n1": 17601785600.0,
+            "n2": 17601785600.0,
+            "n3": 17601785600.0,
+            "n4": 17601785600.0,
+            "n5": 17601785600.0,
+            "n6": 17601785600.0,
+            "n7": 17601785600.0
+          },
+          "max_accounted_ttft_s": 1.737822385521858,
+          "max_accounted_tpot_s": 0.1173670016,
+          "trajectory_hash": null,
+          "runtime_s": 0.02190883399453014
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": true,
+          "max_ttft_s": 1.7372011270425718,
+          "max_native_ttft_s": 1.849627155785929,
+          "max_tpot_s": 0.1174260288925143,
+          "violating_requests": 0,
+          "request_count": 15,
+          "violating_request_fraction": 0.0,
+          "max_ttft_excess_s": 0.0,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.0,
+          "drained": true,
+          "runtime_s": 41.592657958040945
+        },
+        "relaxed_decode": {
+          "safe": true,
+          "max_ttft_s": 1.7372011270425718,
+          "max_native_ttft_s": 1.849627155785929,
+          "max_tpot_s": 0.1174260288925143,
+          "violating_requests": 0,
+          "request_count": 15,
+          "violating_request_fraction": 0.0,
+          "max_ttft_excess_s": 0.0,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.0,
+          "drained": true,
+          "runtime_s": 41.592657958040945
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 41.66473741596565
+        }
+      ],
+      "reference_cache_key": "4320a7c125966367d16ae332ab2d043b80657b73ba5d335afeea7d9c2ba35e01",
+      "reference_was_cached": false,
+      "reference_physical_runtime_s": 41.592657958040945,
+      "reference_access_wall_s": 41.66473741596565
+    }
+  ],
+  "elapsed_s": 366.756179292046,
+  "workload_fingerprint": "2b860aed211f9ee499f01a1bd1e87f1d2ef7543ebdeb111df3703515445f26a3",
+  "profile_fingerprint": "cfa10f4b4b56dfb3fadb07e503e6a14a3a19942c30391a5403f20d21129608c9",
+  "baseline_sha256": "4f186748f3fb5940179e833ffe68cf463bb8b9d1dbbd16926490062065669b15"
+}

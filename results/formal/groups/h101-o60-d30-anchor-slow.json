@@ -1,0 +1,32 @@
+{
+  "protocol_hash": "75120a5593b7c9574fe5bb3b21c3172179b95700955464d6aada0d12f04024bf",
+  "group": {
+    "id": "h101-o60-d30-anchor-slow",
+    "workload": "h101-o60-d30",
+    "kind": "heterogeneous",
+    "link": "slow",
+    "shifts": [
+      0
+    ],
+    "role": "link_anchor"
+  },
+  "status": "running",
+  "stages": {
+    "initial": [
+      0.001,
+      0.004,
+      0.016,
+      0.064,
+      0.256,
+      1.024,
+      4.096,
+      16.384,
+      65.536
+    ]
+  },
+  "rows": [],
+  "elapsed_s": 0.007005167019087821,
+  "workload_fingerprint": "7b0ee2875d7b651a409331e0acde97f27f47390ab626e400073674f34b795487",
+  "profile_fingerprint": "cfa10f4b4b56dfb3fadb07e503e6a14a3a19942c30391a5403f20d21129608c9",
+  "baseline_sha256": "4f186748f3fb5940179e833ffe68cf463bb8b9d1dbbd16926490062065669b15"
+}

@@ -1,0 +1,32 @@
+{
+  "protocol_hash": "75120a5593b7c9574fe5bb3b21c3172179b95700955464d6aada0d12f04024bf",
+  "group": {
+    "id": "h106-o1100-d120-a100-slow",
+    "workload": "h106-o1100-d120",
+    "kind": "a100",
+    "link": "slow",
+    "shifts": [
+      0
+    ],
+    "role": "primary"
+  },
+  "status": "running",
+  "stages": {
+    "initial": [
+      0.001,
+      0.004,
+      0.016,
+      0.064,
+      0.256,
+      1.024,
+      4.096,
+      16.384,
+      65.536
+    ]
+  },
+  "rows": [],
+  "elapsed_s": 0.011072417022660375,
+  "workload_fingerprint": "a9392ae2dcb654273e12717aafeb6e32f31621289c9beaa659312490e267c033",
+  "profile_fingerprint": "cfa10f4b4b56dfb3fadb07e503e6a14a3a19942c30391a5403f20d21129608c9",
+  "baseline_sha256": "4f186748f3fb5940179e833ffe68cf463bb8b9d1dbbd16926490062065669b15"
+}

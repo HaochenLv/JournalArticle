@@ -1,6 +1,6 @@
 """Evidence-quality checks: failures are explicit, never silently dropped."""
 from pathlib import Path
-import sys,json,gzip,collections,hashlib
+import sys,json,gzip,collections,hashlib,subprocess,tarfile,io
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from formal_core import *
 
@@ -23,6 +23,9 @@ def main():
    assert raw['raw']['finished_requests']==raw['raw']['total_requests']==len(w)
    assert r['partition_fingerprint']==fingerprint(raw['inputs']['pipeline'])
    assert r['scaled_workload_fingerprint']==fingerprint(raw['inputs']['workload'])
+   assert r['scaled_workload_fingerprint']==fingerprint([asdict(x) for x in scale_workload(w,r['intensity'])])
+   assert r['partition_fingerprint']==fingerprint(asdict(pipeline(g['link'],r['shift'],g['kind']=='heterogeneous')))
+   assert raw['inputs']['helix_commit']==CONFIG['helix_commit'] and raw['inputs']['adapter_commit']==CONFIG['adapter_commit']
    for regime,sla in slas(g).items():
     assert r['reference'][regime]==reference_details(raw,sla);pairs+=1
   states.append(d)
@@ -54,6 +57,18 @@ def main():
  restart=json.loads((FORMAL/'execution_restart.json').read_text());lookup={d['group']['id']:d for d in states}
  for c in restart['interrupted_probe_candidates']:assert any(r['shift']==c['shift'] and r['intensity']==c['intensity'] for r in lookup[c['group']]['rows'])
  report.update(retried_points=retry_points,attempt_errors=attempt_errors,timeout_attempts=sum('TimeoutError' in a.get('error','') for a in attempt_errors),interrupted_probe_candidates_recovered=len(restart['interrupted_probe_candidates']),analysis_source_sha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'scripts').glob('formal_*.py'))})
+ assert subprocess.check_output(['git','-C',str(HELIX),'rev-parse','HEAD'],text=True).strip()==CONFIG['helix_commit']
+ assert not subprocess.check_output(['git','-C',str(HELIX),'status','--porcelain'],text=True).strip()
+ object_repo=next((p for p in [ROOT/'.deps/evaluator-history.git',ROOT/'.deps/evaluator-git'] if p.exists()),None)
+ assert object_repo is not None,'Run scripts/bootstrap.py to obtain pinned adapter git objects'
+ archive=subprocess.check_output(['git','--git-dir',str(object_repo),'archive',CONFIG['adapter_commit'],'src'])
+ source_hashes={}
+ with tarfile.open(fileobj=io.BytesIO(archive)) as tf:
+  for member in tf.getmembers():
+   if not member.isfile():continue
+   original=tf.extractfile(member).read();local=(ROOT/'.deps/evaluator'/member.name).read_bytes();assert original==local,member.name
+   source_hashes[member.name]=hashlib.sha256(local).hexdigest()
+ report['dependency_source_integrity']={'helix_clean_at_pinned_commit':True,'adapter_files_equal_git_objects':source_hashes}
  write_json(FORMAL/'quality_checks.json',report);print(json.dumps(report,indent=2))
  if errors or stress_errors:raise SystemExit('Recorded failures require explicit reporting; do not delete them.')
 if __name__=='__main__':main()
