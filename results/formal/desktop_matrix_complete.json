@@ -1,0 +1,12 @@
+{
+  "matrix_complete": true,
+  "groups": 14,
+  "physical_points": 1634,
+  "paired_points": 3268,
+  "failed_points": 0,
+  "inherited_rows_exactly_preserved": 195,
+  "all_candidates_share_group_grid": true,
+  "postprocessing": "in_progress",
+  "formal_quality_checks": "pending_after_mismatch_and_mitigation",
+  "matrix_completion_observed_utc": "2026-09-17T08:00:17.299822+00:00"
+}
