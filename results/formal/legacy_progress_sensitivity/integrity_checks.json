@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "protocol_hash": "75120a5593b7c9574fe5bb3b21c3172179b95700955464d6aada0d12f04024bf",
+  "baseline_sha256": "4f186748f3fb5940179e833ffe68cf463bb8b9d1dbbd16926490062065669b15",
+  "physical_reference_records_reused": 1634,
+  "new_reference_runs": 0,
+  "paired_judgments": 3268,
+  "configuration_regimes": 76,
+  "main_trials_per_variant": 12,
+  "unique_point_ids": 3268,
+  "protected_files_unchanged": 2387,
+  "workload_partition_profile_grid_reference_labels_verified": true,
+  "raw_capacity_and_decisions_exactly_reproduced_from_saved_labels": true,
+  "only_changed_semantics": "5 ms fixed overhead enters progress; queue overhead is asserted zero",
+  "source_manifest": "source_manifest.json",
+  "driver_sha256": "da5e7c7118756bcd7a234ebfb2164539de1691fd7dda1e8cb33364e960bae667"
+}

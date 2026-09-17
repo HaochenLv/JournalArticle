@@ -1,0 +1,9 @@
+kind,regime,sla_label,variant,attempted,paired,failed,both_safe,optimistic,conservative,both_unsafe,changed_labels
+heterogeneous,decode,tight-TPOT,raw,1504,1504,0,209,1,0,1294,29
+heterogeneous,decode,tight-TPOT,legacy,1504,1504,0,181,0,28,1295,29
+heterogeneous,prefill,relaxed-TPOT (fixed TTFT),raw,1504,1504,0,656,8,404,436,8
+heterogeneous,prefill,relaxed-TPOT (fixed TTFT),legacy,1504,1504,0,648,8,412,436,8
+a100,decode,tight-TPOT,raw,130,130,0,26,1,2,101,8
+a100,decode,tight-TPOT,legacy,130,130,0,19,0,9,102,8
+a100,relaxed_decode,relaxed-TPOT (fixed TTFT),raw,130,130,0,62,13,7,48,8
+a100,relaxed_decode,relaxed-TPOT (fixed TTFT),legacy,130,130,0,58,9,11,52,8
