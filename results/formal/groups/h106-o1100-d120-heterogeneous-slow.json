@@ -26,6 +26,9 @@
       4.096,
       16.384,
       65.536
+    ],
+    "lower-0": [
+      0.00025
     ]
   },
   "rows": [
@@ -5989,9 +5992,3034 @@
       "reference_was_cached": false,
       "reference_physical_runtime_s": 66.4811824579956,
       "reference_access_wall_s": 66.60534374997951
+    },
+    {
+      "shift": -1,
+      "intensity": 4.096,
+      "partition_fingerprint": "2ce50f2ac9bfaaa2ad42bf9ba205035e3c430ac9b5b04034d9a8df27e2452cfb",
+      "scaled_workload_fingerprint": "3af0dfbd44af1b4c0239960b24c4d71b54d088cceee24c9bdc4d27ea66ecac21",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 2.3804525859534538,
+            "limit": 0.3,
+            "time_s": 1.46336,
+            "side": "post",
+            "num_prefill": 1,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 2.3804525859534538,
+              "limit": 0.3,
+              "time_s": 1.46336,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 1
+            }
+          ],
+          "events": 3,
+          "drained": false,
+          "final_time_s": 1.46336,
+          "peak_prefill": 2,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.13502935314144343,
+          "peak_memory_bytes": {
+            "n0": 15812939136.0,
+            "n1": 15812939136.0,
+            "n2": 19322622080.0,
+            "n3": 19322622080.0,
+            "n4": 15812939136.0,
+            "n5": 15812939136.0,
+            "n6": 19322622080.0,
+            "n7": 19322622080.0
+          },
+          "max_accounted_ttft_s": 2.5302211875534537,
+          "max_accounted_tpot_s": 2.3808195875534537,
+          "trajectory_hash": null,
+          "runtime_s": 0.0003369000041857362
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 10.035063763550063,
+            "limit": 10.0,
+            "time_s": 6.37109375,
+            "side": "post",
+            "num_prefill": 4,
+            "num_decode": 5
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 10.035063763550063,
+              "limit": 10.0,
+              "time_s": 6.37109375,
+              "side": "post",
+              "num_prefill": 4,
+              "num_decode": 5
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00001",
+              "required": 10.035063763550063,
+              "limit": 10.0,
+              "time_s": 6.37109375,
+              "side": "post",
+              "num_prefill": 4,
+              "num_decode": 5
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00002",
+              "required": 10.035063763550063,
+              "limit": 10.0,
+              "time_s": 6.37109375,
+              "side": "post",
+              "num_prefill": 4,
+              "num_decode": 5
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00003",
+              "required": 10.035063763550063,
+              "limit": 10.0,
+              "time_s": 6.37109375,
+              "side": "post",
+              "num_prefill": 4,
+              "num_decode": 5
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00004",
+              "required": 10.035063763550063,
+              "limit": 10.0,
+              "time_s": 6.37109375,
+              "side": "post",
+              "num_prefill": 4,
+              "num_decode": 5
+            }
+          ],
+          "events": 15,
+          "drained": false,
+          "final_time_s": 6.37109375,
+          "peak_prefill": 4,
+          "peak_decode": 5,
+          "peak_network_utilization": 0.6008330562668968,
+          "peak_memory_bytes": {
+            "n0": 16114179456.0,
+            "n1": 16114179456.0,
+            "n2": 19678789760.0,
+            "n3": 19678789760.0,
+            "n4": 16114179456.0,
+            "n5": 16114179456.0,
+            "n6": 19678789760.0,
+            "n7": 19678789760.0
+          },
+          "max_accounted_ttft_s": 3.0048984486138197,
+          "max_accounted_tpot_s": 10.035430765150064,
+          "trajectory_hash": null,
+          "runtime_s": 0.0017469000304117799
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 5.339841059184015,
+          "max_native_ttft_s": 7.811396469904005,
+          "max_tpot_s": 5.141744041930003,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 0.13984105918401468,
+          "max_tpot_excess_s": 4.841744041930003,
+          "max_normalized_excess": 16.13914680643334,
+          "drained": true,
+          "runtime_s": 22.23257890000241
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 5.339841059184015,
+          "max_native_ttft_s": 7.811396469904005,
+          "max_tpot_s": 5.141744041930003,
+          "violating_requests": 2,
+          "request_count": 49,
+          "violating_request_fraction": 0.04081632653061224,
+          "max_ttft_excess_s": 0.13984105918401468,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.02689251138154125,
+          "drained": true,
+          "runtime_s": 22.23257890000241
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 26.549010299961083
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "63e7e9480b6a99909bf9e3792a592a74b343b54b5fd9bdd270465464605f91aa",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 22.23257890000241,
+      "reference_access_wall_s": 26.549010299961083
+    },
+    {
+      "shift": 0,
+      "intensity": 4.096,
+      "partition_fingerprint": "146b774035d3594d13372061734e07a5aadc16969e610aefda5a8204a859ed70",
+      "scaled_workload_fingerprint": "3af0dfbd44af1b4c0239960b24c4d71b54d088cceee24c9bdc4d27ea66ecac21",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 2.3708365859534535,
+            "limit": 0.3,
+            "time_s": 1.46336,
+            "side": "post",
+            "num_prefill": 1,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 2.3708365859534535,
+              "limit": 0.3,
+              "time_s": 1.46336,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 1
+            }
+          ],
+          "events": 3,
+          "drained": false,
+          "final_time_s": 1.46336,
+          "peak_prefill": 2,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.13439484065361645,
+          "peak_memory_bytes": {
+            "n0": 17567780608.0,
+            "n1": 17567780608.0,
+            "n2": 17567780608.0,
+            "n3": 17567780608.0,
+            "n4": 17567780608.0,
+            "n5": 17567780608.0,
+            "n6": 17567780608.0,
+            "n7": 17567780608.0
+          },
+          "max_accounted_ttft_s": 2.5142051875534532,
+          "max_accounted_tpot_s": 2.3712035875534534,
+          "trajectory_hash": null,
+          "runtime_s": 0.00035370001569390297
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 10.615736136416071,
+            "limit": 10.0,
+            "time_s": 8.32421875,
+            "side": "post",
+            "num_prefill": 5,
+            "num_decode": 8
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 10.615736136416071,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00001",
+              "required": 10.615736136416071,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00002",
+              "required": 10.615736136416071,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00003",
+              "required": 10.615736136416071,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00004",
+              "required": 10.615736136416071,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00005",
+              "required": 10.615736136416071,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00006",
+              "required": 10.615736136416071,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00010",
+              "required": 10.615736136416071,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            }
+          ],
+          "events": 26,
+          "drained": false,
+          "final_time_s": 8.32421875,
+          "peak_prefill": 5,
+          "peak_decode": 8,
+          "peak_network_utilization": 0.6573227021696435,
+          "peak_memory_bytes": {
+            "n0": 18016292608.0,
+            "n1": 18016292608.0,
+            "n2": 18016292608.0,
+            "n3": 18016292608.0,
+            "n4": 18016292608.0,
+            "n5": 18016292608.0,
+            "n6": 18016292608.0,
+            "n7": 18016292608.0
+          },
+          "max_accounted_ttft_s": 2.9862104486138197,
+          "max_accounted_tpot_s": 10.616103138016072,
+          "trajectory_hash": null,
+          "runtime_s": 0.003996399987954646
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 5.261128033630011,
+          "max_native_ttft_s": 7.5480924721040195,
+          "max_tpot_s": 5.065255016375997,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 0.06112803363001085,
+          "max_tpot_excess_s": 4.765255016375997,
+          "max_normalized_excess": 15.88418338791999,
+          "drained": true,
+          "runtime_s": 21.75367110001389
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 5.261128033630011,
+          "max_native_ttft_s": 7.5480924721040195,
+          "max_tpot_s": 5.065255016375997,
+          "violating_requests": 2,
+          "request_count": 49,
+          "violating_request_fraction": 0.04081632653061224,
+          "max_ttft_excess_s": 0.06112803363001085,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.01175539108269441,
+          "drained": true,
+          "runtime_s": 21.75367110001389
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 25.906714299984742
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "0065298dc71fb8ff10c375b61d107ce379aa243c0a5ea970846e9d39e6b44245",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 21.75367110001389,
+      "reference_access_wall_s": 25.906714299984742
+    },
+    {
+      "shift": 1,
+      "intensity": 4.096,
+      "partition_fingerprint": "ba13ef36550060e3f7a4b4667f50a991e27998153d38ea216eeabaf182674e2f",
+      "scaled_workload_fingerprint": "3af0dfbd44af1b4c0239960b24c4d71b54d088cceee24c9bdc4d27ea66ecac21",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 2.3612205859534536,
+            "limit": 0.3,
+            "time_s": 1.46336,
+            "side": "post",
+            "num_prefill": 1,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 2.3612205859534536,
+              "limit": 0.3,
+              "time_s": 1.46336,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 1
+            }
+          ],
+          "events": 3,
+          "drained": false,
+          "final_time_s": 1.46336,
+          "peak_prefill": 2,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.13376695036060715,
+          "peak_memory_bytes": {
+            "n0": 19322622080.0,
+            "n1": 19322622080.0,
+            "n2": 15812939136.0,
+            "n3": 15812939136.0,
+            "n4": 19322622080.0,
+            "n5": 19322622080.0,
+            "n6": 15812939136.0,
+            "n7": 15812939136.0
+          },
+          "max_accounted_ttft_s": 2.4981891875534536,
+          "max_accounted_tpot_s": 2.3615875875534535,
+          "trajectory_hash": null,
+          "runtime_s": 0.00058970000827685
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 10.54919213641607,
+            "limit": 10.0,
+            "time_s": 8.32421875,
+            "side": "post",
+            "num_prefill": 5,
+            "num_decode": 8
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 10.54919213641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00001",
+              "required": 10.54919213641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00002",
+              "required": 10.54919213641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00003",
+              "required": 10.54919213641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00004",
+              "required": 10.54919213641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00005",
+              "required": 10.54919213641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00006",
+              "required": 10.54919213641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00010",
+              "required": 10.54919213641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            }
+          ],
+          "events": 25,
+          "drained": false,
+          "final_time_s": 8.32421875,
+          "peak_prefill": 5,
+          "peak_decode": 8,
+          "peak_network_utilization": 0.6121679332514885,
+          "peak_memory_bytes": {
+            "n0": 19809390720.0,
+            "n1": 19809390720.0,
+            "n2": 16221883776.0,
+            "n3": 16221883776.0,
+            "n4": 19809390720.0,
+            "n5": 19809390720.0,
+            "n6": 16221883776.0,
+            "n7": 16221883776.0
+          },
+          "max_accounted_ttft_s": 2.9675224486138196,
+          "max_accounted_tpot_s": 10.54955913801607,
+          "trajectory_hash": null,
+          "runtime_s": 0.0038399999612011015
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 5.19333072958401,
+          "max_native_ttft_s": 7.52934384490402,
+          "max_tpot_s": 4.999681712329994,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 0.0,
+          "max_tpot_excess_s": 4.699681712329994,
+          "max_normalized_excess": 15.665605707766648,
+          "drained": true,
+          "runtime_s": 22.46385719999671
+        },
+        "prefill": {
+          "safe": true,
+          "max_ttft_s": 5.19333072958401,
+          "max_native_ttft_s": 7.52934384490402,
+          "max_tpot_s": 4.999681712329994,
+          "violating_requests": 0,
+          "request_count": 49,
+          "violating_request_fraction": 0.0,
+          "max_ttft_excess_s": 0.0,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.0,
+          "drained": true,
+          "runtime_s": 22.46385719999671
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 26.981935199990403
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "1ae164623df8af9fead0c0e368f433fdcea3e8ffc922fdc098c449480a7452b1",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 22.46385719999671,
+      "reference_access_wall_s": 26.981935199990403
+    },
+    {
+      "shift": 2,
+      "intensity": 4.096,
+      "partition_fingerprint": "28c1988a16176606b98bb698f364a8186a22f6fcf05c5eb9216ed183457dfb0d",
+      "scaled_workload_fingerprint": "3af0dfbd44af1b4c0239960b24c4d71b54d088cceee24c9bdc4d27ea66ecac21",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 2.351604585953454,
+            "limit": 0.3,
+            "time_s": 1.46336,
+            "side": "post",
+            "num_prefill": 1,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 2.351604585953454,
+              "limit": 0.3,
+              "time_s": 1.46336,
+              "side": "post",
+              "num_prefill": 1,
+              "num_decode": 1
+            }
+          ],
+          "events": 3,
+          "drained": false,
+          "final_time_s": 1.46336,
+          "peak_prefill": 2,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.1331455791301422,
+          "peak_memory_bytes": {
+            "n0": 21077463552.0,
+            "n1": 21077463552.0,
+            "n2": 14058097664.0,
+            "n3": 14058097664.0,
+            "n4": 21077463552.0,
+            "n5": 21077463552.0,
+            "n6": 14058097664.0,
+            "n7": 14058097664.0
+          },
+          "max_accounted_ttft_s": 2.4821731875534536,
+          "max_accounted_tpot_s": 2.3519715875534537,
+          "trajectory_hash": null,
+          "runtime_s": 0.000354000017978251
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 10.48264813641607,
+            "limit": 10.0,
+            "time_s": 8.32421875,
+            "side": "post",
+            "num_prefill": 5,
+            "num_decode": 8
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 10.48264813641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00001",
+              "required": 10.48264813641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00002",
+              "required": 10.48264813641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00003",
+              "required": 10.48264813641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00004",
+              "required": 10.48264813641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00005",
+              "required": 10.48264813641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00006",
+              "required": 10.48264813641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            },
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00010",
+              "required": 10.48264813641607,
+              "limit": 10.0,
+              "time_s": 8.32421875,
+              "side": "post",
+              "num_prefill": 5,
+              "num_decode": 8
+            }
+          ],
+          "events": 24,
+          "drained": false,
+          "final_time_s": 8.32421875,
+          "peak_prefill": 5,
+          "peak_decode": 8,
+          "peak_network_utilization": 0.6005610343542152,
+          "peak_memory_bytes": {
+            "n0": 21602357760.0,
+            "n1": 21602357760.0,
+            "n2": 14427606016.0,
+            "n3": 14427606016.0,
+            "n4": 21602357760.0,
+            "n5": 21602357760.0,
+            "n6": 14427606016.0,
+            "n7": 14427606016.0
+          },
+          "max_accounted_ttft_s": 2.9488344486138196,
+          "max_accounted_tpot_s": 10.483015138016071,
+          "trajectory_hash": null,
+          "runtime_s": 0.0034052999690175056
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 5.14225876016,
+          "max_native_ttft_s": 7.5103878449040264,
+          "max_tpot_s": 4.937536840375988,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 0.0,
+          "max_tpot_excess_s": 4.637536840375988,
+          "max_normalized_excess": 15.458456134586626,
+          "drained": true,
+          "runtime_s": 22.100185000046622
+        },
+        "prefill": {
+          "safe": true,
+          "max_ttft_s": 5.14225876016,
+          "max_native_ttft_s": 7.5103878449040264,
+          "max_tpot_s": 4.937536840375988,
+          "violating_requests": 0,
+          "request_count": 49,
+          "violating_request_fraction": 0.0,
+          "max_ttft_excess_s": 0.0,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.0,
+          "drained": true,
+          "runtime_s": 22.100185000046622
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 26.764127400005236
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "bc0e5c291213d5ff40c496cf48fd6ce3ca20e230f186046c77d855932de2d85c",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 22.100185000046622,
+      "reference_access_wall_s": 26.764127400005236
+    },
+    {
+      "shift": -2,
+      "intensity": 16.384,
+      "partition_fingerprint": "b657e2c04ccdd3c497df59aa9f10bb2206ff4463bd44e14b424037095dae77a0",
+      "scaled_workload_fingerprint": "2a3675e9286487b98c83f3c082078f7c4a1a796ee2024462fdacbe25f0c1435a",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 6.282938341717906,
+            "limit": 0.3,
+            "time_s": 1.46336,
+            "side": "post",
+            "num_prefill": 3,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 6.282938341717906,
+              "limit": 0.3,
+              "time_s": 1.46336,
+              "side": "post",
+              "num_prefill": 3,
+              "num_decode": 1
+            }
+          ],
+          "events": 5,
+          "drained": false,
+          "final_time_s": 1.46336,
+          "peak_prefill": 4,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.33632353142273935,
+          "peak_memory_bytes": {
+            "n0": 14144457728.0,
+            "n1": 14144457728.0,
+            "n2": 21192610304.0,
+            "n3": 21192610304.0,
+            "n4": 14144457728.0,
+            "n5": 14144457728.0,
+            "n6": 21192610304.0,
+            "n7": 21192610304.0
+          },
+          "max_accounted_ttft_s": 2.5462371875534533,
+          "max_accounted_tpot_s": 6.283305343317906,
+          "trajectory_hash": null,
+          "runtime_s": 0.0005092999781481922
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 12.037639803531725,
+            "limit": 10.0,
+            "time_s": 1.946044921875,
+            "side": "post",
+            "num_prefill": 6,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 12.037639803531725,
+              "limit": 10.0,
+              "time_s": 1.946044921875,
+              "side": "post",
+              "num_prefill": 6,
+              "num_decode": 1
+            }
+          ],
+          "events": 8,
+          "drained": false,
+          "final_time_s": 1.946044921875,
+          "peak_prefill": 6,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.6499887087380007,
+          "peak_memory_bytes": {
+            "n0": 14269139968.0,
+            "n1": 14269139968.0,
+            "n2": 21359923712.0,
+            "n3": 21359923712.0,
+            "n4": 14269139968.0,
+            "n5": 14269139968.0,
+            "n6": 21359923712.0,
+            "n7": 21359923712.0
+          },
+          "max_accounted_ttft_s": 3.0235864486138198,
+          "max_accounted_tpot_s": 12.038006805131726,
+          "trajectory_hash": null,
+          "runtime_s": 0.0007206000154837966
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 10.831276590297954,
+          "max_native_ttft_s": 12.748335083941978,
+          "max_tpot_s": 5.378442943518026,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 5.631276590297953,
+          "max_tpot_excess_s": 5.078442943518026,
+          "max_normalized_excess": 16.928143145060087,
+          "drained": true,
+          "runtime_s": 22.95859140000539
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 10.831276590297954,
+          "max_native_ttft_s": 12.748335083941978,
+          "max_tpot_s": 5.378442943518026,
+          "violating_requests": 30,
+          "request_count": 49,
+          "violating_request_fraction": 0.6122448979591837,
+          "max_ttft_excess_s": 5.631276590297953,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 1.0829378058265293,
+          "drained": true,
+          "runtime_s": 22.95859140000539
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 27.652462400030345
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "aeee3aeb04fc5071ec9e6938f224c7dcca302abc9ba1c8af40ecb56c1de60337",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 22.95859140000539,
+      "reference_access_wall_s": 27.652462400030345
+    },
+    {
+      "shift": -1,
+      "intensity": 16.384,
+      "partition_fingerprint": "2ce50f2ac9bfaaa2ad42bf9ba205035e3c430ac9b5b04034d9a8df27e2452cfb",
+      "scaled_workload_fingerprint": "2a3675e9286487b98c83f3c082078f7c4a1a796ee2024462fdacbe25f0c1435a",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 6.2452103417179075,
+            "limit": 0.3,
+            "time_s": 1.46336,
+            "side": "post",
+            "num_prefill": 3,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 6.2452103417179075,
+              "limit": 0.3,
+              "time_s": 1.46336,
+              "side": "post",
+              "num_prefill": 3,
+              "num_decode": 1
+            }
+          ],
+          "events": 5,
+          "drained": false,
+          "final_time_s": 1.46336,
+          "peak_prefill": 4,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.3347807491096406,
+          "peak_memory_bytes": {
+            "n0": 15906495872.0,
+            "n1": 15906495872.0,
+            "n2": 19430572160.0,
+            "n3": 19430572160.0,
+            "n4": 15906495872.0,
+            "n5": 15906495872.0,
+            "n6": 19430572160.0,
+            "n7": 19430572160.0
+          },
+          "max_accounted_ttft_s": 2.5302211875534537,
+          "max_accounted_tpot_s": 6.245577343317907,
+          "trajectory_hash": null,
+          "runtime_s": 0.00047450000420212746
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 11.962535803531724,
+            "limit": 10.0,
+            "time_s": 1.946044921875,
+            "side": "post",
+            "num_prefill": 6,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 11.962535803531724,
+              "limit": 10.0,
+              "time_s": 1.946044921875,
+              "side": "post",
+              "num_prefill": 6,
+              "num_decode": 1
+            }
+          ],
+          "events": 8,
+          "drained": false,
+          "final_time_s": 1.946044921875,
+          "peak_prefill": 6,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.6465123827667173,
+          "peak_memory_bytes": {
+            "n0": 16041835904.0,
+            "n1": 16041835904.0,
+            "n2": 19587227776.0,
+            "n3": 19587227776.0,
+            "n4": 16041835904.0,
+            "n5": 16041835904.0,
+            "n6": 19587227776.0,
+            "n7": 19587227776.0
+          },
+          "max_accounted_ttft_s": 3.0048984486138197,
+          "max_accounted_tpot_s": 11.962902805131725,
+          "trajectory_hash": null,
+          "runtime_s": 0.0006887000054121017
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 9.709418558297989,
+          "max_native_ttft_s": 11.86776620819201,
+          "max_tpot_s": 5.409188157704019,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 4.509418558297988,
+          "max_tpot_excess_s": 5.109188157704019,
+          "max_normalized_excess": 17.03062719234673,
+          "drained": true,
+          "runtime_s": 22.436013899976388
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 9.709418558297989,
+          "max_native_ttft_s": 11.86776620819201,
+          "max_tpot_s": 5.409188157704019,
+          "violating_requests": 30,
+          "request_count": 49,
+          "violating_request_fraction": 0.6122448979591837,
+          "max_ttft_excess_s": 4.509418558297988,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.867195876595767,
+          "drained": true,
+          "runtime_s": 22.436013899976388
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 26.93130509997718
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "06b866034d65d38684a456ec70131498efcec3f44fcaed33470270a0bcd35fe1",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 22.436013899976388,
+      "reference_access_wall_s": 26.93130509997718
+    },
+    {
+      "shift": 0,
+      "intensity": 16.384,
+      "partition_fingerprint": "146b774035d3594d13372061734e07a5aadc16969e610aefda5a8204a859ed70",
+      "scaled_workload_fingerprint": "2a3675e9286487b98c83f3c082078f7c4a1a796ee2024462fdacbe25f0c1435a",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 6.207482341717907,
+            "limit": 0.3,
+            "time_s": 1.46336,
+            "side": "post",
+            "num_prefill": 3,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 6.207482341717907,
+              "limit": 0.3,
+              "time_s": 1.46336,
+              "side": "post",
+              "num_prefill": 3,
+              "num_decode": 1
+            }
+          ],
+          "events": 5,
+          "drained": false,
+          "final_time_s": 1.46336,
+          "peak_prefill": 4,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.33325299014736887,
+          "peak_memory_bytes": {
+            "n0": 17668534016.0,
+            "n1": 17668534016.0,
+            "n2": 17668534016.0,
+            "n3": 17668534016.0,
+            "n4": 17668534016.0,
+            "n5": 17668534016.0,
+            "n6": 17668534016.0,
+            "n7": 17668534016.0
+          },
+          "max_accounted_ttft_s": 2.5142051875534532,
+          "max_accounted_tpot_s": 6.207849343317907,
+          "trajectory_hash": null,
+          "runtime_s": 0.0009118999587371945
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 11.887431803531726,
+            "limit": 10.0,
+            "time_s": 1.946044921875,
+            "side": "post",
+            "num_prefill": 6,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 11.887431803531726,
+              "limit": 10.0,
+              "time_s": 1.946044921875,
+              "side": "post",
+              "num_prefill": 6,
+              "num_decode": 1
+            }
+          ],
+          "events": 8,
+          "drained": false,
+          "final_time_s": 1.946044921875,
+          "peak_prefill": 6,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.6430761199565299,
+          "peak_memory_bytes": {
+            "n0": 17814531840.0,
+            "n1": 17814531840.0,
+            "n2": 17814531840.0,
+            "n3": 17814531840.0,
+            "n4": 17814531840.0,
+            "n5": 17814531840.0,
+            "n6": 17814531840.0,
+            "n7": 17814531840.0
+          },
+          "max_accounted_ttft_s": 2.9862104486138197,
+          "max_accounted_tpot_s": 11.887798805131727,
+          "trajectory_hash": null,
+          "runtime_s": 0.0013711999636143446
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 8.521391865913994,
+          "max_native_ttft_s": 11.199310078907988,
+          "max_tpot_s": 5.674413175266015,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 3.321391865913994,
+          "max_tpot_excess_s": 5.374413175266016,
+          "max_normalized_excess": 17.914710584220053,
+          "drained": true,
+          "runtime_s": 21.480197199969552
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 8.521391865913994,
+          "max_native_ttft_s": 11.199310078907988,
+          "max_tpot_s": 5.674413175266015,
+          "violating_requests": 30,
+          "request_count": 49,
+          "violating_request_fraction": 0.6122448979591837,
+          "max_ttft_excess_s": 3.321391865913994,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.6387292049834603,
+          "drained": true,
+          "runtime_s": 21.480197199969552
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 25.970754600013606
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "25f2db698ac5d2320ea0ceb5ea9fc770044d4fb9f46ba93f1bca5b9ec0bb87e8",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 21.480197199969552,
+      "reference_access_wall_s": 25.970754600013606
+    },
+    {
+      "shift": 1,
+      "intensity": 16.384,
+      "partition_fingerprint": "ba13ef36550060e3f7a4b4667f50a991e27998153d38ea216eeabaf182674e2f",
+      "scaled_workload_fingerprint": "2a3675e9286487b98c83f3c082078f7c4a1a796ee2024462fdacbe25f0c1435a",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 6.1697543417179075,
+            "limit": 0.3,
+            "time_s": 1.46336,
+            "side": "post",
+            "num_prefill": 3,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 6.1697543417179075,
+              "limit": 0.3,
+              "time_s": 1.46336,
+              "side": "post",
+              "num_prefill": 3,
+              "num_decode": 1
+            }
+          ],
+          "events": 5,
+          "drained": false,
+          "final_time_s": 1.46336,
+          "peak_prefill": 4,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.331740032456538,
+          "peak_memory_bytes": {
+            "n0": 19430572160.0,
+            "n1": 19430572160.0,
+            "n2": 15906495872.0,
+            "n3": 15906495872.0,
+            "n4": 19430572160.0,
+            "n5": 19430572160.0,
+            "n6": 15906495872.0,
+            "n7": 15906495872.0
+          },
+          "max_accounted_ttft_s": 2.4981891875534536,
+          "max_accounted_tpot_s": 6.170121343317907,
+          "trajectory_hash": null,
+          "runtime_s": 0.00048779998905956745
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 11.812327803531725,
+            "limit": 10.0,
+            "time_s": 1.946044921875,
+            "side": "post",
+            "num_prefill": 6,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 11.812327803531725,
+              "limit": 10.0,
+              "time_s": 1.946044921875,
+              "side": "post",
+              "num_prefill": 6,
+              "num_decode": 1
+            }
+          ],
+          "events": 8,
+          "drained": false,
+          "final_time_s": 1.946044921875,
+          "peak_prefill": 6,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.6396792063805146,
+          "peak_memory_bytes": {
+            "n0": 19587227776.0,
+            "n1": 19587227776.0,
+            "n2": 16041835904.0,
+            "n3": 16041835904.0,
+            "n4": 19587227776.0,
+            "n5": 19587227776.0,
+            "n6": 16041835904.0,
+            "n7": 16041835904.0
+          },
+          "max_accounted_ttft_s": 2.9675224486138196,
+          "max_accounted_tpot_s": 11.812694805131725,
+          "trajectory_hash": null,
+          "runtime_s": 0.0006968999514356256
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 8.522078112321987,
+          "max_native_ttft_s": 11.087868498194977,
+          "max_tpot_s": 5.349058089054022,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 3.3220781123219867,
+          "max_tpot_excess_s": 5.049058089054022,
+          "max_normalized_excess": 16.830193630180077,
+          "drained": true,
+          "runtime_s": 22.226204100006726
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 8.522078112321987,
+          "max_native_ttft_s": 11.087868498194977,
+          "max_tpot_s": 5.349058089054022,
+          "violating_requests": 30,
+          "request_count": 49,
+          "violating_request_fraction": 0.6122448979591837,
+          "max_ttft_excess_s": 3.3220781123219867,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.6388611754465359,
+          "drained": true,
+          "runtime_s": 22.226204100006726
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 26.68819119996624
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "2f5232a9b3d376b31b02d5d6a540e65d661dfeabc6ef6a9af11630960623dccc",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 22.226204100006726,
+      "reference_access_wall_s": 26.68819119996624
+    },
+    {
+      "shift": 2,
+      "intensity": 16.384,
+      "partition_fingerprint": "28c1988a16176606b98bb698f364a8186a22f6fcf05c5eb9216ed183457dfb0d",
+      "scaled_workload_fingerprint": "2a3675e9286487b98c83f3c082078f7c4a1a796ee2024462fdacbe25f0c1435a",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 6.132026341717907,
+            "limit": 0.3,
+            "time_s": 1.46336,
+            "side": "post",
+            "num_prefill": 3,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 6.132026341717907,
+              "limit": 0.3,
+              "time_s": 1.46336,
+              "side": "post",
+              "num_prefill": 3,
+              "num_decode": 1
+            }
+          ],
+          "events": 5,
+          "drained": false,
+          "final_time_s": 1.46336,
+          "peak_prefill": 4,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.3302416583688268,
+          "peak_memory_bytes": {
+            "n0": 21192610304.0,
+            "n1": 21192610304.0,
+            "n2": 14144457728.0,
+            "n3": 14144457728.0,
+            "n4": 21192610304.0,
+            "n5": 21192610304.0,
+            "n6": 14144457728.0,
+            "n7": 14144457728.0
+          },
+          "max_accounted_ttft_s": 2.4821731875534536,
+          "max_accounted_tpot_s": 6.132393343317907,
+          "trajectory_hash": null,
+          "runtime_s": 0.0004959999932907522
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "sla_time",
+            "object": "decode",
+            "request_id": "azure-00000",
+            "required": 11.737223803531725,
+            "limit": 10.0,
+            "time_s": 1.946044921875,
+            "side": "post",
+            "num_prefill": 6,
+            "num_decode": 1
+          },
+          "first_violations": [
+            {
+              "kind": "sla_time",
+              "object": "decode",
+              "request_id": "azure-00000",
+              "required": 11.737223803531725,
+              "limit": 10.0,
+              "time_s": 1.946044921875,
+              "side": "post",
+              "num_prefill": 6,
+              "num_decode": 1
+            }
+          ],
+          "events": 8,
+          "drained": false,
+          "final_time_s": 1.946044921875,
+          "peak_prefill": 6,
+          "peak_decode": 1,
+          "peak_network_utilization": 0.636320945455228,
+          "peak_memory_bytes": {
+            "n0": 21359923712.0,
+            "n1": 21359923712.0,
+            "n2": 14269139968.0,
+            "n3": 14269139968.0,
+            "n4": 21359923712.0,
+            "n5": 21359923712.0,
+            "n6": 14269139968.0,
+            "n7": 14269139968.0
+          },
+          "max_accounted_ttft_s": 2.9488344486138196,
+          "max_accounted_tpot_s": 11.737590805131726,
+          "trajectory_hash": null,
+          "runtime_s": 0.0007451999699696898
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 9.427995794022003,
+          "max_native_ttft_s": 12.03131811316402,
+          "max_tpot_s": 5.293711327518038,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 4.227995794022003,
+          "max_tpot_excess_s": 4.993711327518038,
+          "max_normalized_excess": 16.645704425060128,
+          "drained": true,
+          "runtime_s": 22.10212679998949
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 9.427995794022003,
+          "max_native_ttft_s": 12.03131811316402,
+          "max_tpot_s": 5.293711327518038,
+          "violating_requests": 30,
+          "request_count": 49,
+          "violating_request_fraction": 0.6122448979591837,
+          "max_ttft_excess_s": 4.227995794022003,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 0.8130761142350005,
+          "drained": true,
+          "runtime_s": 22.10212679998949
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 26.526111599989235
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "f239b18b5091c6e8d32f44e7260bb1531978770eb36b5ea797d32077918de26e",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 22.10212679998949,
+      "reference_access_wall_s": 26.526111599989235
+    },
+    {
+      "shift": -2,
+      "intensity": 65.536,
+      "partition_fingerprint": "b657e2c04ccdd3c497df59aa9f10bb2206ff4463bd44e14b424037095dae77a0",
+      "scaled_workload_fingerprint": "4c9c18114b9c88c3f0d512259bfae5194efc5adf712e48054cef65f1b41d18ff",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 343426855.99006045,
+            "limit": 312500000.0,
+            "time_s": 1.37384033203125,
+            "side": "post",
+            "num_prefill": 10,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            }
+          ],
+          "events": 10,
+          "drained": false,
+          "final_time_s": 1.37384033203125,
+          "peak_prefill": 10,
+          "peak_decode": 0,
+          "peak_network_utilization": 1.0989659391681934,
+          "peak_memory_bytes": {
+            "n0": 14433078272.0,
+            "n1": 14433078272.0,
+            "n2": 21577437696.0,
+            "n3": 21577437696.0,
+            "n4": 14433078272.0,
+            "n5": 14433078272.0,
+            "n6": 21577437696.0,
+            "n7": 21577437696.0
+          },
+          "max_accounted_ttft_s": 3.0235864486138198,
+          "max_accounted_tpot_s": 0.0,
+          "trajectory_hash": null,
+          "runtime_s": 0.001012900029309094
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 343426855.99006045,
+            "limit": 312500000.0,
+            "time_s": 1.37384033203125,
+            "side": "post",
+            "num_prefill": 10,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 343426855.99006045,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            }
+          ],
+          "events": 10,
+          "drained": false,
+          "final_time_s": 1.37384033203125,
+          "peak_prefill": 10,
+          "peak_decode": 0,
+          "peak_network_utilization": 1.0989659391681934,
+          "peak_memory_bytes": {
+            "n0": 14433078272.0,
+            "n1": 14433078272.0,
+            "n2": 21577437696.0,
+            "n3": 21577437696.0,
+            "n4": 14433078272.0,
+            "n5": 14433078272.0,
+            "n6": 21577437696.0,
+            "n7": 21577437696.0
+          },
+          "max_accounted_ttft_s": 3.0235864486138198,
+          "max_accounted_tpot_s": 0.0,
+          "trajectory_hash": null,
+          "runtime_s": 0.0008919999818317592
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 16.252156786132954,
+          "max_native_ttft_s": 16.463782814936884,
+          "max_tpot_s": 5.411076492318024,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 11.052156786132954,
+          "max_tpot_excess_s": 5.111076492318024,
+          "max_normalized_excess": 17.036921641060083,
+          "drained": true,
+          "runtime_s": 22.979579400038347
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 16.252156786132954,
+          "max_native_ttft_s": 16.463782814936884,
+          "max_tpot_s": 5.411076492318024,
+          "violating_requests": 40,
+          "request_count": 49,
+          "violating_request_fraction": 0.8163265306122449,
+          "max_ttft_excess_s": 11.052156786132954,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 2.1254147665640293,
+          "drained": true,
+          "runtime_s": 22.979579400038347
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 27.29543920001015
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "dd83705ac1b3fe62d883551e0835c2e45d2b0f8f8cd865c6fbb75bf40e54a1ba",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 22.979579400038347,
+      "reference_access_wall_s": 27.29543920001015
+    },
+    {
+      "shift": -1,
+      "intensity": 65.536,
+      "partition_fingerprint": "2ce50f2ac9bfaaa2ad42bf9ba205035e3c430ac9b5b04034d9a8df27e2452cfb",
+      "scaled_workload_fingerprint": "4c9c18114b9c88c3f0d512259bfae5194efc5adf712e48054cef65f1b41d18ff",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 341479096.9210537,
+            "limit": 312500000.0,
+            "time_s": 1.37384033203125,
+            "side": "post",
+            "num_prefill": 10,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            }
+          ],
+          "events": 10,
+          "drained": false,
+          "final_time_s": 1.37384033203125,
+          "peak_prefill": 10,
+          "peak_decode": 0,
+          "peak_network_utilization": 1.0927331101473718,
+          "peak_memory_bytes": {
+            "n0": 16219168128.0,
+            "n1": 16219168128.0,
+            "n2": 19791347840.0,
+            "n3": 19791347840.0,
+            "n4": 16219168128.0,
+            "n5": 16219168128.0,
+            "n6": 19791347840.0,
+            "n7": 19791347840.0
+          },
+          "max_accounted_ttft_s": 3.0048984486138197,
+          "max_accounted_tpot_s": 0.0,
+          "trajectory_hash": null,
+          "runtime_s": 0.0017087999731302261
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 341479096.9210537,
+            "limit": 312500000.0,
+            "time_s": 1.37384033203125,
+            "side": "post",
+            "num_prefill": 10,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 341479096.9210537,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            }
+          ],
+          "events": 10,
+          "drained": false,
+          "final_time_s": 1.37384033203125,
+          "peak_prefill": 10,
+          "peak_decode": 0,
+          "peak_network_utilization": 1.0927331101473718,
+          "peak_memory_bytes": {
+            "n0": 16219168128.0,
+            "n1": 16219168128.0,
+            "n2": 19791347840.0,
+            "n3": 19791347840.0,
+            "n4": 16219168128.0,
+            "n5": 16219168128.0,
+            "n6": 19791347840.0,
+            "n7": 19791347840.0
+          },
+          "max_accounted_ttft_s": 3.0048984486138197,
+          "max_accounted_tpot_s": 0.0,
+          "trajectory_hash": null,
+          "runtime_s": 0.0015833000070415437
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 15.124914578132985,
+          "max_native_ttft_s": 15.361386915618857,
+          "max_tpot_s": 5.430645530504018,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 9.924914578132984,
+          "max_tpot_excess_s": 5.130645530504018,
+          "max_normalized_excess": 17.102151768346726,
+          "drained": true,
+          "runtime_s": 22.300401599961333
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 15.124914578132985,
+          "max_native_ttft_s": 15.361386915618857,
+          "max_tpot_s": 5.430645530504018,
+          "violating_requests": 38,
+          "request_count": 49,
+          "violating_request_fraction": 0.7755102040816326,
+          "max_ttft_excess_s": 9.924914578132984,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 1.9086374188717277,
+          "drained": true,
+          "runtime_s": 22.300401599961333
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 26.602845799992792
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "c28811ae7498e13296f2cae2eaac8bc21803095b74d635bc5cc7a5c3f435031f",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 22.300401599961333,
+      "reference_access_wall_s": 26.602845799992792
+    },
+    {
+      "shift": 0,
+      "intensity": 65.536,
+      "partition_fingerprint": "146b774035d3594d13372061734e07a5aadc16969e610aefda5a8204a859ed70",
+      "scaled_workload_fingerprint": "4c9c18114b9c88c3f0d512259bfae5194efc5adf712e48054cef65f1b41d18ff",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 339554799.47859657,
+            "limit": 312500000.0,
+            "time_s": 1.37384033203125,
+            "side": "post",
+            "num_prefill": 10,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            }
+          ],
+          "events": 10,
+          "drained": false,
+          "final_time_s": 1.37384033203125,
+          "peak_prefill": 10,
+          "peak_decode": 0,
+          "peak_network_utilization": 1.086575358331509,
+          "peak_memory_bytes": {
+            "n0": 18005257984.0,
+            "n1": 18005257984.0,
+            "n2": 18005257984.0,
+            "n3": 18005257984.0,
+            "n4": 18005257984.0,
+            "n5": 18005257984.0,
+            "n6": 18005257984.0,
+            "n7": 18005257984.0
+          },
+          "max_accounted_ttft_s": 2.9862104486138197,
+          "max_accounted_tpot_s": 0.0,
+          "trajectory_hash": null,
+          "runtime_s": 0.0015323000261560082
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 339554799.47859657,
+            "limit": 312500000.0,
+            "time_s": 1.37384033203125,
+            "side": "post",
+            "num_prefill": 10,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 339554799.47859657,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            }
+          ],
+          "events": 10,
+          "drained": false,
+          "final_time_s": 1.37384033203125,
+          "peak_prefill": 10,
+          "peak_decode": 0,
+          "peak_network_utilization": 1.086575358331509,
+          "peak_memory_bytes": {
+            "n0": 18005257984.0,
+            "n1": 18005257984.0,
+            "n2": 18005257984.0,
+            "n3": 18005257984.0,
+            "n4": 18005257984.0,
+            "n5": 18005257984.0,
+            "n6": 18005257984.0,
+            "n7": 18005257984.0
+          },
+          "max_accounted_ttft_s": 2.9862104486138197,
+          "max_accounted_tpot_s": 0.0,
+          "trajectory_hash": null,
+          "runtime_s": 0.0015841000131331384
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 13.984743461332997,
+          "max_native_ttft_s": 14.247313562018885,
+          "max_tpot_s": 5.676935293666013,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 8.784743461332997,
+          "max_tpot_excess_s": 5.376935293666013,
+          "max_normalized_excess": 17.923117645553376,
+          "drained": true,
+          "runtime_s": 22.930518900044262
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 13.984743461332997,
+          "max_native_ttft_s": 14.247313562018885,
+          "max_tpot_s": 5.676935293666013,
+          "violating_requests": 37,
+          "request_count": 49,
+          "violating_request_fraction": 0.7551020408163265,
+          "max_ttft_excess_s": 8.784743461332997,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 1.6893737425640376,
+          "drained": true,
+          "runtime_s": 22.930518900044262
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 27.69488399999682
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "2ad072863d5c9c901c290ae8e74b8c5a8c2d7f05522430bcebb1f346a8d63e24",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 22.930518900044262,
+      "reference_access_wall_s": 27.69488399999682
+    },
+    {
+      "shift": 1,
+      "intensity": 65.536,
+      "partition_fingerprint": "ba13ef36550060e3f7a4b4667f50a991e27998153d38ea216eeabaf182674e2f",
+      "scaled_workload_fingerprint": "4c9c18114b9c88c3f0d512259bfae5194efc5adf712e48054cef65f1b41d18ff",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 337653531.82382107,
+            "limit": 312500000.0,
+            "time_s": 1.37384033203125,
+            "side": "post",
+            "num_prefill": 10,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            }
+          ],
+          "events": 10,
+          "drained": false,
+          "final_time_s": 1.37384033203125,
+          "peak_prefill": 10,
+          "peak_decode": 0,
+          "peak_network_utilization": 1.0804913018362274,
+          "peak_memory_bytes": {
+            "n0": 19791347840.0,
+            "n1": 19791347840.0,
+            "n2": 16219168128.0,
+            "n3": 16219168128.0,
+            "n4": 19791347840.0,
+            "n5": 19791347840.0,
+            "n6": 16219168128.0,
+            "n7": 16219168128.0
+          },
+          "max_accounted_ttft_s": 2.9675224486138196,
+          "max_accounted_tpot_s": 0.0,
+          "trajectory_hash": null,
+          "runtime_s": 0.0010859000030905008
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 337653531.82382107,
+            "limit": 312500000.0,
+            "time_s": 1.37384033203125,
+            "side": "post",
+            "num_prefill": 10,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 337653531.82382107,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            }
+          ],
+          "events": 10,
+          "drained": false,
+          "final_time_s": 1.37384033203125,
+          "peak_prefill": 10,
+          "peak_decode": 0,
+          "peak_network_utilization": 1.0804913018362274,
+          "peak_memory_bytes": {
+            "n0": 19791347840.0,
+            "n1": 19791347840.0,
+            "n2": 16219168128.0,
+            "n3": 16219168128.0,
+            "n4": 19791347840.0,
+            "n5": 19791347840.0,
+            "n6": 16219168128.0,
+            "n7": 16219168128.0
+          },
+          "max_accounted_ttft_s": 2.9675224486138196,
+          "max_accounted_tpot_s": 0.0,
+          "trajectory_hash": null,
+          "runtime_s": 0.0010043999645859003
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 13.983750533341036,
+          "max_native_ttft_s": 14.423158410992974,
+          "max_tpot_s": 5.273691810654016,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 8.783750533341035,
+          "max_tpot_excess_s": 4.973691810654016,
+          "max_normalized_excess": 16.578972702180057,
+          "drained": true,
+          "runtime_s": 23.90268290002132
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 13.983750533341036,
+          "max_native_ttft_s": 14.423158410992974,
+          "max_tpot_s": 5.273691810654016,
+          "violating_requests": 37,
+          "request_count": 49,
+          "violating_request_fraction": 0.7551020408163265,
+          "max_ttft_excess_s": 8.783750533341035,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 1.6891827948732758,
+          "drained": true,
+          "runtime_s": 23.90268290002132
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 29.098613900016062
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "b2f3a4758a6d9e35a059fe5d3023a439f86e6d918c69b2657f34c6b81ba078a6",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 23.90268290002132,
+      "reference_access_wall_s": 29.098613900016062
+    },
+    {
+      "shift": 2,
+      "intensity": 65.536,
+      "partition_fingerprint": "28c1988a16176606b98bb698f364a8186a22f6fcf05c5eb9216ed183457dfb0d",
+      "scaled_workload_fingerprint": "4c9c18114b9c88c3f0d512259bfae5194efc5adf712e48054cef65f1b41d18ff",
+      "evaluator": {
+        "decode": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 335774872.8492105,
+            "limit": 312500000.0,
+            "time_s": 1.37384033203125,
+            "side": "post",
+            "num_prefill": 10,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            }
+          ],
+          "events": 10,
+          "drained": false,
+          "final_time_s": 1.37384033203125,
+          "peak_prefill": 10,
+          "peak_decode": 0,
+          "peak_network_utilization": 1.0744795931174735,
+          "peak_memory_bytes": {
+            "n0": 21577437696.0,
+            "n1": 21577437696.0,
+            "n2": 14433078272.0,
+            "n3": 14433078272.0,
+            "n4": 21577437696.0,
+            "n5": 21577437696.0,
+            "n6": 14433078272.0,
+            "n7": 14433078272.0
+          },
+          "max_accounted_ttft_s": 2.9488344486138196,
+          "max_accounted_tpot_s": 0.0,
+          "trajectory_hash": null,
+          "runtime_s": 0.0010783000034280121
+        },
+        "prefill": {
+          "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+          "safe": false,
+          "first_violation": {
+            "kind": "network",
+            "object": "slow-0",
+            "required": 335774872.8492105,
+            "limit": 312500000.0,
+            "time_s": 1.37384033203125,
+            "side": "post",
+            "num_prefill": 10,
+            "num_decode": 0
+          },
+          "first_violations": [
+            {
+              "kind": "network",
+              "object": "slow-0",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-1",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-2",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-3",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-4",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-5",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            },
+            {
+              "kind": "network",
+              "object": "slow-6",
+              "required": 335774872.8492105,
+              "limit": 312500000.0,
+              "time_s": 1.37384033203125,
+              "side": "post",
+              "num_prefill": 10,
+              "num_decode": 0
+            }
+          ],
+          "events": 10,
+          "drained": false,
+          "final_time_s": 1.37384033203125,
+          "peak_prefill": 10,
+          "peak_decode": 0,
+          "peak_network_utilization": 1.0744795931174735,
+          "peak_memory_bytes": {
+            "n0": 21577437696.0,
+            "n1": 21577437696.0,
+            "n2": 14433078272.0,
+            "n3": 14433078272.0,
+            "n4": 21577437696.0,
+            "n5": 21577437696.0,
+            "n6": 14433078272.0,
+            "n7": 14433078272.0
+          },
+          "max_accounted_ttft_s": 2.9488344486138196,
+          "max_accounted_tpot_s": 0.0,
+          "trajectory_hash": null,
+          "runtime_s": 0.0009220000356435776
+        }
+      },
+      "reference": {
+        "decode": {
+          "safe": false,
+          "max_ttft_s": 14.96402552859498,
+          "max_native_ttft_s": 15.455870436644922,
+          "max_tpot_s": 5.2295796411180255,
+          "violating_requests": 49,
+          "request_count": 49,
+          "violating_request_fraction": 1.0,
+          "max_ttft_excess_s": 9.764025528594981,
+          "max_tpot_excess_s": 4.929579641118026,
+          "max_normalized_excess": 16.431932137060087,
+          "drained": true,
+          "runtime_s": 22.66058399999747
+        },
+        "prefill": {
+          "safe": false,
+          "max_ttft_s": 14.96402552859498,
+          "max_native_ttft_s": 15.455870436644922,
+          "max_tpot_s": 5.2295796411180255,
+          "violating_requests": 38,
+          "request_count": 49,
+          "violating_request_fraction": 0.7755102040816326,
+          "max_ttft_excess_s": 9.764025528594981,
+          "max_tpot_excess_s": 0.0,
+          "max_normalized_excess": 1.8776972170374964,
+          "drained": true,
+          "runtime_s": 22.66058399999747
+        }
+      },
+      "status": "ok",
+      "attempts": [
+        {
+          "part": "reference",
+          "attempt": 1,
+          "status": "ok",
+          "wall_s": 27.345961699960753
+        }
+      ],
+      "execution_host": {
+        "system": "Windows",
+        "machine": "AMD64",
+        "python": "3.12.10",
+        "cpu_logical": 20,
+        "memory_bytes": 34164097024
+      },
+      "reference_cache_key": "7a543a26c1914132fba5c8f29398b1cf021c1e1c2fadd3297aaae05b53334202",
+      "reference_was_cached": false,
+      "reference_runtime_origin": "current_host",
+      "reference_physical_runtime_s": 22.66058399999747,
+      "reference_access_wall_s": 27.345961699960753
     }
   ],
-  "elapsed_s": 2025.2377424580627,
+  "elapsed_s": 3161.482858058065,
   "workload_fingerprint": "a9392ae2dcb654273e12717aafeb6e32f31621289c9beaa659312490e267c033",
   "profile_fingerprint": "cfa10f4b4b56dfb3fadb07e503e6a14a3a19942c30391a5403f20d21129608c9",
   "baseline_sha256": "4f186748f3fb5940179e833ffe68cf463bb8b9d1dbbd16926490062065669b15"

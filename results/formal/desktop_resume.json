@@ -9,5 +9,11 @@
   "inherited_sla_pairs": 390,
   "cross_machine_check": "results/formal/desktop_host_check.json",
   "runtime_note": "Inherited rows/caches are laptop-origin. New rows carry execution_host/reference_runtime_origin. Sequential timings run entirely on desktop after parallel jobs exit.",
-  "restarted_utc": "2026-09-17T05:34:51.9007040Z"
+  "restarted_utc": "2026-09-17T05:34:51.9007040Z",
+  "automatic_followup": {
+    "id": "journalarticle",
+    "status": "ACTIVE",
+    "interval_minutes": 30,
+    "scope": "Current desktop task only; finish existing campaign and evidence review, then pause."
+  }
 }
