@@ -11,6 +11,8 @@ def flatten(state):
    e=r['evaluator'].get(regime);ref=r['reference'].get(regime)
    row={'case_id':g['id']+'-'+regime+'-shift'+str(r['shift']),'group':g['id'],'role':g['role'],'workload':g['workload'],'duration_s':wd['duration_s'],'interval_offset':wd['interval_offset'],'seed':wd['seed'],'kind':g['kind'],'shift':r['shift'],'regime':regime,'link':g['link'],'ttft_s':sla.ttft_s,'tpot_s':sla.tpot_s,'intensity':r['intensity'],'status':r['status'],'evaluator_safe':e['safe'] if e else None,'reference_safe':ref['safe'] if ref else None,'evaluator_first_violation':e['first_violation'] if e else None,'evaluator_all_first_violations':e['first_violations'] if e else None,'evaluator_drained':e['drained'] if e else None,'evaluator_runtime_s':e['runtime_s'] if e else None,'reference_cache_key':r.get('reference_cache_key'),'reference_access_wall_s':r.get('reference_access_wall_s'),'reference_was_cached':r.get('reference_was_cached'),'workload_fingerprint':state['workload_fingerprint'],'scaled_workload_fingerprint':r['scaled_workload_fingerprint'],'partition_fingerprint':r['partition_fingerprint'],'profile_fingerprint':state['profile_fingerprint'],'baseline_sha256':state['baseline_sha256'],'attempts':r['attempts']}
    if ref:row.update({'reference_'+k:v for k,v in ref.items() if k!='safe'})
+   row['execution_host']=r.get('execution_host',{'origin':'laptop_pretransfer'})
+   row['reference_runtime_origin']=r.get('reference_runtime_origin','laptop_pretransfer')
    row['disagreement']='error' if r['status']!='ok' else ('optimistic' if e['safe'] else 'conservative') if e['safe']!=ref['safe'] else 'agreement'
    out.append(row)
  return out

@@ -3,15 +3,16 @@ from pathlib import Path
 import sys,json,math,time,signal,gzip,argparse
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from formal_core import *
+from host_execution import spawned_call,host_metadata
 
 def execute_point(group,shift,value):
  wd,base=load_workload(group['workload']);limits=slas(group)
  p=pipeline(group['link'],shift,group['kind']=='heterogeneous');prof=CachedProfiles()
  def alarm(signum,frame):raise TimeoutError('formal reference wall timeout')
- signal.signal(signal.SIGALRM,alarm)
+ if hasattr(signal,'SIGALRM'):signal.signal(signal.SIGALRM,alarm)
  value=round(value,10)
  w=scale_workload(base,value)
- row={'shift':shift,'intensity':value,'partition_fingerprint':fingerprint(asdict(p)),'scaled_workload_fingerprint':fingerprint([asdict(x) for x in w]),'evaluator':{},'reference':{},'status':'ok','attempts':[]}
+ row={'shift':shift,'intensity':value,'partition_fingerprint':fingerprint(asdict(p)),'scaled_workload_fingerprint':fingerprint([asdict(x) for x in w]),'evaluator':{},'reference':{},'status':'ok','attempts':[],'execution_host':host_metadata()}
  for regime,sla in limits.items():
   try:row['evaluator'][regime]=jb(p,w,sla,prof)
   except Exception as e:row['status']='error';row['attempts'].append({'part':'evaluator','regime':regime,'error':type(e).__name__+': '+str(e).replace(str(ROOT),'<journal>')})
@@ -19,15 +20,21 @@ def execute_point(group,shift,value):
  for attempt in range(2):
   start=time.perf_counter()
   try:
-   signal.alarm(CONFIG['timeout_s']);summary=reference(p,w,next(iter(limits.values())));signal.alarm(0)
+   if hasattr(signal,'SIGALRM'):
+    signal.alarm(CONFIG['timeout_s']);summary=reference(p,w,next(iter(limits.values())));signal.alarm(0)
+   else:summary=spawned_call(reference,(p,w,next(iter(limits.values()))),CONFIG['timeout_s'])
    with gzip.open(ROOT/'results/raw_reference'/(summary['cache_key']+'.json.gz'),'rt') as f:raw=json.load(f)
    assert raw['raw']['finished_requests']==raw['raw']['total_requests']==len(w)
    row['reference']={regime:reference_details(raw,sla) for regime,sla in limits.items()}
    row['reference_cache_key']=summary['cache_key'];row['reference_was_cached']=summary['cache_key'] in before or 'derived_from' in raw
+   handoff=FORMAL/'machine_handoff.json'
+   inherited=set(json.loads(handoff.read_text())['cache_keys_present_before_transfer']) if handoff.exists() else set()
+   row['reference_runtime_origin']='laptop_pretransfer' if summary['cache_key'] in inherited or raw.get('derived_from') in inherited else 'current_host'
    row['reference_physical_runtime_s']=summary['runtime_s'];row['reference_access_wall_s']=time.perf_counter()-start
    row['attempts'].append({'part':'reference','attempt':attempt+1,'status':'ok','wall_s':row['reference_access_wall_s']});break
   except Exception as e:
-   signal.alarm(0);row['attempts'].append({'part':'reference','attempt':attempt+1,'status':'error','wall_s':time.perf_counter()-start,'error':type(e).__name__+': '+str(e).replace(str(ROOT),'<journal>')})
+   if hasattr(signal,'SIGALRM'):signal.alarm(0)
+   row['attempts'].append({'part':'reference','attempt':attempt+1,'status':'error','wall_s':time.perf_counter()-start,'error':type(e).__name__+': '+str(e).replace(str(ROOT),'<journal>')})
  if not row['reference']:row['status']='error'
  return row
 

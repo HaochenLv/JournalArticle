@@ -142,4 +142,4 @@ def reference(p,w,sla):
 def write_json(path,data):
  path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
  temporary=path.with_suffix('.tmp-'+str(os.getpid()))
- temporary.write_text(json.dumps(data,indent=2,ensure_ascii=False,allow_nan=False)+'\n');temporary.replace(path)
+ temporary.write_text(json.dumps(data,indent=2,ensure_ascii=False,allow_nan=False)+'\n',encoding='utf-8',newline='\n');temporary.replace(path)

@@ -1,0 +1,40 @@
+{
+  "checked_utc": "2026-09-17T05:30:48.260590+00:00",
+  "protocol_hash": "75120a5593b7c9574fe5bb3b21c3172179b95700955464d6aada0d12f04024bf",
+  "baseline_sha256": "4f186748f3fb5940179e833ffe68cf463bb8b9d1dbbd16926490062065669b15",
+  "host": {
+    "system": "Windows",
+    "machine": "AMD64",
+    "python": "3.12.10",
+    "cpu_logical": 20,
+    "memory_bytes": 34164097024
+  },
+  "group": "h105-o900-d30-a100-fast",
+  "shift": 0,
+  "intensity": 4.096,
+  "reference_cache_key": "3089180e2bf990e9003effda111fabc1d7ef0606f383ba63ca987d4214b533a2",
+  "request_count": 14,
+  "all_per_request_metrics_exactly_equal": true,
+  "final_time_exactly_equal": true,
+  "all_evaluator_fields_except_runtime_exactly_equal": true,
+  "all_reference_fields_except_runtime_exactly_equal": true,
+  "verdicts": {
+    "decode": {
+      "evaluator_safe": false,
+      "reference_safe": false
+    },
+    "relaxed_decode": {
+      "evaluator_safe": false,
+      "reference_safe": true
+    }
+  },
+  "cache_unchanged": true,
+  "fresh_call_wall_s": 18.13458980002906,
+  "timing_scope": "Migration validation including spawn overhead; not formal sequential timing.",
+  "source_commit": "c04f94990445df34509ec0bd975667dc68373142",
+  "execution_source_sha256": {
+    "src/host_execution.py": "0d1709fbf4047e45c2958f1980cf2815b418034b4e2c733b4dda220801b10012",
+    "scripts/formal_run.py": "bcfcfa13f90d55ad01c0db7570a48ee5d3e8e0b9dcc096b4ace2cfad0f2981a8",
+    "scripts/formal_host_check.py": "3a84b56c0669daf1fb921900dee0d507bbf4562d6884e5426a3a80677f4210bd"
+  }
+}

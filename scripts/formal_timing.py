@@ -3,13 +3,7 @@ from pathlib import Path
 import sys,json,time,gzip,statistics,platform,subprocess,os
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from formal_core import *
-
-def host_memory_bytes():
- if platform.system()=='Darwin':return int(subprocess.check_output(['sysctl','-n','hw.memsize']))
- if hasattr(os,'sysconf'):
-  try:return os.sysconf('SC_PAGE_SIZE')*os.sysconf('SC_PHYS_PAGES')
-  except (ValueError,OSError):pass
- return None
+from host_execution import host_memory_bytes
 
 def main():
  check_pins();out=[]

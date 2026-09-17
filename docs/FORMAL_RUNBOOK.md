@@ -1,5 +1,7 @@
 # Formal execution and review
 
+Windows-native execution is validated as of2026-09-17. In PowerShell set `$env:PYTHONUTF8='1'` and `$env:PYTHONDONTWRITEBYTECODE='1'`, and substitute `.venv\Scripts\python.exe` for `.venv/bin/python`. Reference attempts use killable spawn children when SIGALRM is unavailable, retaining600s/one retry. The postprocessor uses Windows process handles for read-only liveness checks. Preserve LF bytes (`git config core.autocrlf false`) for frozen hashes. See `results/formal/desktop_host_check.json` for the exact14-request migration comparison. This host uses Python3.12.10; no simulation/evaluator semantics or frozen inputs were changed.
+
 The baseline and protocol are frozen. Do not resume historical-source archaeology. All commands run from JournalArticle with Python3.12 and pinned dependencies installed by `scripts/bootstrap.py`. Keep the original conference repositories read-only.
 
 ## Existing campaign

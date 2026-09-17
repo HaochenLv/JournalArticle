@@ -14,7 +14,7 @@ def main():
   if dest.exists():
    print(f'{name}: exists; retained');continue
   if paths is None:
-   subprocess.run(['git','clone',url,str(dest)],check=True)
+   subprocess.run(['git','clone','--config','core.autocrlf=false',url,str(dest)],check=True)
    subprocess.run(['git','-C',str(dest),'checkout',commit],check=True)
   else:
    repo=deps/(name+'-git')

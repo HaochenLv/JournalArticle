@@ -18,6 +18,7 @@ def main():
   patterns=[r'/Users/[A-Za-z0-9_.-]+/',r'/home/[A-Za-z0-9_.-]+/',r'ghp_[A-Za-z0-9]{20,}',r'github_pat_[A-Za-z0-9_]{20,}',r'sk-proj-[A-Za-z0-9_-]{20,}',r'-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----']
   for pattern in patterns:
    if re.search(pattern,s):failures.append((name,'sensitive marker'))
+  if re.search(r'[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s]+[\\/]',s):failures.append((name,'personal Windows path'))
  if failures:raise SystemExit(str(failures))
  print(f'Public preflight passed for {len(list(filter(None,files)))} staged files.')
 if __name__=='__main__':main()

@@ -49,7 +49,7 @@ def csv_write(path,rows):
  path.parent.mkdir(parents=True,exist_ok=True)
  if not rows:return
  keys=list(dict.fromkeys(k for r in rows for k in r))
- with path.open('w') as f:
+ with path.open('w',encoding='utf-8',newline='') as f:
   w=csv.DictWriter(f,fieldnames=keys,lineterminator='\n');w.writeheader()
   w.writerows({k:json.dumps(v,separators=(',',':')) if isinstance(v,(dict,list)) else v for k,v in r.items()} for r in rows)
 

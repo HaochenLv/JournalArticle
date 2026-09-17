@@ -1,5 +1,11 @@
 # 主机续跑交接
 
+## 主机已验证 Windows 原生执行（2026-09-17 更新）
+
+用户要求优先检查原生 Python 后，执行层已补齐 Windows 支持：没有 SIGALRM 时用可终止的 spawn 子进程执行每次 reference，仍保留600秒超时和一次相同重试；后处理使用只读 Windows 进程状态查询，不调用 Windows 的 `os.kill(pid,0)`。冻结 JB1、协议、共同 grid、依赖 commit 和历史缓存均未修改。25项测试通过；新鲜短 trace 的14个请求在所有逐请求指标、最终模拟时间、E/R两种 SLA 判定上与原缓存精确一致，记录见 `results/formal/desktop_host_check.json`。因此下文“必须使用 WSL2”是原交接时的限制，已被本次验证过的执行层适配取代，无需安装 WSL。
+
+PowerShell 设置 `PYTHONUTF8=1`、`PYTHONDONTWRITEBYTECODE=1`，使用 `.venv\Scripts\python.exe` 执行原来的脚本。当前主机是 Python3.12.10（原机3.12.14），差异已通过上述对照核验。新行记录主机来源，旧195行保持原样；正式顺序计时仍全部在主机重新测量。Git 的本仓库 `core.autocrlf=false` 保证冻结文件字节一致。
+
 ## 当前是暂停状态
 
 用户要求停止笔记本计算，改到主机继续。笔记本的实验进程、后处理进程、临时防休眠进程均已停止，自动续跑任务已暂停。**不要在笔记本自动恢复。**

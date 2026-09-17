@@ -3,14 +3,13 @@ from pathlib import Path
 import sys,json,time,os,argparse,subprocess,datetime
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from formal_core import *
+from host_execution import process_alive
 
 def stamp():return datetime.datetime.now(datetime.timezone.utc).isoformat()
 def main(pid):
  dest=FORMAL/'execution_workflow.json';state={'protocol_hash':PROTOCOL_HASH,'workflow_started_utc':stamp(),'status':'waiting_for_matrix','steps':[]}
  write_json(dest,state)
- while True:
-  try:os.kill(pid,0)
-  except ProcessLookupError:break
+ while process_alive(pid):
   time.sleep(30)
  for g in groups():
   p=FORMAL/'groups'/(g['id']+'.json')
