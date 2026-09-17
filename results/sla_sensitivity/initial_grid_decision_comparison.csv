@@ -1,0 +1,97 @@
+group,workload,sla,semantics,initial_selected,final_selected,initial_type,final_type,initial_evaluator_best_set,final_evaluator_best_set,initial_reference_best_set,final_reference_best_set,type_changed,selection_changed
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT0.3,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT0.3,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT0.6,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT0.6,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT1.2,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT1.2,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT2.4,raw,-2,-2,agreement,strict best-set mismatch,[-2],[-2],"[-2,-1,0,2]","[0,1,2]",True,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT2.4,legacy,-2,-2,agreement,strict best-set mismatch,[-2],[-2],"[-2,-1,0,2]","[0,1,2]",True,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT5,raw,0,0,agreement,agreement,"[-2,-1,0,1,2]","[-2,-1,0,1,2]",[0],[0],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT5,legacy,0,0,agreement,agreement,"[-2,-1,0,1,2]","[-2,-1,0,1,2]",[0],[0],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT10,raw,2,2,strict best-set mismatch,strict best-set mismatch,[2],[2],[0],[0],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT5.2_TPOT10,legacy,2,2,strict best-set mismatch,strict best-set mismatch,[2],[2],[0],[0],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT4.68_TPOT1.2,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT4.68_TPOT1.2,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT4.68_TPOT10,raw,2,2,strict best-set mismatch,strict best-set mismatch,[2],[2],[0],[0],False,False
+h101-o60-d30-heterogeneous-fast,h101-o60-d30,TTFT4.68_TPOT10,legacy,2,2,strict best-set mismatch,strict best-set mismatch,[2],[2],[0],[0],False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT0.3,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT0.3,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT0.6,raw,-2,-2,agreement,agreement,[-2],[-2],"[-2,-1,0,1,2]",[-2],False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT0.6,legacy,-2,-2,agreement,agreement,[-2],[-2],"[-2,-1,0,1,2]",[-2],False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT1.2,raw,0,-1,agreement,tie-break mismatch,"[-2,-1,0,1,2]","[-2,-1]","[-2,-1,0,1,2]",[-2],True,True
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT1.2,legacy,0,-2,agreement,agreement,"[-2,-1,0,1,2]",[-2],"[-2,-1,0,1,2]",[-2],False,True
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT2.4,raw,0,-1,agreement,tie-break mismatch,"[-2,-1,0,1,2]","[-2,-1]","[-2,-1,0,1,2]",[-2],True,True
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT2.4,legacy,0,-2,agreement,agreement,"[-2,-1,0,1,2]",[-2],"[-2,-1,0,1,2]",[-2],False,True
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT5,raw,0,0,agreement,agreement,"[-2,-1,0,1,2]","[-2,-1,0,1,2]","[0,1]","[0,1]",False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT5,legacy,0,0,agreement,agreement,"[-2,-1,0,1,2]","[-2,-1,0,1,2]","[0,1]","[0,1]",False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT10,raw,1,1,strict best-set mismatch,strict best-set mismatch,"[1,2]","[1,2]",[0],[0],False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT5.2_TPOT10,legacy,2,2,strict best-set mismatch,strict best-set mismatch,[2],[2],[0],[0],False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT4.68_TPOT1.2,raw,,,no-safe recommendation,no-safe recommendation,[],[],[],[],False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT4.68_TPOT1.2,legacy,,,no-safe recommendation,no-safe recommendation,[],[],[],[],False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT4.68_TPOT10,raw,,,no-safe recommendation,no-safe recommendation,[],[],[],[],False,False
+h102-o300-d120-heterogeneous-slow,h102-o300-d120,TTFT4.68_TPOT10,legacy,,,no-safe recommendation,no-safe recommendation,[],[],[],[],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT0.3,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT0.3,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT0.6,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT0.6,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT1.2,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT1.2,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT2.4,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT2.4,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT5,raw,0,1,agreement,strict best-set mismatch,"[-2,-1,0,1,2]","[1,2]",[0],[0],True,True
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT5,legacy,0,1,agreement,strict best-set mismatch,"[-2,-1,0,1,2]","[1,2]",[0],[0],True,True
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT10,raw,2,2,strict best-set mismatch,strict best-set mismatch,[2],[2],[0],[0],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT5.2_TPOT10,legacy,2,2,strict best-set mismatch,strict best-set mismatch,[2],[2],[0],[0],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT4.68_TPOT1.2,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT4.68_TPOT1.2,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT4.68_TPOT10,raw,1,2,strict best-set mismatch,strict best-set mismatch,"[1,2]",[2],[0],[0],False,True
+h103-o500-d30-heterogeneous-slow,h103-o500-d30,TTFT4.68_TPOT10,legacy,1,2,strict best-set mismatch,strict best-set mismatch,"[1,2]",[2],[0],[0],False,True
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT0.3,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT0.3,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT0.6,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT0.6,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT1.2,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT1.2,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT2.4,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT2.4,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT5,raw,0,1,agreement,agreement,"[-2,-1,0,1,2]","[1,2]","[0,1]","[0,1]",False,True
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT5,legacy,0,1,agreement,agreement,"[-2,-1,0,1,2]","[1,2]","[0,1]","[0,1]",False,True
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT10,raw,2,2,strict best-set mismatch,strict best-set mismatch,[2],[2],"[0,1]","[0,1]",False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT5.2_TPOT10,legacy,0,0,agreement,agreement,"[0,1,2]","[0,1,2]","[0,1]","[0,1]",False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT4.68_TPOT1.2,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT4.68_TPOT1.2,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT4.68_TPOT10,raw,2,2,strict best-set mismatch,strict best-set mismatch,[2],[2],[1],[1],False,False
+h104-o700-d120-heterogeneous-fast,h104-o700-d120,TTFT4.68_TPOT10,legacy,0,0,tie-break mismatch,tie-break mismatch,"[0,1,2]","[0,1,2]",[1],[1],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT0.3,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT0.3,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT0.6,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT0.6,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT1.2,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT1.2,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT2.4,raw,-2,-2,strict best-set mismatch,strict best-set mismatch,[-2],[-2],"[1,2]","[1,2]",False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT2.4,legacy,-2,-2,strict best-set mismatch,strict best-set mismatch,[-2],[-2],"[1,2]","[1,2]",False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT5,raw,0,0,tie-break mismatch,tie-break mismatch,"[-2,-1,0,1,2]","[-2,-1,0,1,2]",[1],[1],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT5,legacy,0,0,tie-break mismatch,tie-break mismatch,"[-2,-1,0,1,2]","[-2,-1,0,1,2]",[1],[1],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT10,raw,0,0,tie-break mismatch,tie-break mismatch,"[0,1,2]","[0,1,2]",[1],[1],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT5.2_TPOT10,legacy,1,1,agreement,agreement,"[1,2]","[1,2]",[1],[1],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT4.68_TPOT1.2,raw,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT4.68_TPOT1.2,legacy,-2,-2,agreement,agreement,[-2],[-2],[-2],[-2],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT4.68_TPOT10,raw,0,0,tie-break mismatch,tie-break mismatch,"[0,1,2]","[0,1,2]",[1],[1],False,False
+h105-o900-d30-heterogeneous-fast,h105-o900-d30,TTFT4.68_TPOT10,legacy,1,1,agreement,agreement,"[1,2]","[1,2]",[1],[1],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT0.3,raw,1,1,agreement,agreement,[1],[1],[1],[1],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT0.3,legacy,1,1,agreement,agreement,[1],[1],[1],[1],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT0.6,raw,1,1,agreement,agreement,[1],[1],[1],[1],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT0.6,legacy,1,1,agreement,agreement,[1],[1],[1],[1],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT1.2,raw,1,1,agreement,agreement,[1],[1],[1],[1],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT1.2,legacy,1,1,agreement,agreement,[1],[1],[1],[1],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT2.4,raw,1,1,agreement,agreement,[1],[1],[1],[1],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT2.4,legacy,1,1,agreement,agreement,[1],[1],[1],[1],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT5,raw,1,1,tie-break mismatch,tie-break mismatch,"[1,2]","[1,2]",[2],[2],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT5,legacy,1,1,tie-break mismatch,tie-break mismatch,"[1,2]","[1,2]",[2],[2],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT10,raw,1,1,tie-break mismatch,tie-break mismatch,"[1,2]","[1,2]",[2],[2],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT5.2_TPOT10,legacy,1,1,tie-break mismatch,tie-break mismatch,"[1,2]","[1,2]",[2],[2],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT4.68_TPOT1.2,raw,,,no-safe recommendation,no-safe recommendation,[],[],[],[],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT4.68_TPOT1.2,legacy,,,no-safe recommendation,no-safe recommendation,[],[],[],[],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT4.68_TPOT10,raw,,,no-safe recommendation,no-safe recommendation,[],[],[],[],False,False
+h106-o1100-d120-heterogeneous-slow,h106-o1100-d120,TTFT4.68_TPOT10,legacy,,,no-safe recommendation,no-safe recommendation,[],[],[],[],False,False

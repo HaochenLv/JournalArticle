@@ -1,0 +1,22 @@
+{
+  "same_host_configuration": true,
+  "old_host": {
+    "system": "Windows",
+    "machine": "AMD64",
+    "python": "3.12.10",
+    "cpu_logical": 20,
+    "memory_bytes": 34164097024
+  },
+  "current_host": {
+    "system": "Windows",
+    "machine": "AMD64",
+    "python": "3.12.14",
+    "cpu_logical": 20,
+    "memory_bytes": 34164097024
+  },
+  "adapter_files_verified": 38,
+  "profile_pins_pass": true,
+  "scientific_inputs_changed": false,
+  "reference_repeat_not_required": "same host and same pinned reference sources; original physical points are read-only and not rerun",
+  "runtime_change": "Python patch version only; exact all-old-SLA evaluator-output gate required before refinement"
+}

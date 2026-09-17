@@ -1,0 +1,73 @@
+{
+  "protocol_hash": "ac61d6e30a9b19823bf8ff595feaf7bdf935ebd72206a712ab001e4968dc3f8b",
+  "cache_reuse_count": 1450,
+  "new_unique_physical_points": 600,
+  "successful_new_physical_points": 600,
+  "physical_attempts": 600,
+  "retries": 0,
+  "timeouts": 0,
+  "failed_attempts": 0,
+  "failed_points": 0,
+  "total_physical_points": 2050,
+  "evaluator_judgments": 32800,
+  "evaluator_original_grid": 23200,
+  "evaluator_added_grid": 9600,
+  "reference_sla_classifications": 16400,
+  "summed_new_physical_runtime_s": 14586.798887700192,
+  "groups": [
+    {
+      "workload": "h101-o60-d30",
+      "before": 51,
+      "after": 75,
+      "added": 24,
+      "rounds_with_additions": 4,
+      "unresolved_intervals": 12,
+      "stop_reason": "24-intensity budget"
+    },
+    {
+      "workload": "h102-o300-d120",
+      "before": 53,
+      "after": 77,
+      "added": 24,
+      "rounds_with_additions": 3,
+      "unresolved_intervals": 6,
+      "stop_reason": "24-intensity budget"
+    },
+    {
+      "workload": "h103-o500-d30",
+      "before": 46,
+      "after": 70,
+      "added": 24,
+      "rounds_with_additions": 6,
+      "unresolved_intervals": 0,
+      "stop_reason": "no unresolved transition"
+    },
+    {
+      "workload": "h104-o700-d120",
+      "before": 41,
+      "after": 52,
+      "added": 11,
+      "rounds_with_additions": 6,
+      "unresolved_intervals": 0,
+      "stop_reason": "no unresolved transition"
+    },
+    {
+      "workload": "h105-o900-d30",
+      "before": 49,
+      "after": 73,
+      "added": 24,
+      "rounds_with_additions": 3,
+      "unresolved_intervals": 9,
+      "stop_reason": "24-intensity budget"
+    },
+    {
+      "workload": "h106-o1100-d120",
+      "before": 50,
+      "after": 63,
+      "added": 13,
+      "rounds_with_additions": 5,
+      "unresolved_intervals": 0,
+      "stop_reason": "no unresolved transition"
+    }
+  ]
+}

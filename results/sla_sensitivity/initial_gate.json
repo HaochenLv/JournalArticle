@@ -1,0 +1,156 @@
+{
+  "passed": true,
+  "protocol_hash": "ac61d6e30a9b19823bf8ff595feaf7bdf935ebd72206a712ab001e4968dc3f8b",
+  "label_comparisons": 8700,
+  "decisions": [
+    {
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "legacy",
+      "reproduced": true
+    },
+    {
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "legacy",
+      "reproduced": true
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "legacy",
+      "reproduced": true
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "legacy",
+      "reproduced": true
+    },
+    {
+      "group": "h103-o500-d30-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h103-o500-d30-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "legacy",
+      "reproduced": true
+    },
+    {
+      "group": "h103-o500-d30-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h103-o500-d30-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "legacy",
+      "reproduced": true
+    },
+    {
+      "group": "h104-o700-d120-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h104-o700-d120-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "legacy",
+      "reproduced": true
+    },
+    {
+      "group": "h104-o700-d120-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h104-o700-d120-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "legacy",
+      "reproduced": true
+    },
+    {
+      "group": "h105-o900-d30-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h105-o900-d30-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "legacy",
+      "reproduced": true
+    },
+    {
+      "group": "h105-o900-d30-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h105-o900-d30-heterogeneous-fast",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "legacy",
+      "reproduced": true
+    },
+    {
+      "group": "h106-o1100-d120-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h106-o1100-d120-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT0.3",
+      "variant": "legacy",
+      "reproduced": true
+    },
+    {
+      "group": "h106-o1100-d120-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "raw",
+      "reproduced": true
+    },
+    {
+      "group": "h106-o1100-d120-heterogeneous-slow",
+      "sla": "TTFT5.2_TPOT10",
+      "variant": "legacy",
+      "reproduced": true
+    }
+  ],
+  "physical_points_reused": 1450,
+  "evaluator_calls": 23200,
+  "full_evaluator_outputs_except_runtime_reproduced": true,
+  "sla_monotonicity": true,
+  "portability": "Same Windows AMD64 / 20 CPU / physical-memory host configuration; bundled Python 3.12.14 replaces unavailable 3.12.10 launcher. Frozen profiles checked and all old-SLA evaluator fields reproduced exactly."
+}

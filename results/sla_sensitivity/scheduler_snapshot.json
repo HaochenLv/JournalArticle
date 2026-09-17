@@ -1,0 +1,13 @@
+{
+  "active": 0,
+  "pending": 0,
+  "max_workers": 12,
+  "budget_bytes": 25769803776,
+  "reserved_bytes": 0,
+  "headroom_bytes": 21214801920,
+  "reserve_bytes": 6442450944,
+  "peak_active": 12,
+  "peak_reserved_bytes": 25769803776,
+  "running": [],
+  "checked_unix_s": 1789643295.5645704
+}

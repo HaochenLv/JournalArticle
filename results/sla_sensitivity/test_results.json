@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "tests": 36,
+  "runner": "python -m unittest discover -s tests -v",
+  "scope": "31 existing tests plus 5 Stage 4 transition/missingness/monotonicity/tie tests",
+  "checked_utc": "2026-09-17T10:30:21.310457+00:00"
+}

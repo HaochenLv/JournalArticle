@@ -1,0 +1,1636 @@
+{
+  "group": "h103-o500-d30-heterogeneous-slow",
+  "original_grid": [
+    0.001,
+    0.004,
+    0.0056568542,
+    0.0067271713,
+    0.0073360323,
+    0.0074966705,
+    0.0076608262,
+    0.0078285765,
+    0.008,
+    0.0081751772,
+    0.0083541903,
+    0.0085371232,
+    0.0087240619,
+    0.0095136569,
+    0.0113137085,
+    0.016,
+    0.064,
+    0.256,
+    1.024,
+    2.048,
+    2.4354961715,
+    2.6559274079,
+    2.7140846452,
+    2.7735153601,
+    2.8342474382,
+    2.8963093757,
+    4.096,
+    5.7926187515,
+    6.8886234338,
+    7.1936088489,
+    7.3511283713,
+    7.512097122,
+    8.192,
+    8.3713814418,
+    8.5546908256,
+    8.7420141623,
+    8.933439346,
+    9.3289564959,
+    9.5332340431,
+    9.7419846861,
+    9.955306373,
+    10.1732991965,
+    10.6237096317,
+    11.585237503,
+    16.384,
+    65.536
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "grid_before": [
+        0.001,
+        0.004,
+        0.0056568542,
+        0.0067271713,
+        0.0073360323,
+        0.0074966705,
+        0.0076608262,
+        0.0078285765,
+        0.008,
+        0.0081751772,
+        0.0083541903,
+        0.0085371232,
+        0.0087240619,
+        0.0095136569,
+        0.0113137085,
+        0.016,
+        0.064,
+        0.256,
+        1.024,
+        2.048,
+        2.4354961715,
+        2.6559274079,
+        2.7140846452,
+        2.7735153601,
+        2.8342474382,
+        2.8963093757,
+        4.096,
+        5.7926187515,
+        6.8886234338,
+        7.1936088489,
+        7.3511283713,
+        7.512097122,
+        8.192,
+        8.3713814418,
+        8.5546908256,
+        8.7420141623,
+        8.933439346,
+        9.3289564959,
+        9.5332340431,
+        9.7419846861,
+        9.955306373,
+        10.1732991965,
+        10.6237096317,
+        11.585237503,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.256,
+          "upper": 1.024,
+          "relative_width": 3.0,
+          "midpoint": 0.512,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 1.024,
+          "upper": 2.048,
+          "relative_width": 1.0,
+          "midpoint": 1.4481546879,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 4.096,
+          "upper": 5.7926187515,
+          "relative_width": 0.4142135623779297,
+          "midpoint": 4.8709923431,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 5.7926187515,
+          "upper": 6.8886234338,
+          "relative_width": 0.1892071150058321,
+          "midpoint": 6.3168955409,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 6.8886234338,
+          "upper": 7.1936088489,
+          "relative_width": 0.044273782422703745,
+          "midpoint": 7.0394646451,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.512,
+        1.4481546879,
+        4.8709923431,
+        6.3168955409,
+        7.0394646451
+      ],
+      "unselected": []
+    },
+    {
+      "round": 2,
+      "grid_before": [
+        0.001,
+        0.004,
+        0.0056568542,
+        0.0067271713,
+        0.0073360323,
+        0.0074966705,
+        0.0076608262,
+        0.0078285765,
+        0.008,
+        0.0081751772,
+        0.0083541903,
+        0.0085371232,
+        0.0087240619,
+        0.0095136569,
+        0.0113137085,
+        0.016,
+        0.064,
+        0.256,
+        0.512,
+        1.024,
+        1.4481546879,
+        2.048,
+        2.4354961715,
+        2.6559274079,
+        2.7140846452,
+        2.7735153601,
+        2.8342474382,
+        2.8963093757,
+        4.096,
+        4.8709923431,
+        5.7926187515,
+        6.3168955409,
+        6.8886234338,
+        7.0394646451,
+        7.1936088489,
+        7.3511283713,
+        7.512097122,
+        8.192,
+        8.3713814418,
+        8.5546908256,
+        8.7420141623,
+        8.933439346,
+        9.3289564959,
+        9.5332340431,
+        9.7419846861,
+        9.955306373,
+        10.1732991965,
+        10.6237096317,
+        11.585237503,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.512,
+          "upper": 1.024,
+          "relative_width": 1.0,
+          "midpoint": 0.7240773439,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 1.4481546879,
+          "upper": 2.048,
+          "relative_width": 0.4142135623438463,
+          "midpoint": 1.7221558585,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 4.8709923431,
+          "upper": 5.7926187515,
+          "relative_width": 0.1892071149948591,
+          "midpoint": 5.3118548159,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 6.3168955409,
+          "upper": 6.8886234338,
+          "relative_width": 0.09050773266681933,
+          "midpoint": 6.5965683997,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.7240773439,
+        1.7221558585,
+        5.3118548159,
+        6.5965683997
+      ],
+      "unselected": []
+    },
+    {
+      "round": 3,
+      "grid_before": [
+        0.001,
+        0.004,
+        0.0056568542,
+        0.0067271713,
+        0.0073360323,
+        0.0074966705,
+        0.0076608262,
+        0.0078285765,
+        0.008,
+        0.0081751772,
+        0.0083541903,
+        0.0085371232,
+        0.0087240619,
+        0.0095136569,
+        0.0113137085,
+        0.016,
+        0.064,
+        0.256,
+        0.512,
+        0.7240773439,
+        1.024,
+        1.4481546879,
+        1.7221558585,
+        2.048,
+        2.4354961715,
+        2.6559274079,
+        2.7140846452,
+        2.7735153601,
+        2.8342474382,
+        2.8963093757,
+        4.096,
+        4.8709923431,
+        5.3118548159,
+        5.7926187515,
+        6.3168955409,
+        6.5965683997,
+        6.8886234338,
+        7.0394646451,
+        7.1936088489,
+        7.3511283713,
+        7.512097122,
+        8.192,
+        8.3713814418,
+        8.5546908256,
+        8.7420141623,
+        8.933439346,
+        9.3289564959,
+        9.5332340431,
+        9.7419846861,
+        9.955306373,
+        10.1732991965,
+        10.6237096317,
+        11.585237503,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.7240773439,
+          "upper": 1.024,
+          "relative_width": 0.41421356244150265,
+          "midpoint": 0.8610779292,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 1.7221558585,
+          "upper": 2.048,
+          "relative_width": 0.18920711496101794,
+          "midpoint": 1.8780242805,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 5.3118548159,
+          "upper": 5.7926187515,
+          "relative_width": 0.09050773265883083,
+          "midpoint": 5.5470307203,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 6.3168955409,
+          "upper": 6.5965683997,
+          "relative_width": 0.04427378242828328,
+          "midpoint": 6.4552175416,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 6.5965683997,
+          "upper": 6.8886234338,
+          "relative_width": 0.04427378242803992,
+          "midpoint": 6.7410144386,
+          "witnesses": [
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.8610779292,
+        1.8780242805,
+        5.5470307203,
+        6.4552175416,
+        6.7410144386
+      ],
+      "unselected": []
+    },
+    {
+      "round": 4,
+      "grid_before": [
+        0.001,
+        0.004,
+        0.0056568542,
+        0.0067271713,
+        0.0073360323,
+        0.0074966705,
+        0.0076608262,
+        0.0078285765,
+        0.008,
+        0.0081751772,
+        0.0083541903,
+        0.0085371232,
+        0.0087240619,
+        0.0095136569,
+        0.0113137085,
+        0.016,
+        0.064,
+        0.256,
+        0.512,
+        0.7240773439,
+        0.8610779292,
+        1.024,
+        1.4481546879,
+        1.7221558585,
+        1.8780242805,
+        2.048,
+        2.4354961715,
+        2.6559274079,
+        2.7140846452,
+        2.7735153601,
+        2.8342474382,
+        2.8963093757,
+        4.096,
+        4.8709923431,
+        5.3118548159,
+        5.5470307203,
+        5.7926187515,
+        6.3168955409,
+        6.4552175416,
+        6.5965683997,
+        6.7410144386,
+        6.8886234338,
+        7.0394646451,
+        7.1936088489,
+        7.3511283713,
+        7.512097122,
+        8.192,
+        8.3713814418,
+        8.5546908256,
+        8.7420141623,
+        8.933439346,
+        9.3289564959,
+        9.5332340431,
+        9.7419846861,
+        9.955306373,
+        10.1732991965,
+        10.6237096317,
+        11.585237503,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.8610779292,
+          "upper": 1.024,
+          "relative_width": 0.18920711503007137,
+          "midpoint": 0.9390121402,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 1.7221558585,
+          "upper": 1.8780242805,
+          "relative_width": 0.09050773263679024,
+          "midpoint": 1.7984022123,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 5.5470307203,
+          "upper": 5.7926187515,
+          "relative_width": 0.04427378242223212,
+          "midpoint": 5.6684948766,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.9390121402,
+        1.7984022123,
+        5.6684948766
+      ],
+      "unselected": []
+    },
+    {
+      "round": 5,
+      "grid_before": [
+        0.001,
+        0.004,
+        0.0056568542,
+        0.0067271713,
+        0.0073360323,
+        0.0074966705,
+        0.0076608262,
+        0.0078285765,
+        0.008,
+        0.0081751772,
+        0.0083541903,
+        0.0085371232,
+        0.0087240619,
+        0.0095136569,
+        0.0113137085,
+        0.016,
+        0.064,
+        0.256,
+        0.512,
+        0.7240773439,
+        0.8610779292,
+        0.9390121402,
+        1.024,
+        1.4481546879,
+        1.7221558585,
+        1.7984022123,
+        1.8780242805,
+        2.048,
+        2.4354961715,
+        2.6559274079,
+        2.7140846452,
+        2.7735153601,
+        2.8342474382,
+        2.8963093757,
+        4.096,
+        4.8709923431,
+        5.3118548159,
+        5.5470307203,
+        5.6684948766,
+        5.7926187515,
+        6.3168955409,
+        6.4552175416,
+        6.5965683997,
+        6.7410144386,
+        6.8886234338,
+        7.0394646451,
+        7.1936088489,
+        7.3511283713,
+        7.512097122,
+        8.192,
+        8.3713814418,
+        8.5546908256,
+        8.7420141623,
+        8.933439346,
+        9.3289564959,
+        9.5332340431,
+        9.7419846861,
+        9.955306373,
+        10.1732991965,
+        10.6237096317,
+        11.585237503,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.9390121402,
+          "upper": 1.024,
+          "relative_width": 0.09050773271354995,
+          "midpoint": 0.9805857594,
+          "witnesses": [
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.8610779292,
+          "upper": 0.9390121402,
+          "relative_width": 0.09050773264204581,
+          "midpoint": 0.8992011061,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 1.7221558585,
+          "upper": 1.7984022123,
+          "relative_width": 0.04427378243593516,
+          "midpoint": 1.7598661613,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 1.7984022123,
+          "upper": 1.8780242805,
+          "relative_width": 0.044273782391632155,
+          "midpoint": 1.8377820929,
+          "witnesses": [
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.9805857594,
+        0.8992011061,
+        1.7598661613,
+        1.8377820929
+      ],
+      "unselected": []
+    },
+    {
+      "round": 6,
+      "grid_before": [
+        0.001,
+        0.004,
+        0.0056568542,
+        0.0067271713,
+        0.0073360323,
+        0.0074966705,
+        0.0076608262,
+        0.0078285765,
+        0.008,
+        0.0081751772,
+        0.0083541903,
+        0.0085371232,
+        0.0087240619,
+        0.0095136569,
+        0.0113137085,
+        0.016,
+        0.064,
+        0.256,
+        0.512,
+        0.7240773439,
+        0.8610779292,
+        0.8992011061,
+        0.9390121402,
+        0.9805857594,
+        1.024,
+        1.4481546879,
+        1.7221558585,
+        1.7598661613,
+        1.7984022123,
+        1.8377820929,
+        1.8780242805,
+        2.048,
+        2.4354961715,
+        2.6559274079,
+        2.7140846452,
+        2.7735153601,
+        2.8342474382,
+        2.8963093757,
+        4.096,
+        4.8709923431,
+        5.3118548159,
+        5.5470307203,
+        5.6684948766,
+        5.7926187515,
+        6.3168955409,
+        6.4552175416,
+        6.5965683997,
+        6.7410144386,
+        6.8886234338,
+        7.0394646451,
+        7.1936088489,
+        7.3511283713,
+        7.512097122,
+        8.192,
+        8.3713814418,
+        8.5546908256,
+        8.7420141623,
+        8.933439346,
+        9.3289564959,
+        9.5332340431,
+        9.7419846861,
+        9.955306373,
+        10.1732991965,
+        10.6237096317,
+        11.585237503,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.8610779292,
+          "upper": 0.8992011061,
+          "relative_width": 0.04427378243850599,
+          "midpoint": 0.8799330806,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.9390121402,
+          "upper": 0.9805857594,
+          "relative_width": 0.04427378243602398,
+          "midpoint": 0.9595738286,
+          "witnesses": [
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.8992011061,
+          "upper": 0.9390121402,
+          "relative_width": 0.04427378239409396,
+          "midpoint": 0.9188910464,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.8799330806,
+        0.9595738286,
+        0.9188910464
+      ],
+      "unselected": []
+    }
+  ],
+  "status": "complete",
+  "final_grid": [
+    0.001,
+    0.004,
+    0.0056568542,
+    0.0067271713,
+    0.0073360323,
+    0.0074966705,
+    0.0076608262,
+    0.0078285765,
+    0.008,
+    0.0081751772,
+    0.0083541903,
+    0.0085371232,
+    0.0087240619,
+    0.0095136569,
+    0.0113137085,
+    0.016,
+    0.064,
+    0.256,
+    0.512,
+    0.7240773439,
+    0.8610779292,
+    0.8799330806,
+    0.8992011061,
+    0.9188910464,
+    0.9390121402,
+    0.9595738286,
+    0.9805857594,
+    1.024,
+    1.4481546879,
+    1.7221558585,
+    1.7598661613,
+    1.7984022123,
+    1.8377820929,
+    1.8780242805,
+    2.048,
+    2.4354961715,
+    2.6559274079,
+    2.7140846452,
+    2.7735153601,
+    2.8342474382,
+    2.8963093757,
+    4.096,
+    4.8709923431,
+    5.3118548159,
+    5.5470307203,
+    5.6684948766,
+    5.7926187515,
+    6.3168955409,
+    6.4552175416,
+    6.5965683997,
+    6.7410144386,
+    6.8886234338,
+    7.0394646451,
+    7.1936088489,
+    7.3511283713,
+    7.512097122,
+    8.192,
+    8.3713814418,
+    8.5546908256,
+    8.7420141623,
+    8.933439346,
+    9.3289564959,
+    9.5332340431,
+    9.7419846861,
+    9.955306373,
+    10.1732991965,
+    10.6237096317,
+    11.585237503,
+    16.384,
+    65.536
+  ],
+  "added_intensities": 24,
+  "unresolved_transitions": [],
+  "stop_reason": "no unresolved transition"
+}

@@ -1,0 +1,1005 @@
+{
+  "group": "h104-o700-d120-heterogeneous-fast",
+  "original_grid": [
+    0.001,
+    0.002,
+    0.0028284271,
+    0.0030844216,
+    0.0031519616,
+    0.0032209806,
+    0.0032915109,
+    0.0033635856,
+    0.0034372386,
+    0.0035125043,
+    0.0035894181,
+    0.0036680161,
+    0.004,
+    0.016,
+    0.064,
+    0.256,
+    1.024,
+    1.1166799183,
+    1.166119562,
+    1.1916542554,
+    1.2177480858,
+    1.2444132967,
+    1.2716623996,
+    1.327963704,
+    1.4481546879,
+    2.048,
+    4.096,
+    4.8709923431,
+    5.3118548159,
+    5.4281692904,
+    5.5470307203,
+    5.7926187515,
+    6.0490798938,
+    6.1815374955,
+    6.3168955409,
+    6.5965683997,
+    6.7410144386,
+    6.8886234338,
+    8.192,
+    16.384,
+    65.536
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "grid_before": [
+        0.001,
+        0.002,
+        0.0028284271,
+        0.0030844216,
+        0.0031519616,
+        0.0032209806,
+        0.0032915109,
+        0.0033635856,
+        0.0034372386,
+        0.0035125043,
+        0.0035894181,
+        0.0036680161,
+        0.004,
+        0.016,
+        0.064,
+        0.256,
+        1.024,
+        1.1166799183,
+        1.166119562,
+        1.1916542554,
+        1.2177480858,
+        1.2444132967,
+        1.2716623996,
+        1.327963704,
+        1.4481546879,
+        2.048,
+        4.096,
+        4.8709923431,
+        5.3118548159,
+        5.4281692904,
+        5.5470307203,
+        5.7926187515,
+        6.0490798938,
+        6.1815374955,
+        6.3168955409,
+        6.5965683997,
+        6.7410144386,
+        6.8886234338,
+        8.192,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.256,
+          "upper": 1.024,
+          "relative_width": 3.0,
+          "midpoint": 0.512,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 4.8709923431,
+          "upper": 5.3118548159,
+          "relative_width": 0.0905077326644752,
+          "midpoint": 5.0866495983,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 5.7926187515,
+          "upper": 6.0490798938,
+          "relative_width": 0.04427378242933555,
+          "midpoint": 5.9194605854,
+          "witnesses": [
+            {
+              "shift": 2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 6.3168955409,
+          "upper": 6.5965683997,
+          "relative_width": 0.04427378242828328,
+          "midpoint": 6.4552175416,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 5.5470307203,
+          "upper": 5.7926187515,
+          "relative_width": 0.04427378242223212,
+          "midpoint": 5.6684948766,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.512,
+        5.0866495983,
+        5.9194605854,
+        6.4552175416,
+        5.6684948766
+      ],
+      "unselected": []
+    },
+    {
+      "round": 2,
+      "grid_before": [
+        0.001,
+        0.002,
+        0.0028284271,
+        0.0030844216,
+        0.0031519616,
+        0.0032209806,
+        0.0032915109,
+        0.0033635856,
+        0.0034372386,
+        0.0035125043,
+        0.0035894181,
+        0.0036680161,
+        0.004,
+        0.016,
+        0.064,
+        0.256,
+        0.512,
+        1.024,
+        1.1166799183,
+        1.166119562,
+        1.1916542554,
+        1.2177480858,
+        1.2444132967,
+        1.2716623996,
+        1.327963704,
+        1.4481546879,
+        2.048,
+        4.096,
+        4.8709923431,
+        5.0866495983,
+        5.3118548159,
+        5.4281692904,
+        5.5470307203,
+        5.6684948766,
+        5.7926187515,
+        5.9194605854,
+        6.0490798938,
+        6.1815374955,
+        6.3168955409,
+        6.4552175416,
+        6.5965683997,
+        6.7410144386,
+        6.8886234338,
+        8.192,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.256,
+          "upper": 0.512,
+          "relative_width": 1.0,
+          "midpoint": 0.362038672,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 5.0866495983,
+          "upper": 5.3118548159,
+          "relative_width": 0.04427378242748725,
+          "midpoint": 5.1980327207,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT4.68_TPOT10",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.362038672,
+        5.1980327207
+      ],
+      "unselected": []
+    },
+    {
+      "round": 3,
+      "grid_before": [
+        0.001,
+        0.002,
+        0.0028284271,
+        0.0030844216,
+        0.0031519616,
+        0.0032209806,
+        0.0032915109,
+        0.0033635856,
+        0.0034372386,
+        0.0035125043,
+        0.0035894181,
+        0.0036680161,
+        0.004,
+        0.016,
+        0.064,
+        0.256,
+        0.362038672,
+        0.512,
+        1.024,
+        1.1166799183,
+        1.166119562,
+        1.1916542554,
+        1.2177480858,
+        1.2444132967,
+        1.2716623996,
+        1.327963704,
+        1.4481546879,
+        2.048,
+        4.096,
+        4.8709923431,
+        5.0866495983,
+        5.1980327207,
+        5.3118548159,
+        5.4281692904,
+        5.5470307203,
+        5.6684948766,
+        5.7926187515,
+        5.9194605854,
+        6.0490798938,
+        6.1815374955,
+        6.3168955409,
+        6.4552175416,
+        6.5965683997,
+        6.7410144386,
+        6.8886234338,
+        8.192,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.256,
+          "upper": 0.362038672,
+          "relative_width": 0.4142135625000001,
+          "midpoint": 0.3044370215,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.3044370215
+      ],
+      "unselected": []
+    },
+    {
+      "round": 4,
+      "grid_before": [
+        0.001,
+        0.002,
+        0.0028284271,
+        0.0030844216,
+        0.0031519616,
+        0.0032209806,
+        0.0032915109,
+        0.0033635856,
+        0.0034372386,
+        0.0035125043,
+        0.0035894181,
+        0.0036680161,
+        0.004,
+        0.016,
+        0.064,
+        0.256,
+        0.3044370215,
+        0.362038672,
+        0.512,
+        1.024,
+        1.1166799183,
+        1.166119562,
+        1.1916542554,
+        1.2177480858,
+        1.2444132967,
+        1.2716623996,
+        1.327963704,
+        1.4481546879,
+        2.048,
+        4.096,
+        4.8709923431,
+        5.0866495983,
+        5.1980327207,
+        5.3118548159,
+        5.4281692904,
+        5.5470307203,
+        5.6684948766,
+        5.7926187515,
+        5.9194605854,
+        6.0490798938,
+        6.1815374955,
+        6.3168955409,
+        6.4552175416,
+        6.5965683997,
+        6.7410144386,
+        6.8886234338,
+        8.192,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.256,
+          "upper": 0.3044370215,
+          "relative_width": 0.18920711523437506,
+          "midpoint": 0.2791699796,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.2791699796
+      ],
+      "unselected": []
+    },
+    {
+      "round": 5,
+      "grid_before": [
+        0.001,
+        0.002,
+        0.0028284271,
+        0.0030844216,
+        0.0031519616,
+        0.0032209806,
+        0.0032915109,
+        0.0033635856,
+        0.0034372386,
+        0.0035125043,
+        0.0035894181,
+        0.0036680161,
+        0.004,
+        0.016,
+        0.064,
+        0.256,
+        0.2791699796,
+        0.3044370215,
+        0.362038672,
+        0.512,
+        1.024,
+        1.1166799183,
+        1.166119562,
+        1.1916542554,
+        1.2177480858,
+        1.2444132967,
+        1.2716623996,
+        1.327963704,
+        1.4481546879,
+        2.048,
+        4.096,
+        4.8709923431,
+        5.0866495983,
+        5.1980327207,
+        5.3118548159,
+        5.4281692904,
+        5.5470307203,
+        5.6684948766,
+        5.7926187515,
+        5.9194605854,
+        6.0490798938,
+        6.1815374955,
+        6.3168955409,
+        6.4552175416,
+        6.5965683997,
+        6.7410144386,
+        6.8886234338,
+        8.192,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.2791699796,
+          "upper": 0.3044370215,
+          "relative_width": 0.09050773273044288,
+          "midpoint": 0.2915298905,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.2915298905
+      ],
+      "unselected": []
+    },
+    {
+      "round": 6,
+      "grid_before": [
+        0.001,
+        0.002,
+        0.0028284271,
+        0.0030844216,
+        0.0031519616,
+        0.0032209806,
+        0.0032915109,
+        0.0033635856,
+        0.0034372386,
+        0.0035125043,
+        0.0035894181,
+        0.0036680161,
+        0.004,
+        0.016,
+        0.064,
+        0.256,
+        0.2791699796,
+        0.2915298905,
+        0.3044370215,
+        0.362038672,
+        0.512,
+        1.024,
+        1.1166799183,
+        1.166119562,
+        1.1916542554,
+        1.2177480858,
+        1.2444132967,
+        1.2716623996,
+        1.327963704,
+        1.4481546879,
+        2.048,
+        4.096,
+        4.8709923431,
+        5.0866495983,
+        5.1980327207,
+        5.3118548159,
+        5.4281692904,
+        5.5470307203,
+        5.6684948766,
+        5.7926187515,
+        5.9194605854,
+        6.0490798938,
+        6.1815374955,
+        6.3168955409,
+        6.4552175416,
+        6.5965683997,
+        6.7410144386,
+        6.8886234338,
+        8.192,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.2915298905,
+          "upper": 0.3044370215,
+          "relative_width": 0.044273782622643365,
+          "midpoint": 0.2979135639,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.2979135639
+      ],
+      "unselected": []
+    }
+  ],
+  "status": "complete",
+  "final_grid": [
+    0.001,
+    0.002,
+    0.0028284271,
+    0.0030844216,
+    0.0031519616,
+    0.0032209806,
+    0.0032915109,
+    0.0033635856,
+    0.0034372386,
+    0.0035125043,
+    0.0035894181,
+    0.0036680161,
+    0.004,
+    0.016,
+    0.064,
+    0.256,
+    0.2791699796,
+    0.2915298905,
+    0.2979135639,
+    0.3044370215,
+    0.362038672,
+    0.512,
+    1.024,
+    1.1166799183,
+    1.166119562,
+    1.1916542554,
+    1.2177480858,
+    1.2444132967,
+    1.2716623996,
+    1.327963704,
+    1.4481546879,
+    2.048,
+    4.096,
+    4.8709923431,
+    5.0866495983,
+    5.1980327207,
+    5.3118548159,
+    5.4281692904,
+    5.5470307203,
+    5.6684948766,
+    5.7926187515,
+    5.9194605854,
+    6.0490798938,
+    6.1815374955,
+    6.3168955409,
+    6.4552175416,
+    6.5965683997,
+    6.7410144386,
+    6.8886234338,
+    8.192,
+    16.384,
+    65.536
+  ],
+  "added_intensities": 11,
+  "unresolved_transitions": [],
+  "stop_reason": "no unresolved transition"
+}

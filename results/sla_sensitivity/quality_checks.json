@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "protocol_hash": "ac61d6e30a9b19823bf8ff595feaf7bdf935ebd72206a712ab001e4968dc3f8b",
+  "protected_hashes_unchanged": 2459,
+  "checks": {
+    "protocol_hash": true,
+    "workload_fingerprints": true,
+    "partition_fingerprints": true,
+    "profile_fingerprints": true,
+    "network_unchanged": true,
+    "candidate_grids_equal": true,
+    "sla_monotonicity": true,
+    "original_stage3_labels_and_decisions": true,
+    "full_drain_and_per_token_completeness": true,
+    "failure_retry_accounting": true,
+    "all_new_points_across_five_candidates": true,
+    "all_reference_metrics_across_eight_slas": true,
+    "no_hidden_dropped_cases": true,
+    "ties_retained": true,
+    "no_safe_retained": true,
+    "nonmonotone_retained": true,
+    "unresolved_brackets_retained": true,
+    "exact_recommendation_safety": true,
+    "loss_identity": true,
+    "refinement_priority_and_budget": true,
+    "frozen_dependency_sources": true,
+    "original_memory_scheduling_limits": true
+  },
+  "grids": [
+    {
+      "workload": "h101-o60-d30",
+      "points": 375,
+      "grid_size": 75,
+      "shared": true,
+      "refinement_replayed": true
+    },
+    {
+      "workload": "h102-o300-d120",
+      "points": 385,
+      "grid_size": 77,
+      "shared": true,
+      "refinement_replayed": true
+    },
+    {
+      "workload": "h103-o500-d30",
+      "points": 350,
+      "grid_size": 70,
+      "shared": true,
+      "refinement_replayed": true
+    },
+    {
+      "workload": "h104-o700-d120",
+      "points": 260,
+      "grid_size": 52,
+      "shared": true,
+      "refinement_replayed": true
+    },
+    {
+      "workload": "h105-o900-d30",
+      "points": 365,
+      "grid_size": 73,
+      "shared": true,
+      "refinement_replayed": true
+    },
+    {
+      "workload": "h106-o1100-d120",
+      "points": 315,
+      "grid_size": 63,
+      "shared": true,
+      "refinement_replayed": true
+    }
+  ],
+  "physical_points": 2050,
+  "new_physical_points": 600,
+  "paired_rows": 32800,
+  "capacity_rows": 480,
+  "decision_rows": 96,
+  "retained_flags": {
+    "evaluator": {
+      "no_safe": 76,
+      "nonmonotone": 0,
+      "right_censored": 0,
+      "unresolved": 49
+    },
+    "reference": {
+      "no_safe": 76,
+      "nonmonotone": 46,
+      "right_censored": 0,
+      "unresolved": 56
+    }
+  },
+  "reference_flag_count_note": "reference flags repeat once per evaluator semantic in the 480 capacity rows",
+  "source_sha256": {
+    "scripts/analyze_sla_sensitivity.py": "822ad6367322047ace30ace63c285cafb103f9f2b12ea6370f4ea0f239029704",
+    "scripts/figure_sla_sensitivity.py": "3f9c086ac7a138599722152723711a58eab75234e710c00d021882116b9d6bb5",
+    "scripts/freeze_sla_sensitivity.py": "530a50bb18a9769ad570bd8dc2a3a21a0dc4b5f62774fedef295bde27972f3ad",
+    "scripts/report_sla_sensitivity.py": "cee561610df40c31f4c1bda9e834a284a737059acd087dd726bc257f5835c677",
+    "scripts/run_sla_sensitivity.py": "bd9b6a3de6a2b439bbd7d11b136aff8eb275cfef9a6916b6b9d455e2ccc53581",
+    "scripts/sla_sensitivity_common.py": "5f5d1e480942bbedb2cdfab4743bc01f1abf70850b154cf565414dfa26aec96b",
+    "scripts/verify_sla_sensitivity.py": "00d6b7df773fab69a4d29d002df3afa8fdf42238e4103382c39373d2e1263463"
+  }
+}

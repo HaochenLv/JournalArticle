@@ -1,0 +1,3076 @@
+{
+  "group": "h102-o300-d120-heterogeneous-slow",
+  "original_grid": [
+    0.001,
+    0.004,
+    0.0056568542,
+    0.0067271713,
+    0.0073360323,
+    0.0074966705,
+    0.0076608262,
+    0.0078285765,
+    0.008,
+    0.0081751772,
+    0.0083541903,
+    0.0085371232,
+    0.0087240619,
+    0.0095136569,
+    0.0113137085,
+    0.016,
+    0.064,
+    0.256,
+    1.024,
+    1.4481546879,
+    1.5122699735,
+    1.5453843739,
+    1.5792238853,
+    1.7221558585,
+    2.048,
+    2.2333598365,
+    2.332239124,
+    2.3833085108,
+    2.4354961715,
+    2.4888265932,
+    2.5433247991,
+    2.6559274079,
+    2.8963093757,
+    4.096,
+    5.7926187515,
+    6.8886234338,
+    7.512097122,
+    7.6765906294,
+    7.8446860755,
+    8.192,
+    8.3713814418,
+    8.5546908256,
+    8.7420141623,
+    8.933439346,
+    9.1290561953,
+    9.3289564959,
+    9.7419846861,
+    9.955306373,
+    10.1732991965,
+    10.6237096317,
+    11.585237503,
+    16.384,
+    65.536
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "grid_before": [
+        0.001,
+        0.004,
+        0.0056568542,
+        0.0067271713,
+        0.0073360323,
+        0.0074966705,
+        0.0076608262,
+        0.0078285765,
+        0.008,
+        0.0081751772,
+        0.0083541903,
+        0.0085371232,
+        0.0087240619,
+        0.0095136569,
+        0.0113137085,
+        0.016,
+        0.064,
+        0.256,
+        1.024,
+        1.4481546879,
+        1.5122699735,
+        1.5453843739,
+        1.5792238853,
+        1.7221558585,
+        2.048,
+        2.2333598365,
+        2.332239124,
+        2.3833085108,
+        2.4354961715,
+        2.4888265932,
+        2.5433247991,
+        2.6559274079,
+        2.8963093757,
+        4.096,
+        5.7926187515,
+        6.8886234338,
+        7.512097122,
+        7.6765906294,
+        7.8446860755,
+        8.192,
+        8.3713814418,
+        8.5546908256,
+        8.7420141623,
+        8.933439346,
+        9.1290561953,
+        9.3289564959,
+        9.7419846861,
+        9.955306373,
+        10.1732991965,
+        10.6237096317,
+        11.585237503,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.256,
+          "upper": 1.024,
+          "relative_width": 3.0,
+          "midpoint": 0.512,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 4.096,
+          "upper": 5.7926187515,
+          "relative_width": 0.4142135623779297,
+          "midpoint": 4.8709923431,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0095136569,
+          "upper": 0.0113137085,
+          "relative_width": 0.18920711761215592,
+          "midpoint": 0.0103747164,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 5.7926187515,
+          "upper": 6.8886234338,
+          "relative_width": 0.1892071150058321,
+          "midpoint": 6.3168955409,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 6.8886234338,
+          "upper": 7.512097122,
+          "relative_width": 0.09050773266845136,
+          "midpoint": 7.1936088489,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        },
+        {
+          "lower": 0.0087240619,
+          "upper": 0.0095136569,
+          "relative_width": 0.09050772553551001,
+          "midpoint": 0.0091103091,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        },
+        {
+          "lower": 2.2333598365,
+          "upper": 2.332239124,
+          "relative_width": 0.044273782434880005,
+          "midpoint": 2.2822640488,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT10",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 7.8446860755,
+          "upper": 8.192,
+          "relative_width": 0.04427378242511293,
+          "midpoint": 8.0164623326,
+          "witnesses": [
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.512,
+        4.8709923431,
+        0.0103747164,
+        6.3168955409,
+        7.1936088489,
+        0.0091103091,
+        2.2822640488,
+        8.0164623326
+      ],
+      "unselected": []
+    },
+    {
+      "round": 2,
+      "grid_before": [
+        0.001,
+        0.004,
+        0.0056568542,
+        0.0067271713,
+        0.0073360323,
+        0.0074966705,
+        0.0076608262,
+        0.0078285765,
+        0.008,
+        0.0081751772,
+        0.0083541903,
+        0.0085371232,
+        0.0087240619,
+        0.0091103091,
+        0.0095136569,
+        0.0103747164,
+        0.0113137085,
+        0.016,
+        0.064,
+        0.256,
+        0.512,
+        1.024,
+        1.4481546879,
+        1.5122699735,
+        1.5453843739,
+        1.5792238853,
+        1.7221558585,
+        2.048,
+        2.2333598365,
+        2.2822640488,
+        2.332239124,
+        2.3833085108,
+        2.4354961715,
+        2.4888265932,
+        2.5433247991,
+        2.6559274079,
+        2.8963093757,
+        4.096,
+        4.8709923431,
+        5.7926187515,
+        6.3168955409,
+        6.8886234338,
+        7.1936088489,
+        7.512097122,
+        7.6765906294,
+        7.8446860755,
+        8.0164623326,
+        8.192,
+        8.3713814418,
+        8.5546908256,
+        8.7420141623,
+        8.933439346,
+        9.1290561953,
+        9.3289564959,
+        9.7419846861,
+        9.955306373,
+        10.1732991965,
+        10.6237096317,
+        11.585237503,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.256,
+          "upper": 0.512,
+          "relative_width": 1.0,
+          "midpoint": 0.362038672,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 4.8709923431,
+          "upper": 5.7926187515,
+          "relative_width": 0.1892071149948591,
+          "midpoint": 5.3118548159,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0103747164,
+          "upper": 0.0113137085,
+          "relative_width": 0.09050773667413226,
+          "midpoint": 0.0108340444,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 6.3168955409,
+          "upper": 6.8886234338,
+          "relative_width": 0.09050773266681933,
+          "midpoint": 6.5965683997,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        },
+        {
+          "lower": 5.7926187515,
+          "upper": 6.3168955409,
+          "relative_width": 0.09050773266654888,
+          "midpoint": 6.0490798938,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0095136569,
+          "upper": 0.0103747164,
+          "relative_width": 0.09050773104924548,
+          "midpoint": 0.0099348625,
+          "witnesses": [
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 7.1936088489,
+          "upper": 7.512097122,
+          "relative_width": 0.04427378243518221,
+          "midpoint": 7.3511283713,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        },
+        {
+          "lower": 6.8886234338,
+          "upper": 7.1936088489,
+          "relative_width": 0.044273782422703745,
+          "midpoint": 7.0394646451,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0087240619,
+          "upper": 0.0091103091,
+          "relative_width": 0.04427378031327356,
+          "midpoint": 0.008915094,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        },
+        {
+          "lower": 0.0091103091,
+          "upper": 0.0095136569,
+          "relative_width": 0.04427377771408447,
+          "midpoint": 0.0093097989,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.362038672,
+        5.3118548159,
+        0.0108340444,
+        6.5965683997,
+        6.0490798938,
+        0.0099348625,
+        7.3511283713,
+        7.0394646451,
+        0.008915094,
+        0.0093097989
+      ],
+      "unselected": []
+    },
+    {
+      "round": 3,
+      "grid_before": [
+        0.001,
+        0.004,
+        0.0056568542,
+        0.0067271713,
+        0.0073360323,
+        0.0074966705,
+        0.0076608262,
+        0.0078285765,
+        0.008,
+        0.0081751772,
+        0.0083541903,
+        0.0085371232,
+        0.0087240619,
+        0.008915094,
+        0.0091103091,
+        0.0093097989,
+        0.0095136569,
+        0.0099348625,
+        0.0103747164,
+        0.0108340444,
+        0.0113137085,
+        0.016,
+        0.064,
+        0.256,
+        0.362038672,
+        0.512,
+        1.024,
+        1.4481546879,
+        1.5122699735,
+        1.5453843739,
+        1.5792238853,
+        1.7221558585,
+        2.048,
+        2.2333598365,
+        2.2822640488,
+        2.332239124,
+        2.3833085108,
+        2.4354961715,
+        2.4888265932,
+        2.5433247991,
+        2.6559274079,
+        2.8963093757,
+        4.096,
+        4.8709923431,
+        5.3118548159,
+        5.7926187515,
+        6.0490798938,
+        6.3168955409,
+        6.5965683997,
+        6.8886234338,
+        7.0394646451,
+        7.1936088489,
+        7.3511283713,
+        7.512097122,
+        7.6765906294,
+        7.8446860755,
+        8.0164623326,
+        8.192,
+        8.3713814418,
+        8.5546908256,
+        8.7420141623,
+        8.933439346,
+        9.1290561953,
+        9.3289564959,
+        9.7419846861,
+        9.955306373,
+        10.1732991965,
+        10.6237096317,
+        11.585237503,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.362038672,
+          "upper": 0.512,
+          "relative_width": 0.4142135622461902,
+          "midpoint": 0.4305389646,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 5.3118548159,
+          "upper": 5.7926187515,
+          "relative_width": 0.09050773265883083,
+          "midpoint": 5.5470307203,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0103747164,
+          "upper": 0.0108340444,
+          "relative_width": 0.044273788534595626,
+          "midpoint": 0.0106018931,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0095136569,
+          "upper": 0.0099348625,
+          "relative_width": 0.04427378498377421,
+          "midpoint": 0.0097219789,
+          "witnesses": [
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 5.7926187515,
+          "upper": 6.0490798938,
+          "relative_width": 0.04427378242933555,
+          "midpoint": 5.9194605854,
+          "witnesses": [
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 6.3168955409,
+          "upper": 6.5965683997,
+          "relative_width": 0.04427378242828328,
+          "midpoint": 6.4552175416,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        },
+        {
+          "lower": 6.5965683997,
+          "upper": 6.8886234338,
+          "relative_width": 0.04427378242803992,
+          "midpoint": 6.7410144386,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        },
+        {
+          "lower": 6.0490798938,
+          "upper": 6.3168955409,
+          "relative_width": 0.044273782426728525,
+          "midpoint": 6.1815374955,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0108340444,
+          "upper": 0.0113137085,
+          "relative_width": 0.044273780159143516,
+          "midpoint": 0.0110712791,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0099348625,
+          "upper": 0.0103747164,
+          "relative_width": 0.044273778323554946,
+          "midpoint": 0.0101524076,
+          "witnesses": [
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [
+        0.4305389646,
+        5.5470307203,
+        0.0106018931,
+        0.0097219789,
+        5.9194605854,
+        6.4552175416
+      ],
+      "unselected": [
+        {
+          "lower": 6.5965683997,
+          "upper": 6.8886234338,
+          "relative_width": 0.04427378242803992,
+          "midpoint": 6.7410144386,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        },
+        {
+          "lower": 6.0490798938,
+          "upper": 6.3168955409,
+          "relative_width": 0.044273782426728525,
+          "midpoint": 6.1815374955,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0108340444,
+          "upper": 0.0113137085,
+          "relative_width": 0.044273780159143516,
+          "midpoint": 0.0110712791,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0099348625,
+          "upper": 0.0103747164,
+          "relative_width": 0.044273778323554946,
+          "midpoint": 0.0101524076,
+          "witnesses": [
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "grid_before": [
+        0.001,
+        0.004,
+        0.0056568542,
+        0.0067271713,
+        0.0073360323,
+        0.0074966705,
+        0.0076608262,
+        0.0078285765,
+        0.008,
+        0.0081751772,
+        0.0083541903,
+        0.0085371232,
+        0.0087240619,
+        0.008915094,
+        0.0091103091,
+        0.0093097989,
+        0.0095136569,
+        0.0097219789,
+        0.0099348625,
+        0.0103747164,
+        0.0106018931,
+        0.0108340444,
+        0.0113137085,
+        0.016,
+        0.064,
+        0.256,
+        0.362038672,
+        0.4305389646,
+        0.512,
+        1.024,
+        1.4481546879,
+        1.5122699735,
+        1.5453843739,
+        1.5792238853,
+        1.7221558585,
+        2.048,
+        2.2333598365,
+        2.2822640488,
+        2.332239124,
+        2.3833085108,
+        2.4354961715,
+        2.4888265932,
+        2.5433247991,
+        2.6559274079,
+        2.8963093757,
+        4.096,
+        4.8709923431,
+        5.3118548159,
+        5.5470307203,
+        5.7926187515,
+        5.9194605854,
+        6.0490798938,
+        6.3168955409,
+        6.4552175416,
+        6.5965683997,
+        6.8886234338,
+        7.0394646451,
+        7.1936088489,
+        7.3511283713,
+        7.512097122,
+        7.6765906294,
+        7.8446860755,
+        8.0164623326,
+        8.192,
+        8.3713814418,
+        8.5546908256,
+        8.7420141623,
+        8.933439346,
+        9.1290561953,
+        9.3289564959,
+        9.7419846861,
+        9.955306373,
+        10.1732991965,
+        10.6237096317,
+        11.585237503,
+        16.384,
+        65.536
+      ],
+      "unresolved_before": [
+        {
+          "lower": 0.362038672,
+          "upper": 0.4305389646,
+          "relative_width": 0.18920711486865693,
+          "midpoint": 0.3948059713,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 6.5965683997,
+          "upper": 6.8886234338,
+          "relative_width": 0.04427378242803992,
+          "midpoint": 6.7410144386,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        },
+        {
+          "lower": 6.0490798938,
+          "upper": 6.3168955409,
+          "relative_width": 0.044273782426728525,
+          "midpoint": 6.1815374955,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 5.5470307203,
+          "upper": 5.7926187515,
+          "relative_width": 0.04427378242223212,
+          "midpoint": 5.6684948766,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0108340444,
+          "upper": 0.0113137085,
+          "relative_width": 0.044273780159143516,
+          "midpoint": 0.0110712791,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0099348625,
+          "upper": 0.0103747164,
+          "relative_width": 0.044273778323554946,
+          "midpoint": 0.0101524076,
+          "witnesses": [
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ],
+      "selected": [],
+      "unselected": [
+        {
+          "lower": 0.362038672,
+          "upper": 0.4305389646,
+          "relative_width": 0.18920711486865693,
+          "midpoint": 0.3948059713,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 6.5965683997,
+          "upper": 6.8886234338,
+          "relative_width": 0.04427378242803992,
+          "midpoint": 6.7410144386,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": false,
+              "right_safe": true
+            }
+          ]
+        },
+        {
+          "lower": 6.0490798938,
+          "upper": 6.3168955409,
+          "relative_width": 0.044273782426728525,
+          "midpoint": 6.1815374955,
+          "witnesses": [
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 5.5470307203,
+          "upper": 5.7926187515,
+          "relative_width": 0.04427378242223212,
+          "midpoint": 5.6684948766,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT5",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0108340444,
+          "upper": 0.0113137085,
+          "relative_width": 0.044273780159143516,
+          "midpoint": 0.0110712791,
+          "witnesses": [
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": -1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        },
+        {
+          "lower": 0.0099348625,
+          "upper": 0.0103747164,
+          "relative_width": 0.044273778323554946,
+          "midpoint": 0.0101524076,
+          "witnesses": [
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 0,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT0.6",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "legacy",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 1,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT1.2",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "raw",
+              "left_safe": true,
+              "right_safe": false
+            },
+            {
+              "shift": 2,
+              "sla": "TTFT5.2_TPOT2.4",
+              "model": "reference",
+              "left_safe": true,
+              "right_safe": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "complete",
+  "final_grid": [
+    0.001,
+    0.004,
+    0.0056568542,
+    0.0067271713,
+    0.0073360323,
+    0.0074966705,
+    0.0076608262,
+    0.0078285765,
+    0.008,
+    0.0081751772,
+    0.0083541903,
+    0.0085371232,
+    0.0087240619,
+    0.008915094,
+    0.0091103091,
+    0.0093097989,
+    0.0095136569,
+    0.0097219789,
+    0.0099348625,
+    0.0103747164,
+    0.0106018931,
+    0.0108340444,
+    0.0113137085,
+    0.016,
+    0.064,
+    0.256,
+    0.362038672,
+    0.4305389646,
+    0.512,
+    1.024,
+    1.4481546879,
+    1.5122699735,
+    1.5453843739,
+    1.5792238853,
+    1.7221558585,
+    2.048,
+    2.2333598365,
+    2.2822640488,
+    2.332239124,
+    2.3833085108,
+    2.4354961715,
+    2.4888265932,
+    2.5433247991,
+    2.6559274079,
+    2.8963093757,
+    4.096,
+    4.8709923431,
+    5.3118548159,
+    5.5470307203,
+    5.7926187515,
+    5.9194605854,
+    6.0490798938,
+    6.3168955409,
+    6.4552175416,
+    6.5965683997,
+    6.8886234338,
+    7.0394646451,
+    7.1936088489,
+    7.3511283713,
+    7.512097122,
+    7.6765906294,
+    7.8446860755,
+    8.0164623326,
+    8.192,
+    8.3713814418,
+    8.5546908256,
+    8.7420141623,
+    8.933439346,
+    9.1290561953,
+    9.3289564959,
+    9.7419846861,
+    9.955306373,
+    10.1732991965,
+    10.6237096317,
+    11.585237503,
+    16.384,
+    65.536
+  ],
+  "added_intensities": 24,
+  "unresolved_transitions": [
+    {
+      "lower": 0.362038672,
+      "upper": 0.4305389646,
+      "relative_width": 0.18920711486865693,
+      "midpoint": 0.3948059713,
+      "witnesses": [
+        {
+          "shift": -2,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -2,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "legacy",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -1,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -1,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "legacy",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 0,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 0,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "legacy",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 1,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 1,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "legacy",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 2,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 2,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "legacy",
+          "left_safe": true,
+          "right_safe": false
+        }
+      ]
+    },
+    {
+      "lower": 6.5965683997,
+      "upper": 6.8886234338,
+      "relative_width": 0.04427378242803992,
+      "midpoint": 6.7410144386,
+      "witnesses": [
+        {
+          "shift": -2,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -1,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 0,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 1,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "reference",
+          "left_safe": false,
+          "right_safe": true
+        }
+      ]
+    },
+    {
+      "lower": 6.0490798938,
+      "upper": 6.3168955409,
+      "relative_width": 0.044273782426728525,
+      "midpoint": 6.1815374955,
+      "witnesses": [
+        {
+          "shift": 1,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        }
+      ]
+    },
+    {
+      "lower": 5.5470307203,
+      "upper": 5.7926187515,
+      "relative_width": 0.04427378242223212,
+      "midpoint": 5.6684948766,
+      "witnesses": [
+        {
+          "shift": -2,
+          "sla": "TTFT5.2_TPOT5",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        }
+      ]
+    },
+    {
+      "lower": 0.0108340444,
+      "upper": 0.0113137085,
+      "relative_width": 0.044273780159143516,
+      "midpoint": 0.0110712791,
+      "witnesses": [
+        {
+          "shift": -2,
+          "sla": "TTFT5.2_TPOT0.6",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -2,
+          "sla": "TTFT5.2_TPOT1.2",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -2,
+          "sla": "TTFT5.2_TPOT1.2",
+          "model": "legacy",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -2,
+          "sla": "TTFT5.2_TPOT1.2",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -2,
+          "sla": "TTFT5.2_TPOT2.4",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -2,
+          "sla": "TTFT5.2_TPOT2.4",
+          "model": "legacy",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -2,
+          "sla": "TTFT5.2_TPOT2.4",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -1,
+          "sla": "TTFT5.2_TPOT1.2",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": -1,
+          "sla": "TTFT5.2_TPOT2.4",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        }
+      ]
+    },
+    {
+      "lower": 0.0099348625,
+      "upper": 0.0103747164,
+      "relative_width": 0.044273778323554946,
+      "midpoint": 0.0101524076,
+      "witnesses": [
+        {
+          "shift": 0,
+          "sla": "TTFT5.2_TPOT1.2",
+          "model": "legacy",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 0,
+          "sla": "TTFT5.2_TPOT2.4",
+          "model": "legacy",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 1,
+          "sla": "TTFT5.2_TPOT0.6",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 1,
+          "sla": "TTFT5.2_TPOT1.2",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 1,
+          "sla": "TTFT5.2_TPOT1.2",
+          "model": "legacy",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 1,
+          "sla": "TTFT5.2_TPOT1.2",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 1,
+          "sla": "TTFT5.2_TPOT2.4",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 1,
+          "sla": "TTFT5.2_TPOT2.4",
+          "model": "legacy",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 1,
+          "sla": "TTFT5.2_TPOT2.4",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 2,
+          "sla": "TTFT5.2_TPOT1.2",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 2,
+          "sla": "TTFT5.2_TPOT1.2",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 2,
+          "sla": "TTFT5.2_TPOT2.4",
+          "model": "raw",
+          "left_safe": true,
+          "right_safe": false
+        },
+        {
+          "shift": 2,
+          "sla": "TTFT5.2_TPOT2.4",
+          "model": "reference",
+          "left_safe": true,
+          "right_safe": false
+        }
+      ]
+    }
+  ],
+  "stop_reason": "24-intensity budget"
+}
