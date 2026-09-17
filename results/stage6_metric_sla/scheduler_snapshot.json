@@ -1,0 +1,44 @@
+{
+  "active": 5,
+  "pending": 0,
+  "max_workers": 12,
+  "budget_bytes": 25769803776,
+  "reserved_bytes": 25501368320,
+  "headroom_bytes": 11076878336,
+  "reserve_bytes": 6442450944,
+  "peak_active": 8,
+  "peak_reserved_bytes": 25501368320,
+  "running": [
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "reserved_bytes": 5100273664,
+      "shift": -2,
+      "intensity": 0.0101524076
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "reserved_bytes": 5100273664,
+      "shift": -1,
+      "intensity": 0.0101524076
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "reserved_bytes": 5100273664,
+      "shift": 0,
+      "intensity": 0.0101524076
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "reserved_bytes": 5100273664,
+      "shift": 1,
+      "intensity": 0.0101524076
+    },
+    {
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "reserved_bytes": 5100273664,
+      "shift": 2,
+      "intensity": 0.0101524076
+    }
+  ],
+  "checked_unix_s": 1789658493.9883876
+}

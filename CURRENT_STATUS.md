@@ -1,3 +1,15 @@
+# Current status — Stage 6A implementation complete
+
+**READY_FOR_FORMAL_VALIDATION (2026-09-18).** JB-Avg-v1 independently implements the frozen serial mixed-cohort virtual-round design. The new primary semantics are standard first-output TTFT, request-average post-first TPOT and 90% joint SLO attainment. Historical JB1/JB1+ results and their prior positioning below remain historical; they are not evidence under the new semantics. See [implementation report](docs/JB_AVG_V1_IMPLEMENTATION_REPORT.md).
+
+29 new deterministic tests and all 75 repository tests pass. Read-only migration audits 3,428 saved reference records / 3,184 unique physical points: all recoverable (100%), 101,817 request rows, one m=1 with TPOT=None, zero reconstruction failures. This includes the 2,550-point Stage4+Stage5 inventory without evaluating it and 15 references completed before this task in the paused Stage6 supplement. Maximum reconstructed final-time error is 9.095e-13 s. Record-specific overhead is required; the new execution core adds no historical accounting delay or fitted H.
+
+All 11,859 pre-existing protected files are unchanged. Previously untracked Stage6 protocol/scripts/results are preserved as an incomplete paused archive; 2,065 points are saved, and five interrupted attempt entries retain historical running text. No Stage6 process was resumed. Stage6A new HELIX runs=0, formal matrix calls=0. CPU runtime sanity medians are 0.0801 ms for one request and 2.0481 ms for eight staggered requests, not GPU speedup or a formal comparison.
+
+**Stop after implementation/validation Git delivery.** Readiness does not establish accuracy or authorize a formal matrix, capacity refinement, candidate ranking, profile stress, new GPU/model/workload or manuscript. No implementation contradiction was found; unsupported profile domains and hard-resource failures remain separate from latency/SLO misses.
+
+The following historical status text is preserved.
+
 # Current status — Stage 5 JB1+ correction complete
 
 **Stage 5 complete (2026-09-17): a clear trade-off; journal position B.** Read [JB1_PLUS_EVIDENCE_REPORT.md](JB1_PLUS_EVIDENCE_REPORT.md) and [technical evidence](docs/JB1_PLUS_TECHNICAL_REPORT.md). Keep JB1 as the main research object and JB1+ as a mechanism-guided correction experiment; do not present it as a safer replacement.

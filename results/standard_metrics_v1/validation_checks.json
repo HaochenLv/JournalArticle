@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "tests_run": 29,
+  "protected_files_unchanged": 11859,
+  "cache_csv_rows": 101817,
+  "cache_anomalies_retained": 0,
+  "new_helix_runs": 0,
+  "formal_matrix_calls": 0,
+  "stage6_refinement_resumed": false,
+  "design_sha256": "9f8f22a8dddac6cb1fd9ef897600efedde8abc02bbd666b31cd1a5797cf02391",
+  "implementation_sha256": {
+    "src/jb_avg_v1.py": "2efe28c71bd87e06c6f57ee021cd48e0d70fab175731d976b9aa6e6c412c30ef",
+    "src/standard_metrics_v1.py": "fc00d6a9abc53e5745490b3198f2e17ee5f7c875244bb2af2ac745bd79ea28c1",
+    "scripts/migrate_standard_metrics.py": "ac8148894a54e0e22aa31ce9d478c7e00d20ea811f509ae3822cb8260c78a4af",
+    "scripts/validate_jb_avg_v1.py": "99b50444b5351ce611bc47ddc9ee72b707620e524275cd255e50c16204781731",
+    "tests/test_jb_avg_v1.py": "41e565e7c681a170e0c073c903df9bf55df387a79a23374e0e06750a2b5137d1",
+    "tests/test_standard_metrics_v1.py": "21f57319b4916ff97e9fb4ab04d1cf411c503f6f9352de28d013b4d6ae38dfab"
+  }
+}

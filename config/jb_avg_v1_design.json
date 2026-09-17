@@ -1,0 +1,55 @@
+{
+  "design_id": "JB-Avg-v1",
+  "stage": "6A implementation and deterministic validation only",
+  "source_head": "881f5cbe159dc712178ec413378a3c616a6e739e",
+  "model": "threshold-free serial mixed-cohort virtual-round approximation",
+  "primary_metrics": {
+    "ttft_s": "first Increment completion - arrival",
+    "average_tpot_s": "(last Increment completion - first Increment completion)/(output_tokens-1); None when output_tokens=1",
+    "joint_pass": "TTFT <= threshold AND (m=1 OR average_TPOT <= threshold)",
+    "target": 0.9,
+    "required": "ceil(Decimal(str(target))*N); empty workload has undefined attainment and safe=None"
+  },
+  "runtime": {
+    "phases": ["PREFILL", "FIRST_DECODE", "DECODE", "FINISHED"],
+    "events": ["Arrival", "PrefillDone", "FirstToken", "DecodeBlockUpdate", "Finish"],
+    "q": 16,
+    "q_role": "KV/context upper bound and diagnostic boundaries only",
+    "Q_P": "sum full input_tokens over active Prefill cohort",
+    "N_D": "count FIRST_DECODE and DECODE requests",
+    "stage_cost": "num_layers * (P_h(Q_P) + D_tilde_h(N_D))",
+    "singleton": "Pinned linear lookup at N=1, then multiply decode by 2; N=0 is zero",
+    "batch_charge": "Each stage batch cost once per round; diagnostic shares never affect progress",
+    "network": "Each boundary message once per routed physical link; sum activation_bytes_per_token*(Q_P+N_D) over boundaries using that link, divide by effective link capacity",
+    "composition": "T_round=sum stage costs+sum link serialization; mu=1/T_round",
+    "progress": "dp/dt=mu; dg/dt=mu; retain fractional progress on state changes",
+    "ties": "Atomic completion/phase/block transitions and arrivals at same timestamp, then resource check and rate recomputation",
+    "tie_tolerance_s": "max(1e-12,8*ulp(timestamp)) for computed completion ties; arrivals admitted when arrival<=timestamp",
+    "memory": "Weights+workspace+reserve+KV+per-stage activation buffers; independent hard gate, no slowdown; zero-layer nodes retain historical zero workspace/reserve policy",
+    "context": "Prefill=input; Decode=input+min((block+1)*q,output_tokens); advance block at q multiples",
+    "domain": "No extrapolation, tiling, clamping or fitting. Unsupported profile/hardware => unsupported_profile_domain, safe=None",
+    "resource_failure": "hard_resource_infeasible for memory excess or positive traffic over zero capacity; safe=False, latency attainment/counts undefined",
+    "invalid_round": "Nonpositive/nonfinite round service => unsupported_service_cost, safe=None",
+    "event_limit": "event_limit_exceeded is incomplete/unknown, never unsafe"
+  },
+  "removed": ["SLA residual bandwidth", "H intrinsic correction", "fixed/queue accounting time", "common gamma", "independent phase resource capacity", "compute/network overlap", "extra NIC slowdown", "candidate search"],
+  "migration": {
+    "read_only_sources": true,
+    "record_overhead": "inputs.sla.fixed_overhead_s + inputs.sla.queue_overhead_s; both required",
+    "ttft_s": "true_first_token_ttft_s - record overhead",
+    "average_tpot_s": "mean(decode_tpot_s[1:] - record overhead), None for one output",
+    "final_completion": "arrival + reconstructed TTFT + sum(decode_tpot_s[1:] - overhead); max request final equals saved raw.final_time_s",
+    "absolute_tolerance_s": 1e-7,
+    "relative_final_tolerance": 1e-10,
+    "identity": "Canonical physical inputs without SLA/accounting metadata; verify recovered aliases before deduplication",
+    "failure": "Retain unsupported/migration_failed with reasons; never infer missing data or rerun reference"
+  },
+  "validation": {
+    "hand_checkable_cases": ["A single m=1", "B single m=2", "C isolated no network", "D two Decode batch once", "E mixed P+D", "F two Prefill aggregate", "G half bandwidth", "H fractional arrival", "I threshold invariance", "J q invariance", "K KV blocks", "L atomic ties", "M domain endpoint/max+1", "N ceil 90%", "O disjoint success trap", "P diagnostic share conservation"],
+    "benchmark": "Small deterministic workloads only; CPU planning runtime, not GPU serving speedup",
+    "formal_matrix_calls": 0,
+    "new_helix_runs": 0
+  },
+  "publication": "Withdrawn unpublished AICCC is not prior publication. Accepted Evaluator-Guided SLA-Aware Layer Partitioning for Heterogeneous LLM Pipelines is prior work. Evaluator-induced capacity, predefined family, evaluator-guided comparison and coarse-to-fine search are not new journal contributions.",
+  "stop": "Implementation, tests, read-only cache audit, report, status/log, commit/push, HEAD==origin/main and clean tree. No formal matrix or manuscript."
+}

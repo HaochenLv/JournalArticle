@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "label_comparisons": 18450,
+  "full_evaluator_outputs_reused_exactly": 12300,
+  "capacity_reproduced": 180,
+  "decisions_reproduced": 36,
+  "old_judgments_reproduced": true,
+  "initial_helix_runs": 0,
+  "new_evaluator_calls": 20500,
+  "new_slas": [
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.5
+  ]
+}

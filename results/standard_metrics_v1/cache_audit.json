@@ -1,0 +1,47 @@
+{
+  "metric_version": "standard-metrics-v1",
+  "total_compressed_files_scanned": 10249,
+  "non_reference_files_skipped": 6821,
+  "total_records": 3428,
+  "record_status_counts": {
+    "recoverable": 3428
+  },
+  "unique_physical_points": 3184,
+  "recoverable_points": 3184,
+  "recoverable_percentage": 100.0,
+  "failed_migration_points": 0,
+  "failed_migration_records": 0,
+  "unidentifiable_records": 0,
+  "error_codes": {},
+  "missing_metrics": 0,
+  "missing_overhead_metadata": 0,
+  "m1_count": 1,
+  "output_length_list_length_mismatch": 0,
+  "full_drain_failures": 0,
+  "output_count_inconsistency": 0,
+  "max_list_inconsistency": 0,
+  "final_completion_mismatch": 0,
+  "duplicate_conflict_points": 0,
+  "request_metrics_rows": 101817,
+  "max_final_completion_error_s": 9.094947017729282e-13,
+  "max_endpoint_identity_error_s": 3.552713678800501e-15,
+  "max_average_endpoint_formula_error_s": 4.135580766728708e-14,
+  "scopes": {
+    "pre_stage6_records": 3169,
+    "paused_stage6_records": 15
+  },
+  "stage4_plus_stage5_inventory_points": 2550,
+  "overhead_values_s": [
+    0.005
+  ],
+  "new_helix_runs": 0,
+  "formal_evaluator_calls": 0,
+  "identity": "SHA256 of canonical input with SLA/accounting metadata removed; reconstructed aliases checked before merge",
+  "csv_mapping": "physical_point_id maps to points in cache_manifest; empty average_tpot_s means None for m=1; no rounding of floats",
+  "tolerances": {
+    "absolute_s": 1e-07,
+    "relative_final_and_duplicate": 1e-10
+  },
+  "limitation": "Saved compact records lack full original timestamp histories. Source-verified lifecycle plus saved first/interval identities and final execution endpoint are checked; no claim of independently measured client timestamps.",
+  "source_files_unchanged": true
+}
