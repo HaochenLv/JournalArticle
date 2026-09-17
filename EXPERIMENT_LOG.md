@@ -91,3 +91,7 @@ The final paper-1 source/40-test bundle remains unavailable publicly. No final-a
 ## Stage2 baseline gate — manuscript/source conflict
 
 Created independent fresh mirrors under ignored dependencies and inspected reachable history, PR refs, deleted/moved files and Actions artifact metadata. Built JB1 from the manuscript's raw-compute progress and pre/post-check contract, retaining declared public blocking and activation-memory recovery assumptions. The2051-token ledger observation and24 accounting-only trajectory pairs reproduce. The published edge pairs do NOT reproduce under raw-compute progress (0/12); adding only the legacy5ms overhead back to progress restores12/12. Full3,864-point evaluator grid replay is retained. Ten semantic tests plus eight bridge tests pass. No formal sweep starts before this distinction and the protocol are frozen.
+
+## Stage2 protocol frozen
+
+FI-JB1-v1 is frozen before held-out reference outcomes. Six new seed/window pairs,30/120s traces, global source-count scaling target.5, five-shift heterogeneous comparisons, A100 controls and two opposite-link uniform anchors give76 configuration/regime combinations. Common grid refinement uses union transitions across all candidates and both SLAs, targeting2.5% relative brackets with finite caps.22 pre-run tests pass. Per user steering, historical archaeology is closed; missing historical artifacts are documented limitations and do not block new evidence.

@@ -1,0 +1,117 @@
+{
+  "id": "h101-o60-d30",
+  "seed": 101,
+  "interval_offset": 60,
+  "duration_s": 30,
+  "global_target_rate": 0.5,
+  "primary_link": "fast",
+  "requests": [
+    {
+      "id": "azure-00000",
+      "arrival_time_s": 1.0,
+      "input_tokens": 873,
+      "output_tokens": 87
+    },
+    {
+      "id": "azure-00001",
+      "arrival_time_s": 2.0,
+      "input_tokens": 1024,
+      "output_tokens": 375
+    },
+    {
+      "id": "azure-00002",
+      "arrival_time_s": 4.5,
+      "input_tokens": 169,
+      "output_tokens": 172
+    },
+    {
+      "id": "azure-00003",
+      "arrival_time_s": 7.0,
+      "input_tokens": 394,
+      "output_tokens": 91
+    },
+    {
+      "id": "azure-00004",
+      "arrival_time_s": 8.0,
+      "input_tokens": 1315,
+      "output_tokens": 178
+    },
+    {
+      "id": "azure-00005",
+      "arrival_time_s": 10.0,
+      "input_tokens": 1044,
+      "output_tokens": 456
+    },
+    {
+      "id": "azure-00006",
+      "arrival_time_s": 11.0,
+      "input_tokens": 1077,
+      "output_tokens": 483
+    },
+    {
+      "id": "azure-00007",
+      "arrival_time_s": 13.0,
+      "input_tokens": 402,
+      "output_tokens": 90
+    },
+    {
+      "id": "azure-00008",
+      "arrival_time_s": 14.0,
+      "input_tokens": 203,
+      "output_tokens": 167
+    },
+    {
+      "id": "azure-00009",
+      "arrival_time_s": 16.0,
+      "input_tokens": 379,
+      "output_tokens": 56
+    },
+    {
+      "id": "azure-00010",
+      "arrival_time_s": 17.0,
+      "input_tokens": 578,
+      "output_tokens": 131
+    },
+    {
+      "id": "azure-00011",
+      "arrival_time_s": 19.5,
+      "input_tokens": 1164,
+      "output_tokens": 419
+    },
+    {
+      "id": "azure-00012",
+      "arrival_time_s": 22.5,
+      "input_tokens": 1992,
+      "output_tokens": 66
+    },
+    {
+      "id": "azure-00013",
+      "arrival_time_s": 25.5,
+      "input_tokens": 181,
+      "output_tokens": 148
+    },
+    {
+      "id": "azure-00014",
+      "arrival_time_s": 28.0,
+      "input_tokens": 1041,
+      "output_tokens": 390
+    },
+    {
+      "id": "azure-00015",
+      "arrival_time_s": 29.0,
+      "input_tokens": 194,
+      "output_tokens": 194
+    }
+  ],
+  "workload_fingerprint": "7b0ee2875d7b651a409331e0acde97f27f47390ab626e400073674f34b795487",
+  "features": {
+    "request_count": 16,
+    "input_mean": 751.875,
+    "input_max": 1992,
+    "input_ge1500_fraction": 0.0625,
+    "output_mean": 218.9375,
+    "interarrival_cv": 0.4087686836521285,
+    "count_bin_cv": 0.30618621784789724,
+    "count_bin_peak": 2
+  }
+}

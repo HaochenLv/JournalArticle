@@ -1,0 +1,202 @@
+{
+  "protocol_id": "FI-JB1-v1",
+  "date": "2026-09-17",
+  "baseline_version": "JB1-raw-progress-prepost-active-prefill-debt-stage-buffer",
+  "baseline_sha256": "4f186748f3fb5940179e833ffe68cf463bb8b9d1dbbd16926490062065669b15",
+  "helix_commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3",
+  "adapter_commit": "1cd5c56365b084fb06e3ca14f67448ddbf45275a",
+  "profile_files": {
+    "simulator/model_manager/llama2_70b/a100/decode_bs2time.csv": "1d8302ad8503ce5f734bf1a4b43e3dc0c642063acdc8f59ad6d58a67f3cb90e0",
+    "simulator/model_manager/llama2_70b/a100/prompt_bs2time.csv": "00867a592d8aadccb87deb68e8ea417bab2de4d44ebfac84ac110d535601c07c",
+    "simulator/model_manager/llama2_70b/l4x2/decode_bs2time.csv": "2916886177c002ef0c3a6a3bb0b15864992e311698abf9646c22e6f1223e23be",
+    "simulator/model_manager/llama2_70b/l4x2/prompt_bs2time.csv": "b8152b37d50981f13b8e457397cbc31013db57b9fd61d58d2748006910234bcf",
+    "simulator/model_manager/llama2_70b/t4x4/decode_bs2time.csv": "09ed378b48592784b2f6a7169021c4211623f27291b6bf75a7a36e0d5558c983",
+    "simulator/model_manager/llama2_70b/t4x4/prompt_bs2time.csv": "4e69a786ea24bc82356411c7fb7844c752d23ed99ae2b693acf66014ae564fe5"
+  },
+  "profile_fingerprint": "cfa10f4b4b56dfb3fadb07e503e6a14a3a19942c30391a5403f20d21129608c9",
+  "workloads": [
+    {
+      "id": "h101-o60-d30",
+      "seed": 101,
+      "interval_offset": 60,
+      "duration_s": 30,
+      "global_target_rate": 0.5,
+      "primary_link": "fast",
+      "workload_fingerprint": "7b0ee2875d7b651a409331e0acde97f27f47390ab626e400073674f34b795487",
+      "features": {
+        "request_count": 16,
+        "input_mean": 751.875,
+        "input_max": 1992,
+        "input_ge1500_fraction": 0.0625,
+        "output_mean": 218.9375,
+        "interarrival_cv": 0.4087686836521285,
+        "count_bin_cv": 0.30618621784789724,
+        "count_bin_peak": 2
+      }
+    },
+    {
+      "id": "h102-o300-d120",
+      "seed": 102,
+      "interval_offset": 300,
+      "duration_s": 120,
+      "global_target_rate": 0.5,
+      "primary_link": "slow",
+      "workload_fingerprint": "cd51aa8bcecf85c9bc3a55235feec924495380380b11194d123bf8e9ba5def14",
+      "features": {
+        "request_count": 54,
+        "input_mean": 742.1481481481482,
+        "input_max": 1912,
+        "input_ge1500_fraction": 0.037037037037037035,
+        "output_mean": 257.48148148148147,
+        "interarrival_cv": 0.40275196388004736,
+        "count_bin_cv": 0.3902093982538051,
+        "count_bin_peak": 2
+      }
+    },
+    {
+      "id": "h103-o500-d30",
+      "seed": 103,
+      "interval_offset": 500,
+      "duration_s": 30,
+      "global_target_rate": 0.5,
+      "primary_link": "slow",
+      "workload_fingerprint": "2b860aed211f9ee499f01a1bd1e87f1d2ef7543ebdeb111df3703515445f26a3",
+      "features": {
+        "request_count": 15,
+        "input_mean": 892.7333333333333,
+        "input_max": 1775,
+        "input_ge1500_fraction": 0.13333333333333333,
+        "output_mean": 278,
+        "interarrival_cv": 0.6766470569428508,
+        "count_bin_cv": 0.5374838498865699,
+        "count_bin_peak": 3
+      }
+    },
+    {
+      "id": "h104-o700-d120",
+      "seed": 104,
+      "interval_offset": 700,
+      "duration_s": 120,
+      "global_target_rate": 0.5,
+      "primary_link": "fast",
+      "workload_fingerprint": "a5a659aee8619031d54b3767eaded5658a54771ae9f676d6d137f7fafdc37057",
+      "features": {
+        "request_count": 81,
+        "input_mean": 713.1604938271605,
+        "input_max": 1901,
+        "input_ge1500_fraction": 0.024691358024691357,
+        "output_mean": 244.39506172839506,
+        "interarrival_cv": 0.4383904120805953,
+        "count_bin_cv": 0.321699116562849,
+        "count_bin_peak": 3
+      }
+    },
+    {
+      "id": "h105-o900-d30",
+      "seed": 105,
+      "interval_offset": 900,
+      "duration_s": 30,
+      "global_target_rate": 0.5,
+      "primary_link": "fast",
+      "workload_fingerprint": "77e5927f356a56e941c7a00593b90979041302ac651499705c337bc10ac6ad89",
+      "features": {
+        "request_count": 14,
+        "input_mean": 805,
+        "input_max": 1313,
+        "input_ge1500_fraction": 0.0,
+        "output_mean": 269.42857142857144,
+        "interarrival_cv": 0.3685672757241124,
+        "count_bin_cv": 0.3499271061118826,
+        "count_bin_peak": 2
+      }
+    },
+    {
+      "id": "h106-o1100-d120",
+      "seed": 106,
+      "interval_offset": 1100,
+      "duration_s": 120,
+      "global_target_rate": 0.5,
+      "primary_link": "slow",
+      "workload_fingerprint": "a9392ae2dcb654273e12717aafeb6e32f31621289c9beaa659312490e267c033",
+      "features": {
+        "request_count": 49,
+        "input_mean": 772.4285714285714,
+        "input_max": 2040,
+        "input_ge1500_fraction": 0.02040816326530612,
+        "output_mean": 259.61224489795916,
+        "interarrival_cv": 0.46756319403843116,
+        "count_bin_cv": 0.49947911226613945,
+        "count_bin_peak": 2
+      }
+    }
+  ],
+  "heterogeneous_shifts": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "heterogeneous_slas": {
+    "decode": {
+      "ttft_s": 5.2,
+      "tpot_s": 0.3
+    },
+    "prefill": {
+      "ttft_s": 5.2,
+      "tpot_s": 10.0
+    }
+  },
+  "a100_slas": {
+    "decode": {
+      "ttft_s": 2.0,
+      "tpot_s": 0.15
+    },
+    "relaxed_decode": {
+      "ttft_s": 2.0,
+      "tpot_s": 1.0
+    }
+  },
+  "fixed_overhead_s": 0.005,
+  "initial_grid": [
+    0.001,
+    0.004,
+    0.016,
+    0.064,
+    0.256,
+    1.024,
+    4.096,
+    16.384,
+    65.536
+  ],
+  "minimum_probe": 6.25e-05,
+  "maximum_probe": 262.144,
+  "relative_transition_resolution": 0.025,
+  "max_refinement_rounds": 6,
+  "max_common_grid_points": 128,
+  "timeout_s": 600,
+  "workers": 8,
+  "anchor_opposite_link_workloads": [
+    "h101-o60-d30",
+    "h102-o300-d120"
+  ],
+  "mismatch_scales": [
+    0.95,
+    0.9,
+    0.8
+  ],
+  "device_bias": [
+    "l4x2",
+    0.9
+  ],
+  "mitigations": [
+    "evaluator_only",
+    "compute_margin_25pct",
+    "capacity_derating_20pct",
+    "four_scenarios",
+    "selected_point_reference",
+    "selected_partition_boundary_reference"
+  ],
+  "boundary_validation_budget": 5,
+  "python": "3.12.14"
+}

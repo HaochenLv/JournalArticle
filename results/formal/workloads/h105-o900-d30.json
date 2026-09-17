@@ -1,0 +1,105 @@
+{
+  "id": "h105-o900-d30",
+  "seed": 105,
+  "interval_offset": 900,
+  "duration_s": 30,
+  "global_target_rate": 0.5,
+  "primary_link": "fast",
+  "requests": [
+    {
+      "id": "azure-00000",
+      "arrival_time_s": 1.0,
+      "input_tokens": 1011,
+      "output_tokens": 396
+    },
+    {
+      "id": "azure-00001",
+      "arrival_time_s": 2.0,
+      "input_tokens": 392,
+      "output_tokens": 86
+    },
+    {
+      "id": "azure-00002",
+      "arrival_time_s": 4.5,
+      "input_tokens": 1313,
+      "output_tokens": 179
+    },
+    {
+      "id": "azure-00003",
+      "arrival_time_s": 7.0,
+      "input_tokens": 1026,
+      "output_tokens": 403
+    },
+    {
+      "id": "azure-00004",
+      "arrival_time_s": 8.0,
+      "input_tokens": 181,
+      "output_tokens": 139
+    },
+    {
+      "id": "azure-00005",
+      "arrival_time_s": 10.5,
+      "input_tokens": 373,
+      "output_tokens": 62
+    },
+    {
+      "id": "azure-00006",
+      "arrival_time_s": 13.0,
+      "input_tokens": 206,
+      "output_tokens": 211
+    },
+    {
+      "id": "azure-00007",
+      "arrival_time_s": 14.0,
+      "input_tokens": 1075,
+      "output_tokens": 375
+    },
+    {
+      "id": "azure-00008",
+      "arrival_time_s": 16.5,
+      "input_tokens": 1039,
+      "output_tokens": 390
+    },
+    {
+      "id": "azure-00009",
+      "arrival_time_s": 19.5,
+      "input_tokens": 1313,
+      "output_tokens": 207
+    },
+    {
+      "id": "azure-00010",
+      "arrival_time_s": 22.5,
+      "input_tokens": 302,
+      "output_tokens": 18
+    },
+    {
+      "id": "azure-00011",
+      "arrival_time_s": 25.5,
+      "input_tokens": 1023,
+      "output_tokens": 399
+    },
+    {
+      "id": "azure-00012",
+      "arrival_time_s": 28.0,
+      "input_tokens": 970,
+      "output_tokens": 509
+    },
+    {
+      "id": "azure-00013",
+      "arrival_time_s": 29.0,
+      "input_tokens": 1046,
+      "output_tokens": 398
+    }
+  ],
+  "workload_fingerprint": "77e5927f356a56e941c7a00593b90979041302ac651499705c337bc10ac6ad89",
+  "features": {
+    "request_count": 14,
+    "input_mean": 805,
+    "input_max": 1313,
+    "input_ge1500_fraction": 0.0,
+    "output_mean": 269.42857142857144,
+    "interarrival_cv": 0.3685672757241124,
+    "count_bin_cv": 0.3499271061118826,
+    "count_bin_peak": 2
+  }
+}

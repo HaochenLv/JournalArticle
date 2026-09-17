@@ -1,0 +1,111 @@
+{
+  "id": "h103-o500-d30",
+  "seed": 103,
+  "interval_offset": 500,
+  "duration_s": 30,
+  "global_target_rate": 0.5,
+  "primary_link": "slow",
+  "requests": [
+    {
+      "id": "azure-00000",
+      "arrival_time_s": 1.5,
+      "input_tokens": 1263,
+      "output_tokens": 428
+    },
+    {
+      "id": "azure-00001",
+      "arrival_time_s": 4.0,
+      "input_tokens": 1076,
+      "output_tokens": 414
+    },
+    {
+      "id": "azure-00002",
+      "arrival_time_s": 5.0,
+      "input_tokens": 1045,
+      "output_tokens": 397
+    },
+    {
+      "id": "azure-00003",
+      "arrival_time_s": 7.0,
+      "input_tokens": 1587,
+      "output_tokens": 97
+    },
+    {
+      "id": "azure-00004",
+      "arrival_time_s": 8.0,
+      "input_tokens": 205,
+      "output_tokens": 81
+    },
+    {
+      "id": "azure-00005",
+      "arrival_time_s": 10.0,
+      "input_tokens": 405,
+      "output_tokens": 103
+    },
+    {
+      "id": "azure-00006",
+      "arrival_time_s": 11.0,
+      "input_tokens": 148,
+      "output_tokens": 127
+    },
+    {
+      "id": "azure-00007",
+      "arrival_time_s": 12.75,
+      "input_tokens": 1010,
+      "output_tokens": 397
+    },
+    {
+      "id": "azure-00008",
+      "arrival_time_s": 13.5,
+      "input_tokens": 131,
+      "output_tokens": 73
+    },
+    {
+      "id": "azure-00009",
+      "arrival_time_s": 14.25,
+      "input_tokens": 1131,
+      "output_tokens": 433
+    },
+    {
+      "id": "azure-00010",
+      "arrival_time_s": 16.5,
+      "input_tokens": 1775,
+      "output_tokens": 56
+    },
+    {
+      "id": "azure-00011",
+      "arrival_time_s": 22.5,
+      "input_tokens": 410,
+      "output_tokens": 35
+    },
+    {
+      "id": "azure-00012",
+      "arrival_time_s": 25.5,
+      "input_tokens": 1138,
+      "output_tokens": 396
+    },
+    {
+      "id": "azure-00013",
+      "arrival_time_s": 28.0,
+      "input_tokens": 985,
+      "output_tokens": 552
+    },
+    {
+      "id": "azure-00014",
+      "arrival_time_s": 29.0,
+      "input_tokens": 1082,
+      "output_tokens": 581
+    }
+  ],
+  "workload_fingerprint": "2b860aed211f9ee499f01a1bd1e87f1d2ef7543ebdeb111df3703515445f26a3",
+  "features": {
+    "request_count": 15,
+    "input_mean": 892.7333333333333,
+    "input_max": 1775,
+    "input_ge1500_fraction": 0.13333333333333333,
+    "output_mean": 278,
+    "interarrival_cv": 0.6766470569428508,
+    "count_bin_cv": 0.5374838498865699,
+    "count_bin_peak": 3
+  }
+}
