@@ -34,7 +34,7 @@ The main branches are not the complete final-paper artifacts. Public experiment 
 | Regression history | E31 multiworkload, phase jitter, request-size, TPOT, trajectory-alignment, counterexample scripts; `PROJECT_STATUS.md` contains E31–E46 findings |
 | Tests/caches | 31 tests in exported branch; initial main has early MVP outputs. Most later reference outputs lived in CI artifacts/status reports, not a final paper result bundle |
 
-Historical source already notes reference nonmonotonicity (E39), conservative phase exposure, and a size-shift counterexample (E44–46). These observations are prior project knowledge, not discoveries to claim as wholly new. New value must be a reproducible, systematic diagnostic and budgeted decision method, with new comparative evidence.
+Historical source already notes reference nonmonotonicity (E39), conservative phase exposure, and a size-shift counterexample (E44–46). These observations are prior project knowledge, not discoveries to claim as wholly new. New value must be a reproducible, systematic reliability and decision-transfer study with new comparative evidence. A budgeted method claim was considered but did not pass the strong-baseline diagnostic.
 
 ## Paper-2 map (under src/sla_partition_sensitivity)
 

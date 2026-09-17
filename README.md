@@ -2,7 +2,7 @@
 
 Reproducible diagnosis of an inexpensive evaluator against a pinned HELIX reference simulator, followed by evidence-based journal direction selection. No GPU cluster is required.
 
-Read `JOURNAL_DIRECTION_REPORT.md` for the decision, `CURRENT_STATUS.md` for execution state, and `EXPERIMENT_LOG.md` for evidence. Source/version and metric audits are in `docs/`.
+Selected direction: **Reference-Grounded Reliability Assessment for SLA-Aware Capacity and Partition Planning**. Read [JOURNAL_DIRECTION_REPORT.md](JOURNAL_DIRECTION_REPORT.md) for the Chinese decision report, [CURRENT_STATUS.md](CURRENT_STATUS.md) for execution state, and [EXPERIMENT_LOG.md](EXPERIMENT_LOG.md) for evidence. Source/version and metric audits are in `docs/`.
 
 ## Reproduce
 
@@ -14,7 +14,16 @@ python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/reproduce.py paper1
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/reproduce.py paper2
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/reproduce.py paper1_edges
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/reproduce.py paper2_revision
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/nominal_gap.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/partition_ranking.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/profile_mismatch.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/simple_guards.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/analyze.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/planning_pilot.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/figures.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests -v
 ```
 
 Dependencies are fetched into ignored `.deps/` at exact commits. The two sibling conference repositories are read-only. The bootstrap script does not change them. Existing `.deps` directories are retained; use a fresh clone for a fully clean bootstrap.
@@ -22,3 +31,15 @@ Dependencies are fetched into ignored `.deps/` at exact commits. The two sibling
 Results contain actual finite-grid simulator outputs, not real-GPU measurements. `results/raw_reference` stores compressed input manifests and full per-request metrics returned by the adapter; content hashes permit exact reuse. Evaluator scores, perturbed profiles, and reference verdicts are distinct. No confidence interval is inferred from a deterministic perturbation grid.
 
 The supplied papers, private reviewer material, credentials, caches, and machine-specific paths are excluded from version control. Public code dependencies remain upstream; this repository contains new research wrappers and derived experimental results.
+
+## Completed evidence
+
+- `results/reproduction/`: recovered conference observations, environment, old-repository start/end states and validation.
+- `results/diagnostic/nominal_summary.json`: ten A100 cases, 175 paired probes, mixed nominal disagreement.
+- `results/diagnostic/partition_ranking/`: twenty candidate cases, 502 paired probes, refined and common-grid ranking views.
+- `results/diagnostic/profile_mismatch/`: 7,282 evaluator-only stress rows, including nominal controls, zero run errors.
+- `results/diagnostic/simple_guards/`: fixed margin, derating and finite-scenario controls.
+- `results/diagnostic/planning_pilot/`: query-counted replay including strong uniform reference-only control; no allocation superiority claim.
+- `results/figures/`: PNG/SVG scientific figures.
+
+`PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/verify_results.py` additionally checks this completed matrix and verifies the two sibling repositories against their recorded start states; it requires those sibling clones at the original commits. The ordinary bridge tests do not require sibling clones. Exploratory results do not substitute for the held-out journal evaluation described in the report.

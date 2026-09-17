@@ -19,3 +19,5 @@ Nominal model mismatch and controlled profile mismatch must be reported separate
 The final paper-1 implementation is not present in the fetched branches. New experiments use an explicitly labeled recovered implementation that numerically reproduces key supplied results. This is not a claim that all published tests/regression counts were rerun.
 
 Paper-2 reproduction retains its analytical model. Unified HELIX-profile diagnostics are new experiments with separately stated SLAs and semantics, not retroactive replacement of conference results.
+
+Final exploratory outcome: no claim that budgeted E-seeded allocation beats strong reference-only controls is supported. Uniform reference-only bisection matches four coarse-grid optima with five queries; E-seeded allocation takes ten. Six stress-induced selection changes on candidate-specific refined probes are provisional: the common19 grid produces ties and no reference-quality loss. Do not report them as a robust ranking-error probability. Selected journal direction is an empirical reliability assessment, with held-out publication evidence still required.
