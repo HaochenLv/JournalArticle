@@ -4,7 +4,7 @@
 
 Nominal confusion:953 both-safe,1879 both-unsafe,23 optimistic,413 conservative. Main decision trials:6/6 Decode-tight winners agree;0/6 Prefill-oriented winners agree, with8.30–26.16% sampled reference-capacity regret. Preserve3 reference nonmonotone configurations,8 no-safe configurations, ties and all denominators. Boundary validation with at most5 queries has0 unsafe outputs in the tested replay and retains more useful load than blanket margin, without a new-optimizer superiority or deployment-safety claim. Report assessment: **Yes for a narrowly scoped simulator-relative empirical study**, with explicit novelty/generalization limits.
 
-No experiments remain under the frozen protocol. The next phase is manuscript planning, only if requested. Automatic monitoring is to be paused after final delivery; the local automation setting is the authoritative scheduling state. Evidence is in `results/formal/`, `docs/MECHANISM_ANALYSIS.md` and `docs/CLAIM_BOUNDARY.md`.
+No experiments remain under the frozen protocol. The next phase is manuscript planning, only if requested. Final evidence was pushed in commit b4f7cdc; automation journalarticle is confirmed PAUSED after delivery. Evidence is in `results/formal/`, `docs/MECHANISM_ANALYSIS.md` and `docs/CLAIM_BOUNDARY.md`.
 
 ## Historical checkpoints (superseded by completion above)
 

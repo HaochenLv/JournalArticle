@@ -12,9 +12,10 @@
   "restarted_utc": "2026-09-17T06:34:46.9786484Z",
   "automatic_followup": {
     "id": "journalarticle",
-    "status": "ACTIVE",
+    "status": "PAUSED",
     "interval_minutes": 5,
-    "scope": "Current desktop task only; finish existing campaign and evidence review, then pause."
+    "scope": "Current desktop task only; finish existing campaign and evidence review, then pause.",
+    "paused_utc": "2026-09-17T08:32:40.356147+00:00"
   },
   "scheduling": {
     "mode": "memory_budgeted",
@@ -24,5 +25,6 @@
     "matrix_log": ".private/desktop_matrix_memory12.log",
     "scheduler_status": ".private/memory_scheduler.json"
   },
-  "completed_utc": "2026-09-17T08:30:39.783923+00:00"
+  "completed_utc": "2026-09-17T08:30:39.783923+00:00",
+  "delivery_commit": "b4f7cdc"
 }
