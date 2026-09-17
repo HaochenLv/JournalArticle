@@ -78,7 +78,9 @@ if __name__=='__main__':
  if args.group and not selected:raise SystemExit('unknown group')
  selected.sort(key=lambda g:load_workload(g['workload'])[0]['features']['request_count']*len(g['shifts']),reverse=True)
  from concurrent.futures import ProcessPoolExecutor,ThreadPoolExecutor,as_completed
- with ProcessPoolExecutor(max_workers=args.workers,initializer=check_pins) as pool, ThreadPoolExecutor(max_workers=len(selected)) as coordinators:
+ from multiprocessing import get_context
+ # Explicit spawn also avoids forking a multithreaded coordinator on Linux.
+ with ProcessPoolExecutor(max_workers=args.workers,initializer=check_pins,mp_context=get_context('spawn')) as pool, ThreadPoolExecutor(max_workers=len(selected)) as coordinators:
   futures={coordinators.submit(run_group,g,pool):g['id'] for g in selected}
   for f in as_completed(futures):
    try:print('GROUP_COMPLETE',json.dumps(f.result()),flush=True)

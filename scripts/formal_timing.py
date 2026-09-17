@@ -1,8 +1,15 @@
 """Sequential planning-cost measurements; run after the parallel matrix exits."""
 from pathlib import Path
-import sys,json,time,gzip,statistics,platform,subprocess
+import sys,json,time,gzip,statistics,platform,subprocess,os
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from formal_core import *
+
+def host_memory_bytes():
+ if platform.system()=='Darwin':return int(subprocess.check_output(['sysctl','-n','hw.memsize']))
+ if hasattr(os,'sysconf'):
+  try:return os.sysconf('SC_PAGE_SIZE')*os.sysconf('SC_PHYS_PAGES')
+  except (ValueError,OSError):pass
+ return None
 
 def main():
  check_pins();out=[]
@@ -24,7 +31,7 @@ def main():
    begin=time.perf_counter();r=ref.evaluate_helix_fixed_reference(pipeline=p,workload=w,sla=sla,helix_root=HELIX);elapsed=time.perf_counter()-begin
    assert json.loads(json.dumps(asdict(r)))['query_metrics']==expected
    if i:rt.append(elapsed)
-  result={'protocol_hash':PROTOCOL_HASH,'group':g['id'],'shift':0,'regime':'decode','intensity':row['intensity'],'selection_rule':'highest observed both-safe shift0 point, otherwise lowest point','request_count':len(w),'evaluator_safe':e['safe'],'reference_safe':r.feasible,'warmups_per_model':1,'evaluator_wall_s':et,'reference_wall_s':rt,'evaluator_median_s':statistics.median(et),'reference_median_s':statistics.median(rt),'reference_to_evaluator_median_ratio':statistics.median(rt)/statistics.median(et),'metric_equality':True,'execution':'fresh sequential reference calls; no cache; evaluator CSV profile objects initialized before timing; planning CPU wall time, not inference speedup','python':platform.python_version(),'machine':platform.machine(),'cpu_logical':int(subprocess.check_output(['sysctl','-n','hw.logicalcpu'])),'memory_bytes':int(subprocess.check_output(['sysctl','-n','hw.memsize']))}
+  result={'protocol_hash':PROTOCOL_HASH,'group':g['id'],'shift':0,'regime':'decode','intensity':row['intensity'],'selection_rule':'highest observed both-safe shift0 point, otherwise lowest point','request_count':len(w),'evaluator_safe':e['safe'],'reference_safe':r.feasible,'warmups_per_model':1,'evaluator_wall_s':et,'reference_wall_s':rt,'evaluator_median_s':statistics.median(et),'reference_median_s':statistics.median(rt),'reference_to_evaluator_median_ratio':statistics.median(rt)/statistics.median(et),'metric_equality':True,'execution':'fresh sequential reference calls; no cache; evaluator CSV profile objects initialized before timing; planning CPU wall time, not inference speedup','python':platform.python_version(),'system':platform.system(),'machine':platform.machine(),'cpu_logical':os.cpu_count(),'memory_bytes':host_memory_bytes()}
   write_json(dest,result);out.append(result);print(json.dumps(result),flush=True)
  write_json(FORMAL/'runtime/summary.json',{'protocol_hash':PROTOCOL_HASH,'rows':out})
 
