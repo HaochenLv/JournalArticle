@@ -2,6 +2,8 @@
 
 **AICCC_JOURNAL_REBUILD (2026-09-19).** This branch is intentionally reset to the AICCC mathematical evaluator as the only mother evaluator for the Future Internet extension. The previous JB-Avg-v1 / Stage 6B line remains preserved as historical work, but its virtual-round execution plus post-hoc 90% attainment semantics are not valid journal-core semantics.
 
+**BASIC_TESTS_PASS (2026-09-19).** Existing Python 3.12.10 environment: AICCC math 5/5, evaluator 6/6, adjacent JB1 10/10; the bounded repository suite passed 84/84 (including those 21), with no failures. Two historical-reference directory-scan tests were deliberately omitted under the handoff scope limit; unrestricted discovery is not claimed. No source/test fix or mathematical semantic change was needed. No HELIX execution, formal experiment, or journal semantic extension was run; Stage 6B evidence was not reused. See [basic validation and next-step record](docs/AICCC_REBUILD_TEST_REPORT.md).
+
 Branch: `aiccc-journal-rebuild`, created from main commit `bfb4e002be2a079fc6dade5cf1d07d9c00b71bb0`.
 
 New foundation:
