@@ -1,0 +1,514 @@
+{
+  "protocol_id": "FI-JBAVG-S6B-v1",
+  "implementation_pin": "eb614e16c9ad3eba44068d58e51b49eabcbdfe14",
+  "helix_commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3",
+  "adapter_commit": "1cd5c56365b084fb06e3ca14f67448ddbf45275a",
+  "group_dispatch_extension": 1,
+  "profile_files": {
+    "simulator/model_manager/llama2_70b/a100/decode_bs2time.csv": "1d8302ad8503ce5f734bf1a4b43e3dc0c642063acdc8f59ad6d58a67f3cb90e0",
+    "simulator/model_manager/llama2_70b/a100/prompt_bs2time.csv": "00867a592d8aadccb87deb68e8ea417bab2de4d44ebfac84ac110d535601c07c",
+    "simulator/model_manager/llama2_70b/l4x2/decode_bs2time.csv": "2916886177c002ef0c3a6a3bb0b15864992e311698abf9646c22e6f1223e23be",
+    "simulator/model_manager/llama2_70b/l4x2/prompt_bs2time.csv": "b8152b37d50981f13b8e457397cbc31013db57b9fd61d58d2748006910234bcf",
+    "simulator/model_manager/llama2_70b/t4x4/decode_bs2time.csv": "09ed378b48592784b2f6a7169021c4211623f27291b6bf75a7a36e0d5558c983",
+    "simulator/model_manager/llama2_70b/t4x4/prompt_bs2time.csv": "4e69a786ea24bc82356411c7fb7844c752d23ed99ae2b693acf66014ae564fe5"
+  },
+  "workloads": [
+    {
+      "id": "h101-o60-d30",
+      "short_id": "h101",
+      "group": "h101-o60-d30-heterogeneous-fast",
+      "link": "fast",
+      "requests": 16,
+      "expected_grid_size": 75,
+      "source": "results/formal/workloads/h101-o60-d30.json",
+      "inventory": "results/sla_sensitivity/points/h101-o60-d30-heterogeneous-fast",
+      "refinement": "results/sla_sensitivity/refinement/h101-o60-d30-heterogeneous-fast.json"
+    },
+    {
+      "id": "h102-o300-d120",
+      "short_id": "h102",
+      "group": "h102-o300-d120-heterogeneous-slow",
+      "link": "slow",
+      "requests": 54,
+      "expected_grid_size": 77,
+      "source": "results/formal/workloads/h102-o300-d120.json",
+      "inventory": "results/sla_sensitivity/points/h102-o300-d120-heterogeneous-slow",
+      "refinement": "results/sla_sensitivity/refinement/h102-o300-d120-heterogeneous-slow.json"
+    },
+    {
+      "id": "h103-o500-d30",
+      "short_id": "h103",
+      "group": "h103-o500-d30-heterogeneous-slow",
+      "link": "slow",
+      "requests": 15,
+      "expected_grid_size": 70,
+      "source": "results/formal/workloads/h103-o500-d30.json",
+      "inventory": "results/sla_sensitivity/points/h103-o500-d30-heterogeneous-slow",
+      "refinement": "results/sla_sensitivity/refinement/h103-o500-d30-heterogeneous-slow.json"
+    },
+    {
+      "id": "h104-o700-d120",
+      "short_id": "h104",
+      "group": "h104-o700-d120-heterogeneous-fast",
+      "link": "fast",
+      "requests": 81,
+      "expected_grid_size": 52,
+      "source": "results/formal/workloads/h104-o700-d120.json",
+      "inventory": "results/sla_sensitivity/points/h104-o700-d120-heterogeneous-fast",
+      "refinement": "results/sla_sensitivity/refinement/h104-o700-d120-heterogeneous-fast.json"
+    },
+    {
+      "id": "h105-o900-d30",
+      "short_id": "h105",
+      "group": "h105-o900-d30-heterogeneous-fast",
+      "link": "fast",
+      "requests": 14,
+      "expected_grid_size": 73,
+      "source": "results/formal/workloads/h105-o900-d30.json",
+      "inventory": "results/sla_sensitivity/points/h105-o900-d30-heterogeneous-fast",
+      "refinement": "results/sla_sensitivity/refinement/h105-o900-d30-heterogeneous-fast.json"
+    },
+    {
+      "id": "h106-o1100-d120",
+      "short_id": "h106",
+      "group": "h106-o1100-d120-heterogeneous-slow",
+      "link": "slow",
+      "requests": 49,
+      "expected_grid_size": 63,
+      "source": "results/formal/workloads/h106-o1100-d120.json",
+      "inventory": "results/sla_sensitivity/points/h106-o1100-d120-heterogeneous-slow",
+      "refinement": "results/sla_sensitivity/refinement/h106-o1100-d120-heterogeneous-slow.json"
+    },
+    {
+      "id": "w201",
+      "short_id": "w201",
+      "group": "w201-heterogeneous-fast",
+      "link": "fast",
+      "requests": 13,
+      "expected_grid_size": 25,
+      "source": "results/jb1_plus/workloads/w201.json",
+      "inventory": "results/jb1_plus/phase_b_points/w201-heterogeneous-fast",
+      "refinement": "results/jb1_plus/refinement/w201-heterogeneous-fast.json"
+    },
+    {
+      "id": "w202",
+      "short_id": "w202",
+      "group": "w202-heterogeneous-slow",
+      "link": "slow",
+      "requests": 48,
+      "expected_grid_size": 25,
+      "source": "results/jb1_plus/workloads/w202.json",
+      "inventory": "results/jb1_plus/phase_b_points/w202-heterogeneous-slow",
+      "refinement": "results/jb1_plus/refinement/w202-heterogeneous-slow.json"
+    },
+    {
+      "id": "w203",
+      "short_id": "w203",
+      "group": "w203-heterogeneous-slow",
+      "link": "slow",
+      "requests": 5,
+      "expected_grid_size": 25,
+      "source": "results/jb1_plus/workloads/w203.json",
+      "inventory": "results/jb1_plus/phase_b_points/w203-heterogeneous-slow",
+      "refinement": "results/jb1_plus/refinement/w203-heterogeneous-slow.json"
+    },
+    {
+      "id": "w204",
+      "short_id": "w204",
+      "group": "w204-heterogeneous-fast",
+      "link": "fast",
+      "requests": 44,
+      "expected_grid_size": 25,
+      "source": "results/jb1_plus/workloads/w204.json",
+      "inventory": "results/jb1_plus/phase_b_points/w204-heterogeneous-fast",
+      "refinement": "results/jb1_plus/refinement/w204-heterogeneous-fast.json"
+    }
+  ],
+  "candidate_shifts": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "candidate_layers": {
+    "-2": [
+      8,
+      12,
+      8,
+      12,
+      8,
+      12,
+      8,
+      12
+    ],
+    "-1": [
+      9,
+      11,
+      9,
+      11,
+      9,
+      11,
+      9,
+      11
+    ],
+    "0": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "1": [
+      11,
+      9,
+      11,
+      9,
+      11,
+      9,
+      11,
+      9
+    ],
+    "2": [
+      12,
+      8,
+      12,
+      8,
+      12,
+      8,
+      12,
+      8
+    ]
+  },
+  "tie_break": [
+    0,
+    -1,
+    1,
+    -2,
+    2
+  ],
+  "slas": [
+    {
+      "id": "S1",
+      "ttft_s": 2.5,
+      "tpot_s": 0.15
+    },
+    {
+      "id": "S2",
+      "ttft_s": 2.5,
+      "tpot_s": 0.3
+    },
+    {
+      "id": "S3",
+      "ttft_s": 6.0,
+      "tpot_s": 0.2
+    },
+    {
+      "id": "S4",
+      "ttft_s": 6.0,
+      "tpot_s": 0.25
+    },
+    {
+      "id": "S5",
+      "ttft_s": 6.0,
+      "tpot_s": 0.3
+    },
+    {
+      "id": "S6",
+      "ttft_s": 6.0,
+      "tpot_s": 0.5
+    }
+  ],
+  "joint_target": "0.90",
+  "required_pass_count": "ceil(Decimal(0.90)*N)",
+  "comparison": "unrounded <=; no tolerance",
+  "evaluator": {
+    "name": "JB-Avg-v1",
+    "q": 16,
+    "diagnostic_shares": false,
+    "max_events": 100000,
+    "wall_timeout_s": 600,
+    "technical_retry_limit": 1
+  },
+  "metrics": {
+    "version": "standard_metrics_v1",
+    "ttft": "t_first-arrival",
+    "average_tpot": "(t_last-t_first)/(m-1) for m>1; null for m=1",
+    "primary": [
+      "median_signed",
+      "median_absolute",
+      "p90_absolute"
+    ],
+    "supplement": [
+      "p95_absolute",
+      "mean_signed",
+      "MAE",
+      "min",
+      "max",
+      "relative",
+      "SLA_budget_normalized"
+    ],
+    "relative_min_reference_s": 0.001,
+    "quantile": "empirical inverse CDF; Q(p)=inf{x:F(x)>=p}",
+    "weighting": [
+      "equal workload",
+      "equal valid candidate",
+      "equal valid physical point",
+      "equal applicable request"
+    ],
+    "empty_layer": "NA with reason and valid counts"
+  },
+  "g0": {
+    "expected_physical_count": 2550,
+    "expected_judgments": 15300,
+    "primary_accuracy": true,
+    "membership": "complete historical inventory; exact equality to final_grid; no old verdict selection"
+  },
+  "refinement": {
+    "start_after": "complete G0 with original recommendations preserved",
+    "trigger": "adjacent bool endpoints of opposite labels in any candidate/SLA/E/R",
+    "relative_width_gt": "0.05",
+    "priority": [
+      "b/a descending Decimal",
+      "a ascending",
+      "b ascending"
+    ],
+    "midpoint": "sqrt(a*b)",
+    "decimal_precision": 50,
+    "rounding": "ROUND_HALF_EVEN",
+    "decimal_places": 10,
+    "round_robin": [
+      "h101",
+      "h102",
+      "h103",
+      "h104",
+      "h105",
+      "h106",
+      "w201",
+      "w202",
+      "w203",
+      "w204"
+    ],
+    "one_midpoint_per_turn": true,
+    "all_five_terminal_before_reselect": true,
+    "unknown_triggers": false,
+    "same_label_triggers": false,
+    "cache_lookup_only_after_selection": true,
+    "cache_hit_consumes_quota": true,
+    "range_extension": false
+  },
+  "budgets": {
+    "intensities_per_workload": 6,
+    "total_intensities": 60,
+    "candidate_slots": 300,
+    "new_helix_unique_starts": 300,
+    "helix_attempts": 600,
+    "timeout_s": 600,
+    "technical_retries_per_input": 1,
+    "timing_only_reference_reruns": 0
+  },
+  "retry_reasons": [
+    "timeout",
+    "process_interruption",
+    "startup_failure",
+    "io_failure"
+  ],
+  "capacity": {
+    "lower": "max(known safe intensities union {0})",
+    "upper": "max(known safe or unknown intensities union {0})",
+    "identified": "lower==upper",
+    "C": "lower if identified else NA",
+    "relative_gap": "(CE-CR)/CR only both identified and CR>0",
+    "gap_bounds": [
+      "CE_lower-CR_upper",
+      "CE_upper-CR_lower"
+    ],
+    "monotonicity_assumption": false
+  },
+  "taxonomy": {
+    "BS": [
+      true,
+      true
+    ],
+    "BU": [
+      false,
+      false
+    ],
+    "O": [
+      true,
+      false
+    ],
+    "C": [
+      false,
+      true
+    ],
+    "hard_resource_safe": false,
+    "unsupported_safe": null,
+    "incomplete_safe": null,
+    "timeout_safe": null
+  },
+  "judgment_denominators": [
+    "BS+BU+O+C",
+    "O/(BS+O)",
+    "C/(BS+C)",
+    "O/(BU+O)",
+    "E_approved/all_scheduled",
+    "both_decidable/all_scheduled"
+  ],
+  "zero_denominator": "NA",
+  "near_boundary": "abs(J_R-K)<=1",
+  "ranking": {
+    "requires": "all five full-grid capacities identified and max>0",
+    "ties": "exact canonical grid value",
+    "best_set": "all candidates attaining max",
+    "classes": [
+      "exact_set_agreement",
+      "overlap_nonidentical",
+      "strict_mismatch",
+      "undefined"
+    ],
+    "tie_only": "intersection nonempty and chosen E not in R best set",
+    "abstention": [
+      "abstain_no_safe",
+      "abstain_unknown"
+    ]
+  },
+  "operating_point": {
+    "selection": "highest confirmed-safe E sampled intensity; fixed candidate tie-break; no R fallback",
+    "preserve": [
+      "G0",
+      "G1"
+    ],
+    "arithmetic_loss": "1-L/B",
+    "safe_usable_intensity": "L if R safe; 0 if R unsafe or abstain; null if R unknown",
+    "safe_usable_loss": "1-U/B",
+    "loss_denominator": "all five R capacities identified and B>0",
+    "shortfall": "max(0,0.90-A_R)",
+    "excess_fail": "max(0,joint_fail-(N-K))"
+  },
+  "screen": {
+    "cells": 60,
+    "min_requests": 10,
+    "both_safe_intensities_same_candidate": 2,
+    "service_subset": "R True or E True",
+    "complete_paired_coverage": 1,
+    "optimistic_approvals": 0,
+    "unverified_approvals": 0,
+    "absolute_relative_capacity_gap_max": 0.2,
+    "upper_transition_width_max": 0.05,
+    "right_censored_allowed": false,
+    "p90_sla_normalized_error_max": 0.1,
+    "safe_original_recommendation_required": true,
+    "safe_usable_loss_max": 0.2,
+    "matched_runtime_median_ratio_min": 10,
+    "matched_all_five_candidates": true,
+    "versions_checked_separately": [
+      "G0",
+      "G1"
+    ],
+    "NA": "not-assessable",
+    "positive_story": "at least two workloads including h and w"
+  },
+  "load_bands": {
+    "fixed_endpoints": "G0 min/max",
+    "u": "log(lambda/min)/log(max/min)",
+    "low": "[0,1/3)",
+    "middle": "[1/3,2/3)",
+    "high": "[2/3,1]",
+    "separate_pass_screen": false
+  },
+  "runtime": {
+    "warmups": 1,
+    "measured_repeats": 5,
+    "state": "clean each simulation",
+    "point_estimate": "median five",
+    "aggregate": [
+      "median",
+      "P95",
+      "range"
+    ],
+    "workers": 1,
+    "E_R_concurrent": false,
+    "include_diagnostics_hash": true,
+    "reference_timing": "actual adapter call including initialization/extraction",
+    "cached_processing_is_execution": false,
+    "no_matched_evidence": "cost advantage unestablished"
+  },
+  "tolerances": {
+    "migration_absolute_s": 1e-07,
+    "endpoint_and_alias_relative": 1e-10
+  },
+  "stop_conditions": {
+    "normal": [
+      "no eligible interval",
+      "all transitions <=5%",
+      "all midpoints illegal",
+      "6 intensities/workload",
+      "all scheduled terminal and summaries/checks complete"
+    ],
+    "immediate": [
+      "source_pin_changed",
+      "protected_file_changed",
+      "G0_mismatch",
+      "alias_conflict",
+      "metric_semantics_contradiction",
+      "SLA_changes_trajectory",
+      "candidate_grid_asymmetry",
+      "count_mismatch",
+      "budget_overrun",
+      "provenance_loss",
+      "repeated_environment_failure"
+    ],
+    "not_stop_or_extend": [
+      "no screen passes",
+      "optimistic errors",
+      "capacity errors",
+      "ranking disagreement",
+      "runtime advantage inadequate"
+    ]
+  },
+  "prohibitions": [
+    "model edits",
+    "baseline",
+    "ablation",
+    "new SLA",
+    "new workload",
+    "new hardware",
+    "old Stage 6 resume",
+    "significance tests",
+    "bootstrap",
+    "fake CI",
+    "manuscript",
+    "Stage 6C"
+  ],
+  "authoritative_sections": {
+    "1": "Final protocol decision\n\n## GO — PROTOCOL READY\n\n本协议的科学定义可以冻结。正式执行前仍须完成第 20 节规定的只读输入核验和协议落盘；这不是允许重新选择实验条件。核验失败时停止，不以删点、补跑或换口径来“修复”矩阵。\n\n| 项目 | 冻结决定 |\n|---|---|\n| 主矩阵 | 全部 10 个既有 workload × 5 个既有 candidate × 各 workload 的完整共同网格 |\n| SLA | 保留提出的全部 6 组；每条执行轨迹只生成一次，再分别分类 |\n| 初始 physical inventory | 既有 Stage 4 主异构 2,050 点 + Stage 5 w201–w204 的 500 点，预期共 2,550 点 |\n| 主 evaluator / reference | JB-Avg-v1 / pinned HELIX，经 standard_metrics_v1 提取及分类 |\n| baseline / ablation | 不新增 |\n| 细化 | 所有已观测双向 transition 的并集；共同网格；相对区间宽度目标 5% |\n| 硬预算 | 每 workload 最多 6 个新增共同 intensity；最多 300 个此前未执行的 unique HELIX physical points |\n| 超范围探索 | 不扩展初始负载范围；不新增 workload、SLA、硬件、candidate 或 correction |\n| 成功标准 | 完整、可追溯地得到正向、负向或不确定证据；不是必须得到正向适用区 |\n\n**最重要的解释修正：**“sampled capacity 已知”不等于“连续服务边界已知”；“没有批准”不等于“批准很可靠”；“本模型失败”不等于“所有轻量抽象必然失败”。\n\n",
+    "2": "Frozen research questions\n\n**RQ1 — 数值预测。** 对同一 physical input 的同一请求，JB-Avg-v1 的 standard TTFT 和 request-average TPOT 与 HELIX 相差多少？同时报告偏差方向、典型误差和尾部误差。\n\n**RQ2 — 判断和容量。** 这些误差怎样改变 90% joint attainment 的批准/拒绝，以及 SLO-attaining sampled capacity？资源拒绝、profile 越界和未完成必须与 latency miss 分开。\n\n**RQ3 — 有边界的适用性。** 在预先列出的 workload、SLA、负载分层中，是否存在 reference 可服务且 evaluator 确实批准的非零负载？数值误差、错误批准、容量损失和计算成本各是什么？不估计未经测试的连续“可靠区间”。\n\n**RQ4 — 下游后果。** 误差是否改变五候选的 sampled-best set，以及 evaluator 推荐的 candidate + intensity 在 HELIX 下的实际 joint attainment 和 safe usable loss？\n\n研究对象是 **simulator-to-approximation validation**。HELIX 是固定 reference，不是实测部署真值；本轮不验证 HELIX 对真实 GPU 集群或用户端延迟的准确度。[S1–S4]\n\n",
+    "3": "Frozen workloads\n\n全部纳入，不能根据新版结果删除或替换。h101–h106 和 w201–w204 分别保留历史来源标签；w 组只称“additional historical workloads”，不称 untouched held-out。两组都不是外部分布验证。[S1, S10, S12]\n\n| workload / 完整 ID | 原始窗口长度（s） | 请求数 N | 主链路 | 初始共同网格点数 | ceil(0.9N) |\n|---|---:|---:|---|---:|---:|\n| h101 / h101-o60-d30 | 30 | 16 | fast | 75 | 15 |\n| h102 / h102-o300-d120 | 120 | 54 | slow | 77 | 49 |\n| h103 / h103-o500-d30 | 30 | 15 | slow | 70 | 14 |\n| h104 / h104-o700-d120 | 120 | 81 | fast | 52 | 73 |\n| h105 / h105-o900-d30 | 30 | 14 | fast | 73 | 13 |\n| h106 / h106-o1100-d120 | 120 | 49 | slow | 63 | 45 |\n| w201 | 30 | 13 | fast | 25 | 12 |\n| w202 | 120 | 48 | slow | 25 | 44 |\n| w203 | 30 | 5 | slow | 25 | 5 |\n| w204 | 120 | 44 | fast | 25 | 40 |\n\n网格点数是既有归档所规定的预期核对值，不是本轮重新计算的结果。[S1, S12]\n\n输入继承指定 commit 下的 `results/formal/workloads/<完整ID>.json` 和 `results/jb1_plus/workloads/<ID>.json`；按历史 pin 的 `scale_workload` 生成各 intensity 对应的到达时间。新增点不得重抽请求、改变 token 长度、改变窗口抽取或截断 drain。实际送入两个模型的 request ID、到达时间、输入/输出长度必须完全相同。\n\n**有限请求数的特别说明：**w203 的 90% 目标等价于 5/5 通过，不能把它解释成对允许 10% 违规的精细验证。其结果保留，但不能单独构成跨 workload 的正向适用性叙述。所有 workload 均报告 N、required pass count、允许违规数和 1/N 的 attainment 分辨率。\n\n主分析 workload 等权；同时完整列出每个 workload。30s/120s、fast/slow、h/w 可以作描述性分组，但这些因素并未独立随机化，不能据此声称因果效应。\n\n",
+    "4": "Frozen candidates\n\n固定 shift 集合 **{-2, -1, 0, +1, +2}**。八个连续 stage 的层数按以下序列固定，合计均为 80 层。[S11]\n\n| shift | 八个 stage 的层数 |\n|---:|---|\n| -2 | 8, 12, 8, 12, 8, 12, 8, 12 |\n| -1 | 9, 11, 9, 11, 9, 11, 9, 11 |\n| 0 | 10, 10, 10, 10, 10, 10, 10, 10 |\n| +1 | 11, 9, 11, 9, 11, 9, 11, 9 |\n| +2 | 12, 8, 12, 8, 12, 8, 12, 8 |\n\n从 stage 0 开始，硬件类型交替为 L4x2、T4x4。节点容量、workspace、memory margin、boundary route、模型参数及 fast/slow 链路配置全部继承对应 physical input，不凭硬件名称重新推定。\n\n统一 tie-break：按 `(abs(shift), shift)` 升序，即 **0、-1、+1、-2、+2**。同一规则用于所有 SLA、workload 和两个模型，不依据 reference 选择有利 tie-break。\n\n正式名称仅为 **controlled five-candidate ranking probe**。不使用 global optimum、完整 partition search space regret 或 best possible placement 等说法。\n\n",
+    "5": "Frozen SLA tuples\n\n| ID | TTFT（s） | request-average TPOT（s） | 事前角色 |\n|---|---:|---:|---|\n| S1 | 2.5 | 0.15 | 文献取值参照、严格控制条件 |\n| S2 | 2.5 | 0.30 | 与 S1 对照 TPOT；与 S5 对照 TTFT |\n| S3 | 6.0 | 0.20 | 接近所述硬件时延尺度、偏严格 |\n| S4 | 6.0 | 0.25 | 接近所述硬件时延尺度、稍宽松 |\n| S5 | 6.0 | 0.30 | hardware-relative 中间研究预算 |\n| S6 | 6.0 | 0.50 | 更宽松的 hardware-relative 条件 |\n\n保留六组的理由是：固定 6s 时的四点 TPOT 扫描，加上固定 0.30s 时的 TTFT 对照，以及一个文献参照。它们不是重复独立样本，也不是完整 factorial design；不估计缺失组合的交互效应。\n\nDistServe 的 Table 1 确实为 OPT-66B chatbot 列出 2.5s / 0.15s，但这是另一模型与硬件环境中的研究设置，不是通用生产标准。本文的 6s 是研究预算，不宣称为通用 chatbot 要求。[L1]\n\n**不得预先把 S1/S3 标为“必定不可服务”。**用户给出的约 0.211–0.237s 数值只作为待标注来源的硬件尺度说明，本轮未独立重新计算。JB-Avg-v1 的 singleton decode 带 ×2 规则，因此 singleton latency 并不自动构成所有 batch 状态的全局下界；request-average TPOT 又不要求每一个 token interval 都通过。[S2–S4] S1 即使存在 safe points 也必须照常报告。\n\n所有 SLA 的 service target 固定为 **0.90 joint attainment**。不改成分别 90% 的 TTFT/TPOT，也不追加“结果更好”的阈值。\n\n",
+    "6": "Primary evaluator / reference\n\n**Evaluator：**指定 commit 的 `src/jb_avg_v1.py`，q=16、`diagnostic_shares=False`、`max_events=100000`，保留当前默认事件轨迹和 hash 开销；不增加 H、5ms accounting、common gamma、overlap、profile 外推或拟合。[S2–S4]\n\n**Reference：**HELIX commit `8639497a4aaf1eb3b7594614cb0bbd376c1342b3`；adapter commit `1cd5c56365b084fb06e3ca14f67448ddbf45275a`；group dispatch extension=1；profiles 使用历史 protocol 所列逐文件 hash。分类只用本次固定的 `standard_metrics_v1.py`。[S5, S10, S11]\n\n物理执行与 SLA 解耦。每个 unique physical point 只形成一份 E 轨迹和一份 R 指标，再产生六组分类。初始预期为 2,550 个 E 执行输入和 **15,300 个 E/R paired judgment 条件**；不是 15,300 次 HELIX 执行。\n\n时间语义：\n\n- `TTFT_r = t_first,r − arrival_r`。\n- `average_TPOT_r = (t_last,r − t_first,r)/(m_r−1)`，仅 m_r>1。\n- m_r=1 时 TPOT=None；仅检查 TTFT。\n- 请求通过等价于 TTFT≤τT 且（m=1 或 average TPOT≤τD）。\n\n完整执行的 reference resource feasibility 来自“固定 reference 成功完成并 fully drained”的证据；不得把 evaluator 的 conservative memory gate 套到 reference 上。E memory 拒绝但 R 完成可服务，是应保留的 resource-induced conservative disagreement，不是删除该点的理由。[S5]\n\n新 reference 使用一致的 adapter accounting metadata（fixed=0.005s、queue=0），仅为了与现有提取契约一致；它们不进入 HELIX trajectory 或 JB-Avg-v1 trajectory。提取时读取每条记录自己的 metadata，不能对未来记录盲减常数。旧 `safe`、`feasible`、`first_violation`、max-latency verdict 不进入新版分类。\n\n",
+    "7": "Any baseline or ablation\n\n**不新增 baseline 或 ablation。**这是一个已冻结近似器相对固定 reference 的有效性研究，不是方法排行榜。旧 JB1/JB1+/Raw/Legacy/Remaining 不进入主矩阵。\n\n“关闭 contention”无法作为只删一个参数的干净消融：当前 batch cost、mixed cohort、共享进度和资源占用相互耦合。把每请求隔离运行会同时改变 batching、并发和 memory 语义，也不是普遍下界。不能把它包装成单机制证据。\n\n可保留现有 hand-checkable tests 作为实现核验，但它们不是正式性能对照。论文不声称 JB-Avg-v1 超过其他轻量预测器，也不从无消融的结果推断某个机制的独立因果贡献。[S2, S6, S7]\n\n",
+    "8": "Request-level accuracy metrics\n\n## 8.1 配对与定义\n\n分析单位为 `(physical_point_id, request_id)`。E 和 R 均完整、resource-feasible 且指标有效时，整条执行才进入配对 latency 分析。E 中途失败时，不把“已经完成的容易请求”单独放入主误差统计。未配对点、未配对请求及原因另表完整报告。\n\n对 x∈{TTFT, average TPOT}：\n\n`e_x = x_E − x_R`，`AE_x = |e_x|`。\n\n正值表示预测更慢；负值表示预测更快。TPOT 仅对 m>1 的请求计算，不用 0 填充 m=1。\n\n主文报告每 workload 的 **median signed error、median absolute error、P90 absolute error**；另列相同层次的 equal-workload 总体分布。TTFT 用秒，TPOT 展示用毫秒，底层统一保留秒的全精度。\n\n补充材料报告 P95 absolute error、mean signed error、MAE、最小/最大误差，以及所有原始配对请求行。固定分位数算法：经验分布逆函数 `Q(p)=inf{x:F(x)≥p}`；不在结果后切换插值方法。\n\n## 8.2 相对误差与 SLA 归一化\n\n主结论不使用 MAPE。补充提供普通 signed/absolute relative error，但仅在 `x_R≥0.001s` 时计算；低于该固定阈值者标记 undefined，报告人数，不加任意 epsilon 或截尾。\n\n与 SLA 相关的展示使用 `e_T/τT`、`AE_T/τT` 和 `e_D/τD`、`AE_D/τD`。这叫 **SLA-budget-normalized error**，不是相对 reference 的误差。六组分类不应让同一请求在 SLA-independent 总体 latency 表中被重复计数六次。\n\n## 8.3 权重\n\n按以下层次构造分布：workload 等权 → 五 candidate 等权 → 该 candidate 的有效 physical points 等权 → 点内适用请求等权。不存在有效数据的层次返回 NA，并显式报告有效 workload/candidate 数；不能把该层误差填为 0。\n\n一个点内部不按输出 token 数加权；长输出请求不能因为 token 多而得到额外票数。request-pooled / physical-point-pooled 结果只能放补充，并明确它们回答的是不同加权问题。\n\n",
+    "9": "Joint-attainment judgment metrics\n\n对 N>0 的完整、resource-feasible 执行：\n\n`K = ceil(Decimal('0.90') × N)`，`A_M = J_M/N`，`safe_M = (J_M≥K)`。\n\n阈值比较使用未显示舍入的数据和 `≤`；不对 90% 门槛加浮点容差。[S5, S7]\n\n## 9.1 状态和 taxonomy\n\n先确定每模型的三值 service decision：\n\n| 状态 | safe | attainment |\n|---|---|---|\n| 完整、resource-feasible | True 或 False，由 J≥K 决定 | 定义 |\n| 已证实 hard-resource infeasible | False | None |\n| unsupported profile / service cost、未完成、event limit、技术失败、空 workload | None | None |\n\n仅当双方 safe 均为布尔值时进入四格表：\n\n| 类型 | E | R |\n|---|---|---|\n| both-safe (BS) | True | True |\n| both-unsafe (BU) | False | False |\n| optimistic (O) | True | False |\n| conservative (C) | False | True |\n\n每个拒绝保留 `latency` / `hard_resource` 原因。主表是 service-decision confusion；另给双方均有 A 的 latency-only confusion。这样不会用 `A=None` 假装 `A<0.90`。\n\n## 9.2 分母\n\n每 workload、每 SLA 均报告原始分子/分母及：\n\n- 四格比例：BS、BU、O、C 各除以 `D=BS+BU+O+C`。\n- **错误批准比例**：`O/(BS+O)`，分母是 R 可判定的 E 批准点。\n- **reference-safe 漏批比例**：`C/(BS+C)`。\n- 标准 false-positive rate：`O/(BU+O)`，与错误批准比例分开命名。\n- E 批准覆盖：E=True 点数 / 全部 scheduled 条件数；双方可判定覆盖：D / 全部 scheduled 条件数。\n\n零分母一律 NA，不是 0%。E 批准而 R unknown 的点另报 `unverified_approval`；不能藏在错误批准比例的分母之外。全拒绝不构成安全性正向证据。\n\n## 9.3 attainment 误差与近边界\n\n双方 A 定义时，报告 `ΔA=A_E−A_R` 和 `|ΔA|`，以百分点展示；每 workload 给均值偏差、MAE、P90 absolute error。\n\nnear-boundary 预定义为 **`|J_R−K|≤1`**，按 reference 的请求计数确定，不按 evaluator 选点。在此子集重复 confusion 和 attainment error，并报告 J_R、K、N；w203 的粗分辨率不会因此被隐藏。没有近边界点时标为 absent，不新增点来强行填满此表。\n\n",
+    "10": "Sampled-capacity definition\n\n固定 workload w、candidate c、SLA s、同一版本共同网格 Λ_w。主名称为 **SLO-attaining sampled capacity**，数值单位是历史 workload scaling 的 intensity，不自动等同于 req/s 或 steady-state throughput。\n\n若全网格 decision 可判定：\n\n`C_M(w,c,s;Λ_w) = max({λ∈Λ_w : safe_M(λ)=True} ∪ {0})`。\n\n0 是“该测试网格没有已知 safe 点”的报告约定，不是执行过 λ=0，也不是证明所有正负载都不可服务。\n\n有 unknown 点时，不猜它们的安全性，报告：\n\n`C_M^- = max({已知 safe 的 λ} ∪ {0})`\n\n`C_M^+ = max({已知 safe 或 unknown 的 λ} ∪ {0})`。\n\n这里 `[C_M^-, C_M^+]` 是**固定有限网格上、由未判定点造成的可能容量范围**，不是置信区间，更不是连续负载容量区间。hard-resource infeasible 是已知拒绝，不进入 upper bound。\n\n仅当 `C_M^-=C_M^+` 时，完整网格 sampled capacity 被 point-identified；unknown 全在最高已知 safe 点以下时仍可能识别最高值，但这些 coverage holes 必须保留。\n\nE/R 容量均识别时：报告 signed gap `C_E−C_R` 和 absolute gap。C_R>0 时另报 `(C_E−C_R)/C_R` 及其绝对值；C_R=0 时相对误差为 NA，分列 `both_no_safe` 和 `evaluator_approves_reference_no_safe`，不得加 epsilon。\n\n尚未识别时可报告 signed gap 的有限网格上下界 `[C_E^-−C_R^+, C_E^+−C_R^-]`，但不得用 lower bound 代替完整容量计算精确相对误差。\n\n",
+    "11": "Common-grid rule\n\n## 11.1 初始网格 G0\n\n**第一轮直接使用各 workload 既有最终共同 physical grid。**h 组来自指定 commit 下 `results/sla_sensitivity` 的完成库存；w 组来自 `results/jb1_plus/phase_b_points` 的完成库存。必须与各自 `refinement/<group>.json` 的最终网格核对，不能误取历史 protocol 的 `original_grid` 或最初九点网格。[S12, S13]\n\nG0 是指定 commit 中上述库存的确定性投影：只读取 workload、candidate、intensity、physical identity、source path 及完成状态，不读取旧 SLA verdict 来决定成员。每个 workload 五候选的网格必须完全相等。若不相等，**停止核验**，不能悄悄取 intersection、union 后只补部分 candidate，或删掉缺点。\n\nG0 在任何新版 E/R 分类被查看前保存精确 intensity 列表、对应五个 physical IDs、来源 hash。继承旧网格具有历史 outcome-adaptive 取样偏好；执行本身与 SLA 无关，不代表网格的设计与旧结果无关。论文须披露这一点。\n\n## 11.2 细化后网格 G1\n\nG1=G0∪本协议合法选出的共同新增 intensity。每个新增 intensity 对五候选和六 SLA 全部生效；不能只执行 evaluator winner。失败点也保留在 scheduled grid 中，以 unknown 表示，不能通过删掉失败点恢复“完整网格”。\n\nRQ1/判断总体误差以 **G0 为主分析**，G1 为边界增密后的敏感性分析。容量、ranking、operating point 同时报告 G0 和 G1，主容量表使用 G1，但 G0 决策不得被覆盖。未发生细化时两版本一致。\n\n**G1 是 reference/evaluator-informed 研究网格。**G1 上的下游结果是这个共同网格条件下的决策检验，不是一次完全 blind、只调用五次 evaluator 的在线优化实验。\n\n",
+    "12": "Nonmonotonicity / censoring rules\n\n每条 `(w,c,s,M,grid_version)` 序列完整保存 intensity、三值 safe、attainment、状态及原因。至少保留以下独立 flags：\n\n| 情形 | 冻结处理 |\n|---|---|\n| no-safe，且全网格可判定 | C=0；只能说测试网格无 safe |\n| 未见 safe，但存在 unknown | C^-=0，标记 no-certified-safe + unresolved；不能写全部 unsafe |\n| all-safe | 每个 scheduled 点都 True；sampled C=max grid，超网格行为未观测 |\n| upper endpoint safe | `right_censored=True`，即使下面存在 unsafe holes；它只表示对更高负载的外推被截断 |\n| top endpoint unknown | `upper_status_unknown`，不是普通 right-censored，也不是 unsafe |\n| profile/domain hole | unknown；不插值、不外推、不当作资源失败 |\n| 已证实资源失败 | 已知拒绝，保留 resource subtype；attainment 为 None |\n| unsafe→safe | 保留为已观测 nonmonotonicity；不运行单 crossing 二分或 isotonic 修正 |\n| safe–unsafe–safe | 列出中间已观测 unsafe hole 的全部点，不用填充连续 safe interval |\n| 相同标签端点 | 不证明内部没有 crossing；没有观察到的细窄 safe/unsafe islands 不作结论 |\n| 边界仍宽 | 保存 unresolved bracket、宽度、停止原因；不能用中点假装真实容量 |\n\n`nearest_unsafe_above` 定义为大于最高已知 safe intensity 的最小**已知 False** intensity；可跨越 unknown，但必须附 `unknown_between`。它只是样本位置，不能据此声明整个区间只有一次 crossing。\n\n同时记录：所有相邻已知异号 brackets、所有 safe runs、标签序列中任意 lower False / higher True 的 nonmonotone witness、unknown 的位置。跨 unknown 的证据可以证明“曾出现下降后恢复”，却不能用于假定中间 crossing 的位置。\n\n**right-censoring 不使有限网格 max 失去定义。**但两个模型都碰到网格顶端而 C 相同，不能作为连续容量准确的证据。主文将 identified、right-censored、no-safe、unknown 分层列出；不能只展示最容易量化的 uncensored 行。\n\n",
+    "13": "Refinement algorithm\n\n以下规则适用于 G0 完成后的、另行授权的正式阶段。本轮不执行。\n\n## 13.1 候选区间\n\n对每 workload，取当前共同网格的**相邻**点 a<b。只要在任一 candidate、任一六组 SLA、任一模型 E 或 R 下，两个端点的 safe 都是布尔值且不同，就把 `(a,b)` 纳入 transition 并集。\n\n两个方向一视同仁；同一 interval 被多个条件触发只保留一个，但记录全部触发者。True↔已证实 hard-resource False 也属于 service transition，单独标注原因。unknown 端点、两端同号、只有 attainment 接近 0.9 而没有异号，都不触发新增。\n\n细化条件是 **`b/a−1 > 0.05`**。不要求 attainment 在区间里单调，也不把 refinement 描述成求一个连续方程的根。\n\n## 13.2 优先级与中点\n\n每个 workload 内，按以下顺序排序：\n\n1. `b/a` 降序，等价于 log-width 降序；使用十进制值比较比例，避免排序依赖显示舍入。\n2. a 升序。\n3. b 升序。\n\n不使用 winner 身份、SLA 的“实用性”、误差符号、预期论文结论或当前 agreement 作为优先级。\n\n中点固定为 `sqrt(a×b)`，使用 50 位十进制精度计算，再按 round-half-even 保留小数点后 10 位。只有 `a<mid<b` 且 mid 不在现有/已选择 grid 中才合法；否则将该 bracket 标为 numerical-resolution-limited，继续检查下一个区间。\n\n## 13.3 执行顺序和更新\n\n全局按 h101、h102、h103、h104、h105、h106、w201、w202、w203、w204 的固定顺序轮询。每次一个 workload 只选择一个合法中点；完成五 candidate 的结果记录和六 SLA 分类后，重建该 workload 的所有 brackets，再允许下一次选择。\n\n每个 workload 最多选择 6 个新共同 intensity；其他 workload 剩余配额不能转移给它。可并行处理一个共同点的五候选，但下一点的选择只依赖该点五候选都达到终态后的状态，不依赖谁先返回。\n\n选定中点后才允许查询旧 supplemental cache 能否命中该 physical identity；不能因为某个更方便的 intensity 有 cache 而改变中点。\n\n## 13.4 该算法没有提供的保证\n\n算法只改善**已经被样本揭示的 transitions**的分辨率。它不会发现所有同号区间内部的隐藏 islands，不能证明区间内单调，也不保证最多六次就把全部边界压到 5%。这些限制是协议的一部分，不是增预算的理由。\n\n全部 safe / 全部 unsafe 且没有任何合法 transition 时，不向两端扩展搜索；保留 censoring 或 no-observed-service。不得以“还没找到正向适用区”为理由探更低负载或放宽 SLA。\n\n",
+    "14": "New HELIX hard budget\n\n**保留 300 个 unique new physical points 的硬上限。**它是相对于 2,550 点库存的有限补充预算，不是“足以解决所有 300 条 candidate/SLA 容量序列”的保证。其是否用满不影响研究完成与否。\n\n计数口径冻结如下：\n\n| 计数器 | 上限 / 规则 |\n|---|---|\n| 每 workload 新选择的共同 intensity | 6，cache 命中也消耗该 intensity 配额 |\n| 全部新增共同 intensity | 60 |\n| 新选择的 candidate physical slots | 300 |\n| 此前未存在、实际启动的 unique HELIX inputs | ≤300；首次启动即计数，失败不返还 |\n| 每个新 HELIX input | 600s wall timeout；最多 1 次技术性重试 |\n| 全部新 HELIX 尝试 | ≤600，包括失败和重试；成功运行不重复做 timing |\n| 专门用于 timing 的旧点重跑 | 0 |\n| 网格范围扩展、补充模型/硬件/工作负载 | 0 |\n\n只有第 13 节确定性选择出的新中点允许新增 reference。SLA 数量不乘入 physical budget。没有合法 transition、interval 已达 5%、配额已满或没有合法中点时，禁止新增。\n\n技术性重试只用于超时、进程中断、启动/I/O 类故障；相同输入、相同模型参数、相同 timeout。已完成但不符合 SLO、已证实 hard-resource failure、deterministic unsupported 都不是重试理由。重试仍失败则保留 unknown。新 E 执行采用同样的 600s runner wall 上限，event limit 仍为 100000；E 技术失败最多重试一次，不提高 event limit。\n\n旧暂停 Stage 6 的 15 个已完成新增 references，仅在本协议选中完全相同的 physical identity 时允许命中复用；不为它们另加 3 个共同 intensity，也不把它们自动并入 G0。旧 2,050 条 reused entries 只是原库存别名，不能重复计数。旧五条 `running` 文本保留为历史日志，不是待接续任务。[S1, S2, S8]\n\n",
+    "15": "Candidate-ranking probe\n\n分别对 G0、G1 计算，每个版本最多 60 个 `(w,s)` 决策案例。只比较同一 workload 的共同网格。\n\n若五候选对某模型的完整网格 sampled capacities 均 point-identified，且最大值>0，定义：\n\n`B_M = {c : C_M(c)=max_j C_M(j)}`。\n\n容量相等必须是相同 canonical grid value，不按 1% 或图表舍入随意合并为 tie。若最大值=0，best set 为空；不能把“五个都不服务”记成完美 ranking agreement。\n\n## 15.1 两套互不混淆的结果\n\n**Best-set comparison：**\n\n- `exact_set_agreement`：B_E=B_R，且均非空。\n- `overlap_nonidentical`：交集非空，但集合不等。\n- `strict_mismatch`：两集合非空且不相交。\n- `undefined`：任一完整 best set 因 unknown 未识别，或 reference 没有正的 sampled service capacity。\n\n**Selected-candidate comparison：**E 按第 4 节规则选定 c_E，R 同规则给出 c_R。另报 `c_E=c_R`、`c_E∈B_R`。若 B_E∩B_R 非空但 c_E∉B_R，称 `tie_only_mismatch`；它是 overlap 行的下游后果，不与 strict mismatch 混算。\n\n## 15.2 unknown、abstention 和 censoring\n\n无法识别完整 best set 时，正式 ranking 记 undefined，同时可给出 **confirmed-safe best set**：按各 candidate 的 C_E^- 比较，且最大值>0。它只用于描述实际可提出的推荐，不冒充 full-grid 最优集合。\n\nE 没有任何已知正 safe 点时：全可判定则 `abstain_no_safe`，存在 unknown 则 `abstain_unknown`。两者都不是 conservative latency prediction 的同义词。\n\nright-censored candidate 可以参加 **sampled-grid ranking**，但增加 `censored_best_set` 标志；碰到相同上端点的并列只说明该网格分不出高下。不给出连续容量排名。unknown below maximum 虽不妨碍最大值识别，仍保留 coverage flag。\n\n精确 agreement 的分母仅包含双方非空、已识别的 best sets；同时报告它们占全部 60 案例的比例。另列无 censoring 的分层结果，不能只报那个更好看的分母。\n\n",
+    "16": "Operating-point evaluation\n\n## 16.1 推荐规则\n\n对每 `(w,s)` 和 grid version，E 只根据自己的输出，在全部五候选已确认 safe 的 sampled pairs 中选择最高 intensity L；candidate 并列按固定 tie-break。即使用 `max_c C_E^-(c)`，不借助 R，不要求把 unknown 当成 unsafe。\n\n无正的已知 safe pair 时 abstain。存在 unknown 时仍可提出已确认 pair，但必须标记 `recommendation_under_incomplete_coverage`；这不证明它是完整网格的最佳选择。\n\nG0 的 60 个原始推荐在 refinement 前固定保存。G1 推荐单独生成，不能事后替换 G0 失败点。禁止 reference-informed 换 candidate、回退到安全 intensity、derating 或挑一个更好 tie-break 来改写主推荐。\n\n## 16.2 reference 下的实际结果\n\n在推荐点报告 A_R、J_R、N、K、resource status 和 exact safe。TTFT violation、TPOT violation、both violation、joint violation 均给 count；joint count 必须满足：\n\n`joint_fail = ttft_fail + tpot_fail − both_fail`。\n\nTTFT 和 joint violation fraction 用 N 作分母。TPOT 另报适用请求数 N_D=#(m>1)，主 TPOT violation fraction 用 N_D；同时保留 `tpot_fail/N`，防止误读成 joint attainment 的分母变化。\n\n90% 目标下允许 `N−K` 个 joint failures。报告：\n\n`attainment_shortfall = max(0, 0.90−A_R)`；\n\n`excess_fail_count = max(0, joint_fail−(N−K))`。\n\n某一个请求违规并不自动使推荐 unsafe。R hard-resource failure 则 unsafe，但不伪造 latency counts；R 未完成则 safety unknown。\n\n## 16.3 loss\n\n设 `B=max_c C_R(c)`，要求完整网格的 B 已识别且 B>0。候选均未识别但能够证明最大值相同，不另作聪明补判；本协议保守地按第 15 节全五候选识别规则处理。\n\n**Arithmetic operating-point loss：**`L_op=1−L/B`。abstain 时 L=0。该量不考虑安全，可能为负；不得截成 0 或把负值解释为有效收益。\n\n**Safe usable intensity：**\n\n- 推荐点 reference-safe：U=L。\n- 推荐点 reference-unsafe，或 E abstain：U=0。\n- 已推荐但 reference safety unknown：U=None。\n\n**Safe usable loss：**`L_safe=1−U/B`，U=None 时为 NA。它适用的是 90% joint target，而不是每请求零违规的目标。B=0 或 B 未识别时，不报告精确相对 loss，保留原始 L、A_R、safety 和容量 bounds。\n\n可补充 `S=C_R(c_E)` 下的 controlled-candidate loss `1−S/B` 与 load-selection component `(S−L)/B`。它们仅用于损失分解，不能称为 full partition-space regret。\n\n即使 B 未识别，推荐点自身的 A_R 和 safe/unsafe 仍应报告。不存在可用 B，不能成为不展示 unsafe recommendation 的理由。\n\n",
+    "17": "Applicability reporting rule\n\n## 17.1 事前固定报告单元\n\n完整报告全部 **60 个 workload×SLA cells**。为描述 load regime，另把每 workload 的 G0 范围按 log-intensity 均分为低、中、高三段：\n\n`u(λ)=log(λ/λ_min)/log(λ_max/λ_min)`；\n\nlow：0≤u<1/3；middle：1/3≤u<2/3；high：2/3≤u≤1。\n\nλ_min、λ_max 固定取 G0，G1 也沿用这些边界。若仅有一个 intensity，load band=not_applicable。不得按结果重新找 TPOT cutoff、合并有利 workload，或把某条不连续 safe sequence 写成连续可靠范围。\n\n每 cell 的 **service-relevant subset** 预定义为所有 `R=True 或 E=True` 的 physical points；候选全部包含。它用于判断模型在潜在可服务/实际批准条件下的误差，而不是被大量双方拒绝点稀释。全网格误差依然必须报告。\n\n## 17.2 不设综合 score；冻结一个保守的“足够条件”screen\n\n以下数值是本协议采用的研究者工程容差，不是文献标准，也不是已经满足的结果。它们只提供一个可事前判定的充分条件，失败不意味着所有用途都无价值。\n\n允许某 `(w,s)` cell 使用 **“在本测试条件内通过预设工程适用性 screen”** 的表述，必须同时满足：\n\n| 维度 | 冻结要求 |\n|---|---|\n| 非平凡服务 | N≥10；同一 candidate 至少两个不同 intensity 被 E 与 R 同时判 safe；reference 与 E 的正容量均非零 |\n| 可判定覆盖 | service-relevant subset 的双方执行均完整、resource-feasible，全部请求可配对；不得用 unknown 或 E resource reject 隐去 reference-safe 点 |\n| 错误批准 | G0、G1 全部 scheduled 点均无 O，也无 E=True/R=unknown；这是零个“已观测错误批准”，不称总体错误率为零 |\n| 容量 | G0 与 G1 的五候选容量均识别；所有 C_R>0 的 candidate 均满足 absolute relative capacity gap≤20%；相关 E/R 上端点未被 right-censored，且最高 safe 点相邻的 upper transition 宽度≤5% |\n| 请求误差 | service-relevant subset 上，TTFT 与 average TPOT 的等 candidate/point/request 加权 P90 SLA-budget-normalized absolute error 均≤10%；m=1 规则保持不变；分别列出 signed bias |\n| 推荐结果 | G0、G1 原始推荐均 reference-safe，且各自 safe usable loss≤20% |\n| 成本 | 存在第 18 节合格的同环境、matched-input、full-drain timing；该 workload 至少覆盖全部五 candidate 各一个点；这些匹配点的 median reference/evaluator physical-execution time ratio≥10；报告完整 P95 和逐点范围 |\n\n涉及 G0/G1 的门槛在各自版本分别检查，不能将两版本混合后平均。请求误差和 coverage 门槛也必须分别在两版本成立。若 G0=G1，只计算一次。\n\n容量条件中的 upper transition 仅是**采样分辨率条件**，不证明区间连续单调。更早的 transitions 尚未解决时仍完整列出；不能据此声称整段负载可靠。\n\n成本数据不合格或不足时，标为 **accuracy/decision evidence available; cost advantage unestablished**，不能偷偷继承旧 speedup 通过 screen。某一维度 NA 时为 not-assessable，不按通过处理。\n\n## 17.3 允许的论文措辞\n\n所有 cell，无论 pass/fail/not-assessable，都展示同一张 evidence table：参考正容量、E 批准覆盖、O 分子/分母、误差尾部、capacity gap/bounds、推荐 attainment、safe usable loss、成本及 censoring。\n\n单个通过 cell 只能支撑局部观察。只有至少两个不同 workload 的 cell 通过，且至少一个来自 h 组、一个来自 w 组，才允许形成 **bounded positive applicability story**；仍不称独立 held-out 泛化。未通过者及失败维度必须同时披露。\n\nlow/middle/high 分层允许报告有界的数值结果，但**不另设可事后挑选的分层 pass screen**。不能绕过 workload×SLA screen，仅挑一小段负载宣布整体实用。更广泛、连续或跨硬件的可靠性均不在本协议结论范围内。\n\n",
+    "18": "Runtime / cost comparison\n\n## 18.1 四类成本分开\n\n| 成本类别 | 定义和报告 |\n|---|---|\n| E virtual execution | 从已准备好的 pipeline/workload/profile objects 调用当前完整模拟函数到返回，包括默认 diagnostics、trajectory/hash；不包括读 reference cache |\n| R physical execution | 真正调用 pinned HELIX adapter 到返回的 wall time；包括其当前必要的初始化和指标提取，不包括事后的六 SLA 重分类 |\n| Cached reference processing | 读取/解压、standard metric recovery、六组重分类分别计时；绝不标为 HELIX physical execution |\n| Planning / campaign | 输入加载、唯一执行、分类、grid/ranking 选择、文件写出和实际 reference expenditure 分项记录 |\n\n标准主比较为 **CPU planning/simulation cost**，不是 GPU serving speedup。HELIX 的 simulated final_time_s 是模型时间，绝不能用作程序 wall time。[S1, S2]\n\n## 18.2 E 正式计时\n\n在所有 scheduled E physical inputs 上，固定一次 warmup、五次 measured repeat；每次使用干净的运行状态，profile table 可以一次加载后复用，但不能复用模拟结果。各重复 trajectory hash、status 和请求结果必须一致。评估主结果不按“最快一次”选择。\n\n保存每次外部 wall time、模型自报 runtime、event-batch 数、请求数、token 数、status、peak process memory 和环境标识。每点先取五次的 median；在这些 per-point medians 上报告 median/P95，并分 complete、resource-reject、unsupported/failed，避免把很快的提前退出当成完整预测的加速。\n\n六 SLA classifier 的成本单独测量，不能把 E physical execution 乘以六。profile load、process startup、输出序列化的实际成本另报；端到端 planning 不能把它们完全省去。\n\n## 18.3 R 成本及是否报告 ratio\n\n既有 reference 的真实执行 runtime 可作为 archival evidence 使用，但按原机器、OS、Python、worker/concurrency、计时范围分组；缺少环境或计时范围的行标 unknown。不把不同环境的历史 wall time 与新 E time 除一下，就称 controlled speedup。\n\n只有在第 13 节确实触发新增 reference 时，才获得新的 R physical timing。为避免并行争用，**本协议所有新增 HELIX physical executions 和正式 E timing 均采用同一台登记的主机、单 worker、无二者同时运行**。五候选仍全部执行。默认的实现诊断开销不为了 timing 被关闭。每个新 reference 只执行一次；不追加专门 timing 重跑。\n\n历史 timing 只有元数据足以证明相同主机/软件/并发/计时范围时才能进入 matched 表；“CPU 名称相同”不足以证明同一环境。控制条件不能满足时，仍可完成验证，但不报告 controlled ratio。\n\n合格 matched point 且 E/R 均 full-drain 时，定义：\n\n`rho_i = actual_R_physical_wall_i / median_actual_E_execution_wall_i`。\n\n报告逐点 ratio、其 median/P95、E 与 R 各自的绝对时间及计时范围。单次 R vs 五次 E median、reference wrapper 与 E wrapper 的差异必须披露；称 matched simulator-execution runtime ratio，不称纯 kernel speedup。新 timing points 是 boundary-selected subset，不外推为全矩阵速度。\n\n无合格 matched 数据时，**不报告 speedup ratio**，只并列绝对成本并说明不可直接比较。不继承 488×，也不把 cache hit 计作新 R 执行。\n\n## 18.4 total planning cost\n\n同时报告真实累计花费和一次规划的账本。一次 E grid-conditioned planning 的成本为：一次 profile/input 准备 + 每 unique point 一次 E execution + 每点六次分类 + grid/ranking/写出开销；benchmark 的重复次数是研究测量成本，不能都算进“一次规划”。\n\nR 的一次重建成本只能按真实 physical execution 计时分环境汇总，不能把 cache reclassification 冒充新模拟。历史混合环境的累计 process-seconds 不等于同机端到端 wall time。没有实际测到的重建成本标为 unavailable，不用小样本任意外推。\n\n另报本次复用 cache 的实际 postprocessing 成本、实际新 reference 次数及 wall time。G0 已有历史 refinement、G1 又依赖 E/R transition，二者都不是无 reference 信息的从零在线规划；相关成本与该限制不能从算法成本论述中消失。\n\n",
+    "19": "Aggregation / uncertainty reporting\n\n**不做显著性检验，不做 request bootstrap，不提供伪总体 workload CI。**十条固定历史 traces 不是随机抽样的独立 workload 总体；同一 trace 在多 intensity、candidate、SLA 下重复使用，也不是独立样本。\n\n主聚合遵循第 8 节的 workload/candidate/point/request 层次。judgment rates 先保留每 workload/candidate 的原始 numerator、denominator，再对有定义的 candidate 等权、workload 等权；报告实际参与聚合的候选数与 workload 数。macro rate 与 pooled count ratio 分开列，不冒用同一名称。\n\nSLA 逐组报告，不把六组当六倍独立证据。确需一个总览时对六 SLA 等权，并明确标为描述性汇总。容量先每 `(w,c,s)`，再对有效 candidate 等权汇总；no-safe、unknown、censoring 计数与误差表并列。\n\n描述变化使用每 workload 数值、min/max、经验分位数和全序列，不借助 CI 增强“普遍可靠”的语气。runtime repeats 只描述该环境的测量变动，不当作十个新 workload。\n\n排序 tie、NA、零分母、empty subset、未配对数据的规则必须全表一致。精度保留至原始浮点 round-trip；百分数只在展示时舍入。\n\n",
+    "20": "Quality checks / invariants\n\n## 20.1 在查看正式结果之前的 data gate\n\n协议正文、机器可读定义、G0 精确列表和 provenance manifest 必须先生成并保存 hash，再进入正式分类或模型执行。以下是固定机械核验，不是可调整的研究选择。\n\n1. **Pins 与对象一致。**核对 implementation、HELIX、adapter、dispatch extension、profiles、workloads、candidate pipelines 的版本与 hash。源代码、旧记录和暂停归档只读。后续 launcher 不能导入历史 runner 的“自动续跑”入口。\n2. **主库存精确。**五 candidate 的每-workload 网格相等；点数与第 3 节一致；合计 2,550 unique physical points。逐点核对 actual scaled workload 和 pipeline，不只核对 workload 的短名字。若任何数值不同，停止并报告差异，不重新定义 inventory 来凑数。\n3. **physical identity 和别名。**按照 standard_metrics_v1 的 `execution_identity`：删除 SLA/accounting 对象，保留 pipeline、workload、source commits、schema、dispatch 等其他输入；所有别名的 reconstructed metrics 必须一致，才能去重。不能以文件名或旧 SLA key 代替 physical identity。[S5]\n4. **cache recovery。**全请求计数、输出 token/list 长度、m=1 null、完成顺序、full drain、record-specific overhead、final endpoint consistency 全部核对。继承 migration tolerance：absolute=1e−7s、relative endpoint/duplicate=1e−10。这不是放宽 SLO 比较的容差。[S2, S3, S8]\n5. **历史隔离。**不导入旧 `reference_details` 的 safe 结论，不调用旧 `safe_summary` 来处理 None；这些历史辅助函数使用旧指标或二值假设，不是 Stage 6B 正式统计组件。[S11, S14]\n\n现有成功审计可以支撑“已有缓存可恢复”的前提，但本轮没有重新完成 2,550 点本地逐项核验。执行者仍必须在不观察新版 outcome 的 preflight 中生成逐点 manifest。\n\n## 20.2 正式执行和后处理 invariants\n\n- 单个 physical input 的 E execution 不接收 SLA/target；六次分类不得修改它的 request metrics、trajectory、resource status 或 hash。\n- E/R 请求 ID 集合、N、m、arrival 完全配对；m=1 的 first=last、TPOT=None；m>1 的 TPOT 与 endpoint formula 一致。\n- 每次分类的 `joint_pass+joint_fail=N`，joint fail 满足 inclusion-exclusion；pass threshold 使用 K，不能用分别 P90 TTFT/P90 TPOT 代替 joint 检查。\n- 固定 physical point 上，componentwise SLA 放宽时 pass set 只能扩大、A 不能下降；这项 monotonicity 不适用于 intensity 增大。\n- safe=True 必须对应 complete、drained、resource-feasible；hard-resource failure 的 latency counts 为 None；unsupported 和 incomplete 不能伪装成 False。\n- G0 与 G1 行可追溯，未丢失不利条件；五候选共同新增、六 SLA 全部分类；每点只有一份 physical evidence。\n- 成功 timing repeats 除 runtime/进程测量外的语义结果相同；不能用差异较小的一次覆盖其他重复。超时重复保留 timeout 标志，不算成功完整预测的高速样本。\n- capacity、best sets、tie-break、recommendation、U、loss 可以从底层记录直接复算。已知 reference-safe 的推荐应满足 U≤相同网格已识别 B；否则检查不同网格混用、单位或选择错误。\n- 全部输出中的 NA 有原因；unknown approvals、reference-safe 但 E unsupported、资源型 disagreement 必须能从总数回查。\n- 预算 ledger 按 unique identity 和 attempts 双计数，cache 命中、被选择但失败的点、未解决区间都不消失。\n\n**出现实现/提取矛盾时：**停止受影响的正式阶段、封存已有 outcomes。不得一边修改 JB-Avg-v1 一边仍把同批结果称原冻结版本。需要修改语义的修复必须形成新版本与 protocol amendment，并披露此前已看过的结果；本协议不授权自动进入该修复实验。\n\n## 20.3 本次审查读取范围与限制\n\n已读取所要求的 CURRENT_STATUS、implementation report、design、两个核心源码、两个 test 文件和 cache_audit 的正文；没有运行它们。对 `cache_manifest.json`，连接器返回了 Git blob identity，但没有正文；后续 raw 获取也失败，因此**未声称逐项审查了该大 manifest**。其 Git blob ID 为 `48f7529465dadcc26ff9a8110e88ba8d7690c607`，这不是本轮重新计算的 SHA256。\n\n因此，“protocol ready”表示定义、数据选择算法、预算及失败处理均已冻结；不表示 repository 已写入新 protocol，也不表示本轮已替代本地数据 preflight。manifest 正文未能远程展开不留给执行者任何自由选点空间：输入范围由指定 commit、固定路径、完整共同网格及预期计数锁定，校验不符则停止。\n\n",
+    "21": "Exact output artifacts that Codex should later generate\n\n本节仅规定后来正式阶段的产物契约，不是执行提示词。本轮只交付本协议 Markdown。\n\n统一新目录为 **`results/stage6b_jb_avg_v1/`**；不写入旧 `results/stage6_metric_sla/`，也不覆盖 `results/standard_metrics_v1/` 或 Stage 2–5。\n\n| 路径 / 文件 | 必须包含的内容 |\n|---|---|\n| `docs/STAGE6B_FORMAL_VALIDATION_PROTOCOL.md` | 本协议原文及版本；不得在结果后静默重写 |\n| `config/stage6b_jb_avg_protocol.json` | 六 SLA、target、10 workloads、五 shifts、tie-break、权重、quantiles、细化算法、容差、配额、timing 和 screen 的全部精确定义 |\n| `results/stage6b_jb_avg_v1/provenance/freeze_manifest.json` | protocol/source hashes、冻结时间、实施版本、data gate 结果、任何 amendment；区分已核验与继承的证据 |\n| `.../provenance/physical_registry.csv` | 每 scheduled `(w,c,λ)` 的 physical ID、input hash、source alias、所属 G0/G1、执行状态 |\n| `.../provenance/cache_reuse_manifest.json` | 每个 reused source、source SHA256、别名一致性、历史阶段；暂停旧 Stage 6 的 15 点单独标源 |\n| `.../grids/g0.json` | 10 个精确初始 common grids；每 λ 对应五候选；永久只读 |\n| `.../grids/g1.json` | 最终 scheduled grids，含失败/unknown slots；未细化时与 G0 一致 |\n| `.../grids/refinement_history.jsonl` | 每次选择前的全部 eligible brackets、排序、选定 midpoint、触发者、cache hit、五候选终态、配额余额 |\n| `.../evaluator/<physical_id>.json.gz` | 新模型完整输出、request endpoints、status、trajectory/hash、diagnostics；只生成本版本 |\n| `.../reference/<physical_id>.json.gz` | 仅本阶段真实新增 R 执行的原始记录；reused records 用 registry 引用，不复制后冒充新运行 |\n| `.../status/point_status.csv` | E/R status、资源/unsupported/技术失败原因、可配对性、每 SLA decision definedness |\n| `.../metrics/request_pairs.csv` | 每物理点/请求的 E/R TTFT、TPOT、signed/absolute error、definedness；m=1 保留 null |\n| `.../metrics/request_accuracy.csv` | G0/G1、全网格/service-relevant/load-band、每 workload 的固定加权 summaries，NA 分母 |\n| `.../metrics/judgments.csv` | 全部 `(grid_version,w,c,λ,SLA)` 的 K、J、A、三值 safe、taxonomy、失败原因和 near-boundary 标志 |\n| `.../metrics/judgment_summary.csv` | 四格 counts、所有固定 denominators、macro/pooled 标签、unknown approvals 和 coverage |\n| `.../capacity/capacities.csv` | C^-、C^+、是否识别、C、nearest unsafe、no-safe、censoring、gap 与 bounds |\n| `.../capacity/sequences.jsonl` | 全序列、所有 transitions/holes/unknowns、bracket width、未解决原因 |\n| `.../decisions/ranking.csv` | G0/G1 五候选 scores/bounds、best sets、exact/overlap/strict/tie-only、abstention/undefined、分母 |\n| `.../decisions/operating_points.csv` | G0/G1 原始 E 推荐、R actual attainment/violations、B、L、U、所有 loss 和 NA 原因 |\n| `.../applicability/evidence_cells.csv` | 全部 60 cells、各 screen 条件的值与 pass/fail/NA；不能只列通过者 |\n| `.../applicability/load_bands.csv` | 固定 log bands 下的全部描述性误差、status、coverage；不产生另一个可挑选 pass label |\n| `.../runtime/environment.json` | 主机/CPU/RAM/OS/Python、软件 pins、workers、线程环境、timing boundaries、计时器、profile loading policy |\n| `.../runtime/evaluator_samples.csv` | 全部 warmup/measurement 标记、每次 wall time/status/hash/event counts |\n| `.../runtime/reference_execution.csv` | 新 physical 实际 wall time、历史 time 来源/环境、cache hit 与 execution 严格区分 |\n| `.../runtime/cache_processing.csv` | read/decompress/recover/classify 的实际时间，不称 R execution |\n| `.../runtime/matched_ratios.csv` | 只有合格 matched full-drain rows；空表须附 insufficient_evidence 原因 |\n| `.../runtime/planning_cost.json` | 一次规划账本、benchmark 重复成本、实际 campaign 花费、不可比较/未知项 |\n| `.../checks/quality_checks.json` | 第 20 节所有 invariant 的实际检查结果，不伪填“passed” |\n| `.../checks/budget_ledger.json` | intensity slots、unique new starts、attempts、retries、cache hits、timeout 和失败计数 |\n| `.../checks/stop_summary.json` | 每 workload 及整体停止原因、未决边界、证据缺口、是否协议偏离 |\n| `.../reports/FINAL_EVIDENCE_REPORT.md` | 对 RQ1–RQ4 的实际回答，包含全部负面/未决条件，按第 23 节限定解释 |\n\n`.../` 均展开为 `results/stage6b_jb_avg_v1/`。原始请求表不为了 G0/G1 共用而重复模拟；registry/summary 用 membership 区分。\n\n主文候选图限于四类，均由完整表生成：`figures/01_request_accuracy`、`02_attainment_and_coverage`、`03_sampled_capacity`、`04_recommended_operating_points`，各输出 SVG 与 PNG。图必须显示 unknown/censoring，不能只画 successful pairs；本轮不生成图。\n\n",
+    "22": "Stop conditions\n\n## 22.1 本轮\n\n本轮在交付 protocol 后结束。没有正式 evaluator calls、新 HELIX runs、refinement、ranking 或 manuscript 实验产物。本地保存此 Markdown 不构成 repository 修改或正式阶段启动。\n\n## 22.2 后来正式阶段的正常停止\n\n每 workload 在以下任一情形停止新增 intensity：全部已观测 eligible transitions 达到 5%；没有 eligible interval；所有 midpoint 不合法；已消耗 6 个新增共同 intensity。未使用配额不转移，不为耗完预算制造点。\n\n整体在 G0 处理完成、所有 workload 停止细化、五候选 scheduled slots 全部进入终态、统计和不变量检查完成后停止。最多 300 unique new starts / 600 attempts；预算不扩展。技术失败终态可以是 unknown，不要求把每个点都跑成功才允许结束。\n\n## 22.3 立即暂停条件\n\npins 或受保护文件被改变；G0 无法按冻结定义还原；cache 别名冲突；指标语义矛盾；SLA 影响 trajectory；共同网格被破坏；计数无法守恒；超预算；计时或数据行来源不可追溯。\n\n这些属于质量问题，保留现有产物并报告；不改阈值、不换 workload、不补有利样本。局部机器故障按固定重试规则处理；反复环境故障使实验不能继续时，输出 partial/incomplete evidence，不额外改变 scientific design。\n\n## 22.4 明确不构成继续理由\n\n没有一个 cell 通过 applicability screen、错误批准太多、容量误差大、ranking 不一致、成本优势不足、结果对发表不理想，均不是继续实验或改模型的许可。\n\n",
+    "23": "What outcomes would support each possible paper interpretation\n\n| 解释 | 本协议可以支持它的证据 | 不允许的扩张 |\n|---|---|---|\n| **A. Bounded positive applicability** | 至少满足第 17 节的跨两个历史 workload、h/w 均有代表的充分条件；真实可服务、E 实际批准、原始推荐安全、误差/损失在固定容差内、成本有合格证据；并完整展示其余失败 cells | 不称 universally reliable，不称 TPOT≤X 就可靠，不外推新 workload/硬件，不把实测 GPU 安全性归于本次模拟验证 |\n| **B. Reliability / failure-boundary story** | 明确的 latency 偏差、错误批准或漏批、采样容量错位、nonmonotone transitions、unsupported/resource coverage 限制、原始推荐不达 90%；完整展示条件与后果 | 没有 ablation 的相关性只写 diagnostic association / plausible explanation，不声称已经证明某个机制的独立因果作用 |\n| **C. 当前轻量实现的工程价值不足** | 在可判定的可服务条件下，误差/推荐损失不能满足固定工程容差；或准确的条件里成本优势仍不足；或 unsupported、未决范围使有用决策覆盖过低。性能差和速度快可以同时存在，速度快本身不能挽救错误推荐 | **不能从一个固定 JB-Avg-v1 与 HELIX 的比较，证明“为了准确，任何轻量抽象都必须逼近 HELIX 复杂度”。**这需要另一个事前冻结的 accuracy–complexity 对照设计，本协议不包含它 |\n| **Evidence insufficient / incomplete** | 数据 gate、domain coverage、censoring、失败或不匹配 runtime 使某个 RQ 不能判定 | 不把未证实准确写成已证实不准确，也不把无 matched timing 写成工程价值已被否定 |\n\nA、B 可在不同条件同时成立；B、C 也可能同时成立。论文不必被强行分到一个唯一标签。screen 未通过应按具体失败维度解释，不把它自动等同于原始强版本 C。\n\n**关于 prior work：**按用户提供的出版边界，withdrawn 且未公开的 AICCC 稿不作为 prior publication；accepted 的 *Evaluator-Guided SLA-Aware Layer Partitioning for Heterogeneous LLM Pipelines* 已包括 evaluator-induced capacity、预定义 allocation family、candidate comparison、coarse-to-fine search，因此它们不作为 journal 的主要新增贡献。这一出版状态来自用户说明及仓库记录，本轮没有独立向出版社核实。[U1, S2]\n\n新贡献允许定位于：标准指标语义下的可审计验证协议与实证结果、误差到 90% joint decision 的传播、有限共同网格的容量/coverage 边界、controlled ranking 与原始 operating-point 后果、准确度与计算成本的条件性权衡。结论方向由实验决定。\n\n---\n\n## 审查依据与来源索引\n\n所有仓库资料均读取或定位于 `HaochenLv/JournalArticle@eb614e16c9ad3eba44068d58e51b49eabcbdfe14`，未使用后来 default branch 的结果来调整协议。下列 Git blob IDs 是仓库返回的对象标识，不是本轮重新计算的内容 SHA256。\n\n| 编号 | 来源 | 本轮使用范围 |\n|---|---|---|\n| U1 | 用户附件《粘贴的文本 (1)(2).txt》 | 任务、研究问题、候选 SLA、预算、出版边界和阶段约束 |\n| S1 | `CURRENT_STATUS.md`；blob `d386d2e55e7f696bf4ee6807b97e8612b080841c` | Stage 6A 状态、库存来源、历史阶段隔离；历史结果不作新版证据 |\n| S2 | `docs/JB_AVG_V1_IMPLEMENTATION_REPORT.md`；blob `bd99f10b396ab6ebd8871adacfae38ea7bede8c6` | 模型契约、reference 恢复、已报告的测试及局限 |\n| S3 | `config/jb_avg_v1_design.json`；blob `0d21dbc9f4a3ad999cd0d41aa3ff4df0ddd24d6a` | 冻结计算、事件、memory、domain、migration conventions |\n| S4 | `src/jb_avg_v1.py`；blob `ab105dd8a4ce09640153f567df18f7641c6293cd` | 实现静态阅读，尤其 singleton、profile、进度、hard gate 和输出 |\n| S5 | `src/standard_metrics_v1.py`；blob `8237f2d9f1666636d274ced363d47128ccbc75fe` | 三值状态、joint counts、Decimal ceil、identity 与 recovery |\n| S6 | `tests/test_jb_avg_v1.py`；blob `f708e047ec4d06f1d8420ecf395e37a3ac5a8a83` | 静态检查测试覆盖；本轮没有重跑测试 |\n| S7 | `tests/test_standard_metrics_v1.py`；blob `c38b867b57965235a03964763312ae93e7010298` | 90% ceil、disjoint success trap、m=1、recovery 异常约定 |\n| S8 | `results/standard_metrics_v1/cache_audit.json`；blob `7b8cd55f7b9a386ef36fc06a8b91e8a81c46b966` | 已有 3,184/3,184 可恢复审计、2,550 inventory count；非本轮新审计 |\n| S9 | `results/standard_metrics_v1/cache_manifest.json`；blob `48f7529465dadcc26ff9a8110e88ba8d7690c607` | 仅取得对象标识，正文获取失败；不得误报逐项审查完成 |\n| S10 | `config/formal_protocol.json`；blob `ee5263cd64a445d76d639129fc96286e9b6242db` | h workloads、pins、profile hashes、主链路、历史 scaling 元数据 |\n| S11 | `src/research.py`；blob `e48820870ebc0746da3f6687052ebe0591453e32` | candidate 层数组成、硬件次序、physical input 和 reference timer 范围；旧 verdict 未复用 |\n| S12 | `config/sla_sensitivity_protocol.json`、`config/jb1_plus_protocol.json`，配合 S1 | 历史设计/来源、w 请求数与窗口、主库存和约束；读取相关段落，不把旧 outcome 当新证据 |\n| S13 | `results/sla_sensitivity/refinement/`、`results/jb1_plus/refinement/` 的 Git tree 及 h101 记录开头 | 确认归档路径及 original/final grid 必须区分；本轮未重新枚举所有最终网格值 |\n| S14 | `src/formal_core.py`；blob `e74b8600df72c9b1158dcec8ee106ec3f5f76cf2` | 识别不应照搬的旧 latency、二值 summary 和历史 tie-break |\n| L1 | Zhong et al., *DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving*, arXiv:2401.09670v3，Table 1 及 §6.1 | 外部核验 2.5s/0.15s 的具体文献语境；HTML 原文，不把它宣称为生产标准 |\n\n**冻结说明：**本文所有预算、容差和判据均为事前设计。第 17 节的 10% latency-budget error 容差与“90% 请求通过、允许最多约 10% 请求违规”是两个不同概念，不能互相推出。本轮没有观察 Stage 6B evaluator outcomes；没有执行 evaluator、HELIX、正式矩阵或源码测试。\n\n**Final status：PROTOCOL READY。**\n"
+  },
+  "protocol_sha256": "df081a529e795c61f4107cca90b19ee0ffd935036cdfa09467931593b3c208ab",
+  "source_attachment": "C:\\Users\\haoch\\Downloads\\STAGE6B_FORMAL_VALIDATION_PROTOCOL.md"
+}

@@ -1,0 +1,14 @@
+test_N_required_ceil_90_percent (test_standard_metrics_v1.StandardMetricsTests.test_N_required_ceil_90_percent) ... ok
+test_O_disjoint_success_trap (test_standard_metrics_v1.StandardMetricsTests.test_O_disjoint_success_trap) ... ok
+test_integrity_failures_retained (test_standard_metrics_v1.StandardMetricsTests.test_integrity_failures_retained) ... ok
+test_malformed_definedness_rejected (test_standard_metrics_v1.StandardMetricsTests.test_malformed_definedness_rejected) ... ok
+test_malformed_record_shapes_are_retained_not_raised (test_standard_metrics_v1.StandardMetricsTests.test_malformed_record_shapes_are_retained_not_raised) ... ok
+test_missing_overhead_is_unsupported (test_standard_metrics_v1.StandardMetricsTests.test_missing_overhead_is_unsupported) ... ok
+test_physical_identity_ignores_accounting_but_not_workload (test_standard_metrics_v1.StandardMetricsTests.test_physical_identity_ignores_accounting_but_not_workload) ... ok
+test_record_specific_overhead_no_mutation_and_postfirst (test_standard_metrics_v1.StandardMetricsTests.test_record_specific_overhead_no_mutation_and_postfirst) ... ok
+test_single_token_TPOT_none_and_only_TTFT (test_standard_metrics_v1.StandardMetricsTests.test_single_token_TPOT_none_and_only_TTFT) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK

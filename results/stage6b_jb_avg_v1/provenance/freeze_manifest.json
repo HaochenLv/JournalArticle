@@ -1,0 +1,16 @@
+{
+  "protocol_id": "FI-JBAVG-S6B-v1",
+  "frozen_utc": "2026-09-18T06:17:26.160400+00:00",
+  "implementation_pin": "eb614e16c9ad3eba44068d58e51b49eabcbdfe14",
+  "protocol_sha256": "df081a529e795c61f4107cca90b19ee0ffd935036cdfa09467931593b3c208ab",
+  "config_sha256": "38d1a0c3faa49a0eb8c4bf53d1f2964498d5c2dc784d15f65452c55f6b009fa4",
+  "source_hashes_sha256": "b405f2fa6a0b530771c2f7a644e54d40d6e87e68cc5a1aa22f0c74ffc882e56f",
+  "g0_sha256": "77f93375c4afc7e798dcc50a6fff12459e539feaab3a8ae4344daab3d323be8d",
+  "data_gate": "passed",
+  "data_gate_sha256": "79b06a643360a980706aaaa2be2e6c4fe451e66861ce9e6fd1ad198a1a803fa9",
+  "amendments": [],
+  "formal_evaluator_calls_before_freeze": 0,
+  "classifications_before_freeze": 0,
+  "verified_evidence": "all G0 actual inputs, source hashes, aliases and metric identities",
+  "inherited_evidence": "historical execution environment not asserted matched"
+}

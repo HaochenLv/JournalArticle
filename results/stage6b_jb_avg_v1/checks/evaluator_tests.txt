@@ -1,0 +1,25 @@
+test_A_single_output (test_jb_avg_v1.JBAvgTests.test_A_single_output) ... ok
+test_B_two_outputs_first_increment_excluded (test_jb_avg_v1.JBAvgTests.test_B_two_outputs_first_increment_excluded) ... ok
+test_C_isolated_no_network (test_jb_avg_v1.JBAvgTests.test_C_isolated_no_network) ... ok
+test_D_two_decode_batch_cost_once (test_jb_avg_v1.JBAvgTests.test_D_two_decode_batch_cost_once) ... ok
+test_E_mixed_resource_cost (test_jb_avg_v1.JBAvgTests.test_E_mixed_resource_cost) ... ok
+test_F_two_prefills_use_aggregate_profile (test_jb_avg_v1.JBAvgTests.test_F_two_prefills_use_aggregate_profile) ... ok
+test_G_half_bandwidth_only_serialization_changes (test_jb_avg_v1.JBAvgTests.test_G_half_bandwidth_only_serialization_changes) ... ok
+test_H_midround_fractional_progress_survives (test_jb_avg_v1.JBAvgTests.test_H_midround_fractional_progress_survives) ... ok
+test_I_thresholds_only_classify_full_drain (test_jb_avg_v1.JBAvgTests.test_I_thresholds_only_classify_full_drain) ... ok
+test_J_q_does_not_change_isolated_first_token (test_jb_avg_v1.JBAvgTests.test_J_q_does_not_change_isolated_first_token) ... ok
+test_K_KV_block_transition (test_jb_avg_v1.JBAvgTests.test_K_KV_block_transition) ... ok
+test_L_atomic_finish_and_arrival (test_jb_avg_v1.JBAvgTests.test_L_atomic_finish_and_arrival) ... ok
+test_M_profile_boundary_and_max_plus_one (test_jb_avg_v1.JBAvgTests.test_M_profile_boundary_and_max_plus_one) ... ok
+test_P_diagnostic_shares_conserve_without_feedback (test_jb_avg_v1.JBAvgTests.test_P_diagnostic_shares_conserve_without_feedback) ... ok
+test_hard_resource_distinct_from_latency (test_jb_avg_v1.JBAvgTests.test_hard_resource_distinct_from_latency) ... ok
+test_memory_failure_at_block_boundary_not_latency_miss (test_jb_avg_v1.JBAvgTests.test_memory_failure_at_block_boundary_not_latency_miss) ... ok
+test_memory_weights_workspace_reserve_KV_activations (test_jb_avg_v1.JBAvgTests.test_memory_weights_workspace_reserve_KV_activations) ... ok
+test_pinned_profiles_match_every_knot_and_interpolation (test_jb_avg_v1.JBAvgTests.test_pinned_profiles_match_every_knot_and_interpolation) ... ok
+test_q_one_firsttoken_and_block_tie (test_jb_avg_v1.JBAvgTests.test_q_one_firsttoken_and_block_tie) ... ok
+test_shared_physical_link_counts_distinct_messages (test_jb_avg_v1.JBAvgTests.test_shared_physical_link_counts_distinct_messages) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.066s
+
+OK

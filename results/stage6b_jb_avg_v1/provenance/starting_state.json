@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-18T06:16:35.284595+00:00",
+  "head": "eb614e16c9ad3eba44068d58e51b49eabcbdfe14",
+  "status_short": "?? results/stage6b_jb_avg_v1/",
+  "log_5": "eb614e1 implementation: add JB-Avg-v1 semantic realignment\n881f5cb analysis: summarize JB1+ correction evidence\nec4ec0a experiment: evaluate remaining-Prefill correction\ne3887ca experiment: freeze JB1+ remaining-work protocol\n4e579bb analysis: summarize SLA sensitivity evidence",
+  "initial_observed_status_before_creating_runner": "clean",
+  "formal_evaluator_calls": 0,
+  "new_helix_attempts": 0
+}
