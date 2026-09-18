@@ -1,0 +1,15 @@
+{
+  "visual_review": "passed",
+  "utc": "2026-09-18T09:10:14.429273+00:00",
+  "review": "All four PNGs inspected. Request accuracy includes all-workload paired/unsupported coverage. Judgment chart retains unknown. Capacity chart retains unknown bounds and censoring. Operating chart retains abstentions and unsafe markers; colorbar placed outside data and attainment displayed to three decimals. Matching SVGs exported from the same figures.",
+  "files": {
+    "01_request_accuracy.png": "39af80cf38e2d8374d60e0a183b3cb15e7a16931d5ac6393df561a91f0312cab",
+    "01_request_accuracy.svg": "8aa66acc6208bda12c7652a1f12f916aa8b221749a84780b5992eecf07edfe1a",
+    "02_attainment_and_coverage.png": "ffecd544940dfd91343901c82e1906b5a88b38fd21cf0430808064c5c5a84887",
+    "02_attainment_and_coverage.svg": "312aa739643a9abce35e3184c328d81d1211ce0240e85dd3fe0b8e54274dd3ed",
+    "03_sampled_capacity.png": "9bb31aeffead31ba90eaf66474cf8ec6a1fe68dd9dfe9c4006a51a5612bc8331",
+    "03_sampled_capacity.svg": "e1be2fa1992ed64b8ac8275142c55e250bfebc8a06a9180f28309ec231516ffc",
+    "04_recommended_operating_points.png": "c897120592fb4a807d723761e7bfe7e242cc5bc9b8ea6fa9ce19699d3abba444",
+    "04_recommended_operating_points.svg": "dc1dd761a97048cef4d417117a999966dc22374c96c298eb0f461af2836d0f22"
+  }
+}

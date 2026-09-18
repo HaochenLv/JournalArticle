@@ -1,0 +1,29 @@
+grid_version,SLA,scope,scheduled_cases,both_nonempty_identified,exact_set_agreement,exact_set_agreement_fraction,defined_coverage,na_reason,counts,strict_mismatch,tie_only_mismatch,selected_equal,abstention
+G0,S1,all_cases,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G0,S1,uncensored,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G0,S2,all_cases,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G0,S2,uncensored,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G0,S3,all_cases,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G0,S3,uncensored,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G0,S4,all_cases,10,1,0,0.0,0.1,,"{""undefined"":9,""overlap_nonidentical"":1}",0,0,1,{}
+G0,S4,uncensored,9,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":9}",0,0,0,{}
+G0,S5,all_cases,10,1,1,1.0,0.1,,"{""undefined"":9,""exact_set_agreement"":1}",0,0,1,{}
+G0,S5,uncensored,9,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":9}",0,0,0,{}
+G0,S6,all_cases,10,1,1,1.0,0.1,,"{""undefined"":9,""exact_set_agreement"":1}",0,0,1,{}
+G0,S6,uncensored,8,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":8}",0,0,0,{}
+G0,ALL_SLA_DESCRIPTIVE,all_cases,60,3,2,0.6666666666666666,0.05,,"{""undefined"":57,""overlap_nonidentical"":1,""exact_set_agreement"":2}",0,0,3,"{""abstain_unknown"":27,""abstain_no_safe"":3}"
+G0,ALL_SLA_DESCRIPTIVE,uncensored,56,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":56}",0,0,0,"{""abstain_unknown"":27,""abstain_no_safe"":3}"
+G1,S1,all_cases,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G1,S1,uncensored,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G1,S2,all_cases,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G1,S2,uncensored,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G1,S3,all_cases,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G1,S3,uncensored,10,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":10}",0,0,0,"{""abstain_unknown"":9,""abstain_no_safe"":1}"
+G1,S4,all_cases,10,1,0,0.0,0.1,,"{""undefined"":9,""overlap_nonidentical"":1}",0,0,1,{}
+G1,S4,uncensored,9,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":9}",0,0,0,{}
+G1,S5,all_cases,10,1,1,1.0,0.1,,"{""undefined"":9,""exact_set_agreement"":1}",0,0,1,{}
+G1,S5,uncensored,9,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":9}",0,0,0,{}
+G1,S6,all_cases,10,1,1,1.0,0.1,,"{""undefined"":9,""exact_set_agreement"":1}",0,0,1,{}
+G1,S6,uncensored,8,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":8}",0,0,0,{}
+G1,ALL_SLA_DESCRIPTIVE,all_cases,60,3,2,0.6666666666666666,0.05,,"{""undefined"":57,""overlap_nonidentical"":1,""exact_set_agreement"":2}",0,0,3,"{""abstain_unknown"":27,""abstain_no_safe"":3}"
+G1,ALL_SLA_DESCRIPTIVE,uncensored,56,0,0,,0.0,no two identified nonempty best sets,"{""undefined"":56}",0,0,0,"{""abstain_unknown"":27,""abstain_no_safe"":3}"

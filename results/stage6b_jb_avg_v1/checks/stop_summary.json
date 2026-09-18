@@ -1,0 +1,3611 @@
+{
+  "status": "complete",
+  "workloads": {
+    "h101": {
+      "reason": "intensity quota exhausted",
+      "unresolved_brackets": [
+        {
+          "a": "0.064",
+          "b": "0.090509668",
+          "ratio": "1.4142135625",
+          "midpoint": "0.0761092554",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.128",
+          "b": "0.181019336",
+          "ratio": "1.4142135625",
+          "midpoint": "0.1522185107",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.256",
+          "b": "0.362038672",
+          "ratio": "1.4142135625",
+          "midpoint": "0.3044370215",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.7240773439",
+          "b": "1.024",
+          "ratio": "1.4142135624415025976066864201742909967604636165443",
+          "midpoint": "0.8610779292",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": false,
+              "right": true,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.045254834",
+          "b": "0.064",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.0538173706",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.090509668",
+          "b": "0.128",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.1076347412",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.181019336",
+          "b": "0.256",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.2152694823",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.0380546277",
+          "b": "0.045254834",
+          "ratio": "1.1892071144871560522453882790186908069527638553142",
+          "midpoint": "0.0414988658",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "3.1584477704",
+          "b": "3.4443117169",
+          "ratio": "1.0905077326840826330733868512793691882035625128348",
+          "midpoint": "3.2982841998",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "3.4443117169",
+          "b": "3.756048561",
+          "ratio": "1.0905077326684513825804939879249754324116238353932",
+          "midpoint": "3.5968044245",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.6088740429",
+          "b": "0.663981852",
+          "ratio": "1.0905077326626170090589026816271920926061208512720",
+          "midpoint": "0.6358311998",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        }
+      ]
+    },
+    "h102": {
+      "reason": "intensity quota exhausted",
+      "unresolved_brackets": [
+        {
+          "a": "0.064",
+          "b": "0.090509668",
+          "ratio": "1.4142135625",
+          "midpoint": "0.0761092554",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.128",
+          "b": "0.181019336",
+          "ratio": "1.4142135625",
+          "midpoint": "0.1522185107",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.045254834",
+          "b": "0.064",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.0538173706",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.090509668",
+          "b": "0.128",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.1076347412",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.181019336",
+          "b": "0.256",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.2152694823",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.4305389646",
+          "b": "0.512",
+          "ratio": "1.1892071150300713107628447155883739494643639973115",
+          "midpoint": "0.4695060701",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.362038672",
+          "b": "0.4305389646",
+          "ratio": "1.1892071148686569041442070033888534427062532148499",
+          "midpoint": "0.3948059713",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.0380546277",
+          "b": "0.045254834",
+          "ratio": "1.1892071144871560522453882790186908069527638553142",
+          "midpoint": "0.0414988658",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        }
+      ]
+    },
+    "h103": {
+      "reason": "intensity quota exhausted",
+      "unresolved_brackets": [
+        {
+          "a": "0.032",
+          "b": "0.045254834",
+          "ratio": "1.4142135625",
+          "midpoint": "0.0380546277",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.064",
+          "b": "0.090509668",
+          "ratio": "1.4142135625",
+          "midpoint": "0.0761092554",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.128",
+          "b": "0.181019336",
+          "ratio": "1.4142135625",
+          "midpoint": "0.1522185107",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.512",
+          "b": "0.7240773439",
+          "ratio": "1.4142135623046875",
+          "midpoint": "0.6088740429",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": false,
+              "right": true,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.045254834",
+          "b": "0.064",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.0538173706",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.090509668",
+          "b": "0.128",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.1076347412",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.181019336",
+          "b": "0.256",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.2152694823",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.362038672",
+          "b": "0.512",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.4305389646",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.7240773439",
+          "b": "0.8610779292",
+          "ratio": "1.1892071150328944852378773620678121040709999212558",
+          "midpoint": "0.7896119426",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        }
+      ]
+    },
+    "h104": {
+      "reason": "intensity quota exhausted",
+      "unresolved_brackets": [
+        {
+          "a": "0.032",
+          "b": "0.045254834",
+          "ratio": "1.4142135625",
+          "midpoint": "0.0380546277",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.064",
+          "b": "0.090509668",
+          "ratio": "1.4142135625",
+          "midpoint": "0.0761092554",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.128",
+          "b": "0.181019336",
+          "ratio": "1.4142135625",
+          "midpoint": "0.1522185107",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.022627417",
+          "b": "0.032",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.0269086853",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.045254834",
+          "b": "0.064",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.0538173706",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.090509668",
+          "b": "0.128",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.1076347412",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.181019336",
+          "b": "0.256",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.2152694823",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.3044370215",
+          "b": "0.362038672",
+          "ratio": "1.1892071148777810519999454139975548276082447482492",
+          "midpoint": "0.3319909260",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        }
+      ]
+    },
+    "h105": {
+      "reason": "intensity quota exhausted",
+      "unresolved_brackets": [
+        {
+          "a": "0.128",
+          "b": "0.181019336",
+          "ratio": "1.4142135625",
+          "midpoint": "0.1522185107",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.256",
+          "b": "0.362038672",
+          "ratio": "1.4142135625",
+          "midpoint": "0.3044370215",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "1.024",
+          "b": "1.4481546879",
+          "ratio": "1.41421356240234375",
+          "midpoint": "1.2177480858",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "R",
+              "left": false,
+              "right": true,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": false,
+              "right": true,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "46.3409500118",
+          "b": "65.536",
+          "ratio": "1.4142135623743639257283785868957182076463802565500",
+          "midpoint": "55.1089874700",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "5.7926187515",
+          "b": "8.192",
+          "ratio": "1.4142135623682604101033939761433305162341305865588",
+          "midpoint": "6.8886234338",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.512",
+          "b": "0.7240773439",
+          "ratio": "1.4142135623046875",
+          "midpoint": "0.6088740429",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.045254834",
+          "b": "0.064",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.0538173706",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.090509668",
+          "b": "0.128",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.1076347412",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.181019336",
+          "b": "0.256",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.2152694823",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.362038672",
+          "b": "0.512",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.4305389646",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.064",
+          "b": "0.0761092554",
+          "ratio": "1.189207115625",
+          "midpoint": "0.0697924949",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.7240773439",
+          "b": "0.8610779292",
+          "ratio": "1.1892071150328944852378773620678121040709999212558",
+          "midpoint": "0.7896119426",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.8610779292",
+          "b": "1.024",
+          "ratio": "1.1892071150300713107628447155883739494643639973115",
+          "midpoint": "0.9390121402",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "11.585237503",
+          "b": "13.7772468675",
+          "ratio": "1.1892071149972004160474395757409100394167378857576",
+          "midpoint": "12.6337910818",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "5.3118548159",
+          "b": "5.7926187515",
+          "ratio": "1.0905077326588307818061198828858601071164114457438",
+          "midpoint": "5.5470307203",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "R",
+              "left": false,
+              "right": true,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        }
+      ]
+    },
+    "h106": {
+      "reason": "intensity quota exhausted",
+      "unresolved_brackets": [
+        {
+          "a": "0.362038672",
+          "b": "0.512",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.4305389646",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.045254834",
+          "b": "0.0538173706",
+          "ratio": "1.1892071154210840768966250102696211414674507479135",
+          "midpoint": "0.0493507464",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.512",
+          "b": "0.6088740429",
+          "ratio": "1.1892071150390625",
+          "midpoint": "0.5583399591",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.181019336",
+          "b": "0.2152694823",
+          "ratio": "1.1892071148686569041442070033888534427062532148499",
+          "midpoint": "0.1974029857",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.128",
+          "b": "0.1522185107",
+          "ratio": "1.18920711484375",
+          "midpoint": "0.1395849898",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.0761092554",
+          "b": "0.090509668",
+          "ratio": "1.1892071144871560522453882790186908069527638553142",
+          "midpoint": "0.0829977315",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.0538173706",
+          "b": "0.064",
+          "ratio": "1.1892071144776441381920654443864635779883307788359",
+          "midpoint": "0.0586882588",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.1076347412",
+          "b": "0.128",
+          "ratio": "1.1892071144776441381920654443864635779883307788359",
+          "midpoint": "0.1173765176",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.090509668",
+          "b": "0.0987014929",
+          "ratio": "1.0905077333837971872794848833165535421033695538470",
+          "midpoint": "0.0945168734",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.165995463",
+          "b": "0.181019336",
+          "ratio": "1.0905077327324301628653549404540050591623699980282",
+          "midpoint": "0.1733447100",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        }
+      ]
+    },
+    "w201": {
+      "reason": "intensity quota exhausted",
+      "unresolved_brackets": [
+        {
+          "a": "0.064",
+          "b": "0.090509668",
+          "ratio": "1.4142135625",
+          "midpoint": "0.0761092554",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.128",
+          "b": "0.181019336",
+          "ratio": "1.4142135625",
+          "midpoint": "0.1522185107",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.256",
+          "b": "0.362038672",
+          "ratio": "1.4142135625",
+          "midpoint": "0.3044370215",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "4.096",
+          "b": "5.7926187515",
+          "ratio": "1.4142135623779296875",
+          "midpoint": "4.8709923431",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "8.192",
+          "b": "11.585237503",
+          "ratio": "1.4142135623779296875",
+          "midpoint": "9.7419846861",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "16.384",
+          "b": "23.1704750059",
+          "ratio": "1.414213562371826171875",
+          "midpoint": "19.4839693722",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "5.7926187515",
+          "b": "8.192",
+          "ratio": "1.4142135623682604101033939761433305162341305865588",
+          "midpoint": "6.8886234338",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.045254834",
+          "b": "0.064",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.0538173706",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.090509668",
+          "b": "0.128",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.1076347412",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.181019336",
+          "b": "0.256",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.2152694823",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.362038672",
+          "b": "0.512",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.4305389646",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.7240773439",
+          "b": "0.8610779292",
+          "ratio": "1.1892071150328944852378773620678121040709999212558",
+          "midpoint": "0.7896119426",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        }
+      ]
+    },
+    "w202": {
+      "reason": "intensity quota exhausted",
+      "unresolved_brackets": [
+        {
+          "a": "0.045254834",
+          "b": "0.064",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.0538173706",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.090509668",
+          "b": "0.128",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.1076347412",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.181019336",
+          "b": "0.256",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.2152694823",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.362038672",
+          "b": "0.512",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.4305389646",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.1522185107",
+          "b": "0.181019336",
+          "ratio": "1.1892071152684060520111237693248564939480780243897",
+          "midpoint": "0.1659954630",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.256",
+          "b": "0.3044370215",
+          "ratio": "1.189207115234375",
+          "midpoint": "0.2791699796",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.512",
+          "b": "0.6088740429",
+          "ratio": "1.1892071150390625",
+          "midpoint": "0.5583399591",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.3044370215",
+          "b": "0.362038672",
+          "ratio": "1.1892071148777810519999454139975548276082447482492",
+          "midpoint": "0.3319909260",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.128",
+          "b": "0.1522185107",
+          "ratio": "1.18920711484375",
+          "midpoint": "0.1395849898",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.0761092554",
+          "b": "0.090509668",
+          "ratio": "1.1892071144871560522453882790186908069527638553142",
+          "midpoint": "0.0829977315",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        }
+      ]
+    },
+    "w203": {
+      "reason": "intensity quota exhausted",
+      "unresolved_brackets": [
+        {
+          "a": "0.090509668",
+          "b": "0.128",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.1076347412",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.181019336",
+          "b": "0.256",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.2152694823",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.362038672",
+          "b": "0.512",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.4305389646",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "2.8963093757",
+          "b": "3.4443117169",
+          "ratio": "1.1892071150263617882608092404553410430062435128829",
+          "midpoint": "3.1584477704",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "R",
+              "left": false,
+              "right": true,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "R",
+              "left": false,
+              "right": true,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "R",
+              "left": false,
+              "right": true,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "R",
+              "left": false,
+              "right": true,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "R",
+              "left": false,
+              "right": true,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "2.048",
+          "b": "2.4354961715",
+          "ratio": "1.189207114990234375",
+          "midpoint": "2.2333598365",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.6088740429",
+          "b": "0.7240773439",
+          "ratio": "1.1892071149088559708742348162268817257212066315202",
+          "midpoint": "0.6639818520",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        }
+      ]
+    },
+    "w204": {
+      "reason": "intensity quota exhausted",
+      "unresolved_brackets": [
+        {
+          "a": "0.064",
+          "b": "0.090509668",
+          "ratio": "1.4142135625",
+          "midpoint": "0.0761092554",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.128",
+          "b": "0.181019336",
+          "ratio": "1.4142135625",
+          "midpoint": "0.1522185107",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.512",
+          "b": "0.7240773439",
+          "ratio": "1.4142135623046875",
+          "midpoint": "0.6088740429",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.045254834",
+          "b": "0.064",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.0538173706",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.090509668",
+          "b": "0.128",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.1076347412",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.181019336",
+          "b": "0.256",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.2152694823",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.362038672",
+          "b": "0.512",
+          "ratio": "1.4142135622461900976147653088286656846426615994216",
+          "midpoint": "0.4305389646",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 0,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 1,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": 2,
+              "sla": "S6",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.032",
+          "b": "0.0380546277",
+          "ratio": "1.189207115625",
+          "midpoint": "0.0348962475",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.256",
+          "b": "0.3044370215",
+          "ratio": "1.189207115234375",
+          "midpoint": "0.2791699796",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "E",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            },
+            {
+              "candidate": -2,
+              "sla": "S5",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        },
+        {
+          "a": "0.0380546277",
+          "b": "0.045254834",
+          "ratio": "1.1892071144871560522453882790186908069527638553142",
+          "midpoint": "0.0414988658",
+          "legal": true,
+          "witnesses": [
+            {
+              "candidate": 2,
+              "sla": "S4",
+              "model": "R",
+              "left": true,
+              "right": false,
+              "left_status": "classified",
+              "right_status": "classified"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "protocol_deviations": []
+}

@@ -1,0 +1,61 @@
+grid_version,workload,SLA,candidate,L,physical_id,abstention,recommendation_under_incomplete_coverage,A_R,J_R,N,K,safe_R,reference_status,ttft_fail,tpot_fail,both_fail,joint_fail,joint_fail_fraction,ttft_fail_fraction,tpot_fail_over_N,attainment_shortfall,excess_fail_count,B,U,arithmetic_loss,safe_usable_loss,loss_na_reason,actual_na_reason,candidate_loss,load_selection_loss,N_D,tpot_fail_fraction,tpot_fraction_na_reason
+G1,h101,S1,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h101,S2,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h101,S3,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h101,S4,-2,0.090509668,49981da485cd2c38ea0fc66a9520b689905896fe7dc28d5a4f37f867a68165b0,,True,1.0,16,16,15,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.128,0.090509668,0.29289321874999996,0.29289321874999996,,,0.0,0.29289321875,16,0.0,
+G1,h101,S5,0,0.181019336,620a68e67e2dda38a8b259505691306f8a02ff3f6d33d39e50d2c323520f1629,,True,0.9375,15,16,15,True,classified,0,1,0,1,0.0625,0.0,0.0625,0,0,0.256,0.181019336,0.29289321874999996,0.29289321874999996,,,0.29289321874999996,0.0,16,0.0625,
+G1,h101,S6,0,0.6088740429,e75bb5430f9d981bcad02221d7bf06283ee95e5cf0e3168d1dc9a8ce521e2518,,True,1.0,16,16,15,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,3.4443117169,0.6088740429,0.8232233046990277,0.8232233046990277,,,0.0,0.8232233046990277,16,0.0,
+G1,h102,S1,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h102,S2,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h102,S3,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h102,S4,-1,0.090509668,16113362121edea8df61d4186a3e03e4a2c02be8ac76187842f4c31606c334e3,,True,1.0,54,54,49,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.128,0.090509668,0.29289321874999996,0.29289321874999996,,,0.0,0.29289321875,54,0.0,
+G1,h102,S5,0,0.181019336,c3cf99ab25fb589fdb695b4d4820aebcf221b22934b9d30821b02b2127136568,,True,0.6296296296296297,34,54,49,False,classified,0,20,0,20,0.37037037037037035,0.0,0.37037037037037035,0.27037037037037037,15,0.181019336,0,0.0,1.0,,,0.2928932188769049,-0.29289321887690495,54,0.37037037037037035,
+G1,h102,S6,0,0.4305389646,b576e33cd9991795e59bca5351fe8285816943acafa866ee069ba6fb39251d48,,True,0.9629629629629629,52,54,49,True,classified,1,1,0,2,0.037037037037037035,0.018518518518518517,0.018518518518518517,0,0,0.4305389646,0.4305389646,0.0,0.0,,,0.0,0.0,54,0.018518518518518517,
+G1,h103,S1,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h103,S2,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h103,S3,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h103,S4,-2,0.090509668,dd5abc07d622c4733267285597d700e06d1affad8da6f6d07e23708b9fda46f7,,True,1.0,15,15,14,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.090509668,0.090509668,0.0,0.0,,,0.0,0.0,15,0.0,
+G1,h103,S5,0,0.128,b4a8d33e744d4293b444bb86dbd24bb1856571b9ca7378e093ff93b51dd86ba2,,True,1.0,15,15,14,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.181019336,0.128,0.2928932188769049,0.2928932188769049,,,0.2928932188769049,0.0,15,0.0,
+G1,h103,S6,0,0.512,e96216757b724ed0a1e98446b0fecf560fc3a88f858931bb8cc2ce3fc4525ba6,,True,1.0,15,15,14,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.7240773439,0.512,0.2928932187792487,0.2928932187792487,,,0.0,0.2928932187792487,15,0.0,
+G1,h104,S1,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h104,S2,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h104,S3,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h104,S4,-2,0.064,a87b323a1bff83bcc00244960331296f0b0590a15f2a06e81695862384cbb94f,,True,0.9876543209876543,80,81,73,True,classified,0,1,0,1,0.012345679012345678,0.0,0.012345679012345678,0,0,0.090509668,0.064,0.2928932188769049,0.2928932188769049,,,0.0,0.29289321887690495,81,0.012345679012345678,
+G1,h104,S5,0,0.128,1ccefba6a948a7d9136a542b8846d9693202c07e87f5e1fb44274763ad71567a,,True,0.7407407407407407,60,81,73,False,classified,0,21,0,21,0.25925925925925924,0.0,0.25925925925925924,0.15925925925925932,13,0.128,0,0.0,1.0,,,0.29289321874999996,-0.29289321875,81,0.25925925925925924,
+G1,h104,S6,0,0.3044370215,a669b9c7878af1395d331fd27d8976f16e00b04c835e43ed70f91d94436ff9b1,,True,0.9382716049382716,76,81,73,True,classified,0,5,0,5,0.06172839506172839,0.0,0.06172839506172839,0,0,0.3044370215,0.3044370215,0.0,0.0,,,0.0,0.0,81,0.06172839506172839,
+G1,h105,S1,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h105,S2,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h105,S3,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h105,S4,-2,0.128,3a890328a6c4510a3d90f33d77e3701578f5d5570be96400c82eff99e4c74c05,,True,1.0,14,14,13,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.181019336,0.128,0.2928932188769049,0.2928932188769049,,,0.0,0.29289321887690495,14,0.0,
+G1,h105,S5,0,0.256,d4dca59700c1e918a0b694c0627286abb6b8b4f26a095d19e34843717ac61b7a,,True,1.0,14,14,13,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,5.7926187515,0.256,0.9558058261759919,0.9558058261759919,,,0.9558058261759919,0.0,14,0.0,
+G1,h105,S6,0,0.7240773439,e553738d3c60123d3b43d9594202de101520bdebdcd497a4a6659fc889fc7065,,True,0.9285714285714286,13,14,13,True,classified,0,1,0,1,0.07142857142857142,0.0,0.07142857142857142,0,0,65.536,0.7240773439,0.9889514565444947,0.9889514565444947,,,0.0,0.9889514565444946,14,0.07142857142857142,
+G1,h106,S1,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h106,S2,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h106,S3,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,h106,S4,-2,0.1076347412,b4623401b01a5bce3fda01c55d68e64b9261c7a19b3ee35d31c3df498db56878,,True,1.0,49,49,45,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.1522185107,0.1076347412,0.2928932184067151,0.2928932184067151,,,0.0,0.2928932184067152,49,0.0,
+G1,h106,S5,-2,0.2248002765,d0e38d676dc8c0801e477776b45620ca456761441a63d4aaed2a2429ea9e407b,,True,0.8979591836734694,44,49,45,False,classified,1,4,0,5,0.10204081632653061,0.02040816326530612,0.08163265306122448,0.0020408163265306367,1,0.2199832701,0,-0.021897148805044564,1.0,,,0.0,-0.0218971488050446,49,0.08163265306122448,
+G1,h106,S6,0,0.362038672,a33f443decf662067cbe81786a1625eee71fe0a3043af0907489b15d48ab328f,,True,1.0,49,49,45,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.512,0.362038672,0.29289321874999996,0.29289321874999996,,,0.0,0.29289321875,49,0.0,
+G1,w201,S1,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w201,S2,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w201,S3,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w201,S4,-1,0.128,65a1306dd8aa6a5b99a12c940a801acb6d1050947669557552a7f89f4b265907,,True,1.0,13,13,12,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.181019336,0.128,0.2928932188769049,0.2928932188769049,,,0.0,0.29289321887690495,13,0.0,
+G1,w201,S5,0,0.256,0e4df6bd8b1f73d079434fd17b5d971e30a7ef9de523de2c120d03f95b318f1e,,True,0.9230769230769231,12,13,12,True,classified,0,1,0,1,0.07692307692307693,0.0,0.07692307692307693,0,0,0.362038672,0.256,0.2928932188769049,0.2928932188769049,,,0.2928932188769049,0.0,13,0.07692307692307693,
+G1,w201,S6,0,0.7240773439,6a6fc55059819e81a538939e036f068a322919105e2240278bca27cefc787b15,,True,0.9230769230769231,12,13,12,True,classified,0,1,0,1,0.07692307692307693,0.0,0.07692307692307693,0,0,16.384,0.7240773439,0.9558058261779785,0.9558058261779785,,,0.5,0.4558058261779785,13,0.07692307692307693,
+G1,w202,S1,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w202,S2,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w202,S3,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w202,S4,-1,0.090509668,faacadd55cdfb3a1a35fc3e5cd7a70a3928f80ad0257461a982ebc90974318c3,,True,1.0,48,48,44,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.128,0.090509668,0.29289321874999996,0.29289321874999996,,,0.29289321874999996,0.0,48,0.0,
+G1,w202,S5,0,0.181019336,8f581d3ef88caab03f2e51dfb12c0c8b3a3ccc8f582f8b5be97d36e58bb4bf5b,,True,0.9166666666666666,44,48,44,True,classified,1,4,1,4,0.08333333333333333,0.020833333333333332,0.08333333333333333,0,0,0.181019336,0.181019336,0.0,0.0,,,0.0,0.0,48,0.08333333333333333,
+G1,w202,S6,2,0.3044370215,ebae404a874c1bc15685d39b6ec425b8092952a08aac18b56fe28af24bbddf16,,True,0.9375,45,48,44,True,classified,2,1,0,3,0.0625,0.041666666666666664,0.020833333333333332,0,0,0.512,0.3044370215,0.40539644238281247,0.40539644238281247,,,0.29289321874999996,0.11250322363281248,48,0.020833333333333332,
+G1,w203,S1,,0,,abstain_no_safe,False,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w203,S2,,0,,abstain_no_safe,False,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w203,S3,,0,,abstain_no_safe,False,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w203,S4,0,0.362038672,84d938080ae505fa710f8b16932a24ec979e4061c1498e462f501241ab5736ac,,False,1.0,5,5,5,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,65.536,0.362038672,0.9944757282714843,0.9944757282714843,,,0.0,0.9944757282714844,5,0.0,
+G1,w203,S5,0,2.048,aa2026f935ade2b01d6e0d24b910091b09f3dbe09578f6af8821969ce9e208f8,,False,1.0,5,5,5,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,65.536,2.048,0.96875,0.96875,,,0.0,0.96875,5,0.0,
+G1,w203,S6,0,2.048,aa2026f935ade2b01d6e0d24b910091b09f3dbe09578f6af8821969ce9e208f8,,False,1.0,5,5,5,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,65.536,2.048,0.96875,0.96875,,,0.0,0.96875,5,0.0,
+G1,w204,S1,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w204,S2,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w204,S3,,0,,abstain_unknown,True,,,,,,,,,,,,,,,,0,0,,,reference no positive capacity,abstention,,,,,abstention
+G1,w204,S4,-1,0.090509668,97726ae10dfb2eec05d0941baae24a30137a0bbe27abc73887203d175781dc16,,True,1.0,44,44,40,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.128,0.090509668,0.29289321874999996,0.29289321874999996,,,0.0,0.29289321875,44,0.0,
+G1,w204,S5,-2,0.256,8acbdc8599ee98ce7236988d9cdb6de108e5f7abdde63bf80cbe5c7ef290de10,,True,0.9318181818181818,41,44,40,True,classified,0,3,0,3,0.06818181818181818,0.0,0.06818181818181818,0,0,0.256,0.256,0.0,0.0,,,0.0,0.0,44,0.06818181818181818,
+G1,w204,S6,0,0.362038672,89c4d108cab3d47abde4a0b4096624cd22faf5256c841b7d3d86d382a7b52298,,True,1.0,44,44,40,True,classified,0,0,0,0,0.0,0.0,0.0,0,0,0.512,0.362038672,0.29289321874999996,0.29289321874999996,,,0.0,0.29289321875,44,0.0,

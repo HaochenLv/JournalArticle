@@ -1,0 +1,37 @@
+{
+  "E_by_status": {
+    "complete": {
+      "median": 0.041718000000400934,
+      "P95": 0.28412090000347234,
+      "min": 0.0031582000010530464,
+      "max": 0.6620058999978937,
+      "count": 1560,
+      "na_reason": null
+    },
+    "unsupported_profile_domain": {
+      "median": 0.0011355999959050678,
+      "P95": 0.005532399998628534,
+      "min": 0.0006922000029589981,
+      "max": 0.02236599999741884,
+      "count": 1290,
+      "na_reason": null
+    }
+  },
+  "matched_ratio": {
+    "median": 535.1147350429528,
+    "P95": 738.9305708489629,
+    "min": 70.55865494187333,
+    "max": 840.6675409915771,
+    "count": 295,
+    "na_reason": null
+  },
+  "new_R_wall": {
+    "median": 16.128574799993658,
+    "P95": 58.24165869999706,
+    "min": 2.452257600001758,
+    "max": 76.10144570000557,
+    "count": 300,
+    "na_reason": null
+  },
+  "archival_R": "unknown or mixed environment; excluded from controlled ratios"
+}

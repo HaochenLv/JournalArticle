@@ -1,0 +1,265 @@
+grid_version,SLA,workload,metric,weighting,valid_workloads,valid_candidates,median_signed,median_absolute,p90_absolute,p95_absolute,mean_signed,MAE,min,max,na_reason,total_candidates,E_no_safe,R_no_safe,E_unknown,R_unknown,E_right_censored,R_right_censored
+G0,S1,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,w203,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,5,5,5,0,0,0,0
+G0,S1,w203,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,5,5,0,0,0,0
+G0,S1,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S1,ALL,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,50,5,50,45,0,0,0
+G0,S1,ALL,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,50,5,50,45,0,0,0
+G0,S2,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,w203,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,5,5,5,0,0,0,0
+G0,S2,w203,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,5,5,0,0,0,0
+G0,S2,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S2,ALL,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,50,5,50,45,0,0,0
+G0,S2,ALL,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,50,5,50,45,0,0,0
+G0,S3,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,w203,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,5,5,5,0,0,0,0
+G0,S3,w203,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,5,5,0,0,0,0
+G0,S3,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G0,S3,ALL,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,50,5,50,45,0,0,0
+G0,S3,ALL,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,50,5,50,45,0,0,0
+G0,S4,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,w203,signed_gap,equal valid candidate then equal workload,1,5,-65.28,65.28,65.445490332,65.445490332,-65.3386980664,65.3386980664,-65.445490332,-65.28,,5,0,0,0,0,0,5
+G0,S4,w203,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.99609375,0.99609375,0.9986189320678711,0.9986189320678711,-0.9969894114135742,0.9969894114135742,-0.9986189320678711,-0.99609375,,5,0,0,0,0,0,5
+G0,S4,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S4,ALL,signed_gap,equal valid candidate then equal workload,1,5,-65.28,65.28,65.445490332,65.445490332,-65.3386980664,65.3386980664,-65.445490332,-65.28,,50,0,0,45,0,0,5
+G0,S4,ALL,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.99609375,0.99609375,0.9986189320678711,0.9986189320678711,-0.9969894114135742,0.9969894114135742,-0.9986189320678711,-0.99609375,,50,0,0,45,0,0,5
+G0,S5,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,w203,signed_gap,equal valid candidate then equal workload,1,5,-63.488,63.488,63.488,63.488,-63.488,63.488,-63.488,-63.488,,5,0,0,0,0,0,5
+G0,S5,w203,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.96875,0.96875,0.96875,0.96875,-0.96875,0.96875,-0.96875,-0.96875,,5,0,0,0,0,0,5
+G0,S5,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S5,ALL,signed_gap,equal valid candidate then equal workload,1,5,-63.488,63.488,63.488,63.488,-63.488,63.488,-63.488,-63.488,,50,0,0,45,0,0,5
+G0,S5,ALL,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.96875,0.96875,0.96875,0.96875,-0.96875,0.96875,-0.96875,-0.96875,,50,0,0,45,0,0,5
+G0,S6,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,2
+G0,S6,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,2
+G0,S6,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,w203,signed_gap,equal valid candidate then equal workload,1,5,-63.488,63.488,63.488,63.488,-63.488,63.488,-63.488,-63.488,,5,0,0,0,0,0,5
+G0,S6,w203,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.96875,0.96875,0.96875,0.96875,-0.96875,0.96875,-0.96875,-0.96875,,5,0,0,0,0,0,5
+G0,S6,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G0,S6,ALL,signed_gap,equal valid candidate then equal workload,1,5,-63.488,63.488,63.488,63.488,-63.488,63.488,-63.488,-63.488,,50,0,0,45,0,0,7
+G0,S6,ALL,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.96875,0.96875,0.96875,0.96875,-0.96875,0.96875,-0.96875,-0.96875,,50,0,0,45,0,0,7
+G1,S1,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,w203,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,5,5,5,0,0,0,0
+G1,S1,w203,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,5,5,0,0,0,0
+G1,S1,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S1,ALL,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,50,5,50,45,0,0,0
+G1,S1,ALL,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,50,5,50,45,0,0,0
+G1,S2,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,w203,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,5,5,5,0,0,0,0
+G1,S2,w203,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,5,5,0,0,0,0
+G1,S2,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S2,ALL,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,50,5,50,45,0,0,0
+G1,S2,ALL,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,50,5,50,45,0,0,0
+G1,S3,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,w203,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,5,5,5,0,0,0,0
+G1,S3,w203,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,5,5,0,0,0,0
+G1,S3,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,5,5,0,0,0
+G1,S3,ALL,signed_gap,equal valid candidate then equal workload,1,5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,50,5,50,45,0,0,0
+G1,S3,ALL,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,50,5,50,45,0,0,0
+G1,S4,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,w203,signed_gap,equal valid candidate then equal workload,1,5,-65.173961328,65.173961328,65.445490332,65.445490332,-65.264470996,65.264470996,-65.445490332,-65.173961328,,5,0,0,0,0,0,5
+G1,S4,w203,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.9944757282714844,0.9944757282714844,0.9986189320678711,0.9986189320678711,-0.9958567962036133,0.9958567962036133,-0.9986189320678711,-0.9944757282714844,,5,0,0,0,0,0,5
+G1,S4,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S4,ALL,signed_gap,equal valid candidate then equal workload,1,5,-65.173961328,65.173961328,65.445490332,65.445490332,-65.264470996,65.264470996,-65.445490332,-65.173961328,,50,0,0,45,0,0,5
+G1,S4,ALL,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.9944757282714844,0.9944757282714844,0.9986189320678711,0.9986189320678711,-0.9958567962036133,0.9958567962036133,-0.9986189320678711,-0.9944757282714844,,50,0,0,45,0,0,5
+G1,S5,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,w203,signed_gap,equal valid candidate then equal workload,1,5,-63.488,63.488,63.488,63.488,-63.488,63.488,-63.488,-63.488,,5,0,0,0,0,0,5
+G1,S5,w203,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.96875,0.96875,0.96875,0.96875,-0.96875,0.96875,-0.96875,-0.96875,,5,0,0,0,0,0,5
+G1,S5,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S5,ALL,signed_gap,equal valid candidate then equal workload,1,5,-63.488,63.488,63.488,63.488,-63.488,63.488,-63.488,-63.488,,50,0,0,45,0,0,5
+G1,S5,ALL,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.96875,0.96875,0.96875,0.96875,-0.96875,0.96875,-0.96875,-0.96875,,50,0,0,45,0,0,5
+G1,S6,h101,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,h101,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,h102,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,h102,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,h103,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,h103,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,h104,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,h104,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,h105,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,2
+G1,S6,h105,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,2
+G1,S6,h106,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,h106,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,w201,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,w201,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,w202,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,w202,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,w203,signed_gap,equal valid candidate then equal workload,1,5,-63.488,63.488,63.488,63.488,-63.488,63.488,-63.488,-63.488,,5,0,0,0,0,0,5
+G1,S6,w203,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.96875,0.96875,0.96875,0.96875,-0.96875,0.96875,-0.96875,-0.96875,,5,0,0,0,0,0,5
+G1,S6,w204,signed_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,w204,signed_relative_gap,equal valid candidate then equal workload,0,0,,,,,,,,,empty applicable subset,5,0,0,5,0,0,0
+G1,S6,ALL,signed_gap,equal valid candidate then equal workload,1,5,-63.488,63.488,63.488,63.488,-63.488,63.488,-63.488,-63.488,,50,0,0,45,0,0,7
+G1,S6,ALL,signed_relative_gap,equal valid candidate then equal workload,1,5,-0.96875,0.96875,0.96875,0.96875,-0.96875,0.96875,-0.96875,-0.96875,,50,0,0,45,0,0,7

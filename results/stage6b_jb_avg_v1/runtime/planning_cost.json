@@ -1,0 +1,49 @@
+{
+  "campaign_elapsed_s": 9843.865223300003,
+  "worker_startups": [
+    {
+      "ready": true,
+      "pid": 13432,
+      "profile_load_s": 0.0008019000015337951,
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "startup_wall_s": 0.135107699999935
+    }
+  ],
+  "actual_E_benchmark_wall_s": 620.3237891001263,
+  "actual_cache_processing_s": 18.68861430024117,
+  "actual_classifier_s": 1.6661673999842606,
+  "historical_rebuild_cost": null,
+  "historical_rebuild_na_reason": "mixed or unknown execution environments; no extrapolation",
+  "one_planning_execution_s": 102.99595679999766,
+  "planning_scope": "once per unique input plus preparation/classification/grid/serialization; repeats are benchmark cost",
+  "complete_breakdown_pending_report": false,
+  "final_reporting_wall_s": 17.31112839999696,
+  "actual_new_R_wall_s": 7884.189348499982,
+  "matched_points": 295,
+  "input_and_serialization_s": 511.6982071003731,
+  "analysis_wall_s": 74.11413340000581,
+  "postprocessing_modules_wall_s": 172.58037430000695,
+  "preflight_freeze_wall_s": 50.875805,
+  "campaign_elapsed_scope": "run.py after its initial source guard through physical execution, benchmarking, classification, G0/G1 analysis and final bookkeeping; excludes earlier protocol preparation and later reporting/audit",
+  "postprocessing_scope": "finalize, supplement, figures and independent audit; no extra E or R physical runs",
+  "one_planning_ledger": {
+    "primary_E_execution_s": 102.99595679999766,
+    "profile_and_process_initialization_s": 0.135107699999935,
+    "E_and_R_postclassification_s": 1.6661673999842606,
+    "cached_reference_processing_s": 18.68861430024117,
+    "note": "Cache processing includes R reclassification, so do not sum it again with the full classifier field. Benchmark repetitions are research measurement cost, not one planning execution.",
+    "exact_end_to_end_single_planning_total_s": null,
+    "NA_reason": "The campaign interleaves measurement repeats and refinement; controller/input/serialization components are recorded but a separate repeat-free end-to-end planning run was not authorized or executed.",
+    "E_only_six_SLA_classification_s": 0.6856459999034996,
+    "primary_E_input_object_preparation_s": 0.8139316999004222,
+    "primary_E_serialization_and_verification_hash_s": 279.22075510013383,
+    "unmeasured_components": [
+      "controller JSON transport/parse separated from measured object preparation",
+      "controller-side grid selection and miscellaneous output writing separately from measured analysis modules"
+    ]
+  },
+  "actual_R_timing_scope": "adapter invocation including initialization/extraction, result dataclass materialization and stdout log context; subsequent JSON/gzip output and six-SLA classification are outside this timer",
+  "E_timing_scope": "simulate on prepared objects, including default diagnostics and trajectory hashing; additional repeat-verification hash and JSON/gzip output are outside this timer",
+  "actual_R_attempt_wall_s_including_failures": 7884.189348499982,
+  "peak_memory_limitation": "process-lifetime high-water mark, not isolated per-call or per-model allocation"
+}

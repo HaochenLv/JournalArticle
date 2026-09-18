@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "checked_utc": "2026-09-18T09:07:32.397361+00:00",
+  "G0_physical_count": 2550,
+  "G1_physical_count": 2850,
+  "G0_judgments": 15300,
+  "G1_judgments": 17100,
+  "distinct_request_pair_keys": 97565,
+  "request_pair_rows": 97565,
+  "source_and_protocol_hashes_unchanged": true,
+  "source_gate": "preflight_data_gate.json",
+  "common_grids": true,
+  "budget_limits": true,
+  "successful_repeat_semantics": true,
+  "classifications_pure_and_SLA_monotonic": true,
+  "joint_inclusion_exclusion": true,
+  "request_pairing_and_endpoints": true,
+  "G0_preserved": true,
+  "all_60_cells": true,
+  "unknowns_preserved": true,
+  "model_edited": false,
+  "tests": {
+    "evaluator": 20,
+    "metrics": 9,
+    "protocol": 12
+  },
+  "limitations": [
+    "full historical raw event timestamps unavailable; pinned source and saved endpoint identities verified",
+    "archival timing is excluded from controlled ratios absent matched metadata"
+  ],
+  "independent_audit_passed": true,
+  "independent_check_count": 174948,
+  "artifact_contract_passed": true,
+  "visual_review_passed": true
+}

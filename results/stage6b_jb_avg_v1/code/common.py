@@ -2,6 +2,7 @@
 from pathlib import Path
 import sys,json,gzip,csv,hashlib,math,statistics
 from decimal import Decimal,localcontext,ROUND_HALF_EVEN
+from fractions import Fraction
 ROOT=Path(__file__).resolve().parents[3];OUT=ROOT/'results/stage6b_jb_avg_v1'
 sys.dont_write_bytecode=True
 sys.path.insert(0,str(ROOT/'src'))
@@ -34,18 +35,16 @@ def quantile(values,p):
     return sorted(values)[int((Decimal(str(p))*len(values)).to_integral_value(rounding='ROUND_CEILING'))-1]
 def weighted_quantile(values,p):
     if not values:return None
-    # Decimal weights avoid binary summation selecting the next observation at exact boundaries.
-    with localcontext() as c:
-        c.prec=60
-        ordered=sorted(values);total=sum((w for _,w in ordered),Decimal(0));threshold=Decimal(str(p))*total;cum=Decimal(0)
-        for v,w in ordered:
-            cum+=w
-            if cum>=threshold:return v
-        return ordered[-1][0]
+    # Rational weights make CDF equality exact at discrete boundaries.
+    ordered=sorted(values);total=sum((w for _,w in ordered),Fraction(0));threshold=Fraction(str(p))*total;cum=Fraction(0)
+    for v,w in ordered:
+        cum+=w
+        if cum>=threshold:return v
+    return ordered[-1][0]
 def summary(values):
     if not values:return {'median_signed':None,'median_absolute':None,'p90_absolute':None,'p95_absolute':None,'mean_signed':None,'MAE':None,'min':None,'max':None,'na_reason':'empty applicable subset'}
     absolute=[(abs(x),w) for x,w in values];total=sum(w for x,w in values)
-    return {'median_signed':weighted_quantile(values,.5),'median_absolute':weighted_quantile(absolute,.5),'p90_absolute':weighted_quantile(absolute,.9),'p95_absolute':weighted_quantile(absolute,.95),'mean_signed':float(sum(Decimal(str(x))*w for x,w in values)/total),'MAE':float(sum(Decimal(str(abs(x)))*w for x,w in values)/total),'min':min(x for x,w in values),'max':max(x for x,w in values),'na_reason':None}
+    return {'median_signed':weighted_quantile(values,.5),'median_absolute':weighted_quantile(absolute,.5),'p90_absolute':weighted_quantile(absolute,.9),'p95_absolute':weighted_quantile(absolute,.95),'mean_signed':float(sum(Fraction(x)*w for x,w in values)/total),'MAE':float(sum(Fraction(abs(x))*w for x,w in values)/total),'min':min(x for x,w in values),'max':max(x for x,w in values),'na_reason':None}
 def taxonomy(e,r):
     if not isinstance(e,bool) or not isinstance(r,bool):return 'unknown'
     return {(True,True):'BS',(False,False):'BU',(True,False):'O',(False,True):'C'}[e,r]

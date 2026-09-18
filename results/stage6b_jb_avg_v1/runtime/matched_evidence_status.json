@@ -1,0 +1,11 @@
+{
+  "matched_points": 295,
+  "status": "matched boundary-selected evidence",
+  "insufficient_evidence_reason": null,
+  "limitations": [
+    "single R execution vs five E repetitions",
+    "boundary-selected subset",
+    "reference initialization and extraction vs E prepared object call",
+    "not GPU serving speedup"
+  ]
+}

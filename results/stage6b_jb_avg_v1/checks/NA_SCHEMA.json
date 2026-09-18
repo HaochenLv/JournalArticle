@@ -1,0 +1,11 @@
+{
+  "empty_csv_numeric": "NA, never zero. Read the associated *_na_reason, na_reason, loss_na_reason, actual_na_reason, relative_na_reason or version NA_reasons fields.",
+  "empty_nullable_decision": "unknown: see model status and resource_feasible; abstained operating points have actual_na_reason=abstention.",
+  "empty_optional_reason": "not applicable because the corresponding value is defined; not missing evidence",
+  "empty_optional_candidate": "abstention or full best set unidentified: see abstention/na_reason",
+  "runtime_missing": "failed repetition or archival metadata unavailable; never cache execution time",
+  "empty_SLA": "SLA-independent accuracy, not missing SLA",
+  "TPOT_m1": "undefined by metric definition; not zero",
+  "resource_latency_counts": "undefined for hard-resource rejection",
+  "quantile": "empirical inverse CDF using exact rational hierarchy weights"
+}

@@ -1,0 +1,12 @@
+{
+  "registered_utc": "2026-09-18T06:23:05.877431+00:00",
+  "formal_outcomes_started": false,
+  "files": {
+    "results\\stage6b_jb_avg_v1\\code\\analyze.py": "8f1025c9f3d08b7ffa3f266ee883efee113724c247366cee19a537fdcd8cffb3",
+    "results\\stage6b_jb_avg_v1\\code\\common.py": "b53fad353945b0ad03a31340a901b8f8f38f4d3d0a7b95c767c1dcf81e1bce0a",
+    "results\\stage6b_jb_avg_v1\\code\\freeze.py": "6f75bc290b0e2068fbbcd45cf808e4c40ce3c817fb10831a3360806952be2b2a",
+    "results\\stage6b_jb_avg_v1\\code\\run.py": "aca964698e121fc1255be8d6c0e976a355c3ec5d92bcdd4856a4eb604944c357",
+    "results\\stage6b_jb_avg_v1\\code\\test_protocol.py": "a278d0ea03bf3636cf47e8b7579074a720f233cf4cd88237e21563a813462fac",
+    "results\\stage6b_jb_avg_v1\\code\\worker.py": "389e941198e3ebb14e7401f09abb0a1c8bda5edb2445fd039fd1f7f9586ca547"
+  }
+}

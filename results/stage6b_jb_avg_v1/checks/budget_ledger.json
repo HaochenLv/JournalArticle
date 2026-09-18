@@ -1,0 +1,27 @@
+{
+  "new_common_intensities": 60,
+  "per_workload": {
+    "h101": 6,
+    "h102": 6,
+    "h103": 6,
+    "h104": 6,
+    "h105": 6,
+    "h106": 6,
+    "w201": 6,
+    "w202": 6,
+    "w203": 6,
+    "w204": 6
+  },
+  "candidate_slots": 300,
+  "new_helix_unique_starts": 300,
+  "helix_attempts": 300,
+  "helix_retries": 0,
+  "refinement_cache_hits": 0,
+  "timeouts": 0,
+  "technical_failures": 0,
+  "evaluator_unique_inputs": 2850,
+  "evaluator_invocations": 17100,
+  "evaluator_warmups": 2850,
+  "evaluator_measured_repeats": 14250,
+  "evaluator_retries": 0
+}

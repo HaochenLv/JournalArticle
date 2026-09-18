@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "modules": [
+    {
+      "module": "finalize",
+      "wall_s": 17.526330299995607,
+      "returncode": 0,
+      "log": "checks\\finalize_execution.log"
+    },
+    {
+      "module": "supplement",
+      "wall_s": 4.674401300006139,
+      "returncode": 0,
+      "log": "checks\\supplement_execution.log"
+    },
+    {
+      "module": "figures",
+      "wall_s": 3.5244961000062176,
+      "returncode": 0,
+      "log": "checks\\figures_execution.log"
+    },
+    {
+      "module": "audit_evidence",
+      "wall_s": 146.855146599999,
+      "returncode": 0,
+      "log": "checks\\audit_evidence_execution.log"
+    }
+  ],
+  "quality_passed": true,
+  "utc": "2026-09-18T09:10:14.429273+00:00",
+  "visual_review_passed": true,
+  "artifact_contract_passed": true,
+  "git_delivery": "Final commit and remote verification recorded in task response; commit cannot contain its own hash."
+}
