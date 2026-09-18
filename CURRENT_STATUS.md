@@ -2,14 +2,14 @@
 
 **AICCC_JOURNAL_REBUILD (2026-09-19).** This branch is intentionally reset to the AICCC mathematical evaluator as the only mother evaluator for the Future Internet extension. The previous JB-Avg-v1 / Stage 6B line remains preserved as historical work, but its virtual-round execution plus post-hoc 90% attainment semantics are not valid journal-core semantics.
 
-Branch: \`aiccc-journal-rebuild\`, created from main commit \`bfb4e002be2a079fc6dade5cf1d07d9c00b71bb0\`.
+Branch: `aiccc-journal-rebuild`, created from main commit `bfb4e002be2a079fc6dade5cf1d07d9c00b71bb0`.
 
 New foundation:
-- \`config/aiccc_journal_contract_v1.json\`: machine-readable non-negotiable contract.
-- \`docs/AICCC_JOURNAL_CONTRACT.md\`: mathematical and implementation contract.
-- \`src/aiccc_math.py\`: pure SLA residual-budget -> per-link commitment kernel.
-- \`src/aiccc_evaluator.py\`: event-driven AICCC mother evaluator with strict first-violation safety.
-- \`tests/test_aiccc_math.py\` and \`tests/test_aiccc_evaluator.py\`: hand-checkable invariants and regression fixtures.
+- `config/aiccc_journal_contract_v1.json`: machine-readable non-negotiable contract.
+- `docs/AICCC_JOURNAL_CONTRACT.md`: mathematical and implementation contract.
+- `src/aiccc_math.py`: pure SLA residual-budget -> per-link commitment kernel.
+- `src/aiccc_evaluator.py`: event-driven AICCC mother evaluator with strict first-violation safety.
+- `tests/test_aiccc_math.py` and `tests/test_aiccc_evaluator.py`: hand-checkable invariants and regression fixtures.
 
 The rebuild preserves profiling-driven progress and accounting-only overhead separation. It does **not** yet activate the journal's standard-TTFT / request-average-TPOT semantic extension. That extension must be implemented as a ledger policy on top of this evaluator type, not as a new simulator.
 

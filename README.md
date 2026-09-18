@@ -1,4 +1,4 @@
-> **Current rebuild branch:** \`aiccc-journal-rebuild\`. The journal core is being reset to the AICCC accounting-only event-driven evaluator. \`JB-Avg-v1\` / Stage 6B are historical and must not be used as the journal mother evaluator. See \`docs/AICCC_JOURNAL_CONTRACT.md\` and \`CURRENT_STATUS.md\`.
+> **Current rebuild branch:** `aiccc-journal-rebuild`. The journal core is being reset to the AICCC accounting-only event-driven evaluator. `JB-Avg-v1` / Stage 6B are historical and must not be used as the journal mother evaluator. See `docs/AICCC_JOURNAL_CONTRACT.md` and `CURRENT_STATUS.md`.
 
 # Journal research on SLA-aware LLM pipeline planning
 

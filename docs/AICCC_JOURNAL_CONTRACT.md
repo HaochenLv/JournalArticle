@@ -6,14 +6,14 @@ The Future Internet journal work inherits the **AICCC mathematical evaluator** a
 
 The defining chain is:
 
-\`\`\`text
+```text
 profiled request state
     -> SLA time ledger
     -> residual network time
     -> per-link time allocation
     -> per-link bandwidth commitment
     -> network / memory / SLA feasibility
-\`\`\`
+```
 
 This is the research object. A model that instead advances requests using compute + network serialization and then applies a post-hoc pass-rate classifier is a different evaluator type.
 
@@ -54,7 +54,7 @@ Decode:
 - T_r^{\mathrm{other,acct}}.
 \]
 
-The current code keeps the existing \`queue_overhead_s\` field only as an explicit accounting-only compatibility term. It is not allowed to alter progress.
+The current code keeps the existing `queue_overhead_s` field only as an explicit accounting-only compatibility term. It is not allowed to alter progress.
 
 A non-positive residual budget is immediately unsafe.
 
@@ -128,7 +128,7 @@ Decode progress remains continuous between events, while block boundaries only d
 
 The available AICCC text contains a Decode blocking term T_block, but it does not uniquely define its recurrence. The existing recovered JB1 code charges the full service of active Prefill requests as Decode blocking debt. The rebuild preserves that behavior behind the explicit policy name:
 
-\`active-prefill-full-service-recovered-assumption\`.
+`active-prefill-full-service-recovered-assumption`.
 
 It must remain labeled as a recovered implementation assumption until source evidence establishes a unique rule. Journal experiments may test or replace this **accounting term**, but may not use that as permission to replace the evaluator type.
 
@@ -155,11 +155,11 @@ Not allowed:
 
 - virtual-round execution as the primary evaluator;
 - adding network serialization to the progress clock and then calling that AICCC;
-- \`simulate -> 90% classify\` as workload safety;
+- `simulate -> 90% classify` as workload safety;
 - silently letting accounting-only overhead change overlap or event timing.
 
 ## 9. Current rebuild stage
 
 This branch first rebuilds and tests the AICCC mother evaluator. It does **not** yet activate a new standard-TTFT / average-TPOT journal ledger. That semantic extension is the next layer and must be tested against this frozen core rather than replacing it.
 
-Historical \`JB-Avg-v1\` / Stage 6B code and results stay in the repository for provenance only.
+Historical `JB-Avg-v1` / Stage 6B code and results stay in the repository for provenance only.
