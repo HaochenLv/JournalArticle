@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "contract_id": "AICCC-JOURNAL-CONTRACT-v1",
+  "mother_evaluator": "AICCC accounting-only event-driven SLA-safe capacity evaluator",
+  "status": "frozen foundation for journal rebuild",
+  "safety_semantics": {
+    "workload_safe_iff_all_checked_constraints_hold": true,
+    "posthoc_attainment_threshold_allowed": false,
+    "first_violation_is_unsafe": true
+  },
+  "progress_semantics": {
+    "prefill_progress": "profiled compute only",
+    "decode_progress": "profiled per-token compute only",
+    "sla_budget_may_change_progress": false,
+    "intrinsic_or_fixed_accounting_may_change_progress": false
+  },
+  "ledger_semantics": {
+    "residual_network_budget": "SLA limit - profiled compute - explicit accounting-only charges",
+    "prefill_intrinsic_charge": "accounting only",
+    "blocking_charge": "explicit policy; current recovered assumption is active-Prefill full-service debt",
+    "fixed_overhead": "accounting only"
+  },
+  "network_semantics": {
+    "omega": "(S_e/B_e) / sum_j(S_j/B_j)",
+    "delta": "omega * residual_network_time",
+    "required_bandwidth": "S_e / delta",
+    "shared_link_rule": "sum request commitments and compare with physical capacity",
+    "serialization_added_to_progress": false
+  },
+  "journal_extension_boundary": {
+    "allowed": [
+      "change the semantic horizon represented by the SLA ledger",
+      "add validation, diagnostics, sensitivity analysis, and reference comparison",
+      "add explicitly documented accounting terms without changing profiling-driven progress"
+    ],
+    "forbidden": [
+      "replace the evaluator with a virtual-round or scheduler simulator",
+      "simulate first then classify by a 90 percent workload attainment target",
+      "replace residual-budget link commitments with execution-time serialization",
+      "silently couple accounting-only overhead into request progress"
+    ]
+  },
+  "historical_note": "JB-Avg-v1 and Stage 6B remain preserved as historical experiments but are not the journal mother evaluator."
+}

@@ -1,3 +1,5 @@
+> **Current rebuild branch:** \`aiccc-journal-rebuild\`. The journal core is being reset to the AICCC accounting-only event-driven evaluator. \`JB-Avg-v1\` / Stage 6B are historical and must not be used as the journal mother evaluator. See \`docs/AICCC_JOURNAL_CONTRACT.md\` and \`CURRENT_STATUS.md\`.
+
 # Journal research on SLA-aware LLM pipeline planning
 
 **Stage3 evidence frozen (2026-09-17):** [Writing handoff](STAGE3_EVIDENCE_REPORT.md) and [formal evidence report](FORMAL_EVIDENCE_REPORT.md). Legacy sensitivity reuses1634 reference records for3268 judgments; no new reference run. Main line: Yes, but modified. Raw4 strict/2 tie-break mismatches become legacy3/1; decision and operating-point losses are separated. Mitigation is conditional replay on a reference-informed frozen grid.31 tests pass; no further experiments needed for the stated scope.
