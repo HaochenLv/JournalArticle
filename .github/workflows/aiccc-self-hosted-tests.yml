@@ -7,10 +7,13 @@ on:
     paths:
       - "src/aiccc_math.py"
       - "src/aiccc_evaluator.py"
+      - "src/aiccc_j1_evaluator.py"
       - "src/research.py"
       - "tests/test_aiccc_math.py"
       - "tests/test_aiccc_evaluator.py"
+      - "tests/test_aiccc_j1_evaluator.py"
       - "config/aiccc_journal_contract_v1.json"
+      - "config/j1_standard_ledger_v1.json"
       - "requirements.txt"
       - "scripts/bootstrap.py"
       - ".github/workflows/aiccc-self-hosted-tests.yml"
@@ -106,15 +109,19 @@ jobs:
           Write-Host "SHA: $env:GITHUB_SHA"
           & $env:JOURNAL_PYTHON --version
 
-      - name: AICCC mathematical kernel
+      - name: J0 AICCC mathematical kernel
         run: |
           & $env:JOURNAL_PYTHON -m unittest tests.test_aiccc_math -v
 
-      - name: AICCC evaluator guards
+      - name: J0 AICCC evaluator guards
         run: |
           & $env:JOURNAL_PYTHON -m unittest tests.test_aiccc_evaluator -v
 
+      - name: J1 standard-ledger guards
+        run: |
+          & $env:JOURNAL_PYTHON -m unittest tests.test_aiccc_j1_evaluator -v
+
       - name: Scope guard
         run: |
-          Write-Host "Completed active AICCC core tests only."
+          Write-Host "Completed frozen J0 guards plus active J1 deterministic tests only."
           Write-Host "Frozen Stage 2-6 experiments, HELIX formal runs, capacity sweeps, and repository-wide discovery were not executed."
