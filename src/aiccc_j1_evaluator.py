@@ -17,6 +17,8 @@ from sla_aware_mvp.domain import sorted_workload
 
 VERSION = "AICCC-J1-STANDARD-LEDGER-v1"
 LEDGER_POLICY = "j0-profile-trajectory-standard-request-horizons"
+BLOCKING_MODE_FULL = "full-active-prefill-service"
+BLOCKING_MODE_REMAINING = "remaining-profile-service-full-intrinsic"
 
 
 def _demand(pipeline, tokens):
@@ -63,6 +65,8 @@ def evaluate(
     activation_buffers=True,
     blocking_policy=BLOCKING_POLICY,
     blocking_scale=1.0,
+    blocking_mode=BLOCKING_MODE_FULL,
+    ttft_profile_uncertainty_fraction=0.0,
     decode_block_size=DEFAULT_DECODE_BLOCK_SIZE,
     max_events=100_000,
 ):
@@ -85,6 +89,18 @@ def evaluate(
     ):
         raise ValueError("blocking_scale must be a finite nonnegative number")
     blocking_scale = float(blocking_scale)
+    if blocking_mode not in (BLOCKING_MODE_FULL, BLOCKING_MODE_REMAINING):
+        raise ValueError(f"unsupported blocking_mode: {blocking_mode}")
+    if (
+        isinstance(ttft_profile_uncertainty_fraction, bool)
+        or not isinstance(ttft_profile_uncertainty_fraction, (int, float))
+        or not math.isfinite(ttft_profile_uncertainty_fraction)
+        or ttft_profile_uncertainty_fraction < 0
+    ):
+        raise ValueError(
+            "ttft_profile_uncertainty_fraction must be a finite nonnegative number"
+        )
+    ttft_profile_uncertainty_fraction = float(ttft_profile_uncertainty_fraction)
     requests = sorted_workload(workload)
     specs = {r.id: r for r in requests}
     prof = prof or Profiles()
@@ -127,11 +143,12 @@ def evaluate(
             "runtime_s": time.perf_counter() - started,
         }
 
-    prefill_compute, finish = {}, {}
+    prefill_compute, prefill_end, finish = {}, {}, {}
     for snap in history:
         for rid, ledger in snap["ledger"].items():
             if ledger["phase"] == "prefill" and rid not in prefill_compute:
                 prefill_compute[rid] = ledger["compute_s"]
+                prefill_end[rid] = specs[rid].arrival_time_s + ledger["compute_s"]
         if snap["side"] == "post":
             for event, rid in snap["events"]:
                 if event == "Finish":
@@ -152,11 +169,28 @@ def evaluate(
         if blocking_policy in (None, "none"):
             debt = 0.0
         else:
-            debt = blocking_scale * sum(
-                prefill_compute[rid] + (H * specs[rid].input_tokens if intrinsic else 0.0)
-                for rid, ledger in left["ledger"].items()
-                if ledger["phase"] == "prefill"
-            )
+            components = []
+            for rid, ledger in left["ledger"].items():
+                if ledger["phase"] != "prefill":
+                    continue
+                intrinsic_debt = H * specs[rid].input_tokens if intrinsic else 0.0
+                if blocking_mode == BLOCKING_MODE_FULL:
+                    profiled_debt = prefill_compute[rid]
+                else:
+                    service = prefill_compute[rid]
+                    if service <= 0:
+                        raise RuntimeError("non-positive Prefill profile in blocking ledger")
+                    f0 = min(
+                        1.0,
+                        max(0.0, (prefill_end[rid] - t0) / service),
+                    )
+                    f1 = min(
+                        1.0,
+                        max(0.0, (prefill_end[rid] - t1) / service),
+                    )
+                    profiled_debt = service * 0.5 * (f0 + f1)
+                components.append(profiled_debt + intrinsic_debt)
+            debt = blocking_scale * sum(components)
         for rid in set(left["ledger"]) & set(right["ledger"]):
             a, b = left["ledger"][rid], right["ledger"][rid]
             if a["phase"] != "decode" or b["phase"] != "decode":
@@ -184,14 +218,19 @@ def evaluate(
 
     def make_horizon(rid, name, units, start_s, end_s, limit_total, intrinsic_s, blocking_s, demand):
         nonlocal max_ttft, max_tpot
-        fixed_s = units * sla.fixed_overhead_s
+        user_fixed_s = units * sla.fixed_overhead_s
         queue_s = units * sla.queue_overhead_s
+        uncertainty_s = (
+            ttft_profile_uncertainty_fraction * (end_s - start_s)
+            if name == "standard_ttft"
+            else 0.0
+        )
         budget = residual_network_budget(
             limit_total,
             end_s - start_s,
             intrinsic_s=intrinsic_s,
             blocking_s=blocking_s,
-            fixed_s=fixed_s,
+            fixed_s=user_fixed_s + uncertainty_s,
             queue_s=queue_s,
         )
         serial = _ideal_serialization(demand, capacities)
@@ -230,7 +269,8 @@ def evaluate(
             "profile_elapsed_s": end_s - start_s,
             "intrinsic_s": intrinsic_s,
             "blocking_s": blocking_s,
-            "fixed_s": fixed_s,
+            "fixed_s": user_fixed_s,
+            "profile_uncertainty_reserve_s": uncertainty_s,
             "queue_s": queue_s,
             "accounted_s": budget.accounted_s,
             "residual_network_s": budget.network_s,
@@ -322,6 +362,8 @@ def evaluate(
         "ledger_policy": LEDGER_POLICY,
         "blocking_policy": blocking_policy,
         "blocking_scale": blocking_scale,
+        "blocking_mode": blocking_mode,
+        "ttft_profile_uncertainty_fraction": ttft_profile_uncertainty_fraction,
         "strict_all_request_safety": True,
         "decode_block_size": decode_block_size,
         "safe": not first_set,
