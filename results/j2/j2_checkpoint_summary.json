@@ -1,0 +1,252 @@
+{
+  "schema": 1,
+  "result_id": "J2-REFERENCE-PROFILE-STRESS-v1-summary",
+  "status": "complete",
+  "scientific_scope": "broader cache-only validation plus deterministic profile-error stress; not final held-out journal validation",
+  "modeling_direction_preserved": true,
+  "j0_frozen_core_unchanged": true,
+  "runs": {
+    "deterministic_tests": {
+      "id": 35416897937,
+      "conclusion": "success",
+      "j0_math": "5/5",
+      "j0_evaluator": "13/13",
+      "j1_evaluator": "11/11"
+    },
+    "reference_profile": {
+      "id": 35416485936,
+      "conclusion": "success",
+      "artifact_id": 10575758478,
+      "artifact_digest": "sha256:e5c6c150288e56fc6482a3dd7b3e59dffed7e45c13f0618773c54956882972cf"
+    },
+    "blocking_sensitivity": {
+      "id": 35416969225,
+      "conclusion": "success",
+      "artifact_id": 10576496710,
+      "artifact_digest": "sha256:602e4539eb48874f6b5f9a6ee5f6317ddb50497539a4aee54f5211bba029a58a"
+    }
+  },
+  "population": {
+    "nominal_pairs": 677,
+    "nominal_gap_pairs": 175,
+    "partition_ranking_pairs": 502,
+    "cases": 30,
+    "reference_safe": 366,
+    "reference_unsafe": 311
+  },
+  "nominal": {
+    "safe_safe": 297,
+    "false_acceptance": 4,
+    "false_rejection": 69,
+    "unsafe_unsafe": 307,
+    "agreement": 0.8921713441654358,
+    "false_acceptance_rate_given_reference_unsafe": 0.012861736334405145,
+    "false_rejection_rate_given_reference_safe": 0.1885245901639344,
+    "by_source": {
+      "nominal_gap": {
+        "pairs": 175,
+        "safe_safe": 110,
+        "false_acceptance": 4,
+        "false_rejection": 12,
+        "unsafe_unsafe": 49,
+        "agreement": 0.9085714285714286
+      },
+      "partition_ranking": {
+        "pairs": 502,
+        "safe_safe": 187,
+        "false_acceptance": 0,
+        "false_rejection": 57,
+        "unsafe_unsafe": 258,
+        "agreement": 0.8864541832669323
+      }
+    },
+    "false_acceptance_cost": {
+      "mean_max_normalized_sla_excess": 0.2268177676854627,
+      "max_normalized_sla_excess": 0.3081707239244764,
+      "mean_violating_request_fraction": 0.07352941176470587,
+      "max_violating_request_fraction": 0.1176470588235294,
+      "cases": [
+        {
+          "case": "a100-s0-slow-prefill",
+          "intensity": 1.28,
+          "reference_max_standard_ttft_s": 2.2942863429019065,
+          "ttft_limit_s": 2,
+          "violating_requests": 1,
+          "request_count": 17,
+          "max_normalized_excess": 0.1471431714509532
+        },
+        {
+          "case": "a100-s0-slow-ttft",
+          "intensity": 1.28,
+          "reference_max_standard_ttft_s": 2.2942863429019065,
+          "ttft_limit_s": 1.8,
+          "violating_requests": 1,
+          "request_count": 17,
+          "max_normalized_excess": 0.2746035238343924
+        },
+        {
+          "case": "a100-s7-slow-prefill",
+          "intensity": 0.64,
+          "reference_max_standard_ttft_s": 2.3547073030640577,
+          "ttft_limit_s": 2,
+          "violating_requests": 1,
+          "request_count": 17,
+          "max_normalized_excess": 0.1773536515320288
+        },
+        {
+          "case": "a100-s7-slow-ttft",
+          "intensity": 0.64,
+          "reference_max_standard_ttft_s": 2.3547073030640577,
+          "ttft_limit_s": 1.8,
+          "violating_requests": 2,
+          "request_count": 17,
+          "max_normalized_excess": 0.3081707239244764
+        }
+      ]
+    },
+    "first_rejection_pattern": "false rejections are dominated by average-TPOT sla_time checks (62/69); the four false acceptances are high-intensity slow-placement TTFT misses in the execution reference",
+    "sampled_capacity": {
+      "cases": 30,
+      "comparable_edges": 28,
+      "exact_edges": 3,
+      "evaluator_nonmonotone_cases": 0,
+      "reference_nonmonotone_cases": 0
+    }
+  },
+  "profile_stress": {
+    "interpretation": "deterministic multiplicative profile error; not probability",
+    "selected_rows": [
+      {
+        "variant": "prefill_x0.95",
+        "false_acceptance": 20,
+        "false_rejection": 63,
+        "agreement": 0.8774002954209749
+      },
+      {
+        "variant": "decode_x0.95",
+        "false_acceptance": 15,
+        "false_rejection": 64,
+        "agreement": 0.8833087149187593
+      },
+      {
+        "variant": "both_x0.95",
+        "false_acceptance": 20,
+        "false_rejection": 55,
+        "agreement": 0.8892171344165436
+      },
+      {
+        "variant": "both_x0.90",
+        "false_acceptance": 21,
+        "false_rejection": 42,
+        "agreement": 0.9069423929098966
+      },
+      {
+        "variant": "both_x0.80",
+        "false_acceptance": 22,
+        "false_rejection": 34,
+        "agreement": 0.9172821270310192
+      },
+      {
+        "variant": "both_x1.05",
+        "false_acceptance": 3,
+        "false_rejection": 168,
+        "agreement": 0.7474150664697193
+      },
+      {
+        "variant": "both_x1.10",
+        "false_acceptance": 3,
+        "false_rejection": 175,
+        "agreement": 0.7370753323485968
+      },
+      {
+        "variant": "both_x1.20",
+        "false_acceptance": 2,
+        "false_rejection": 229,
+        "agreement": 0.6587887740029542
+      },
+      {
+        "variant": "l4x2_x0.90",
+        "pairs": 502,
+        "false_acceptance": 5,
+        "false_rejection": 45,
+        "agreement": 0.900398406374502
+      },
+      {
+        "variant": "t4x4_x0.90",
+        "pairs": 502,
+        "false_acceptance": 5,
+        "false_rejection": 48,
+        "agreement": 0.8944223107569721
+      },
+      {
+        "variant": "l4x2_x1.10",
+        "pairs": 502,
+        "false_acceptance": 0,
+        "false_rejection": 144,
+        "agreement": 0.7131474103585658
+      },
+      {
+        "variant": "t4x4_x1.10",
+        "pairs": 502,
+        "false_acceptance": 0,
+        "false_rejection": 143,
+        "agreement": 0.7151394422310757
+      }
+    ],
+    "key_observation": "profile underestimation sharply increases unsafe approvals; profile inflation reduces false acceptance only modestly while greatly increasing false rejection"
+  },
+  "blocking_sensitivity": {
+    "interpretation": "diagnostic only; no multiplier selected",
+    "scales": [
+      {
+        "blocking_scale": 0,
+        "false_acceptance": 206,
+        "false_rejection": 0,
+        "agreement": 0.6957163958641064,
+        "fa_rate": 0.662379421221865,
+        "capacity_exact_edges": 0,
+        "capacity_comparable_edges": 12
+      },
+      {
+        "blocking_scale": 0.25,
+        "false_acceptance": 21,
+        "false_rejection": 23,
+        "agreement": 0.9350073855243722,
+        "fa_rate": 0.06752411575562701,
+        "capacity_exact_edges": 3,
+        "capacity_comparable_edges": 22,
+        "evaluator_nonmonotone_cases": 6
+      },
+      {
+        "blocking_scale": 0.5,
+        "false_acceptance": 7,
+        "false_rejection": 44,
+        "agreement": 0.9246676514032496,
+        "fa_rate": 0.022508038585209004,
+        "capacity_exact_edges": 4,
+        "capacity_comparable_edges": 28
+      },
+      {
+        "blocking_scale": 0.75,
+        "false_acceptance": 4,
+        "false_rejection": 53,
+        "agreement": 0.9158050221565731,
+        "fa_rate": 0.012861736334405145,
+        "capacity_exact_edges": 5,
+        "capacity_comparable_edges": 28
+      },
+      {
+        "blocking_scale": 1,
+        "false_acceptance": 4,
+        "false_rejection": 69,
+        "agreement": 0.8921713441654358,
+        "fa_rate": 0.012861736334405145,
+        "capacity_exact_edges": 3,
+        "capacity_comparable_edges": 28
+      }
+    ],
+    "key_observation": "the recovered full-service blocking term is a major source of conservative average-TPOT rejections, but removing it creates severe optimism; scalar tuning is not a justified final model"
+  },
+  "new_helix_runs": 0,
+  "broad_conclusion": "J1 preserves the required modeling direction, but broader validation exposes two separable reliability problems: high-intensity TTFT optimism under unmodeled execution/queueing effects, and average-TPOT conservatism driven by the recovered blocking accounting assumption. Profile uncertainty worsens the safety-critical optimistic mode."
+}
