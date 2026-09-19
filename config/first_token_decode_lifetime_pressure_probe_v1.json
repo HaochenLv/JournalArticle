@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "experiment_id": "FIRST_TOKEN_DECODE_LIFETIME_PRESSURE_PROBE_v1",
+  "date": "2026-09-19",
+  "question": "Does the amount of Decode work that will remain alive while a new request enters Decode explain first-token compute queuing better than instantaneous concurrency?",
+  "frozen_before_outcome": true,
+  "new_helix_runs": 0,
+  "source": "same 34 cached A100 slow-placement physical points used by HIGH_LOAD_TTFT_DIAG_v1",
+  "signals": {
+    "remaining_decode_tokens": "sum(max(0, output_tokens-progress)) over already-active Decode requests at the target Prefill-to-Decode post-event boundary",
+    "remaining_decode_profile_work_s": "sum(remaining tokens multiplied by that request's current J0 profiled end-to-end Decode time)",
+    "minimum_remaining_decode_tokens": "minimum remaining tokens among active Decode competitors",
+    "long_lived_competitor_count": "count of active Decode competitors with at least eight remaining output tokens; eight is the fixed pipeline stage count, not a fitted threshold"
+  },
+  "outcome": "reference first-Decode runtime minus J0/J1 predicted first-Decode profile duration",
+  "comparison": "Pearson correlations and predeclared focus-pair safe-to-unsafe changes; no threshold fitting",
+  "decision_boundary": "Mechanism probe only. Any candidate accounting guard must be frozen separately before classification back-check."
+}
