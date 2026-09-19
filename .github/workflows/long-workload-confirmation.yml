@@ -1,0 +1,103 @@
+name: Long-Workload Accounting Confirmation
+
+on:
+  push:
+    branches:
+      - aiccc-journal-rebuild
+    paths:
+      - "scripts/long_workload_confirmation.py"
+      - "config/long_workload_confirmation.json"
+      - ".github/workflows/long-workload-confirmation.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: journal-long-workload-confirmation
+  cancel-in-progress: true
+
+jobs:
+  confirm:
+    if: github.repository == 'HaochenLv/JournalArticle' && github.ref == 'refs/heads/aiccc-journal-rebuild'
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 60
+
+    defaults:
+      run:
+        shell: powershell -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File {0}
+
+    steps:
+      - name: Checkout active branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          clean: false
+
+      - name: Locate local Python 3.12
+        run: |
+          $ErrorActionPreference = "Stop"
+          if (Test-Path ".venv\Scripts\python.exe") {
+            $python = (Resolve-Path ".venv\Scripts\python.exe").Path
+          } else {
+            $python = $null
+            $py = Get-Command py.exe -ErrorAction SilentlyContinue
+            if ($py) {
+              $candidate = & $py.Source -3.12 -c "import sys; print(sys.executable)" 2>$null
+              if ($LASTEXITCODE -eq 0 -and $candidate) {
+                $python = ($candidate | Select-Object -Last 1).Trim()
+              }
+            }
+            if (-not $python) {
+              $candidates = @(
+                "C:\Python312\python.exe",
+                "C:\Program Files\Python312\python.exe"
+              )
+              $candidates += @(
+                Get-ChildItem "C:\Users\*\AppData\Local\Programs\Python\Python312\python.exe" -ErrorAction SilentlyContinue |
+                  ForEach-Object { $_.FullName }
+              )
+              foreach ($candidate in $candidates) {
+                if (-not (Test-Path $candidate)) { continue }
+                & $candidate -c "import sys; assert sys.version_info[:2] == (3, 12)" 2>$null
+                if ($LASTEXITCODE -eq 0) { $python = $candidate; break }
+              }
+            }
+            if (-not $python) {
+              throw "No accessible Python 3.12 installation was found for the self-hosted runner service account."
+            }
+            & $python -m venv .venv
+            $python = (Resolve-Path ".venv\Scripts\python.exe").Path
+          }
+          "JOURNAL_PYTHON=$python" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          & $python --version
+
+      - name: Prepare pinned environment
+        run: |
+          & $env:JOURNAL_PYTHON -m pip install --disable-pip-version-check -r requirements.txt
+          & $env:JOURNAL_PYTHON -m pip check
+          if (-not (Test-Path ".deps\evaluator") -or -not (Test-Path ".deps\helix")) {
+            & $env:JOURNAL_PYTHON scripts\bootstrap.py
+          } else {
+            Write-Host "Pinned .deps already present; reusing them."
+          }
+
+      - name: Run long-workload confirmation
+        run: |
+          & $env:JOURNAL_PYTHON scripts\long_workload_confirmation.py
+
+      - name: Upload confirmation result
+        if: always() && hashFiles('results/long_workload_confirmation/summary.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: long-workload-accounting-confirmation
+          path: results/long_workload_confirmation/summary.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Scope guard
+        if: always()
+        run: |
+          Write-Host "Only the pre-frozen baseline and accounting candidate are compared."
+          Write-Host "Existing pinned HELIX records only; no new HELIX run."
+          Write-Host "The AICCC request-progress and network-commitment model is unchanged."
