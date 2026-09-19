@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "experiment": "Diagnostic back-check of the frozen accounting candidate on the earlier 677-condition design set",
+  "date": "2026-09-19",
+  "purpose": "Determine whether the 5% TTFT reserve actually catches the previously observed high-load unsafe approvals, while measuring the effect of remaining-Prefill blocking on conservative rejections.",
+  "evidence_role": "diagnostic only; these 677 conditions were already used for mechanism diagnosis and are not held-out confirmation",
+  "comparison": [
+    {
+      "label": "current accounting",
+      "blocking_mode": "full-active-prefill-service",
+      "ttft_profile_uncertainty_fraction": 0
+    },
+    {
+      "label": "frozen candidate",
+      "blocking_mode": "remaining-profile-service-full-intrinsic",
+      "ttft_profile_uncertainty_fraction": 0.05
+    }
+  ],
+  "population": [
+    "results/diagnostic/nominal_gap",
+    "results/diagnostic/partition_ranking"
+  ],
+  "guardrails": {
+    "frozen_J0_progress": true,
+    "unchanged_AICCC_network_equations": true,
+    "strict_all_request_safety": true,
+    "new_helix_runs": 0
+  }
+}
