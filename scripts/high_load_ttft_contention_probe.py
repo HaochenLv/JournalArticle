@@ -88,6 +88,36 @@ def main():
         f"max_decode_gt_{k}": summarize(high),
     }
 
+    pair_groups = defaultdict(list)
+    for r in rows:
+        pair_groups[(int(r["first_decode_max_prefill"]), int(r["first_decode_max_decode"]))].append(r)
+    by_concurrency_pair = {
+        f"P{np}_D{nd}": summarize(group)
+        for (np, nd), group in sorted(pair_groups.items())
+    }
+    top_outliers = []
+    for r in sorted(
+        rows,
+        key=lambda x: x["reference_first_decode_runtime_s"] - x["j1_predicted_first_decode_profile_s"],
+        reverse=True,
+    )[:30]:
+        top_outliers.append({
+            "seed": r["seed"],
+            "case_id": r["case_id"],
+            "intensity": r["intensity"],
+            "arrival_rate_rps": r["arrival_rate_rps"],
+            "request_id": r["request_id"],
+            "input_tokens": r["input_tokens"],
+            "output_tokens": r["output_tokens"],
+            "max_prefill": r["first_decode_max_prefill"],
+            "max_decode": r["first_decode_max_decode"],
+            "mean_prefill": r["first_decode_mean_prefill"],
+            "mean_decode": r["first_decode_mean_decode"],
+            "reference_runtime_s": r["reference_first_decode_runtime_s"],
+            "predicted_profile_s": r["j1_predicted_first_decode_profile_s"],
+            "excess_s": r["reference_first_decode_runtime_s"] - r["j1_predicted_first_decode_profile_s"],
+        })
+
     # This is not a fitted threshold: it reports the two previously observed
     # high-load false-acceptance focus requests under the structural split.
     focus_rows = []
@@ -123,6 +153,8 @@ def main():
         "pipeline_stage_count": k,
         "structural_split": split,
         "by_exact_first_decode_max_decode": exact_summary,
+        "by_first_decode_concurrency_pair": by_concurrency_pair,
+        "top_excess_rows_posthoc": top_outliers,
         "focus_request_series": focus_rows,
         "elapsed_s": time.perf_counter() - started,
     }
@@ -139,6 +171,7 @@ def main():
             "request_rows": summary["request_rows"],
             "structural_split": split,
             "by_exact_first_decode_max_decode": exact_summary,
+            "top_excess_rows_posthoc": top_outliers,
             "elapsed_s": summary["elapsed_s"],
         }, sort_keys=True, allow_nan=False),
         flush=True,
