@@ -1,6 +1,7 @@
 name: High-Load TTFT Diagnosis
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - aiccc-journal-rebuild
