@@ -1,20 +1,35 @@
 {
   "schema": 1,
   "protocol_id": "J1-STANDARD-LEDGER-PILOT-v1",
-  "purpose": "Bounded cache-only semantic validation of the J1 standard-TTFT/request-average-TPOT ledger against pinned HELIX execution records.",
+  "purpose": "Bounded cache-only semantic validation of the J1 standard-TTFT/request-average-TPOT ledger against a pre-existing nominal-diagnostic HELIX cache grid.",
   "branch": "aiccc-journal-rebuild",
   "reference_policy": "cache-only; never launch HELIX",
   "workload": {
     "duration_s": 30,
-    "seeds": [0, 1, 2, 3, 7, 19],
-    "placements": ["slow", "fast"],
-    "intensities": [0.006, 0.01, 0.0131, 0.015, 0.02, 0.022]
+    "seeds": [
+      0,
+      7,
+      19
+    ],
+    "placements": [
+      "slow",
+      "fast"
+    ],
+    "intensities": [
+      0.006,
+      0.01,
+      0.0131,
+      0.0132,
+      0.015,
+      0.02,
+      0.025
+    ]
   },
   "sla": {
-    "ttft_s": 2.0,
+    "ttft_s": 2,
     "tpot_s": 0.15,
     "fixed_overhead_s": 0.005,
-    "queue_overhead_s": 0.0
+    "queue_overhead_s": 0
   },
   "evaluator": {
     "intrinsic": true,
@@ -40,11 +55,13 @@
     "J0 phase-local verdict comparison"
   ],
   "scope_limits": [
+    "Pilot target grid is restricted to seed/placement/intensity points already used by the pre-existing nominal-gap diagnostic; cache misses abort rather than launch HELIX",
     "No new HELIX execution",
     "No capacity refinement",
     "No partition search",
     "No profile-noise experiment",
     "No manuscript claim"
   ],
-  "implementation_revision": 1
+  "implementation_revision": 2,
+  "protocol_amendment": "Revision 2 after the first cache-only run aborted before producing scientific results: the original 72-point target included uncached seed/intensity combinations. The revised 42-point grid uses the pre-existing nominal_gap.py seed/placement/intensity family only; no outcome-based selection and no HELIX execution."
 }
