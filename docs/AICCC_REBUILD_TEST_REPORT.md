@@ -59,6 +59,28 @@ Historical helper tests, including `test_stage6`, use their existing small fixtu
 - Trace ledgers expose residual time and per-link allocations/commitments; path allocations sum to the residual.
 - A single first violation is unsafe, without an attainment threshold.
 
+## Post-hardening J0 validation
+
+After the basic validation above, seven direct event/resource regressions were added to the rebuilt evaluator and the Decode block size was made an explicit runtime parameter. The last source/test hardening commit is `0d3e4b1a61cfd5ce48bf068dff12fd1481a47b2e`.
+
+The hardened core was then executed through the repository's Windows self-hosted GitHub Actions path:
+
+- Workflow: `AICCC Self-Hosted Tests`.
+- Run: `35412992314`, attempt 2.
+- Tested branch head: `b411bfcb29c08b71816b7570cb0e28b449108850`.
+- Runner: `journal-win`.
+- Python: 3.12.10.
+- AICCC math: **5/5 passed**.
+- AICCC evaluator: **13/13 passed**.
+- Failed/errors: **0**.
+- The run intentionally executed only the active AICCC core checks.
+
+The seven added evaluator regressions cover tied-arrival commutativity, preservation of fractional Decode progress across unrelated arrivals, parameterized Decode block-boundary context/KV consistency, retention of simultaneous violations, immediate prompt-KV/activation reservation at arrival, explicit event-limit failure, and aggregate overload on a shared physical link. Block-sensitive tests use a non-default block size to verify that 16 is a compatibility default rather than a mathematical constant.
+
+This self-hosted run did **not** execute HELIX, a formal validation matrix, a capacity sweep, Stage 6B experiments, profile-noise experiments, or manuscript experiments. Dependency bootstrap may fetch the pinned HELIX source tree, but no HELIX simulation was launched.
+
+This checkpoint closes J0. Any future journal TTFT/TPOT work must be additive ledger-policy work above the frozen mother evaluator and must not silently alter the profiling-driven progress model or strict feasibility semantics. See `docs/J0_AICCC_CORE_FREEZE.md`.
+
 ## Changes, limitations, and handoff
 
 - Files modified: this report and a short addition in the top AICCC section of `CURRENT_STATUS.md`. Historical status content is preserved.
