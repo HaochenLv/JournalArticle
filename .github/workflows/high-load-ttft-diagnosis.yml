@@ -87,8 +87,9 @@ jobs:
 
       - name: Run frozen evaluator guards
         run: |
-          $env:PYTHONPATH = "src"
-          & $env:JOURNAL_PYTHON -m pytest -q tests\test_aiccc_math.py tests\test_aiccc_evaluator.py tests\test_aiccc_j1_evaluator.py
+          & $env:JOURNAL_PYTHON -m unittest tests.test_aiccc_math -v
+          & $env:JOURNAL_PYTHON -m unittest tests.test_aiccc_evaluator -v
+          & $env:JOURNAL_PYTHON -m unittest tests.test_aiccc_j1_evaluator -v
 
       - name: Diagnose high-load TTFT
         run: |
