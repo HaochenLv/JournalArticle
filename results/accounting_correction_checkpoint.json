@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "status": "blocking_correction_supported; global_ttft_reserve_rejected",
+  "date": "2026-09-19",
+  "modeling_direction_unchanged": true,
+  "accepted_for_next_stage": {
+    "mechanism": "remaining Prefill blocking",
+    "formula_summary": "During each Decode/Prefill overlap interval, charge only the average remaining fraction of the known profiled Prefill service. Keep the intrinsic overhead fully charged because its temporal placement is unknown.",
+    "changes_progress": false,
+    "changes_network_equations": false,
+    "final_model_claim": false
+  },
+  "rejected_general_guard": {
+    "mechanism": "global 5% TTFT profile uncertainty reserve",
+    "reason": "On the 677-condition design-set back-check it reduced false acceptance only from 4 to 3 while increasing false rejection from 47 to 151 when paired with remaining-Prefill blocking.",
+    "conclusion": "Do not use a global TTFT reserve as the general safety fix."
+  },
+  "mechanism_screen": {
+    "run_id": 35418640453,
+    "population": "h103 and h105 short workloads; 528 cached physical conditions",
+    "current_accounting": {
+      "false_acceptance": 0,
+      "false_rejection": 16,
+      "agreement": 0.9696969696969697,
+      "exact_sampled_capacity_edges": 0,
+      "comparable_capacity_edges": 12
+    },
+    "remaining_blocking_only": {
+      "false_acceptance": 0,
+      "false_rejection": 11,
+      "agreement": 0.9791666666666666,
+      "exact_sampled_capacity_edges": 1,
+      "comparable_capacity_edges": 12
+    },
+    "note": "0%, 2.5%, and 5% global TTFT reserves produced identical verdict counts on this short screening set; 10% caused more false rejections."
+  },
+  "long_confirmation": {
+    "candidate_run_id": 35419646173,
+    "baseline_run_id": 35418937603,
+    "population": "h104 and h106 long workloads; 490 cached physical conditions",
+    "current_accounting": {
+      "false_acceptance": 0,
+      "false_rejection": 14,
+      "agreement": 0.9714285714285714,
+      "exact_sampled_capacity_edges": 0,
+      "comparable_capacity_edges": 6
+    },
+    "remaining_blocking_only": {
+      "false_acceptance": 0,
+      "false_rejection": 12,
+      "agreement": 0.9755102040816327,
+      "exact_sampled_capacity_edges": 0,
+      "comparable_capacity_edges": 6
+    },
+    "conclusion": "Remaining-Prefill blocking again reduces conservative rejections without introducing unsafe approvals, but it does not by itself fix the sampled capacity edge."
+  },
+  "design_set_backcheck": {
+    "run_id": 35419538913,
+    "population": "677 previously used diagnostic conditions; diagnostic only, not held-out",
+    "current_accounting": {
+      "false_acceptance": 4,
+      "false_rejection": 69,
+      "agreement": 0.8921713441654358
+    },
+    "remaining_blocking_only": {
+      "false_acceptance": 4,
+      "false_rejection": 47,
+      "agreement": 0.9246676514032496
+    },
+    "remaining_blocking_plus_global_5pct_ttft_reserve": {
+      "false_acceptance": 3,
+      "false_rejection": 151,
+      "agreement": 0.7725258493353028
+    },
+    "conclusion": "Remaining-Prefill blocking addresses the conservative TPOT side. The high-load TTFT unsafe approvals are a separate problem and are not solved by this blocking correction."
+  },
+  "deterministic_tests": {
+    "run_id": 35417857624,
+    "J0_math": "5/5",
+    "J0_evaluator": "13/13",
+    "standard_ledger_and_candidate_guards": "14/14"
+  },
+  "next_problem": "Design a targeted high-load/profile-uncertainty safety guard that attacks TTFT unsafe approvals without globally sacrificing safe capacity.",
+  "new_helix_runs": 0
+}

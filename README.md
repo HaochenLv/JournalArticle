@@ -1,3 +1,5 @@
+> **Current rebuild branch:** `aiccc-journal-rebuild`. J0 freezes the AICCC accounting-only event-driven evaluator as the only journal mother evaluator. J1 adds standard first-output TTFT and request-average post-first TPOT only as an accounting/ledger overlay on that frozen progress engine. The bounded 42-point cache-only J1 pilot passed with 0 false acceptances and 0 false rejections against the strict standard-metric reference, but it is not final journal validation. `JB-Avg-v1` / Stage 6B remain historical. See `docs/AICCC_JOURNAL_CONTRACT.md`, `docs/J1_VALIDATION_REPORT.md`, and `CURRENT_STATUS.md`.
+
 # Journal research on SLA-aware LLM pipeline planning
 
 **Stage3 evidence frozen (2026-09-17):** [Writing handoff](STAGE3_EVIDENCE_REPORT.md) and [formal evidence report](FORMAL_EVIDENCE_REPORT.md). Legacy sensitivity reuses1634 reference records for3268 judgments; no new reference run. Main line: Yes, but modified. Raw4 strict/2 tie-break mismatches become legacy3/1; decision and operating-point losses are separated. Mitigation is conditional replay on a reference-informed frozen grid.31 tests pass; no further experiments needed for the stated scope.

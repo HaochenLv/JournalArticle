@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "experiment_id": "HIGH_LOAD_TTFT_DIAG_v1",
+  "date": "2026-09-19",
+  "question": "Why does standard first-output TTFT become optimistic at high request intensity after the remaining-Prefill blocking correction?",
+  "model_guardrails": {
+    "mother_evaluator": "frozen AICCC J0 profiling-driven progress",
+    "journal_ledger": "J1 standard first-output TTFT and request-average post-first TPOT",
+    "prefill_blocking": "remaining-profile-service-full-intrinsic",
+    "network_equations": "unchanged AICCC residual-time -> omega -> delta -> required-bandwidth",
+    "changes_progress": false,
+    "changes_network_equations": false,
+    "changes_safety_rule": false
+  },
+  "source_cases": [
+    "a100-s0-slow-prefill",
+    "a100-s0-slow-ttft",
+    "a100-s7-slow-prefill",
+    "a100-s7-slow-ttft"
+  ],
+  "physical_case_files": [
+    "results/diagnostic/nominal_gap/a100-s0-slow-prefill.json",
+    "results/diagnostic/nominal_gap/a100-s7-slow-prefill.json"
+  ],
+  "threshold_views": [
+    {"seed": 0, "ttft_s": 2.0, "label": "seed0-ttft2.0"},
+    {"seed": 0, "ttft_s": 1.8, "label": "seed0-ttft1.8"},
+    {"seed": 7, "ttft_s": 2.0, "label": "seed7-ttft2.0"},
+    {"seed": 7, "ttft_s": 1.8, "label": "seed7-ttft1.8"}
+  ],
+  "reference": {
+    "source": "pre-existing pinned HELIX raw-reference records",
+    "new_helix_runs": 0,
+    "cache_miss_policy": "abort",
+    "standard_ttft": "HELIX true_first_token_ttft_s under the existing record-specific overhead convention"
+  },
+  "diagnostic_hypotheses": [
+    "The high-load TTFT rise is already present in the aligned Prefill-side latency.",
+    "The high-load TTFT rise is concentrated in the first Decode-token interval after Prefill.",
+    "The evaluator profiling-driven first-token trajectory misses a load-dependent waiting term."
+  ],
+  "comparison_rule": "For each seed and TTFT threshold, identify the first sampled intensity that violates TTFT and compare the same worst request with the nearest lower sampled intensity that is TTFT-safe.",
+  "outputs": [
+    "per-request reference aligned TTFT, true first-output TTFT, and first Decode-token runtime",
+    "J1 predicted standard TTFT and ledger components",
+    "same-request safe-to-unsafe decomposition",
+    "request rate and J0 Prefill/Decode concurrency around the first-token interval",
+    "identity checks and trajectory-hash parity"
+  ],
+  "decision_boundary": "Diagnosis only. Do not select or tune a safety guard from this run."
+}

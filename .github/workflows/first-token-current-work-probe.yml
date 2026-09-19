@@ -1,0 +1,71 @@
+name: First-Token Current-Work Probe
+
+on:
+  push:
+    branches:
+      - aiccc-journal-rebuild
+    paths:
+      - "scripts/first_token_current_work_backlog_probe.py"
+      - "config/first_token_current_work_backlog_probe_v1.json"
+      - ".github/workflows/first-token-current-work-probe.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: journal-first-token-current-work-probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    if: github.repository == 'HaochenLv/JournalArticle' && github.ref == 'refs/heads/aiccc-journal-rebuild'
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: powershell -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File {0}
+    steps:
+      - name: Checkout active branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          clean: false
+
+      - name: Locate Python
+        run: |
+          if (Test-Path ".venv\Scripts\python.exe") {
+            $python=(Resolve-Path ".venv\Scripts\python.exe").Path
+          } else {
+            $py=Get-Command py.exe -ErrorAction Stop
+            $python=(& $py.Source -3.12 -c "import sys;print(sys.executable)" | Select-Object -Last 1).Trim()
+            & $python -m venv .venv
+            $python=(Resolve-Path ".venv\Scripts\python.exe").Path
+          }
+          "JOURNAL_PYTHON=$python" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Prepare environment
+        run: |
+          & $env:JOURNAL_PYTHON -m pip install --disable-pip-version-check -r requirements.txt
+          if (-not (Test-Path ".deps\evaluator") -or -not (Test-Path ".deps\helix")) {
+            & $env:JOURNAL_PYTHON scripts\bootstrap.py
+          }
+
+      - name: Run frozen current-work probe
+        run: |
+          & $env:JOURNAL_PYTHON scripts\first_token_current_work_backlog_probe.py
+
+      - name: Upload result
+        if: always() && hashFiles('results/first_token_current_work_backlog_probe_v1/summary.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: first-token-current-work-backlog-probe-v1
+          path: results/first_token_current_work_backlog_probe_v1/summary.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Scope guard
+        if: always()
+        run: |
+          Write-Host "Cache-only mechanism probe; no new HELIX run."
+          Write-Host "Correlation does not authorize a guard."

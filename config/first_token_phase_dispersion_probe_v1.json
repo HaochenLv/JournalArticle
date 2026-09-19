@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "experiment_id": "FIRST_TOKEN_PHASE_DISPERSION_PROBE_v1",
+  "date": "2026-09-19",
+  "question": "Does desynchronization of active Decode requests at a target request's Prefill-to-Decode boundary explain first-token compute queuing better than raw Decode concurrency?",
+  "frozen_before_outcome": true,
+  "new_helix_runs": 0,
+  "source": "same 34 cached A100 slow-placement physical points used by HIGH_LOAD_TTFT_DIAG_v1",
+  "signals": {
+    "phase": "fractional part of each competing Decode request's J0 continuous token progress at the target Prefill-to-Decode post-event boundary",
+    "circular_dispersion": "1 - magnitude(mean(exp(2*pi*i*phase)))",
+    "mean_pairwise_circular_distance": "mean(min(|phi_a-phi_b|, 1-|phi_a-phi_b|))",
+    "cohort_pressure": "competing Decode count multiplied by circular dispersion",
+    "occupied_stage_bins": "number of occupied bins when phase is deterministically divided into eight equal bins"
+  },
+  "outcome": "reference first-Decode runtime minus J0/J1 predicted first-Decode profile duration",
+  "comparison": "Pearson correlations and predeclared focus-pair safe-to-unsafe changes; no threshold fitting",
+  "decision_boundary": "Mechanism probe only. Do not adopt a guard from correlation alone. Any final accounting formula must be frozen separately before classification tests."
+}

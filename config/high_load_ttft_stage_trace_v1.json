@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "experiment_id": "HIGH_LOAD_TTFT_STAGE_TRACE_v1",
+  "date": "2026-09-19",
+  "question": "Where inside the first Decode token does the high-load TTFT jump observed by HIGH_LOAD_TTFT_DIAG_v1 occur?",
+  "frozen_before_outcome": true,
+  "model_guardrails": {
+    "mother_evaluator": "AICCC J0 unchanged",
+    "journal_ledger": "J1 unchanged",
+    "network_equations": "unchanged",
+    "safety_rule": "unchanged",
+    "purpose": "reference-side mechanism diagnosis only"
+  },
+  "reference": {
+    "helix_commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3",
+    "adapter_commit": "1cd5c56365b084fb06e3ca14f67448ddbf45275a",
+    "pipeline": "A100 slow placement, shift 0",
+    "fresh_runs_planned": 4,
+    "instrumentation": "record request.location_history for the first Decode iteration without altering scheduling"
+  },
+  "execution_amendment": {
+    "reason": "The first instrumented attempt completed the first three frozen physical runs and then stopped because the script incorrectly asserted that the focus request must also be the maximum-TTFT request at the lower-load comparison point. That assertion is not part of the scientific protocol: the focus request is frozen from the high-load failure and is intentionally followed backward to the lower-load point.",
+    "scientific_output_from_failed_attempt": false,
+    "completed_physical_runs_before_abort": 3,
+    "additional_exact_reruns_authorized": 4,
+    "maximum_total_fresh_helix_runs_after_amendment": 7,
+    "changes_points_or_hypothesis": false
+  },
+  "points": [
+    {"seed": 0, "intensity": 0.96, "role": "lower TTFT-safe comparison"},
+    {"seed": 0, "intensity": 1.28, "role": "first sampled TTFT-unsafe comparison"},
+    {"seed": 7, "intensity": 0.32, "role": "lower TTFT-safe comparison"},
+    {"seed": 7, "intensity": 0.64, "role": "first sampled TTFT-unsafe comparison"}
+  ],
+  "focused_requests_from_prior_cache_only_diagnosis": {
+    "0": "azure-00011",
+    "7": "azure-00014"
+  },
+  "measurements": [
+    "first-output TTFT",
+    "aligned Prefill-side TTFT",
+    "first Decode-token total duration",
+    "time spent at source, links, and each compute node during first Decode",
+    "per-node first-Decode residence increase from lower-load to high-load for the same request"
+  ],
+  "decision_boundary": "Do not choose or tune a protection mechanism from this stage trace alone. Use it only to identify whether the missing time is compute-node residence/queueing, network transfer, or another location."
+}

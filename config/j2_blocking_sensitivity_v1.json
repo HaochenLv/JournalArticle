@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "protocol_id": "J2-BLOCKING-SENSITIVITY-v1",
+  "date": "2026-09-19",
+  "motivation": "J2 broader nominal validation found conservative disagreements dominated by average-TPOT SLA-time failures. The AICCC text includes Decode SLA debt but does not uniquely define the recovered blocking recurrence, so this experiment isolates that accounting term without changing request progress.",
+  "modeling_guardrails": {
+    "mother_evaluator": "frozen AICCC J0",
+    "j1_semantics": "standard TTFT and request-average post-first TPOT",
+    "progress_unchanged": true,
+    "network_kernel_unchanged": true,
+    "strict_safety": true,
+    "blocking_scale_role": "diagnostic multiplier on the recovered accounting-only blocking term; never applied to J0 progress"
+  },
+  "blocking_scales": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "populations": [
+    {
+      "source": "results/diagnostic/nominal_gap",
+      "expected_pairs": 175
+    },
+    {
+      "source": "results/diagnostic/partition_ranking",
+      "expected_pairs": 502
+    }
+  ],
+  "reference": "same strict standard-metric pinned HELIX cache used by J2-REFERENCE-PROFILE-STRESS-v1",
+  "primary_metrics": [
+    "false acceptance",
+    "false rejection",
+    "agreement",
+    "false-acceptance severity",
+    "sampled safe-edge agreement",
+    "first limiting constraint distribution"
+  ],
+  "interpretation": "mechanism sensitivity only; no blocking scale is selected or calibrated from this experiment",
+  "scope_limits": [
+    "No new HELIX execution",
+    "No profile perturbation",
+    "No capacity refinement",
+    "No partition search",
+    "No change to J0 progress or AICCC network equations"
+  ],
+  "workers": 4,
+  "timeout_minutes": 45
+}

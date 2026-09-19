@@ -1,0 +1,110 @@
+name: First-Token HELIX Stage Trace
+
+on:
+  push:
+    branches:
+      - aiccc-journal-rebuild
+    paths:
+      - "scripts/high_load_ttft_stage_trace.py"
+      - "config/high_load_ttft_stage_trace_v1.json"
+      - ".github/workflows/high-load-ttft-stage-trace.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: journal-high-load-ttft-stage-trace
+  cancel-in-progress: true
+
+jobs:
+  trace:
+    if: github.repository == 'HaochenLv/JournalArticle' && github.ref == 'refs/heads/aiccc-journal-rebuild'
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 60
+
+    defaults:
+      run:
+        shell: powershell -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File {0}
+
+    steps:
+      - name: Checkout active branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          clean: false
+
+      - name: Locate local Python 3.12
+        run: |
+          $ErrorActionPreference = "Stop"
+          if (Test-Path ".venv\Scripts\python.exe") {
+            $python = (Resolve-Path ".venv\Scripts\python.exe").Path
+          } else {
+            $python = $null
+            $py = Get-Command py.exe -ErrorAction SilentlyContinue
+            if ($py) {
+              $candidate = & $py.Source -3.12 -c "import sys; print(sys.executable)" 2>$null
+              if ($LASTEXITCODE -eq 0 -and $candidate) {
+                $python = ($candidate | Select-Object -Last 1).Trim()
+              }
+            }
+            if (-not $python) {
+              $candidates = @(
+                "C:\Python312\python.exe",
+                "C:\Program Files\Python312\python.exe"
+              )
+              $candidates += @(
+                Get-ChildItem "C:\Users\*\AppData\Local\Programs\Python\Python312\python.exe" -ErrorAction SilentlyContinue |
+                  ForEach-Object { $_.FullName }
+              )
+              foreach ($candidate in $candidates) {
+                if (-not (Test-Path $candidate)) { continue }
+                & $candidate -c "import sys; assert sys.version_info[:2] == (3, 12)" 2>$null
+                if ($LASTEXITCODE -eq 0) {
+                  $python = $candidate
+                  break
+                }
+              }
+            }
+            if (-not $python) { throw "No accessible Python 3.12 installation was found." }
+            & $python -m venv .venv
+            $python = (Resolve-Path ".venv\Scripts\python.exe").Path
+          }
+          "JOURNAL_PYTHON=$python" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          & $python --version
+
+      - name: Prepare pinned environment
+        run: |
+          & $env:JOURNAL_PYTHON -m pip install --disable-pip-version-check -r requirements.txt
+          & $env:JOURNAL_PYTHON -m pip check
+          if (-not (Test-Path ".deps\evaluator") -or -not (Test-Path ".deps\helix")) {
+            & $env:JOURNAL_PYTHON scripts\bootstrap.py
+          } else {
+            Write-Host "Pinned .deps already present; reusing them."
+          }
+
+      - name: Frozen evaluator guards
+        run: |
+          & $env:JOURNAL_PYTHON -m unittest tests.test_aiccc_math -v
+          & $env:JOURNAL_PYTHON -m unittest tests.test_aiccc_evaluator -v
+          & $env:JOURNAL_PYTHON -m unittest tests.test_aiccc_j1_evaluator -v
+
+      - name: Trace four frozen HELIX points
+        run: |
+          & $env:JOURNAL_PYTHON scripts\high_load_ttft_stage_trace.py
+
+      - name: Upload stage trace
+        if: always() && hashFiles('results/high_load_ttft_stage_trace_v1/summary.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: high-load-ttft-stage-trace-v1
+          path: results/high_load_ttft_stage_trace_v1/summary.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Scope guard
+        if: always()
+        run: |
+          Write-Host "Exactly four frozen HELIX reference points are authorized."
+          Write-Host "Instrumentation records location history only; it does not change scheduling."
+          Write-Host "No AICCC/J1 equation or safety rule is modified."

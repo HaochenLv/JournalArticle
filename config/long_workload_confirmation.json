@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "experiment": "Confirmation of the remaining-Prefill blocking formula with a 5% TTFT profile-uncertainty reserve",
+  "date": "2026-09-19",
+  "selection_record": {
+    "screening_run": 35418640453,
+    "screening_population": [
+      "h103-o500-d30",
+      "h105-o900-d30"
+    ],
+    "result": "On 528 cached physical conditions, remaining-Prefill blocking reduced false rejections from 16 to 11 with false acceptances staying at 0. TTFT reserves of 0%, 2.5%, and 5% were tied on these verdict counts; 10% added false rejections.",
+    "chosen_candidate": "remaining Prefill blocking + 5% TTFT reserve",
+    "rationale": "Use the physically motivated remaining-service blocking rule. Among tied low-cost TTFT reserves, 5% matches the smallest profile-error stress magnitude already used for uncertainty analysis and provides a one-sided safety allowance before confirmation. The choice is frozen before evaluating the long workloads.",
+    "not_claimed": "The 5% value is not fitted as an optimum and is not yet a final production margin."
+  },
+  "reserved_confirmation_workloads": [
+    "h104-o700-d120",
+    "h106-o1100-d120"
+  ],
+  "comparison": [
+    {
+      "label": "current accounting",
+      "blocking_mode": "full-active-prefill-service",
+      "ttft_profile_uncertainty_fraction": 0
+    },
+    {
+      "label": "candidate accounting",
+      "blocking_mode": "remaining-profile-service-full-intrinsic",
+      "ttft_profile_uncertainty_fraction": 0.05
+    }
+  ],
+  "guardrails": {
+    "arrival_model": "same AICCC/HELIX Azure-derived arrivals and intensity time-scaling",
+    "progress": "frozen J0 profiling-driven trajectory",
+    "latency_metrics": "standard first-output TTFT and request-average post-first TPOT",
+    "network": "unchanged residual-time to per-link bandwidth commitment equations",
+    "strict_safety": true,
+    "new_helix_runs": 0,
+    "cache_miss_policy": "abort"
+  },
+  "success_questions": [
+    "Does the candidate avoid increasing false acceptance on the long workloads?",
+    "Does it reduce false rejection relative to the current accounting?",
+    "Does it move the sampled maximum-safe-load edge closer to the HELIX reference?",
+    "Does every accounting-only comparison preserve the same J0 trajectory?"
+  ],
+  "workers": 4
+}

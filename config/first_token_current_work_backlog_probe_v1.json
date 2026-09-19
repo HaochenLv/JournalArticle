@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "experiment_id": "FIRST_TOKEN_CURRENT_WORK_BACKLOG_PROBE_v1",
+  "date": "2026-09-19",
+  "question": "Can a scheduler-free accounting signal based on the remaining current-token Decode work already in flight explain the high-load first-token delay?",
+  "frozen_before_outcome": true,
+  "new_helix_runs": 0,
+  "source": "same 34 cached A100 slow-placement physical points used by HIGH_LOAD_TTFT_DIAG_v1",
+  "signal_definition": {
+    "observation_time": "the J0 post-event state where the target request transitions from Prefill to Decode",
+    "per_competing_decode_request": "remaining fraction to that request's next integer Decode-token boundary multiplied by its current profiled end-to-end Decode time",
+    "aggregate": "sum over all already-active Decode requests except the target",
+    "integer_boundary_rule": "an exactly integral progress value contributes one full next-token service quantum"
+  },
+  "comparison_signals": [
+    "active Decode request count",
+    "sum of full current profiled Decode service quanta of competing requests",
+    "sum of remaining-to-next-token profiled Decode work of competing requests"
+  ],
+  "outcome": "reference first-Decode runtime minus J0/J1 predicted first-Decode profile duration",
+  "decision_boundary": "Mechanism probe only. Do not adopt a guard from correlation alone. If a signal is promising, freeze its accounting formula before classification back-check and held-out validation."
+}

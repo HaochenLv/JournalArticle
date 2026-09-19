@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "contract_id": "AICCC-J1-STANDARD-LEDGER-v1",
+  "status": "experimental semantic extension; requires J1 validation before freeze",
+  "mother_evaluator": "AICCC-JOURNAL-BASE-v1.1",
+  "progress_source": "frozen J0 profiling-driven drained trajectory",
+  "execution_passes": 2,
+  "pass_1": "Generate the immutable J0 profile-driven trajectory with accounting unable to alter progress.",
+  "pass_2": "Overlay standard request-horizon SLA ledgers and unchanged AICCC residual-time-to-bandwidth commitments.",
+  "standard_ttft": {
+    "definition": "arrival to the profile-driven completion of the first Decode-token unit, with network service charged to the same accounting horizon",
+    "accounted_terms": [
+      "profile-driven elapsed time from arrival to first Decode-token completion",
+      "intrinsic Prefill accounting charge",
+      "integrated recovered Decode blocking charge over output progress [0,1]",
+      "one fixed overhead charge",
+      "one queue overhead charge"
+    ],
+    "network_horizon": "Prefill activation traffic plus one Decode-token activation traffic",
+    "limit": "ttft_s"
+  },
+  "request_average_tpot": {
+    "definition": "post-first profile-driven elapsed time divided by output_tokens-1, with post-first network service charged over the same request horizon",
+    "single_output": "no TPOT horizon",
+    "accounted_total_terms": [
+      "profile-driven elapsed time from first Decode-token completion to finish",
+      "integrated recovered Decode blocking charge over output progress [1,m]",
+      "(m-1) fixed overhead charges",
+      "(m-1) queue overhead charges"
+    ],
+    "network_horizon": "(m-1) Decode-token activation transfers",
+    "limit_total": "(m-1) * tpot_s"
+  },
+  "network_kernel": {
+    "unchanged_from_j0": true,
+    "omega": "(S_e/B_e) / sum_j(S_j/B_j)",
+    "delta": "omega * residual_network_time",
+    "required_bandwidth": "S_e / delta",
+    "shared_link_rule": "sum active request-horizon commitments and compare with physical capacity"
+  },
+  "first_token_boundary": {
+    "implementation": "analytical interpolation within a J0 interval of constant Decode profile",
+    "changes_j0_event_schedule": false,
+    "changes_j0_progress": false
+  },
+  "blocking_interpretation": {
+    "policy": "active-prefill-full-service-recovered-assumption",
+    "j1_extension": "integrate the recovered per-token blocking debt over equivalent Decode progress",
+    "theorem_claimed": false,
+    "sensitivity_parameter": {
+      "name": "blocking_scale",
+      "default": 1,
+      "domain": "finite nonnegative",
+      "purpose": "J2 accounting-only sensitivity of the recovered blocking assumption",
+      "changes_progress": false,
+      "default_semantics_unchanged": true,
+      "status": "diagnostic only until separately validated"
+    }
+  },
+  "safety": {
+    "strict_all_request_safety": true,
+    "attainment_threshold": null,
+    "any_sla_network_memory_violation_is_unsafe": true
+  },
+  "forbidden": [
+    "network serialization in the progress clock",
+    "virtual-round execution",
+    "simulate then classify at 90 percent attainment",
+    "SLA thresholds or accounting-only charges changing the J0 trajectory"
+  ]
+}

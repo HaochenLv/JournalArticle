@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "experiment": "Long-workload confirmation of remaining-Prefill blocking without a global TTFT reserve",
+  "date": "2026-09-19",
+  "reason_for_followup": "The diagnostic 677-condition back-check showed that the global 5% TTFT reserve reduced unsafe approvals only from 4 to 3 but increased conservative rejections from 47 to 151 when combined with remaining-Prefill blocking. Therefore the global reserve is rejected as a general mechanism, and the blocking correction is confirmed separately.",
+  "candidate": {
+    "blocking_mode": "remaining-profile-service-full-intrinsic",
+    "ttft_profile_uncertainty_fraction": 0
+  },
+  "long_workloads": [
+    "h104-o700-d120",
+    "h106-o1100-d120"
+  ],
+  "baseline_comparison": {
+    "source_run": 35418937603,
+    "same_population": true,
+    "current_accounting": {
+      "pairs": 490,
+      "false_acceptance": 0,
+      "false_rejection": 14,
+      "safe_safe": 81,
+      "unsafe_unsafe": 395,
+      "agreement": 0.9714285714285714
+    },
+    "note": "Baseline was already executed on the exact same h104/h106 population with unchanged J0 core and standard reference; do not rerun it solely to waste compute."
+  },
+  "success_questions": [
+    "Does remaining-Prefill blocking keep false acceptance at zero on the long population?",
+    "Does it reduce false rejection below 14?",
+    "What happens to sampled maximum-safe-load edges?"
+  ],
+  "guardrails": {
+    "new_helix_runs": 0,
+    "J0_progress_unchanged": true,
+    "AICCC_network_equations_unchanged": true,
+    "strict_all_request_safety": true
+  },
+  "workers": 4
+}
