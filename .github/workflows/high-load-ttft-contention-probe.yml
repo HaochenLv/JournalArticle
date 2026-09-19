@@ -1,0 +1,77 @@
+name: High-Load TTFT Contention Probe
+
+on:
+  push:
+    branches:
+      - aiccc-journal-rebuild
+    paths:
+      - "scripts/high_load_ttft_contention_probe.py"
+      - "config/high_load_ttft_contention_probe_v1.json"
+      - ".github/workflows/high-load-ttft-contention-probe.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: journal-high-load-ttft-contention-probe
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    if: github.repository == 'HaochenLv/JournalArticle' && github.ref == 'refs/heads/aiccc-journal-rebuild'
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: powershell -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File {0}
+    steps:
+      - name: Checkout active branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          clean: false
+
+      - name: Locate local Python 3.12
+        run: |
+          $ErrorActionPreference = "Stop"
+          if (Test-Path ".venv\Scripts\python.exe") {
+            $python = (Resolve-Path ".venv\Scripts\python.exe").Path
+          } else {
+            $py = Get-Command py.exe -ErrorAction SilentlyContinue
+            if (-not $py) { throw "Python launcher unavailable." }
+            $candidate = & $py.Source -3.12 -c "import sys; print(sys.executable)" 2>$null
+            if ($LASTEXITCODE -ne 0 -or -not $candidate) { throw "Python 3.12 unavailable." }
+            & ($candidate | Select-Object -Last 1).Trim() -m venv .venv
+            $python = (Resolve-Path ".venv\Scripts\python.exe").Path
+          }
+          "JOURNAL_PYTHON=$python" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          & $python --version
+
+      - name: Prepare pinned environment
+        run: |
+          & $env:JOURNAL_PYTHON -m pip install --disable-pip-version-check -r requirements.txt
+          & $env:JOURNAL_PYTHON -m pip check
+          if (-not (Test-Path ".deps\evaluator") -or -not (Test-Path ".deps\helix")) {
+            & $env:JOURNAL_PYTHON scripts\bootstrap.py
+          }
+
+      - name: Run contention probe
+        run: |
+          & $env:JOURNAL_PYTHON scripts\high_load_ttft_contention_probe.py
+
+      - name: Upload probe
+        if: always() && hashFiles('results/high_load_ttft_contention_probe_v1/summary.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: high-load-ttft-contention-probe-v1
+          path: results/high_load_ttft_contention_probe_v1/summary.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Scope guard
+        if: always()
+        run: |
+          Write-Host "Cache-only structural probe; new HELIX runs are forbidden."
+          Write-Host "The eight-stage split is structural and was frozen before this output."
+          Write-Host "No guard is selected or tuned here."
