@@ -2,7 +2,7 @@
   "schema": 1,
   "experiment": "Held-out check of a more realistic Prefill-blocking calculation and a small TTFT profile-uncertainty reserve",
   "date": "2026-09-19",
-  "basis": "Mechanisms were defined after the broader reliability diagnosis. Evaluation uses formal-workload families h103-h106, which were not used to design the current correction in this conversation.",
+  "basis": "Mechanism screening uses h103 and h105 only. h104 and h106 are deliberately reserved for later confirmation and are not evaluated during screening.",
   "important_limitation": "These workloads existed historically in the repository, so they are held out from the current mechanism-design step, not globally unseen data.",
   "model_guardrails": {
     "request_arrival": "same AICCC/HELIX Azure-derived workload construction and time-scaling",
@@ -21,9 +21,7 @@
   },
   "held_out_workloads": [
     "h103-o500-d30",
-    "h104-o700-d120",
-    "h105-o900-d30",
-    "h106-o1100-d120"
+    "h105-o900-d30"
   ],
   "deployments": [
     "A100 primary link",
@@ -70,5 +68,10 @@
     "trajectory hash parity across accounting-only candidates"
   ],
   "selection_rule": "Do not choose a final mechanism only because it has the best aggregate score. Prefer a candidate only if it reduces conservative mistakes without increasing unsafe approvals on the held-out set, and keep all limitations explicit.",
-  "workers": 4
+  "workers": 4,
+  "protocol_amendment": "Before the first held-out run produced any result, the full h103-h106 screen was recognized as unnecessarily expensive. The mechanism-screening population is restricted to the two short held-out workloads h103 and h105. The two longer workloads h104 and h106 are reserved untouched for a later confirmation after a candidate is frozen.",
+  "reserved_confirmation_workloads": [
+    "h104-o700-d120",
+    "h106-o1100-d120"
+  ]
 }
