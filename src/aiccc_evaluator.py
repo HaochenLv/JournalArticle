@@ -26,8 +26,9 @@ from aiccc_math import (
 from research import H, Profiles, fingerprint
 from sla_aware_mvp.domain import sorted_workload
 
-VERSION = "AICCC-JOURNAL-BASE-v1"
+VERSION = "AICCC-JOURNAL-BASE-v1.1"
 BLOCKING_POLICY = "active-prefill-full-service-recovered-assumption"
+DEFAULT_DECODE_BLOCK_SIZE = 16
 
 
 @dataclass
@@ -53,6 +54,7 @@ def evaluate(
     precheck=True,
     activation_buffers=True,
     blocking_policy=BLOCKING_POLICY,
+    decode_block_size=DEFAULT_DECODE_BLOCK_SIZE,
     max_events=100_000,
 ):
     """Evaluate one finite workload using the AICCC accounting model.
@@ -64,11 +66,21 @@ def evaluate(
 
     drain=True is diagnostic: evaluation continues after the first violation
     so trajectories can be compared, but safe is still set by first violation.
+
+    decode_block_size controls only Decode profile/resource recomputation
+    granularity. The compatibility default is 16; it is not a mathematical
+    constant of the evaluator.
     """
     started = time.perf_counter()
     pipeline.validate()
     requests = sorted_workload(workload)
     prof = prof or Profiles()
+    if (
+        isinstance(decode_block_size, bool)
+        or not isinstance(decode_block_size, int)
+        or decode_block_size <= 0
+    ):
+        raise ValueError("decode_block_size must be a positive integer")
 
     active = {}
     index = 0
@@ -126,7 +138,7 @@ def evaluate(
         if x.phase != "decode":
             return x.spec.input_tokens
         return x.spec.input_tokens + min(
-            (x.block + 1) * 16,
+            (x.block + 1) * decode_block_size,
             x.spec.output_tokens,
         )
 
@@ -343,6 +355,7 @@ def evaluate(
             "mother_evaluator": "AICCC-accounting-only",
             "blocking_policy": blocking_policy,
             "strict_all_request_safety": True,
+            "decode_block_size": decode_block_size,
             "safe": not first,
             "first_violation": first[0] if first else None,
             "first_violations": first,
@@ -386,7 +399,7 @@ def evaluate(
             if x.decode_compute <= 0:
                 raise ValueError("positive profiled Decode compute required")
 
-            target = min((x.block + 1) * 16, x.spec.output_tokens)
+            target = min((x.block + 1) * decode_block_size, x.spec.output_tokens)
             when = t + (target - x.progress) * x.decode_compute
             due[rid] = (when, target)
             candidates.append(when)
@@ -421,7 +434,7 @@ def evaluate(
                     events.append(("Finish", rid))
                     del active[rid]
                 else:
-                    x.block = target // 16
+                    x.block = target // decode_block_size
                     events.append(("DecodeBlockUpdate", rid))
 
         for rid, x in active.items():

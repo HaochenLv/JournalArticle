@@ -4,6 +4,8 @@
 
 **BASIC_TESTS_PASS (2026-09-19).** Existing Python 3.12.10 environment: AICCC math 5/5, evaluator 6/6, adjacent JB1 10/10; the bounded repository suite passed 84/84 (including those 21), with no failures. Two historical-reference directory-scan tests were deliberately omitted under the handoff scope limit; unrestricted discovery is not claimed. No source/test fix or mathematical semantic change was needed. No HELIX execution, formal experiment, or journal semantic extension was run; Stage 6B evidence was not reused. See [basic validation and next-step record](docs/AICCC_REBUILD_TEST_REPORT.md).
 
+**EVENT_RESOURCE_GUARDS_ADDED (2026-09-19; execution pending).** Seven direct regressions now target `aiccc_evaluator.evaluate()`: tied-arrival commutativity, fractional Decode progress preservation, parameterized block-boundary context/KV consistency, simultaneous violation retention, prompt KV/activation reservation at arrival, explicit event-limit failure, and shared-link aggregate overload. Decode block granularity is now the explicit `decode_block_size` parameter with compatibility default 16 rather than an operational hard-coded constant. This commit changes no SLA-to-bandwidth mathematics and runs no experiment; local test execution is still required before marking this checkpoint PASS.
+
 Branch: `aiccc-journal-rebuild`, created from main commit `bfb4e002be2a079fc6dade5cf1d07d9c00b71bb0`.
 
 New foundation:

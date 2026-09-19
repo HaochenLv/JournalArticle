@@ -122,7 +122,7 @@ The evaluator remains event-driven and scheduler-free.
 - Decode block update
 - Finish
 
-Decode progress remains continuous between events, while block boundaries only determine when profile/resource state is recomputed. Tied events are processed atomically and pre/post checks may retain simultaneous first violations.
+Decode progress remains continuous between events, while block boundaries only determine when profile/resource state is recomputed. The block granularity is a runtime evaluator parameter (`decode_block_size`); the current compatibility default is 16 tokens, but 16 is not a mathematical constant and experiments may change it explicitly. The same parameter must drive event scheduling, context/KV upper bounds, and block-state updates. Tied events are processed atomically and pre/post checks may retain simultaneous first violations.
 
 ## 7. Recovered assumption that is not promoted to a theorem
 

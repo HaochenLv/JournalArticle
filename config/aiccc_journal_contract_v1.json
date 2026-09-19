@@ -12,7 +12,13 @@
     "prefill_progress": "profiled compute only",
     "decode_progress": "profiled per-token compute only",
     "sla_budget_may_change_progress": false,
-    "intrinsic_or_fixed_accounting_may_change_progress": false
+    "intrinsic_or_fixed_accounting_may_change_progress": false,
+    "decode_block_granularity": {
+      "parameter": "decode_block_size",
+      "default": 16,
+      "hardcoded": false,
+      "role": "Decode profile/resource recomputation granularity; does not redefine the SLA-to-bandwidth accounting model"
+    }
   },
   "ledger_semantics": {
     "residual_network_budget": "SLA limit - profiled compute - explicit accounting-only charges",
