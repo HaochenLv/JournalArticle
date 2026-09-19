@@ -1,4 +1,4 @@
-> **Current rebuild branch:** `aiccc-journal-rebuild`. The journal core is being reset to the AICCC accounting-only event-driven evaluator. `JB-Avg-v1` / Stage 6B are historical and must not be used as the journal mother evaluator. See `docs/AICCC_JOURNAL_CONTRACT.md` and `CURRENT_STATUS.md`.
+> **Current rebuild branch:** `aiccc-journal-rebuild`. J0 freezes the AICCC accounting-only event-driven evaluator as the only journal mother evaluator. J1 adds standard first-output TTFT and request-average post-first TPOT only as an accounting/ledger overlay on that frozen progress engine. The bounded 42-point cache-only J1 pilot passed with 0 false acceptances and 0 false rejections against the strict standard-metric reference, but it is not final journal validation. `JB-Avg-v1` / Stage 6B remain historical. See `docs/AICCC_JOURNAL_CONTRACT.md`, `docs/J1_VALIDATION_REPORT.md`, and `CURRENT_STATUS.md`.
 
 # Journal research on SLA-aware LLM pipeline planning
 
