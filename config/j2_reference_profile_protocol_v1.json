@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "protocol_id": "J2-REFERENCE-PROFILE-STRESS-v1",
+  "date": "2026-09-19",
+  "modeling_guardrails": {
+    "mother_evaluator": "frozen AICCC J0",
+    "semantic_layer": "J1 standard-TTFT/request-average-TPOT ledger only",
+    "progress_rule": "profiling drives progress; accounting never changes progress",
+    "network_rule": "residual time -> omega -> delta -> required bandwidth -> shared-link feasibility",
+    "strict_safety": true,
+    "attainment_threshold": null,
+    "virtual_round_forbidden": true,
+    "network_serialization_in_progress_forbidden": true
+  },
+  "reference": {
+    "source": "existing pinned HELIX raw-reference records referenced by pre-existing diagnostic JSONs",
+    "new_helix_runs": 0,
+    "metric_semantics": "standard first-output TTFT + request-average post-first TPOT",
+    "explicit_accounting_alignment": "reapply each record's fixed+queue overhead after standard-metric migration",
+    "workload_rule": "all requests must pass applicable limits",
+    "cache_miss_policy": "abort; never launch HELIX"
+  },
+  "populations": [
+    {
+      "source": "results/diagnostic/nominal_gap",
+      "expected_nominal_pairs": 175,
+      "role": "A100 nominal-gap family"
+    },
+    {
+      "source": "results/diagnostic/partition_ranking",
+      "expected_nominal_pairs": 502,
+      "role": "heterogeneous five-shift partition family"
+    }
+  ],
+  "profile_variants": {
+    "uniform_phase_scales": {
+      "phases": [
+        "prefill",
+        "decode",
+        "both"
+      ],
+      "scales": [
+        0.8,
+        0.9,
+        0.95,
+        1,
+        1.05,
+        1.1,
+        1.2
+      ],
+      "interpretation": {
+        "<1": "evaluator profile underestimates true compute time; safety-critical optimistic profiling error",
+        ">1": "evaluator profile overestimates true compute time; conservative profiling error"
+      }
+    },
+    "heterogeneous_device_scales": {
+      "devices": [
+        "l4x2",
+        "t4x4"
+      ],
+      "scales": [
+        0.9,
+        1.1
+      ],
+      "phases": "both"
+    }
+  },
+  "primary_metrics": [
+    "strict safe/unsafe confusion matrix",
+    "false acceptance count and rate among reference-unsafe points",
+    "false rejection count and rate among reference-safe points",
+    "false-acceptance severity: reference max normalized SLA excess and violating-request fraction",
+    "sampled safe-edge agreement where sampled monotonicity supports an edge",
+    "first limiting constraint distribution",
+    "J1 runtime"
+  ],
+  "interpretation": "deterministic controlled profile-uncertainty stress; not a probability model and not a confidence interval",
+  "scope_limits": [
+    "No new HELIX execution",
+    "No new workload generation",
+    "No partition search",
+    "No capacity-grid refinement",
+    "No change to J0/J1 equations",
+    "No manuscript claim from this stage alone"
+  ],
+  "workers": 4,
+  "timeout_minutes": 60
+}
