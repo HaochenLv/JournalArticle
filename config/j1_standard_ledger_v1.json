@@ -46,7 +46,16 @@
   "blocking_interpretation": {
     "policy": "active-prefill-full-service-recovered-assumption",
     "j1_extension": "integrate the recovered per-token blocking debt over equivalent Decode progress",
-    "theorem_claimed": false
+    "theorem_claimed": false,
+    "sensitivity_parameter": {
+      "name": "blocking_scale",
+      "default": 1,
+      "domain": "finite nonnegative",
+      "purpose": "J2 accounting-only sensitivity of the recovered blocking assumption",
+      "changes_progress": false,
+      "default_semantics_unchanged": true,
+      "status": "diagnostic only until separately validated"
+    }
   },
   "safety": {
     "strict_all_request_safety": true,
