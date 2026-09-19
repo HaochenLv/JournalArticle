@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "experiment_id": "TTFT_COMPUTE_CONTENTION_ABSTENTION_v1",
+  "date": "2026-09-19",
+  "status": "frozen before classification back-check",
+  "mechanism": "selective safety certification for first-output TTFT under guaranteed Decode-stage overlap risk",
+  "motivation": "Fresh HELIX stage tracing showed that the high-load TTFT miss is almost entirely load-dependent compute-node residence during the first Decode token; source wait and link time do not increase. Instantaneous concurrency, remaining current-token work, phase dispersion, and remaining decode lifetime are useful risk signals but are not accurate enough to become additive latency formulas.",
+  "guard": {
+    "primary": "If the unmodified J1 evaluator says safe, abstain from certifying safe when any request's profile-driven first-Decode interval contains more active Decode requests than the number of pipeline stages.",
+    "structural_threshold": "strictly greater than K, where K=len(pipeline.stages); K is not fitted from outcomes.",
+    "secondary_diagnostic_only": "also report >=K to show the coverage/conservatism sensitivity, but do not select it from this back-check.",
+    "verdicts": ["unsafe", "certified_safe", "uncertain"],
+    "fallback": "uncertain points require execution-reference validation or a future stronger compute-contention model; they are not counted as certified safe."
+  },
+  "model_guardrails": {
+    "J0_progress": "unchanged profiling-driven trajectory",
+    "J1_latency_semantics": "unchanged standard first-output TTFT and request-average post-first TPOT",
+    "Prefill_blocking": "remaining-profile-service-full-intrinsic",
+    "AICCC_network_equations": "unchanged",
+    "strict_base_safety": "unchanged",
+    "guard_changes_trajectory": false,
+    "guard_adds_fitted_latency": false
+  },
+  "populations": {
+    "design_backcheck": "677 previously used diagnostic conditions",
+    "short_confirmation": "h103 and h105 formal workloads; 528 cached conditions",
+    "long_confirmation": "h104 and h106 formal workloads; 490 cached conditions"
+  },
+  "metrics": [
+    "false certified-safe count among reference-unsafe points",
+    "unsafe cases caught by abstention",
+    "safe cases sent to abstention",
+    "certification coverage among reference-safe points",
+    "binary-equivalent false rejection if uncertain were treated as unsafe",
+    "sampled certified-safe edge where meaningful"
+  ],
+  "success_rule": "Primary >K guard is useful only if it removes the known unsafe certifications on the design back-check and does not create unsafe certified-safe cases on the two confirmation populations. Coverage loss must be reported rather than hidden.",
+  "new_helix_runs": 0
+}
