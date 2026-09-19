@@ -1,0 +1,79 @@
+name: AICCC Self-Hosted Tests
+
+on:
+  push:
+    branches:
+      - aiccc-journal-rebuild
+    paths:
+      - "src/aiccc_math.py"
+      - "src/aiccc_evaluator.py"
+      - "src/research.py"
+      - "tests/test_aiccc_math.py"
+      - "tests/test_aiccc_evaluator.py"
+      - "config/aiccc_journal_contract_v1.json"
+      - "requirements.txt"
+      - "scripts/bootstrap.py"
+      - ".github/workflows/aiccc-self-hosted-tests.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: journal-aiccc-self-hosted
+  cancel-in-progress: true
+
+jobs:
+  aiccc-core:
+    if: github.repository == 'HaochenLv/JournalArticle' && github.ref == 'refs/heads/aiccc-journal-rebuild'
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 15
+
+    defaults:
+      run:
+        shell: powershell
+
+    steps:
+      - name: Checkout active branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          clean: false
+
+      - name: Provision Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Prepare lightweight test environment
+        run: |
+          if (-not (Test-Path ".venv\Scripts\python.exe")) {
+            python -m venv .venv
+          }
+          .\.venv\Scripts\python.exe -m pip install --disable-pip-version-check -r requirements.txt
+          .\.venv\Scripts\python.exe -m pip check
+
+          if (-not (Test-Path ".deps\evaluator")) {
+            .\.venv\Scripts\python.exe scripts\bootstrap.py
+          }
+
+      - name: Runner diagnostics
+        run: |
+          Write-Host "Runner: $env:RUNNER_NAME"
+          Write-Host "OS: $env:RUNNER_OS"
+          Write-Host "SHA: $env:GITHUB_SHA"
+          .\.venv\Scripts\python.exe --version
+
+      - name: AICCC mathematical kernel
+        run: |
+          .\.venv\Scripts\python.exe -m unittest tests.test_aiccc_math -v
+
+      - name: AICCC evaluator guards
+        run: |
+          .\.venv\Scripts\python.exe -m unittest tests.test_aiccc_evaluator -v
+
+      - name: Scope guard
+        run: |
+          Write-Host "Completed active AICCC core tests only."
+          Write-Host "Frozen Stage 2-6 experiments, HELIX formal runs, capacity sweeps, and repository-wide discovery were not executed."
