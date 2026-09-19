@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "experiment_id": "HIGH_LOAD_TTFT_CONTENTION_PROBE_v1",
+  "date": "2026-09-19",
+  "question": "Across all cached request rows in the two A100 slow-placement diagnosis families, does the first-Decode runtime gap concentrate when Decode concurrency exceeds the eight pipeline stages?",
+  "frozen_before_outcome": true,
+  "source": "same 34 cached physical points and raw HELIX request metrics used by HIGH_LOAD_TTFT_DIAG_v1",
+  "new_helix_runs": 0,
+  "pipeline_stage_count": 8,
+  "predeclared_split": {
+    "not_oversubscribed": "first_decode_max_decode <= 8",
+    "oversubscribed": "first_decode_max_decode > 8"
+  },
+  "metrics": [
+    "reference first-Decode runtime",
+    "J0/J1 predicted first-Decode profile duration",
+    "reference-minus-profile first-Decode excess",
+    "exact-concurrency and stage-count-split distributions"
+  ],
+  "decision_boundary": "Diagnostic only. The eight-stage split is structural, not fitted. Do not select the final guard from this probe alone."
+}
