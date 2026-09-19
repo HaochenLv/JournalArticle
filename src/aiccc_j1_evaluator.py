@@ -62,6 +62,7 @@ def evaluate(
     trace=False,
     activation_buffers=True,
     blocking_policy=BLOCKING_POLICY,
+    blocking_scale=1.0,
     decode_block_size=DEFAULT_DECODE_BLOCK_SIZE,
     max_events=100_000,
 ):
@@ -76,6 +77,14 @@ def evaluate(
     started = time.perf_counter()
     if blocking_policy not in (None, "none", BLOCKING_POLICY):
         raise ValueError(f"unsupported blocking policy: {blocking_policy}")
+    if (
+        isinstance(blocking_scale, bool)
+        or not isinstance(blocking_scale, (int, float))
+        or not math.isfinite(blocking_scale)
+        or blocking_scale < 0
+    ):
+        raise ValueError("blocking_scale must be a finite nonnegative number")
+    blocking_scale = float(blocking_scale)
     requests = sorted_workload(workload)
     specs = {r.id: r for r in requests}
     prof = prof or Profiles()
@@ -101,6 +110,7 @@ def evaluate(
             "evaluator_version": VERSION,
             "mother_evaluator": "AICCC-accounting-only",
             "ledger_policy": LEDGER_POLICY,
+            "blocking_scale": blocking_scale,
             "strict_all_request_safety": True,
             "safe": True,
             "first_violation": None,
@@ -142,7 +152,7 @@ def evaluate(
         if blocking_policy in (None, "none"):
             debt = 0.0
         else:
-            debt = sum(
+            debt = blocking_scale * sum(
                 prefill_compute[rid] + (H * specs[rid].input_tokens if intrinsic else 0.0)
                 for rid, ledger in left["ledger"].items()
                 if ledger["phase"] == "prefill"
@@ -311,6 +321,7 @@ def evaluate(
         "mother_evaluator": "AICCC-accounting-only",
         "ledger_policy": LEDGER_POLICY,
         "blocking_policy": blocking_policy,
+        "blocking_scale": blocking_scale,
         "strict_all_request_safety": True,
         "decode_block_size": decode_block_size,
         "safe": not first_set,
