@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "result_id": "J1-STANDARD-LEDGER-PILOT-v1-summary",
+  "status": "complete",
+  "scientific_scope": "bounded cache-only semantic pilot; not final journal validation",
+  "branch": "aiccc-journal-rebuild",
+  "pilot_head": "f4f428a14d7cf7117368146ecacd079327dc43de",
+  "test_run": {
+    "id": 35415896706,
+    "conclusion": "success",
+    "j0_math": "5/5",
+    "j0_evaluator": "13/13",
+    "j1_evaluator": "9/9"
+  },
+  "pilot_run": {
+    "id": 35415993230,
+    "conclusion": "success",
+    "artifact_id": 10575582812,
+    "artifact_digest": "sha256:132d65a273ae23ecafc92d63af0a4861f22a7410a053d2937a94e3df2538ec49"
+  },
+  "population": {
+    "workloads": 42,
+    "requests_per_workload": 17,
+    "seeds": [
+      0,
+      7,
+      19
+    ],
+    "placements": [
+      "slow",
+      "fast"
+    ],
+    "intensities": [
+      0.006,
+      0.01,
+      0.0131,
+      0.0132,
+      0.015,
+      0.02,
+      0.025
+    ],
+    "sla": {
+      "ttft_s": 2,
+      "tpot_s": 0.15,
+      "fixed_overhead_s": 0.005,
+      "queue_overhead_s": 0
+    }
+  },
+  "reference": {
+    "policy": "existing pinned HELIX cache only; reconstructed standard endpoints plus the same explicit fixed/queue ledger charge",
+    "new_helix_runs": 0,
+    "cache_misses": 0,
+    "index_files": 2313,
+    "index_unique_physical": 2069,
+    "index_aliases": 244,
+    "index_malformed": 0,
+    "raw_reference_name_fingerprint": "f5e1c2f6f23ab67a5c87c7c984bbd3d795e83707bd66c582e3c594bc938e4a30"
+  },
+  "j1_confusion": {
+    "safe_safe": 35,
+    "false_acceptance": 0,
+    "false_rejection": 0,
+    "unsafe_unsafe": 7,
+    "total": 42,
+    "agreement": 1
+  },
+  "j0_phase_local_against_standard_reference": {
+    "safe_safe": 23,
+    "false_acceptance": 5,
+    "false_rejection": 12,
+    "unsafe_unsafe": 2,
+    "total": 42,
+    "agreement": 0.5952380952380952
+  },
+  "j1_first_verdicts": {
+    "safe": 35,
+    "network:slow-0": 7
+  },
+  "unsafe_cluster": {
+    "seed": 19,
+    "placement": "slow",
+    "cases": 7,
+    "reference_failure": "one TTFT-failing request in every case",
+    "j1_required_bandwidth_bytes_per_s": 313694402.85681605,
+    "link_capacity_bytes_per_s": 312500000,
+    "peak_utilization": 1.0038220891418115,
+    "j1_max_standard_ttft_s": 2.002682,
+    "reference_max_standard_ttft_s": 2.002069
+  },
+  "metric_gap_ranges_seconds": {
+    "j1_minus_reference_standard_ttft": [
+      0.0004113791697970548,
+      0.0006767618345955295
+    ],
+    "j1_minus_reference_average_tpot": [
+      -0.00005902721111264442,
+      0.008675910777321785
+    ]
+  },
+  "runtime": {
+    "j1_median_ms": 30.668800012790598,
+    "pilot_elapsed_s": 7.413164099998539
+  },
+  "audit_notes": [
+    "Perfect 42/42 verdict agreement is limited to this pre-existing cached grid and is not evidence of universal conservatism.",
+    "The minimum average-TPOT metric gap is slightly negative, so J1 is not claimed to be a numerical upper bound on every request-level metric.",
+    "The first 72-point cache-only attempt aborted before scientific output because required records were missing; protocol revision 2 switched to the pre-existing nominal-gap cached grid before the successful run.",
+    "Frozen J0 math/evaluator/test/contract blobs remained byte-identical to the J0 freeze checkpoint."
+  ]
+}
