@@ -11,7 +11,12 @@
       "ttft_profile_uncertainty_fraction": 0
     },
     {
-      "label": "frozen candidate",
+      "label": "remaining blocking only",
+      "blocking_mode": "remaining-profile-service-full-intrinsic",
+      "ttft_profile_uncertainty_fraction": 0
+    },
+    {
+      "label": "remaining blocking plus global 5% TTFT reserve",
       "blocking_mode": "remaining-profile-service-full-intrinsic",
       "ttft_profile_uncertainty_fraction": 0.05
     }
@@ -25,5 +30,6 @@
     "unchanged_AICCC_network_equations": true,
     "strict_all_request_safety": true,
     "new_helix_runs": 0
-  }
+  },
+  "amendment": "After the first back-check showed that the global 5% TTFT reserve cut only one unsafe approval while greatly increasing conservative rejections, add the remaining-blocking-only condition to isolate the two mechanisms. This is diagnostic on the already-used design set, not held-out evidence."
 }
