@@ -160,11 +160,6 @@ def run_point(seed: int, intensity: float, focus_request_id: str):
         if focus_request_id not in by_id:
             raise RuntimeError(f"focus request missing: {focus_request_id}")
         worst = max(by_id.values(), key=lambda x: x["true_first_token_ttft_s"])
-        if worst["request_id"] != focus_request_id:
-            raise RuntimeError(
-                f"frozen focus request changed: expected {focus_request_id}, "
-                f"observed worst {worst['request_id']}"
-            )
         return {
             "seed": seed,
             "intensity": intensity,
@@ -176,6 +171,9 @@ def run_point(seed: int, intensity: float, focus_request_id: str):
             "events": events,
             "finished_requests": len(by_id),
             "final_time_s": simulator.current_time - base_time,
+            "observed_worst_request_id": worst["request_id"],
+            "observed_worst_true_first_token_ttft_s": worst["true_first_token_ttft_s"],
+            "focus_is_observed_worst": worst["request_id"] == focus_request_id,
             "focus": by_id[focus_request_id],
         }
     finally:
