@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "experiment": "Held-out check of a more realistic Prefill-blocking calculation and a small TTFT profile-uncertainty reserve",
+  "date": "2026-09-19",
+  "basis": "Mechanisms were defined after the broader reliability diagnosis. Evaluation uses formal-workload families h103-h106, which were not used to design the current correction in this conversation.",
+  "important_limitation": "These workloads existed historically in the repository, so they are held out from the current mechanism-design step, not globally unseen data.",
+  "model_guardrails": {
+    "request_arrival": "same AICCC/HELIX Azure-derived workload construction and time-scaling",
+    "progress": "frozen J0 profiling-driven trajectory",
+    "latency_semantics": "standard first-output TTFT and request-average post-first TPOT",
+    "network_accounting": "unchanged AICCC residual-time -> omega -> delta -> required-bandwidth chain",
+    "safety": "strict all-request",
+    "no_virtual_round": true,
+    "no_network_serialization_in_progress": true
+  },
+  "reference": {
+    "source": "existing pinned HELIX raw-reference records already produced for formal workloads",
+    "new_helix_runs": 0,
+    "standard_metrics": true,
+    "cache_miss_policy": "abort"
+  },
+  "held_out_workloads": [
+    "h103-o500-d30",
+    "h104-o700-d120",
+    "h105-o900-d30",
+    "h106-o1100-d120"
+  ],
+  "deployments": [
+    "A100 primary link",
+    "heterogeneous five layer shifts"
+  ],
+  "sla": {
+    "A100": {
+      "ttft_s": 2,
+      "tpot_s": 0.15,
+      "fixed_overhead_s": 0.005
+    },
+    "heterogeneous": {
+      "ttft_s": 5.2,
+      "tpot_s": 0.3,
+      "fixed_overhead_s": 0.005
+    }
+  },
+  "candidate_mechanisms": {
+    "blocking": [
+      {
+        "label": "current full Prefill blocking",
+        "mode": "full-active-prefill-service",
+        "explanation": "charge the full profiled Prefill service of every active Prefill request, plus full intrinsic overhead"
+      },
+      {
+        "label": "remaining Prefill blocking",
+        "mode": "remaining-profile-service-full-intrinsic",
+        "explanation": "charge only the average remaining fraction of known profiled Prefill service during each overlap interval; keep intrinsic overhead fully charged because its time placement is unknown"
+      }
+    ],
+    "ttft_profile_uncertainty_fraction": [
+      0,
+      0.025,
+      0.05,
+      0.1
+    ],
+    "explanation": "TTFT reserve is accounting-only and equals the chosen fraction of profile-driven arrival-to-first-token time"
+  },
+  "outputs": [
+    "false acceptance and false rejection counts",
+    "false-acceptance severity",
+    "sampled maximum-safe-load edge agreement",
+    "which resource/SLA condition becomes limiting",
+    "trajectory hash parity across accounting-only candidates"
+  ],
+  "selection_rule": "Do not choose a final mechanism only because it has the best aggregate score. Prefer a candidate only if it reduces conservative mistakes without increasing unsafe approvals on the held-out set, and keep all limitations explicit.",
+  "workers": 4
+}
