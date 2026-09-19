@@ -30,7 +30,7 @@ jobs:
 
     defaults:
       run:
-        shell: powershell
+        shell: powershell -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File {0}
 
     steps:
       - name: Checkout active branch
