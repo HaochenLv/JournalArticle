@@ -250,5 +250,39 @@ class AICCCJ1EvaluatorTests(unittest.TestCase):
         self.assertEqual(r["first_violation"]["object"], "standard_ttft")
 
 
+
+    def test_blocking_scale_is_accounting_only_sensitivity(self):
+        p = huge_bandwidth(pipeline())
+        w = (
+            RequestSpec("a", 0.0, 20, 1),
+            RequestSpec("b", 0.0, 20, 1),
+        )
+        args = dict(
+            pipeline=p,
+            workload=w,
+            sla=SLA(10.0, 10.0),
+            prof=OverlapProfiles(),
+            intrinsic=False,
+            trace=True,
+        )
+        full = evaluate(**args, blocking_scale=1.0)
+        none = evaluate(**args, blocking_scale=0.0)
+        self.assertEqual(full["core_trajectory_hash"], none["core_trajectory_hash"])
+        self.assertEqual(full["final_time_s"], none["final_time_s"])
+        self.assertGreater(full["request_ledgers"]["b"]["ttft"]["blocking_s"], 0.0)
+        self.assertEqual(none["request_ledgers"]["b"]["ttft"]["blocking_s"], 0.0)
+        self.assertEqual(full["blocking_scale"], 1.0)
+        self.assertEqual(none["blocking_scale"], 0.0)
+
+    def test_blocking_scale_rejects_invalid_values(self):
+        with self.assertRaisesRegex(ValueError, "blocking_scale"):
+            evaluate(
+                huge_bandwidth(pipeline()),
+                (RequestSpec("a", 0.0, 20, 1),),
+                SLA(10.0, 10.0),
+                ConstantProfiles(),
+                blocking_scale=-0.1,
+            )
+
 if __name__ == "__main__":
     unittest.main()
