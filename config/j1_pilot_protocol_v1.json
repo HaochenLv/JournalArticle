@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "protocol_id": "J1-STANDARD-LEDGER-PILOT-v1",
+  "purpose": "Bounded cache-only semantic validation of the J1 standard-TTFT/request-average-TPOT ledger against pinned HELIX execution records.",
+  "branch": "aiccc-journal-rebuild",
+  "reference_policy": "cache-only; never launch HELIX",
+  "workload": {
+    "duration_s": 30,
+    "seeds": [0, 1, 2, 3, 7, 19],
+    "placements": ["slow", "fast"],
+    "intensities": [0.006, 0.01, 0.0131, 0.015, 0.02, 0.022]
+  },
+  "sla": {
+    "ttft_s": 2.0,
+    "tpot_s": 0.15,
+    "fixed_overhead_s": 0.005,
+    "queue_overhead_s": 0.0
+  },
+  "evaluator": {
+    "intrinsic": true,
+    "blocking_policy": "active-prefill-full-service-recovered-assumption",
+    "decode_block_size": 16,
+    "strict_all_request_safety": true
+  },
+  "reference_semantics": {
+    "ttft": "first Increment completion minus arrival",
+    "average_tpot": "last Increment completion minus first Increment completion, divided by output_tokens-1",
+    "single_output_tpot": null,
+    "workload_rule": "all requests must pass applicable limits (classification target=1.0)",
+    "accounting_alignment": "reconstructed standard endpoints plus the same explicit fixed/queue charge used by J1; no evaluator H or recovered blocking correction is added to the execution reference"
+  },
+  "reported_metrics": [
+    "safe/unsafe confusion matrix",
+    "false acceptance count and cases",
+    "false rejection count and cases",
+    "agreement",
+    "first-violation kinds",
+    "maximum standard TTFT and average TPOT diagnostics",
+    "cache completeness",
+    "J0 phase-local verdict comparison"
+  ],
+  "scope_limits": [
+    "No new HELIX execution",
+    "No capacity refinement",
+    "No partition search",
+    "No profile-noise experiment",
+    "No manuscript claim"
+  ],
+  "implementation_revision": 1
+}
